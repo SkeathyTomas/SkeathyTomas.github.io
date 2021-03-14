@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://SkeathyTomas.github.io</id>
     <title>Skeathy的奇思妙想</title>
-    <updated>2021-03-14T17:21:41.018Z</updated>
+    <updated>2021-03-14T17:23:45.789Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://SkeathyTomas.github.io"/>
     <link rel="self" href="https://SkeathyTomas.github.io/atom.xml"/>
@@ -257,10 +257,10 @@ A better design by life.</subtitle>
         <updated>2021-03-04T11:00:45.000Z</updated>
         <content type="html"><![CDATA[<h1 id="原神玩法总结">原神玩法总结</h1>
 <p>作为一款<strong>二次元开放世界抽卡rpg</strong>游戏，原神在氪金换皮手游领域实现了突破，不仅在&quot;全平台&quot;登录，更是荣获ios、google play两大手机App平台2020年度游戏。众所周知，游戏有四个核心要素——美术、机制（玩法）、故事和技术，作为一名准公测开服玩家，想要从玩家角度来谈谈这一款跨时代游戏的玩法。</p>
-<h2 id="核心玩法">核心玩法</h2>
-<p>一度被称为“大杂烩缝合怪”的原神，我对于这款游戏的第一串定语就又臭又长——<strong>二次元开放世界抽卡rpg</strong>，甚至还可以添加多种游戏标签，比如ACT、文字冒险、解谜、收集等等。但谈到原神的核心玩法，我会总结以下三点：<strong>探索</strong>、<strong>战斗</strong>、<strong>养成</strong>。</p>
 <p>一图流：</p>
 <figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/%E5%8E%9F%E7%A5%9E%E7%8E%A9%E6%B3%95.svg" alt="一图流" loading="lazy"></figure>
+<h2 id="核心玩法">核心玩法</h2>
+<p>一度被称为“大杂烩缝合怪”的原神，我对于这款游戏的第一串定语就又臭又长——<strong>二次元开放世界抽卡rpg</strong>，甚至还可以添加多种游戏标签，比如ACT、文字冒险、解谜、收集等等。但谈到原神的核心玩法，我会总结以下三点：<strong>探索</strong>、<strong>战斗</strong>、<strong>养成</strong>。</p>
 <h3 id="探索">探索</h3>
 <p>用探索这个词来形容一个游戏的核心玩法未免有些不讲道理，因为探索就算被写进游戏的定义也不足为怪，几乎所有的游戏都少不了探索这一玩法，也许是探索游戏世界、故事、机制、解法……</p>
 <p>这里就简单介绍以下原神以大世界为背景的探索玩法。在游戏pv中，原神就介绍了以7个国家为背景的提瓦特大陆，整个游戏的世界观和所有发生的事件都在这个大世界中。目前只开放了其中两个国家——蒙德和璃月，璃月还有层岩巨渊未开放。在整个大世界中，玩家可以操纵角色（旅行者）以第三人称视角自由冒险和探索（除非因为等级和剧情原因被限制区域），以了解和掌握整个地图，也比较契合旅行者这一角色身份。在探索过程中，通过解锁七天神像点亮地图，方便地图认知和熟悉；也可以解锁传送锚点，实现地区之间的方便传送；另外，大地图中存在各种不连续的秘境空间，也可进行解锁和探索。</p>
