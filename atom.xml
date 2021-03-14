@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://SkeathyTomas.github.io</id>
     <title>Skeathy的奇思妙想</title>
-    <updated>2021-03-14T13:56:38.838Z</updated>
+    <updated>2021-03-14T13:58:26.194Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://SkeathyTomas.github.io"/>
     <link rel="self" href="https://SkeathyTomas.github.io/atom.xml"/>
@@ -17,10 +17,16 @@ A better design by life.</subtitle>
         <link href="https://SkeathyTomas.github.io/post/梦境物语/">
         </link>
         <updated>2021-03-14T12:24:06.000Z</updated>
+        <summary type="html"><![CDATA[<h2 id="1-故事背景">1-故事背景</h2>
+<p>在某一天你陷入沉睡之时来到了一个特殊的地方——梦境工厂，工厂的负责人告诉你：你正在长大，你的梦境也随之发生了一些变化，在梦境中隐藏着关于未来的一个秘密。为了发现这隐藏的秘密，所以在沉睡时邀请你来参与梦境的制造。</p>
+<p>当你刚想要问一些什么的时候，负责人消失了，随之出现了一个奇奇怪怪的门，虽然你有点犹豫， 但是非常好奇，所以进入了这个奇怪的梦境之门。</p>
+<p>*<em>（<em>每当你完成这梦境建造公司/工厂里的一个任务/订单，你就会获得一个未来碎片。）</em></em></p>
+]]></summary>
         <content type="html"><![CDATA[<h2 id="1-故事背景">1-故事背景</h2>
 <p>在某一天你陷入沉睡之时来到了一个特殊的地方——梦境工厂，工厂的负责人告诉你：你正在长大，你的梦境也随之发生了一些变化，在梦境中隐藏着关于未来的一个秘密。为了发现这隐藏的秘密，所以在沉睡时邀请你来参与梦境的制造。</p>
 <p>当你刚想要问一些什么的时候，负责人消失了，随之出现了一个奇奇怪怪的门，虽然你有点犹豫， 但是非常好奇，所以进入了这个奇怪的梦境之门。</p>
 <p>*<em>（<em>每当你完成这梦境建造公司/工厂里的一个任务/订单，你就会获得一个未来碎片。）</em></em></p>
+<!-- more -->
 <h2 id="2-材料设定">2-材料设定</h2>
 <table>
 <thead>
@@ -57,6 +63,7 @@ A better design by life.</subtitle>
 </tbody>
 </table>
 <p><strong>未来碎片*N(N为关卡数)，每个关卡拥有独立故事</strong></p>
+<!-- more -->
 <h2 id="3-故事关卡">3-故事关卡</h2>
 <h3 id="3-1-梦的云团">3-1 梦的云团</h3>
 <p>云朵小姐（NPC）：嘿，很高兴见到你！你是新来的吗？</p>
@@ -136,6 +143,7 @@ A better design by life.</subtitle>
 <p>我：啊...真的好累啊...感觉非常累呢。</p>
 <p>太阳先生（NPC）：真是个聪明又勤劳的孩子呢，来，这是你所需要的东西。再会啦！</p>
 <p>*<em>（<em>获得最后关于未来的一枚碎片）</em></em></p>
+<!-- more -->
 <h2 id="4-故事结尾">4-故事结尾</h2>
 <p><strong>（播放完未来碎片的故事片段）</strong></p>
 <p>太阳先生（NPC）：很好，孩子，我想你已经知道你为什么会在这里了吧。</p>
@@ -146,6 +154,7 @@ A better design by life.</subtitle>
 <p>太阳先生（NPC）：哦亲爱的，不要害怕，你一定能够唤醒造梦之神的。</p>
 <p>我被太阳先生授予了造梦之神的手杖/控制台，我离开太阳先生的房间后走向了更远的未来......</p>
 <p><strong>（未来的故事待续..... ）</strong></p>
+<!-- more -->
 <h2 id="5-未来碎片">5-未来碎片</h2>
 <p><strong>（使用未来碎片拼成了一副完整的壁画，画从抽象逐渐开始生动变化起来……我感到了惊奇）</strong></p>
 <p>很久很久以前便存在着造梦的神，他守护着千千万万个孩子的梦境，让他们在梦境中获得快乐、勇敢、镇静、安宁的记忆来筑造他们美好的童年……（参考守护者联盟-沙沙）</p>
