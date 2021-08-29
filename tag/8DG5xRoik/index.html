@@ -1,0 +1,2375 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="keywords" content="Skeathy的奇思妙想">
+<meta name="description" content="A better life by design.
+A better design by life.">
+<meta name="theme-color" content="#000">
+<title>Skeathy的奇思妙想</title>
+<link rel="shortcut icon" href="/favicon.ico?v=1630258318648">
+<link rel="stylesheet" href="/media/css/pisces.css">
+<link rel="stylesheet" href="/media/fonts/font-awesome.css">
+<link
+  href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext"
+  rel="stylesheet" type="text/css">
+
+<link href="/media/hljs/styles/default.css"
+  rel="stylesheet">
+
+<link rel="stylesheet" href="/styles/main.css">
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<script src="/media/js/jquery.js"></script>
+<script src="/media/hljs/highlight.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.ui.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+  integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
+  integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
+  integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+  onload="renderMathInElement(document.body);"></script>
+
+
+
+
+
+
+</head>
+
+<body>
+  <div class="head-top-line"></div>
+  <div class="header-box">
+    
+<div class="pisces">
+  <header class="header  ">
+    <div class="blog-header box-shadow-wrapper bg-color " id="header">
+      <div class="nav-toggle" id="nav_toggle">
+        <div class="toggle-box">
+          <div class="line line-top"></div>
+          <div class="line line-center"></div>
+          <div class="line line-bottom"></div>
+        </div>
+      </div>
+      <div class="site-meta">       
+        <div class="site-title">
+          
+            <a href="/" class="brand">
+              <span>Skeathy的奇思妙想</span>
+            </a>  
+          
+        </div>
+        
+          <p class="subtitle">A better life by design. A better design by life.</p>
+        
+      </div>
+      <nav class="site-nav" id="site_nav">
+        <ul id="nav_ul">
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/" target="_self">
+                  <i class="fa fa-home"></i> 首页
+                </a>
+              
+            </li>
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/archives/" target="_self">
+                  <i class="fa fa-archive"></i> 归档
+                </a>
+              
+            </li>
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/tags/" target="_self">
+                  <i class="fa fa-tags"></i> 标签
+                </a>
+              
+            </li>
+          
+            
+            
+              
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/post/about/" target="_self">
+                  <i class="fa fa-user"></i> 关于
+                </a>
+              
+            </li>
+          
+          
+            
+              <li class="nav-item ">
+                <a href="/friends/" target="_self">
+                  
+                    <i class="fa fa-address-book"></i> 友情链接
+                  
+                </a>
+              </li>
+            
+          
+          
+            <li id="fa_search" class="nav-item">
+              <a href="javascript:void(0);">
+                <i class="fa fa-search"></i> <span class="language" data-lan="search">搜索</span>
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+    </div>
+  </header>
+</div>
+
+<script type="text/javascript"> 
+ 
+  let showNav = true;
+
+  let navToggle = document.querySelector('#nav_toggle'),
+  siteNav = document.querySelector('#site_nav');
+  
+  function navClick() {
+    let sideBar = document.querySelector('.sidebar');
+    let navUl = document.querySelector('#nav_ul');
+    navToggle.classList.toggle('nav-toggle-active');
+    siteNav.classList.toggle('nav-menu-active');
+    if (siteNav.classList.contains('nav-menu-active')) {
+      siteNav.style = "height: " + (navUl.children.length * 42) +"px !important";
+    } else {
+      siteNav.style = "";
+    }
+  }
+
+  navToggle.addEventListener('click',navClick);  
+</script>
+  </div>
+  <div class="main-continer">
+    
+    <div
+      class="section-layout  pisces">
+      <div class="section-layout-wrapper">
+        <div id="sidebarMeta" class="sidebar">
+    
+<div class="sidebar-wrapper box-shadow-wrapper bg-color">
+  <div class="sidebar-item">
+    <img class="site-author-image right-motion" src="/images/avatar.png"/>
+    <p class="site-author-name">Skeathy</p>
+    
+    <div class="site-description right-motion">
+      
+        <p id="binft">可爱的男孩子~w~</p>
+      
+    </div>
+    
+  </div>
+  <div class="sidebar-item side-item-stat right-motion">
+    <div class="sidebar-item-box">
+      <a href="/archives/">
+        
+        <span class="site-item-stat-count">9</span>
+        <span class="site-item-stat-name language" data-lan="article">文章</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="">
+        <span class="site-item-stat-count">9</span>
+        <span class="site-item-stat-name language" data-lan="category">分类</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="/tags/">
+        <span class="site-item-stat-count">9</span>
+        <span class="site-item-stat-name language" data-lan="tag">标签</span>
+      </a>
+    </div>
+  </div>
+  
+    
+      <div class="sidebar-item">
+        <span class="site-item-rss">
+            <i class="fa fa-rss"></i>
+            <a href="https://SkeathyTomas.github.io/atom.xml" target="_blank">RSS</a>
+        </span>
+      </div>
+    
+  
+  
+    <div class="sidebar-item sidebar-item-social">
+      <div class="social-item">
+        
+          
+            <a href="https://github.com/SkeathyTomas">
+              <i class="fa fa-github-alt" title="github"></i>
+            </a>
+          
+            <a href="https://www.zhihu.com/people/skeathy">
+              <i class="fa fa-globe" title="知乎"></i>
+            </a>
+          
+        
+        
+      </div>
+    </div>
+  
+
+
+
+</div>
+</div>
+<script>
+  let sidebarMeta = document.querySelector('#sidebarMeta');
+  let scheme = 'pisces';
+  let sidebarWrapper = document.querySelector('.sidebar-wrapper');
+  if (sidebarMeta && (scheme === 'pisces' || scheme === 'gemini')) {
+    document.addEventListener('scroll', function(e) {
+      if (document.scrollingElement.scrollTop > parseInt(sidebarMeta.style.marginTop) + 10) {
+        sidebarWrapper.classList.add('home-sidebar-fixed')
+      } else {
+        sidebarWrapper.classList.remove('home-sidebar-fixed')
+      }
+    });
+  }
+  </script>
+        <div class="section-box tag-line box-shadow-wrapper">
+          <section class="section tags-section posts-expand bg-color">
+            <div class="padding-wrapper">
+  <div class="tag-timeline-box">
+    <div class="tag-timeline-wrapper">
+      <div class="tag-timeline-title">
+        <h2>
+          动漫
+          <small class="language" data-lan="tag">标签</small>
+        </h2>
+      </div>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <a href="https://SkeathyTomas.github.io/post/《冰菓》中的恋爱小故事——折木x千反田/">
+        <div class="motion-warpper">
+          <div class="tag-post-node">
+            <h1>
+              03-28
+              <small>《冰菓》中的恋爱小故事——折木x千反田</small>
+            </h1>
+          </div>
+        </div>
+      </a>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <a href="https://SkeathyTomas.github.io/post/《冰菓》中的恋爱小故事——福部x伊原/">
+        <div class="motion-warpper">
+          <div class="tag-post-node">
+            <h1>
+              03-20
+              <small>《冰菓》中的恋爱小故事——福部x伊原</small>
+            </h1>
+          </div>
+        </div>
+      </a>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <a href="https://SkeathyTomas.github.io/post/谁说《天气之子》不能和《你的名字》比较？/">
+        <div class="motion-warpper">
+          <div class="tag-post-node">
+            <h1>
+              02-19
+              <small>谁说《天气之子》不能和《你的名字》比较？</small>
+            </h1>
+          </div>
+        </div>
+      </a>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </div>
+  </div>
+</div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <div class="footer-box">
+  <footer class="footer">
+    <span id="busuanzi_container_site_pv">浏览数 <span id="busuanzi_value_site_pv"></span> 次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">访客数 <span id="busuanzi_value_site_uv"></span> 人</span>
+    <div class="copyright">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> ©2019 | Theme By <a
+        href="https://github.com/hsxyhao/gridea-theme-next" target="_blank">HsxyHao</a>
+    </div>
+    <div class="poweredby">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank"> Gridea</a>
+    </div>
+  </footer>
+  
+  
+  <div class="pisces back-to-top" id="back_to_top">
+    <i class="fa fa-arrow-up"></i>
+    
+    <span class="scrollpercent">
+      <span id="back_to_top_text">0</span>%
+    </span>
+    
+  </div>
+  
+  
+  
+<link rel="stylesheet" href="/media/live2d/css/live2d.css" />
+<div class="box-scale">
+  <div id="landlord" style="left: 5px;bottom: px;"
+    data-key="">
+    <canvas id="live2d" width="500" height="560" class="live2d"></canvas>
+    
+
+      <div class="message" style="opacity:0"></div>
+      <div class="live_talk_input_body">
+        <div class="live_talk_input_name_body">
+          <input name="name" type="text" class="live_talk_name white_input" id="AIuserName" autocomplete="off"
+            placeholder="你的名字" />
+        </div>
+        <div class="live_talk_input_text_body">
+          <input name="talk" type="text" class="live_talk_talk white_input" id="AIuserText" autocomplete="off"
+            placeholder="要和我聊什么呀？" />
+          <button type="button" class="live_talk_send_btn" id="talk_send">发送</button>
+        </div>
+      </div>
+      <input name="live_talk" id="live_talk" value="1" type="hidden" />
+      <div class="live_ico_box">
+        <div class="live_ico_item type_info" id="showInfoBtn"></div>
+        <div class="live_ico_item type_talk" id="showTalkBtn"></div>
+        
+        <div class="live_ico_item type_youdu" id="youduButton"></div>
+        <div class="live_ico_item type_quit" id="hideButton"></div>
+        <input name="live_statu_val" id="live_statu_val" value="0" type="hidden" />
+        <audio src="" style="display:none;" id="live2d_bgm" data-bgm="0" preload="none"></audio>
+        <input id="duType" value="douqilai" type="hidden">
+        
+      </div>
+    
+  </div>
+</div>
+<div id="open_live2d">召唤看板娘</div>
+<script>
+  var message_Path = 'https://cdn.jsdelivr.net/gh/hsxyhao/live2d.github.io@master/';
+  let landlord = document.querySelector('#landlord');
+  var apiKey = landlord.dataset.key;
+</script>
+<script type="text/javascript" src="/media/live2d/js/live2d.js"></script>
+<script>
+	var home_Path = document.location.protocol + '//' + window.document.location.hostname + ":" + window.document.location.port + '/';
+	var userAgent = window.navigator.userAgent.toLowerCase();
+	var norunAI = ["android", "iphone", "ipod", "ipad", "windows phone", "mqqbrowser", "msie", "trident/7.0"];
+	var norunFlag = false;
+
+	for (var i = 0; i < norunAI.length; i++) {
+		if (userAgent.indexOf(norunAI[i]) > -1) {
+			norunFlag = true;
+			break;
+		}
+	}
+
+	if (!window.WebGLRenderingContext) {
+		norunFlag = true;
+	}
+
+	if (!norunFlag) {
+		var hitFlag = false;
+		var AIFadeFlag = false;
+		var liveTlakTimer = null;
+		var sleepTimer_ = null;
+		var AITalkFlag = false;
+		var talkNum = 0;
+		(function () {
+			function renderTip(template, context) {
+				var tokenReg = /(\\)?\{([^\{\}\\]+)(\\)?\}/g;
+				return template.replace(tokenReg, function (word, slash1, token, slash2) {
+					if (slash1 || slash2) {
+						return word.replace('\\', '');
+					}
+					var variables = token.replace(/\s/g, '').split('.');
+					var currentObject = context;
+					var i, length, variable;
+					for (i = 0, length = variables.length; i < length; ++i) {
+						variable = variables[i];
+						currentObject = currentObject[variable];
+						if (currentObject === undefined || currentObject === null) return '';
+					}
+					return currentObject;
+				});
+			}
+
+			String.prototype.renderTip = function (context) {
+				return renderTip(this, context);
+			};
+
+			var re = /x/;
+			re.toString = function () {
+				showMessage('哈哈，你打开了控制台，是想要看看我的秘密吗？', 5000);
+				return '';
+			};
+
+			$(document).on('copy', function () {
+				showMessage('你都复制了些什么呀，转载要记得加上出处哦~~', 5000);
+			});
+
+			function initTips() {
+				$.ajax({
+					cache: true,
+					url: message_Path + 'message.json',
+					dataType: "json",
+					success: function (result) {
+						$.each(result.mouseover, function (index, tips) {
+							$(tips.selector).mouseover(function () {
+								var text = tips.text;
+								if (Array.isArray(tips.text)) text = tips.text[Math.floor(Math.random() * tips.text.length + 1) - 1];
+								text = text.renderTip({ text: $(this).text() });
+								showMessage(text, 3000);
+								talkValTimer();
+								clearInterval(liveTlakTimer);
+								liveTlakTimer = null;
+							});
+							$(tips.selector).mouseout(function () {
+								showHitokoto();
+								if (liveTlakTimer == null) {
+									liveTlakTimer = window.setInterval(function () {
+										showHitokoto();
+									}, 15000);
+								};
+							});
+						});
+						$.each(result.click, function (index, tips) {
+							$(tips.selector).click(function () {
+								if (hitFlag) {
+									return false
+								}
+								hitFlag = true;
+								setTimeout(function () {
+									hitFlag = false;
+								}, 8000);
+								var text = tips.text;
+								if (Array.isArray(tips.text)) text = tips.text[Math.floor(Math.random() * tips.text.length + 1) - 1];
+								text = text.renderTip({ text: $(this).text() });
+								showMessage(text, 3000);
+							});
+							clearInterval(liveTlakTimer);
+							liveTlakTimer = null;
+							if (liveTlakTimer == null) {
+								liveTlakTimer = window.setInterval(function () {
+									showHitokoto();
+								}, 15000);
+							};
+						});
+					}
+				});
+			}
+			initTips();
+
+			var text;
+			if (document.referrer !== '') {
+				var referrer = document.createElement('a');
+				referrer.href = document.referrer;
+				text = '嗨！来自 <span style="color:#0099cc;">' + referrer.hostname + '</span> 的朋友！';
+				var domain = referrer.hostname.split('.')[1];
+				if (domain == 'baidu') {
+					text = '嗨！ 来自 百度搜索 的朋友！<br>欢迎访问<span style="color:#0099cc;">「 ' + document.title.split(' - ')[0] + ' 」</span>';
+				} else if (domain == 'so') {
+					text = '嗨！ 来自 360搜索 的朋友！<br>欢迎访问<span style="color:#0099cc;">「 ' + document.title.split(' - ')[0] + ' 」</span>';
+				} else if (domain == 'google') {
+					text = '嗨！ 来自 谷歌搜索 的朋友！<br>欢迎访问<span style="color:#0099cc;">「 ' + document.title.split(' - ')[0] + ' 」</span>';
+				}
+			} else {
+				if (window.location.href == home_Path) { //主页URL判断，需要斜杠结尾
+					var now = (new Date()).getHours();
+					if (now > 23 || now <= 5) {
+						text = '你是夜猫子呀？这么晚还不睡觉，明天起的来嘛？';
+					} else if (now > 5 && now <= 7) {
+						text = '早上好！一日之计在于晨，美好的一天就要开始了！';
+					} else if (now > 7 && now <= 11) {
+						text = '上午好！工作顺利嘛，不要久坐，多起来走动走动哦！';
+					} else if (now > 11 && now <= 14) {
+						text = '中午了，工作了一个上午，现在是午餐时间！';
+					} else if (now > 14 && now <= 17) {
+						text = '午后很容易犯困呢，今天的运动目标完成了吗？';
+					} else if (now > 17 && now <= 19) {
+						text = '傍晚了！窗外夕阳的景色很美丽呢，最美不过夕阳红~~';
+					} else if (now > 19 && now <= 21) {
+						text = '晚上好，今天过得怎么样？';
+					} else if (now > 21 && now <= 23) {
+						text = '已经这么晚了呀，早点休息吧，晚安~~';
+					} else {
+						text = '嗨~ 快来逗我玩吧！';
+					}
+				} else {
+					text = '欢迎阅读<span style="color:#0099cc;">「 ' + document.title.split(' - ')[0] + ' 」</span>';
+				}
+			}
+			showMessage(text, 12000);
+		})();
+
+		liveTlakTimer = setInterval(function () {
+			showHitokoto();
+		}, 15000);
+
+		function showHitokoto() {
+			if (sessionStorage.getItem("Sleepy") !== "1") {
+				if (!AITalkFlag) {
+					$.getJSON('https://v1.hitokoto.cn/', function (result) {
+						talkValTimer();
+						showMessage(result.hitokoto, 0);
+					});
+				}
+			} else {
+				hideMessage(0);
+				if (sleepTimer_ == null) {
+					sleepTimer_ = setInterval(function () {
+						checkSleep();
+					}, 200);
+				}
+			}
+		}
+
+		function checkSleep() {
+			var sleepStatu = sessionStorage.getItem("Sleepy");
+			if (sleepStatu !== '1') {
+				talkValTimer();
+				showMessage('你回来啦~', 0);
+				clearInterval(sleepTimer_);
+				sleepTimer_ = null;
+			}
+		}
+
+		function showMessage(text, timeout) {
+			if (Array.isArray(text)) text = text[Math.floor(Math.random() * text.length + 1) - 1];
+			$('.message').stop();
+			$('.message').html(text);
+			$('.message').fadeTo(200, 1);
+			//if (timeout === null) timeout = 5000;
+			//hideMessage(timeout);
+		}
+		function talkValTimer() {
+			$('#live_talk').val('1');
+		}
+
+		function hideMessage(timeout) {
+			//$('.message').stop().css('opacity',1);
+			if (timeout === null) timeout = 5000;
+			$('.message').delay(timeout).fadeTo(200, 0);
+		}
+
+		function initLive2d() {
+			$('#hideButton').on('click', function () {
+				if (AIFadeFlag) {
+					return false;
+				} else {
+					AIFadeFlag = true;
+					localStorage.setItem("live2dhidden", "0");
+					$('#landlord').fadeOut(200);
+					$('#open_live2d').delay(200).fadeIn(200);
+					setTimeout(function () {
+						AIFadeFlag = false;
+					}, 300);
+				}
+			});
+			$('#open_live2d').on('click', function () {
+				if (AIFadeFlag) {
+					return false;
+				} else {
+					AIFadeFlag = true;
+					localStorage.setItem("live2dhidden", "1");
+					$('#open_live2d').fadeOut(200);
+					$('#landlord').delay(200).fadeIn(200);
+					setTimeout(function () {
+						AIFadeFlag = false;
+					}, 300);
+				}
+			});
+			$('#youduButton').on('click', function () {
+				if ($('#youduButton').hasClass('doudong')) {
+					var typeIs = $('#youduButton').attr('data-type');
+					$('#youduButton').removeClass('doudong');
+					$('body').removeClass(typeIs);
+					$('#youduButton').attr('data-type', '');
+				} else {
+					var duType = $('#duType').val();
+					var duArr = duType.split(",");
+					var dataType = duArr[Math.floor(Math.random() * duArr.length)];
+
+					$('#youduButton').addClass('doudong');
+					$('#youduButton').attr('data-type', dataType);
+					$('body').addClass(dataType);
+				}
+			});
+			if (apiKey) {
+				$('#showInfoBtn').on('click', function () {
+					var live_statu = $('#live_statu_val').val();
+					if (live_statu == "0") {
+						return
+					} else {
+						$('#live_statu_val').val("0");
+						$('.live_talk_input_body').fadeOut(500);
+						AITalkFlag = false;
+						showHitokoto();
+						$('#showTalkBtn').show();
+						$('#showInfoBtn').hide();
+					}
+				});
+				$('#showTalkBtn').on('click', function () {
+					var live_statu = $('#live_statu_val').val();
+					if (live_statu == "1") {
+						return
+					} else {
+						$('#live_statu_val').val("1");
+						$('.live_talk_input_body').fadeIn(500);
+						AITalkFlag = true;
+						$('#showTalkBtn').hide();
+						$('#showInfoBtn').show();
+
+					}
+				});
+				$('#talk_send').on('click', function () {
+					var info_ = $('#AIuserText').val();
+					var userid_ = $('#AIuserName').val();
+					if (info_ == "") {
+						showMessage('写点什么吧！', 0);
+						return;
+					}
+					if (userid_ == "") {
+						showMessage('聊之前请告诉我你的名字吧！', 0);
+						return;
+					}
+					showMessage('思考中~', 0);
+					let protocol = window.location.protocol.indexOf("s") > 0 ? "https" : "http";
+					$.ajax({
+						type: "get",
+						url: `${protocol}://www.tuling123.com/openapi/api?key=${apiKey}&info=${info_}`,
+						dataType: "json",
+						success: function (res) {
+							talkValTimer();
+							showMessage(res.text, 0);
+							$('#AIuserText').val("");
+							sessionStorage.setItem("live2duser", userid_);
+						},
+						error: function (e) {
+							talkValTimer();
+							showMessage('似乎有什么错误，请和站长联系！', 0);
+						}
+					});
+				});
+			} else {
+				$('#showInfoBtn').hide();
+				$('#showTalkBtn').hide();
+			}
+			//获取音乐信息初始化
+			var bgmListInfo = $('input[name=live2dBGM]');
+			if (bgmListInfo.length == 0) {
+				$('#musicButton').hide();
+			} else {
+				var bgmPlayNow = parseInt($('#live2d_bgm').attr('data-bgm'));
+				var bgmPlayTime = 0;
+				var live2dBGM_Num = sessionStorage.getItem("live2dBGM_Num");
+				var live2dBGM_PlayTime = sessionStorage.getItem("live2dBGM_PlayTime");
+				if (live2dBGM_Num) {
+					if (live2dBGM_Num <= $('input[name=live2dBGM]').length - 1) {
+						bgmPlayNow = parseInt(live2dBGM_Num);
+					}
+				}
+				if (live2dBGM_PlayTime) {
+					bgmPlayTime = parseInt(live2dBGM_PlayTime);
+				}
+				var live2dBGMSrc = bgmListInfo.eq(bgmPlayNow).val();
+				$('#live2d_bgm').attr('data-bgm', bgmPlayNow);
+				$('#live2d_bgm').attr('src', live2dBGMSrc);
+				$('#live2d_bgm')[0].currentTime = bgmPlayTime;
+				$('#live2d_bgm')[0].volume = 0.5;
+				var live2dBGM_IsPlay = sessionStorage.getItem("live2dBGM_IsPlay");
+				var live2dBGM_WindowClose = sessionStorage.getItem("live2dBGM_WindowClose");
+				if (live2dBGM_IsPlay == '0' && live2dBGM_WindowClose == '0') {
+					$('#live2d_bgm')[0].play();
+					$('#musicButton').addClass('play');
+				}
+				sessionStorage.setItem("live2dBGM_WindowClose", '1');
+				$('#musicButton').on('click', function () {
+					if ($('#musicButton').hasClass('play')) {
+						$('#live2d_bgm')[0].pause();
+						$('#musicButton').removeClass('play');
+						sessionStorage.setItem("live2dBGM_IsPlay", '1');
+					} else {
+						$('#live2d_bgm')[0].play();
+						$('#musicButton').addClass('play');
+						sessionStorage.setItem("live2dBGM_IsPlay", '0');
+					}
+				});
+				window.onbeforeunload = function () {
+					sessionStorage.setItem("live2dBGM_WindowClose", '0');
+					if ($('#musicButton').hasClass('play')) {
+						sessionStorage.setItem("live2dBGM_IsPlay", '0');
+					}
+				}
+				document.getElementById('live2d_bgm').addEventListener("timeupdate", function () {
+					var live2dBgmPlayTimeNow = document.getElementById('live2d_bgm').currentTime;
+					sessionStorage.setItem("live2dBGM_PlayTime", live2dBgmPlayTimeNow);
+				});
+				document.getElementById('live2d_bgm').addEventListener("ended", function () {
+					var listNow = parseInt($('#live2d_bgm').attr('data-bgm'));
+					listNow++;
+					if (listNow > $('input[name=live2dBGM]').length - 1) {
+						listNow = 0;
+					}
+					var listNewSrc = $('input[name=live2dBGM]').eq(listNow).val();
+					sessionStorage.setItem("live2dBGM_Num", listNow);
+					$('#live2d_bgm').attr('src', listNewSrc);
+					$('#live2d_bgm')[0].play();
+					$('#live2d_bgm').attr('data-bgm', listNow);
+				});
+				document.getElementById('live2d_bgm').addEventListener("error", function () {
+					$('#live2d_bgm')[0].pause();
+					$('#musicButton').removeClass('play');
+					showMessage('音乐似乎加载不出来了呢！', 0);
+				});
+			}
+			//获取用户名
+			var live2dUser = sessionStorage.getItem("live2duser");
+			if (live2dUser !== null) {
+				$('#AIuserName').val(live2dUser);
+			}
+			//获取位置
+			var landL = sessionStorage.getItem("historywidth");
+			var landB = sessionStorage.getItem("historyheight");
+			if (landL == null || landB == null) {
+				landL = '5px'
+				landB = '0px'
+			}
+			$('#landlord').css('left', landL + 'px');
+			$('#landlord').css('bottom', landB + 'px');
+			//移动
+			function getEvent() {
+				return window.event || arguments.callee.caller.arguments[0];
+			}
+			var smcc = document.getElementById("landlord");
+			var moveX = 0;
+			var moveY = 0;
+			var moveBottom = 0;
+			var moveLeft = 0;
+			var moveable = false;
+			var docMouseMoveEvent = document.onmousemove;
+			var docMouseUpEvent = document.onmouseup;
+			smcc.onmousedown = function () {
+				var ent = getEvent();
+				moveable = true;
+				moveX = ent.clientX;
+				moveY = ent.clientY;
+				var obj = smcc;
+				moveBottom = parseInt(obj.style.bottom);
+				moveLeft = parseInt(obj.style.left);
+				if (isFirefox = navigator.userAgent.indexOf("Firefox") > 0) {
+					window.getSelection().removeAllRanges();
+				}
+				document.onmousemove = function () {
+					if (moveable) {
+						var ent = getEvent();
+						var x = moveLeft + ent.clientX - moveX;
+						var y = moveBottom + (moveY - ent.clientY);
+						obj.style.left = x + "px";
+						obj.style.bottom = y + "px";
+					}
+				};
+				document.onmouseup = function () {
+					if (moveable) {
+						var historywidth = obj.style.left;
+						var historyheight = obj.style.bottom;
+						historywidth = historywidth.replace('px', '');
+						historyheight = historyheight.replace('px', '');
+						sessionStorage.setItem("historywidth", historywidth);
+						sessionStorage.setItem("historyheight", historyheight);
+						document.onmousemove = docMouseMoveEvent;
+						document.onmouseup = docMouseUpEvent;
+						moveable = false;
+						moveX = 0;
+						moveY = 0;
+						moveBottom = 0;
+						moveLeft = 0;
+					}
+				};
+			};
+		}
+		$(document).ready(function () {
+			var AIimgSrc = [];
+			let chooseLive2d = 'aoba'
+			if (chooseLive2d === 'histoire') {
+				AIimgSrc.push(message_Path + "model/histoire/histoire.1024/texture_00.png");
+				AIimgSrc.push(message_Path + "model/histoire/histoire.1024/texture_01.png");
+				AIimgSrc.push(message_Path + "model/histoire/histoire.1024/texture_02.png");
+				AIimgSrc.push(message_Path + "model/histoire/histoire.1024/texture_03.png");
+			} else if (chooseLive2d === 'rem') {
+				AIimgSrc.push(message_Path + "model/rem/remu2048/texture_00.png");
+			} else if (chooseLive2d === 'aoba') {
+				AIimgSrc.push(message_Path + "model/aoba/textures/texture_00.png");
+			} else if (chooseLive2d === 'hijiki') {
+				AIimgSrc.push(message_Path + "model/hijiki/moc/hijiki.2048/texture_00.png");
+			} else if (chooseLive2d === 'tororo') {
+				AIimgSrc.push(message_Path + "model/tororo/moc/tororo.2048/texture_00.png");
+			}
+			var images = [];
+			var imgLength = AIimgSrc.length;
+			var loadingNum = 0;
+			for (var i = 0; i < imgLength; i++) {
+				images[i] = new Image();
+				images[i].src = AIimgSrc[i];
+				images[i].onload = function () {
+					loadingNum++;
+					if (loadingNum === imgLength) {
+						var live2dhidden = localStorage.getItem("live2dhidden");
+						if (live2dhidden === "0") {
+							setTimeout(function () {
+								$('#open_live2d').fadeIn(200);
+							}, 1300);
+						} else {
+							setTimeout(function () {
+								$('#landlord').fadeIn(200);
+							}, 1300);
+						}
+						let model = '';
+						if (chooseLive2d === 'histoire') {
+							model = message_Path + "model/histoire/model.json";
+						} else if (chooseLive2d === 'rem') {
+							model = message_Path + "model/rem/model.json";
+						} else if (chooseLive2d === 'aoba') {
+							model = message_Path + "model/aoba/model.json";
+						} else if (chooseLive2d === 'hijiki') {
+							model = message_Path + "model/hijiki/hijiki.model.json";
+						} else if (chooseLive2d === 'tororo') {
+							model = message_Path + "model/tororo/tororo.model.json";
+						}
+						setTimeout(function () {
+							loadlive2d("live2d", model);
+						}, 1000);
+						initLive2d();
+						images = null;
+					}
+				}
+			}
+		});
+	}
+</script>
+  
+  
+</div>
+<script>
+
+  let sideBarOpen = 'sidebar-open';
+  let body = document.body;
+  let back2Top = document.querySelector('#back_to_top'),
+    back2TopText = document.querySelector('#back_to_top_text'),
+    drawerBox = document.querySelector('#drawer_box'),
+    rightSideBar = document.querySelector('.sidebar'),
+    viewport = document.querySelector('body');
+
+  function scrollAnimation(currentY, targetY) {
+
+    let needScrollTop = targetY - currentY
+    let _currentY = currentY
+    setTimeout(() => {
+      const dist = Math.ceil(needScrollTop / 10)
+      _currentY += dist
+      window.scrollTo(_currentY, currentY)
+      if (needScrollTop > 10 || needScrollTop < -10) {
+        scrollAnimation(_currentY, targetY)
+      } else {
+        window.scrollTo(_currentY, targetY)
+      }
+    }, 1)
+  }
+
+  back2Top.addEventListener("click", function (e) {
+    scrollAnimation(document.scrollingElement.scrollTop, 0);
+    e.stopPropagation();
+    return false;
+  });
+
+  window.addEventListener('scroll', function (e) {
+    let percent = document.scrollingElement.scrollTop / (document.scrollingElement.scrollHeight - document.scrollingElement.clientHeight) * 100;
+    if (percent > 1 && !back2Top.classList.contains('back-top-active')) {
+      back2Top.classList.add('back-top-active');
+    }
+    if (percent == 0) {
+      back2Top.classList.remove('back-top-active');
+    }
+    if (back2TopText) {
+      back2TopText.textContent = Math.floor(percent);
+    }
+  });
+
+
+  let hasCacu = false;
+  window.addEventListener('resize', function (e) {
+    calcuHeight();
+  });
+
+  function calcuHeight() {
+    // 动态调整站点概览高度
+    if (!hasCacu && back2Top.classList.contains('pisces') || back2Top.classList.contains('gemini')) {
+      let sideBar = document.querySelector('.sidebar');
+      let navUl = document.querySelector('#site_nav');
+      sideBar.style = 'margin-top:' + (navUl.offsetHeight + navUl.offsetTop + 15) + 'px;';
+      hasCacu = true;
+    }
+  }
+  calcuHeight();
+
+  let open = false, MOTION_TIME = 300, RIGHT_MOVE_DIS = '320px';
+
+  if (drawerBox) {
+    let rightMotions = document.querySelectorAll('.right-motion');
+    let right = drawerBox.classList.contains('right');
+
+    let transitionDir = right ? "transition.slideRightIn" : "transition.slideLeftIn";
+
+    let openProp, closeProp;
+    if (right) {
+      openProp = {
+        paddingRight: RIGHT_MOVE_DIS
+      };
+      closeProp = {
+        paddingRight: '0px'
+      };
+    } else {
+      openProp = {
+        paddingLeft: RIGHT_MOVE_DIS
+      };
+      closeProp = {
+        paddingLeft: '0px'
+      };
+    }
+
+    drawerBox.onclick = function () {
+      open = !open;
+      jQuery.Velocity(rightSideBar, 'stop');
+      jQuery.Velocity(viewport, 'stop');
+      jQuery.Velocity(rightMotions, 'stop');
+      if (open) {
+        jQuery.Velocity(rightSideBar, {
+          width: RIGHT_MOVE_DIS
+        }, {
+          duration: MOTION_TIME,
+          begin: function () {
+            jQuery.Velocity(rightMotions, transitionDir, {});
+          }
+        })
+        jQuery.Velocity(viewport, openProp, {
+          duration: MOTION_TIME
+        });
+      } else {
+        jQuery.Velocity(rightSideBar, {
+          width: '0px'
+        }, {
+          duration: MOTION_TIME,
+          begin: function () {
+            jQuery.Velocity(rightMotions, {
+              opacity: 0
+            });
+          }
+        })
+        jQuery.Velocity(viewport, closeProp, {
+          duration: MOTION_TIME
+        });
+      }
+      for (let i = 0; i < drawerBox.children.length; i++) {
+        drawerBox.children[i].classList.toggle('muse-line');
+      }
+      drawerBox.classList.toggle(sideBarOpen);
+    }
+  }
+
+  // 链接跳转
+  let newWindow = 'true'
+  if (newWindow === 'true') {
+    let links = document.querySelectorAll('.post-body a')
+    links.forEach(item => {
+      if (!item.classList.contains('btn')) {
+        item.setAttribute("target", "_blank");
+      }
+    })
+  }
+
+  let faSearch = document.querySelector('#fa_search');
+  faSearch && faSearch.addEventListener('click', function () {
+    document.querySelector('#search_mask').style = ''
+  })
+
+  // 代码高亮
+  hljs.initHighlightingOnLoad();
+  
+  // 离开当前页title变化
+  var leaveTitle = "";
+  var normal_title = document.title;
+  if (leaveTitle) {
+    document.addEventListener('visibilitychange', function () {
+      if (document.visibilityState == 'hidden') {
+        normal_title = document.title;
+        document.title = leaveTitle;
+      } else {
+        document.title = normal_title;
+      }
+    });
+  }
+
+</script>
+
+<link rel="stylesheet" href="/media/css/jquery.fancybox.css" />
+<script src="/media/js/jquery.fancybox.js"></script>
+
+<script>
+  let images = document.querySelectorAll('.section img');
+  images.forEach(image => {
+    var parent = image.parentElement;
+    var next = image.nextElementSibling;
+    parent.removeChild(image);
+    var aelem = document.createElement('a');
+    aelem.href = image.src;
+    aelem.dataset['fancybox'] = 'images';
+    aelem.dataset['rel'] = 'fancybox-button';
+    aelem.classList.add('fancybox');
+    aelem.appendChild(image);
+    parent.insertBefore(aelem, next);
+  })
+</script>
+
+  </div>
+</body>
+
+<div class="search-mask" id="search_mask" style="display: none;">
+  <div class="search-box">
+    <div class="search-title">
+      <i class="fa fa-search"></i>
+      <div class="input-box">
+        <input id="search" type="text" class="language" data-lan="search" placeholder="搜索">
+      </div>
+      <i id="close" class="fa fa-times-circle"></i>
+    </div>
+    <div class="stat-box">
+      <span id="stat_count">0</span><span class="language" data-lan="stat">条相关条目，使用了</span><span id="stat_times">0</span><span class="language" data-lan="stat-time">毫秒</span>
+      <hr>
+    </div>
+    <div class="result" id="result">
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://SkeathyTomas.github.io/post/从二次元人设到三次元人设——人设的商业价值/"" data-c="
+          &lt;p&gt;随着动画作品接触越来越多，从一开始的剧情党，到越来越重视作品对于人物的塑造。也许大多数剧情套路都渐渐掌握，剧情的波澜起伏带来的吸引力反而不如如何讲好一个故事和如何塑造一个角色。作为一名老“二刺螈”在职PM，偶尔也想来聊一聊人设的魅力。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;h2 id=&#34;人设是什么&#34;&gt;人设是什么&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;人设——人物形象设计，简称人设，或称为角色设计、人物设定（日语：キャラクターデザイン），是指设计动画、小说、游戏、电影等媒体中角色造型，包括外表、服装、表情等细节。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;从这段摘自维基的人设的定义来看（吐槽一下人设的日语是character design的舶来语），人设是视觉层面的，是赋予一个抽象人物的具象形象。当然，我并不完全赞同人设只是外表的设计，人物性格、背景、经历等抽象设定，我也认为算在人设范围之内，当然这些抽象概念的设定不会像外表那样显而易见就是了。此外，正所谓“万物皆可娘化”，人设自然也非仅限于人物，通过拟人化处理，动物、物品等皆可有“人设”。&lt;/p&gt;
+&lt;p&gt;从定义上来看，人设是作品的重要组成部分，且为作品服务。但是随着人设的发展，一些人设已经开始脱离传统意义上的作品，我将花两个小节给出一些作品内和作品外的人设的案例，帮助理解人设及其发展。&lt;/p&gt;
+&lt;h2 id=&#34;作品中的人设&#34;&gt;作品中的人设&lt;/h2&gt;
+&lt;h2 id=&#34;作品外的人设&#34;&gt;作品外的人设&lt;/h2&gt;
+&lt;h2 id=&#34;人设的魅力与商业价值&#34;&gt;人设的魅力与商业价值&lt;/h2&gt;
+&lt;h2 id=&#34;人设的发展前景&#34;&gt;人设的发展前景&lt;/h2&gt;
+">从二次元人设到三次元人设——人设的商业价值</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://SkeathyTomas.github.io/post/原神活动玩法评析/"" data-c="
+          &lt;p&gt;经历了两个大版本的节日活动，又在1.5版本前瞻中了解到原神下一版本似乎有没有大地图的更新后，各位旅行者又要继续在漫长的长草期中靠着活动玩法和玩家整活保持游戏的热度。当然本旅行者也是如此，所以在这么一个长草期中总结一下游戏中活动玩法，分析一下活动玩法的模式类型、个人体验等，顺便提出一些活动玩法的个人建议。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;em&gt;特别注意：本次评析的活动玩法仅包含游戏内部的限时活动玩法，不包含游戏内常驻玩法及轮替常驻玩法（渊月螺旋、纪行、签到、祈愿抽卡、角色试玩等）、其他运营平台活动（h5小游戏）、线下活动、同人创作活动等。活动玩法整理来源于个人回忆和&lt;a href=&#34;https://bbs.mihoyo.com/ys/obc/channel/map/105?bbs_presentation_style=no_header&#34;&gt;米游社观测·wiki&lt;/a&gt;，可能会有遗漏与错误。&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;活动记录&#34;&gt;活动记录&lt;/h2&gt;
+&lt;p&gt;本节主要对先版本中出现过的限时活动进行梳理和记录，并做简要介绍，以便于后续的分析和评价。&lt;/p&gt;
+&lt;h3 id=&#34;10版本&#34;&gt;1.0版本&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;元素烘炉&lt;/strong&gt;：联机怪物挑战，收集场地元素凝块获取角色升级资源。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;百货奇货&lt;/strong&gt;：采集物商品交易，简单粗暴的奖励兑换，多次复刻与优化。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;11版本&#34;&gt;1.1版本&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;未归的熄星&lt;/strong&gt;：天降奇异陨石，收集线索和陨石残骸，解决陨石引起的怪物暴动，解开陨石的真相，商店兑换奖励，送角色。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;飞行挑战&lt;/strong&gt;：借助加速风场在规定时间内到达终点，根据途中“吃”到的金币和所需时间计算奖励分数。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;佳肴尚温&lt;/strong&gt;：跑图任务，在规定时间内为NPC送外卖，有角色能力限制。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;12版本&#34;&gt;1.2版本&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;白垩与黑龙&lt;/strong&gt;：解开雪山与神秘长剑（腐殖之剑）的秘密，雪山怪物限时特殊掉落，两种特殊形式的怪物挑战，Boss战，商店兑换奖励，送武器。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;秘宝迷踪&lt;/strong&gt;：通过寻宝仙灵的特殊提醒，或者藏宝图的提醒在大世界中寻宝，有概率遇到困难任务，可通过联机摇人帮忙解决，商店兑换奖励。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;无相交响诗&lt;/strong&gt;：自选标签高难boss战斗（类似隔壁危机合约），根据累计积分兑换奖励。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;13版本&#34;&gt;1.3版本&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;福至五彩&lt;/strong&gt;：拍照集不同颜色的卡片，游戏中的集五福活动。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;海灯节&lt;/strong&gt;：邀请魈参加海灯节的主线剧情，同时体验璃月的海灯节节日场景和大杂烩活动，送角色。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;海灯节轶事&lt;/strong&gt;：解决璃月居民的各种请求，跑图、解谜、打怪、微剧情。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;机关奇谭&lt;/strong&gt;：塔防小游戏，商店兑换奖励。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;地脉移涌&lt;/strong&gt;：角色经验、基础货币（摩拉）资源双倍掉落福利。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;龙蜥寻踪&lt;/strong&gt;：弱解谜的地图新怪物讨伐。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;14版本&#34;&gt;1.4版本：&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;风花的邀约&lt;/strong&gt;：体验蒙德风花节的大杂烩活动，主线剧情是探索蒙德的风之花究竟为何，商店兑换奖励，送武器。
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;节日逸闻&lt;/strong&gt;：解决蒙德居民的跑图任务，与海灯节轶事类似，数量大大减少。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;百发百中&lt;/strong&gt;：射气球小游戏。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;风中之花&lt;/strong&gt;：新类型的飞行挑战，从高处降落收集物品。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;风物之歌&lt;/strong&gt;：音游小游戏。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;奇趣秘园&lt;/strong&gt;：结合boss怪物挑战的糖豆人闯关小游戏。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;争斗潮流&lt;/strong&gt;：带buff的限时怪物擂台挑战。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;纯水之愿&lt;/strong&gt;：新的宠物小精灵——嫣朵拉，通过水泡攻击捕捉怪物；限时新boss挑战，获取角色升级资源。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;注意：公测第一个限时活动，当时还沉浸在世界探索和主线剧情上，完全没怎么在意这个活动，甚至体力都不知道去清。加上对于游戏机制了解的欠缺，也完全没体会到搬运元素的各种玩法设计，只知道是个刷刷打打奖励还不错的活动。其余活动都是深度体验领完奖励。&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;活动分析&#34;&gt;活动分析&lt;/h2&gt;
+&lt;p&gt;主要从活动的类型、属性、奖励、是否消耗体力等多方面分析各活动，详见表格。（由于所有活动的奖励都包含各类资源，若不做特殊说明，则默认是此类奖励。）&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;活动名称&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;类型定义&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;活动场景&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;体力消耗&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;奖励类型&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;是否联机&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;可选难度&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;元素烘炉&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;战斗刷素材&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;大世界&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;是&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;角色升级经验资源&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;必须联机&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;否&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;百货奇货&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;商品交易&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;大世界NPC&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;否&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;/&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;可选联机&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;无&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;未归的熄星&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;剧情探索收集战斗&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;大世界&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;是&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;商店兑换&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;可选联机&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;是&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;飞行挑战&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;小游戏&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;大世界&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;否&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;记分&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;否&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;否&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;佳肴尚温&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;跑图小游戏&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;大世界&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;否&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;/&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;否&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;否&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;白垩与黑龙&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;剧情探索战斗&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;大世界&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;否&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;商店兑换&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;可选联机&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;否&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;秘宝迷踪&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;探索战斗&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;大世界&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;否&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;/&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;可选联机&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;否&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;无相交响诗&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;战斗&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;秘境&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;否&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;记分&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;可选联机&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;是&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;福至五彩&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;探索社交&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;大世界&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;否&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;/&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;否&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;否&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;海灯节&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;剧情&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;大世界&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;否&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;/&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;否&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;否&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;海灯节轶事&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;微剧情跑图战斗解谜&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;大世界&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;否&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;/&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;否&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;否&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;机关奇谭&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;塔防小游戏&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;秘境&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;否&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;记分、商店兑换&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;可选联机&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;是&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;地脉移涌&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;战斗&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;大世界&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;是&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;双倍奖励&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;否&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;否&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;龙蜥寻踪&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;解谜战斗&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;大世界&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;否&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;/&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;否&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;否&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;风花的邀约&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;剧情&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;大世界&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;否&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;/&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;否&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;否&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;节日逸闻&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;微剧情跑图&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;大世界&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;否&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;/&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;否&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;否&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;百发百中&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;射击小游戏&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;大世界&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;否&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;记分，商店兑换&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;可选联机&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;否&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;风中之花&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;飞行小游戏&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;大世界&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;否&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;记分，商店兑换&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;否&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;否&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;风物之歌&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;音游小游戏&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;大世界&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;否&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;记分，商店兑换&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;否&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;是&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;奇趣秘园&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;闯关战斗小游戏&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;秘境&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;否&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;成就&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;可选联机&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;否&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;争斗潮流&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;战斗&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;大世界&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;否&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;/&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;可选联机&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;是&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;纯水之愿&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;剧情探索收集战斗&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;大世界&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;可用体力&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;角色升级经验资源&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;可选联机&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;否&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;em&gt;以上表格的整理也许并不完全准确，比如是否联机这一块，大多活动任务（除剧情外），基本都可以在日常的联机匹配中和好友或陌生好友一起完成。由于我本人基本都是单机玩家，除非一个人过不了或者角色联机的体验显著大于单机，才会尝试联机。基本只有联机过的活动才会贴上（可选）联机的标签。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;那么从以上表格的结果中，可以获得那些信息呢？&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;活动的六维属性的信息。当然这个信息维度空间是离散的，每个维度空间大多包含2-3个可选值。就算是最复杂的活动类型这一属性，也可大致氛围战斗、剧情、解谜、小游戏四个可选值。通过属性空间的定义，可以在空间中搜索未尝试过的新类型游戏，抑或是拓展维度空间，为玩家提供活动的新内容新体验。&lt;/li&gt;
+&lt;li&gt;时间信息。活动按照发布的时间进行排序，可以探索活动的维度属性随时间的变化趋势。虽然数据量很少，但总能得出一些规律。比如，强制联机改成了可选联机，体力使用从一开始受到诟病到很长一段时间都不再消耗体力，到现版本又得到了回归（照顾爱肝的玩家）。活动的类型，每一个大版本有一个核心的大活动，包含剧情解谜战斗多类型要素，其他各种类型也保持相对平衡，避免在同质化的内容上让玩家觉得疲惫。&lt;/li&gt;
+&lt;li&gt;如果可以得到玩家的反馈信息（官方的问卷应该完全可以得到这些数据），则可以借助单个或多个维度的属性对活动的效果进行评价，评估什么类型的活动哪种属性更讨玩家喜欢。由于个人无法获得准确的玩家信息（实际上我可以爬一些每个活动下的用户评论进行一定的分析得到一些结果，后续有时间可以尝试），就不细分析了，在文章最后的个人评价中结合观测到的一些用户反馈随便谈谈感想就好。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;个人评价&#34;&gt;个人评价&lt;/h2&gt;
+&lt;p&gt;有时候会想，也许活动玩法的设计真不比核心玩法的设计简单。核心玩法可以慢慢打磨，没做好就硬拖，但是每个版本一定要推出各种各样的活动玩法，维持游戏的热度和玩家日活，面临KPI和玩家讨伐的双重压力。加上活动玩法一经敲定与实现，很难也没时间从底层大改，直接砍掉基本不可能，没有什么试错机会，所以基本在方案策划初期就需要考虑到后期的各种风险，对策划的预判、leader的资源掌握、团队的执行力都有不小的考验。听说佳肴尚温这一活动就受到某策划的强力反对，但最后还是实装上线，最后也似乎受到了不少玩家的吐槽。&lt;/p&gt;
+&lt;p&gt;最后结合自己的体验提几条活动设计的原则吧：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;活动玩法的核心目的。目前，原神的活动玩法没有任何氪金点，所以提供玩法多样性，提升玩家游戏体验是最为核心的目的。在完成这一核心目标的基础上，才能完成企业方向的目标（日活与热度）。&lt;/li&gt;
+&lt;li&gt;尽量不脱离核心玩法。在&lt;a href=&#34;https://skeathytomas.github.io/post/%E5%8E%9F%E7%A5%9E%E7%8E%A9%E6%B3%95%E6%80%BB%E7%BB%93/&#34;&gt;原神玩法总结&lt;/a&gt;中，我就总结了三大核心玩法——大世界、战斗和养成，活动玩法需要尽量多和核心玩法有关，避免游戏的割裂感。能在大世界中完成的就不要设置独立的秘境（话说主线中设置的各种秘境只能玩一次，仿佛不存在于大世界中，这已经非常割裂了，如果是线性流程的RPG一遍过也就认了），设置必要的战斗，提供高于日常的养成资源供给。这里日常diss塔防秘境和原豆人秘境，脱离大世界的秘境，本身玩法的乐趣也和正统的塔防、闯关有较大差距。&lt;/li&gt;
+&lt;li&gt;给予玩家自主选择的权力。由于玩家练度、操作的差异，难度自选、记分都是比较合适的解决方案。设置合理的奖励上限，保证领取奖励的条件对大部分玩家而言并不苛刻，也不限制玩家凹分，提供玩家创作的动力。同时，在奖励方面也最好提供多方面的选择，避免同一种养成资源，说的就是最近的纯水，刷得好无聊，刷完发现资源并用不出去（其他资源欠缺）。&lt;/li&gt;
+&lt;li&gt;给予玩家试错的机会。作为一款非血压游戏，就不要在活动中加入像i wanna系列、getting over it 之类让人血压飙升的玩法了，特别是长流程一部出错就要重新开始的那种。点明送外卖玩法，虽然限定角色能力会让玩家觉得不爽，但途中突然出现的怪物、湿地让人猝不及防，并且直接重新开始才是整个活动受到诟病的主要原因。如果是我，我会设计记分系统，比如不使用某能力可以加分、时间剩余可以加分之类，最终根据记分（客户满意度）领取对应奖励。&lt;s&gt;当然，如果是让我给刻晴送外卖那就更好了。&lt;/s&gt;&lt;/li&gt;
+&lt;li&gt;随机性与确定性。随机性可以提供玩法的多样性，塔防、原豆人里都融入了随机因素，但是随机建立在玩法本身的乐趣上。当所有玩法都遍历了，随机性就失去了随机的意义，当这时候还融入随机性，为了刷个关卡成就死活刷不出来的时候，就要破口大骂随机性了（点名原豆人）。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;最后，千言万语，希望原神1.6能出新地图。&lt;/p&gt;
+">原神活动玩法评析</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://SkeathyTomas.github.io/post/《冰菓》中的恋爱小故事——折木x千反田/"" data-c="
+          &lt;p&gt;距离上一篇写福部和伊原的文章都快过去一年了，这篇讲述折木和千反田的恋爱物语也终于填上了坑。要说这么慢的原因的话，就是男女主的情感线写起来比男二女二难多了，以及——一直鸽一直爽。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;比起男二女二从一开始就互相喜欢的设定，男女主是&lt;strong&gt;从相识到相处到互有好感到恋爱（大概）&lt;/strong&gt;，所有的情感线都埋在推理日常的剧情中以及人物的成长之下。所有的细节都需要一点点回顾二人的日常，所以又去N刷了动画。尽管如此，作为暗线的暗线，动画对于男女主情感的描述隐晦而含蓄，完全没有男二女二那样清晰，所以&lt;strong&gt;大多解读仍然是个人解读&lt;/strong&gt;，欢迎大家补充。这里，就由我带领大家来回顾一下《冰菓》中的男女主的情愫是如何发展起来的吧。&lt;/p&gt;
+&lt;h2 id=&#34;相识&#34;&gt;相识&lt;/h2&gt;
+&lt;p&gt;哪怕是没看过《冰菓》的人，恐怕也会对男女主的相识名场景有些印象——作为AMV的热门素材。少年走进社团教室，看到了窗边的少女，少女的镜头马上切换为少年的第一视角，并随着走动上下轻微晃动。随着少年越走越近，少女的背影越来越清晰，少女也听到逐渐靠近的脚步声回过头来。少年停下了脚步，少年和少女互相注视着对方，瞳孔里映射出对方的倒影（顺便这一手法之后也多次使用了）。少女冲少年微微一笑，少年则愣在了原地。&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/SkeathyTomas/img/main/img/image-20200322091018156.png&#34; alt=&#34;image-20200322091018156&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/SkeathyTomas/img/main/img/image-20200322091040613.png&#34; alt=&#34;image-20200322091040613&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;折木在老姐的安排下加入古典部，没想到在锁着的社团教室里发现了野生的千反田，于是玫瑰色的高中生活开始了（这一切都是老姐的入赘豪门计划）。动画将这一场景安排在首集op前，不可谓不吸引人。&lt;strong&gt;动画极力表现少男少女“一见钟情”的场景，脚步声也类似扑通扑通的心动的声音。&lt;strong&gt;但是，尽管动画表现得十分暧昧，甚至还特意安排了福部调侃二人的“幽会”，却很难得出男女主真正一眼就爱上了对方，只能说&lt;/strong&gt;存在一瞬间心动的可能性&lt;/strong&gt;（要是我的话肯定就爱了爱了，馋身子警告）。从二人对于福部调侃的回应也说明了这一点——千反田才开始脸红害羞（天然属性暴露——你们京都人贴人脸上都不脸红，被人调侃才会），而折木一脸冷漠早已看穿。&lt;/p&gt;
+&lt;p&gt;然而，官方的暧昧在这一集中继续升华。对于千反田为何被锁教室这一问题，好奇宝宝第一次展现出自己的“超能力”，拦住想要回去的折木，于是又出现了一处名场景——&lt;strong&gt;抓手手，贴脸脸，面红耳赤加上blingbling的大眼睛，以及标志性的一句『私、気になります』（我很好奇）&lt;/strong&gt;。这一折木想象中的场景可以说是当初第一次看《冰菓》时最吸引我的一幕了，少女的长发将少年捆绑，头发上长出好奇心之花（银边翠，在日本被称为初雪草，花语好奇心），诱导（强迫）好好思考前面的问题。&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;3&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/SkeathyTomas/img/main/img/image-20200324003738611.png&#34; alt=&#34;image-20200324003738611&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;这一幕糖分充足，这还不是恋爱吗？可惜还真不是——千反田只是单纯的好奇，一好奇起来根本不知道怎么把控人与人之间合适的距离，当然&lt;strong&gt;天然属性&lt;/strong&gt;的她日常中也不是很懂人与人之间关系的处理；而折木更多的是&lt;strong&gt;蔷薇色的生活闯入他灰色生活带来的震撼&lt;/strong&gt;，以及之后的在两种生活方式之间的抉择。当然，一瞬间的心动也是存在的，所以折木才会回过神来看了看被摸的手（OS：这手不洗了）。&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;4&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/SkeathyTomas/img/main/img/image-20200325003106037.png&#34; alt=&#34;image-20200325003106037&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;总结，二人的相识被动画表现得相当浪漫而暧昧，会让人一眼以为是恋爱番的错觉。（插句话，我个人对于《冰菓》的定位是&lt;strong&gt;略带苦涩的青春日常推理番&lt;/strong&gt;，恋爱这是青春中的一段小插曲。）&lt;strong&gt;二人的相识或许有些微的心动讯号，或者说留下了一个好印象，但离所谓的恋爱还差得远呢。&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;表白&#34;&gt;表白&lt;/h2&gt;
+&lt;p&gt;表白来得太突然，再加上之前的种种暗示，我真的有被骗到。无所事事的古典部，千反田商议起制作部刊的事情，又强行把折木拉到了图书馆，强迫他思考图书馆神奇的借书事件。这一话给了二人非常多的互动，随便截个同框都可以用作情头，给结尾的表白疯狂暗示。&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;5&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/SkeathyTomas/img/main/img/image-20200414225225226.png&#34; alt=&#34;image-20200414225225226&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;在经历了两三起日常推理事件之后，折木的推理能力逐渐被大家认识到，千反田对此似乎很感兴趣。在一个恬静的星期日，千反田打电话到折木家，把折木约到了一家咖啡店。（提问：这里的折木怎么就答应了一件多余的事呢？）千反田姗姗来迟，折木虽然抱怨着怎么还不来，却对便服的千反田看呆了眼。千反田支支吾吾，不知道怎么开口，折木有些生气，难得的礼拜天就这么被折腾了，差点就回家去了。千反田连忙制止，忙说着抱歉。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;千反田：我很紧张。&lt;/p&gt;
+&lt;p&gt;折木：…紧张啊，难不成你打算向我告白吗？&lt;/p&gt;
+&lt;p&gt;千反田：说不定倒也可以算表白。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;折木不经意的调侃反而得到了意外的回答，又愣住了，千反田则稍稍别过视线，二人的眼里都在期待着些什么。表白的氛围被渲染到了极点，可是这一话戛然而止，观众们又被吊足了胃口。&lt;/p&gt;
+&lt;p&gt;第三话开头继续着这一场景，而且加了一层恋爱滤镜，画面变粉，墙上的钟摆变成了心形，桌上的粉色康乃馨也在滤镜的作用下变成了红色（红色康乃馨的花语是迷恋热爱，象征着热恋；粉色康乃馨花语是我不会忘了你，象征着千反田对舅舅的思念，对应着古典部往事的剧情），千反田抓着裙摆显得更加紧张，折木也面对突如其来的表白紧张得流汗。&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;6&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/SkeathyTomas/img/main/img/image-20200330201745674.png&#34; alt=&#34;image-20200330201745674&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;就当大家都盼望着表白的时候，千反田又不按套路出牌，说出了不情之请的真相（古典部的历史真相）。一瞬间，滤镜消了，钟摆变回了圆形，康乃馨也变回粉色，&lt;strong&gt;折木的脸上似乎除了震惊，还有一丝的失落&lt;/strong&gt;。这短短的几分钟，很可能是&lt;strong&gt;全动画中最直白的描述男女主恋爱的场景&lt;/strong&gt;了（虽然是刻意营造的虚假的表白），相信一个清纯少年无论如何也会沦陷吧。&lt;/p&gt;
+&lt;p&gt;所以，我的结论是，&lt;strong&gt;在这一刻，折木也真正沦陷了，少年的恋爱真正开始了&lt;/strong&gt;。在前几次千反田的请求中，还可以看到折木的各种不情愿，能不去做就不去，甚至可以大费周章策划其余事件也要避免去音乐教室。这之前折木依然处于自我的灰色生活中，虽然千反田的蔷薇色照入了他的眼里，但并不想走出自己的舒适区。而这之后，折木主动选择了踏入蔷薇色的生活中，所以也就答应了千反田的个人请求，而且确实尽自己所能在寻找着线索。当然这里面也有折木一直以来为人的原因——&lt;strong&gt;折木式的温柔&lt;/strong&gt;，这一次的请求正式得多，远不是之前各种小打小闹，倾注了千反田好奇心之外的情感。然而，&lt;strong&gt;千反田一边的话，除了有对于折木的依赖（崇拜），其他的感情基本看不出来&lt;/strong&gt;，甚至有利用自己的美色把折木当工具人的婊里婊气的感觉，不过这依然是千反田的天然罢了，她没有恶意，也不会平白接受他人的帮助，只是一个什么事都直来直去的憨憨。&lt;/p&gt;
+&lt;h2 id=&#34;相处与发展日常中的发糖&#34;&gt;相处与发展——日常中的发糖&lt;/h2&gt;
+&lt;p&gt;在经历了惊艳的相识和假表白事件后，动画中也处处在日常中悄悄地给二人发糖，折木和千反田也在久而久之的相处和互动中产生更强的情感与关联，特别是千反田对于折木。这一节就按照动画的顺序随便发发二人的糖吧。&lt;/p&gt;
+&lt;h3 id=&#34;犯下大罪&#34;&gt;犯下大罪&lt;/h3&gt;
+&lt;p&gt;在古典部往事的第一篇章结束之后，动画安排了一些短篇日常。第一个短篇围绕大家在日常生活中可能犯下的“七大罪”而展开讨论，尤为关注“愤怒”。折木隔着教室就注意到了隔壁教室生气的千反田，后来主动提到了这件事让千反田回忆起好奇的事情（主动挖坑），再后来也主动思考起千反田会生气的理由，揣测千反田的内心，吐槽“&lt;strong&gt;这一天为千反田的无数次意外之举所震惊&lt;/strong&gt;” 。折木花在千反田上的心思不知不觉就多了很多，虽然就在刚才还企图逃避好奇的千反田，但毕竟“&lt;strong&gt;虽然懒但是听老婆话&lt;/strong&gt;”，真香还是要真香的。&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;7&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/SkeathyTomas/img/main/img/image-20200404233020766.png&#34; alt=&#34;image-20200404233020766&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;特别注意，在千反田了解到事情真相后，意识到老师犯错也在所难免，自己对老师说得太过火了，折木的眼里闪过一丝光芒，才有了折木后面对于千反田内心/为人的揣测。**折木在这一刻意识到千反田有着和自己类似的观念，这是两人感情的重要伏笔，至于是怎样的伏笔，就等伏笔揭晓的时候详细来说。**总之，这一话也进一步说明了折木沦陷的观点，&lt;strong&gt;潜意识里也会不自觉的关注喜欢的人&lt;/strong&gt;。当然，表白是不可能表白的，折木性格使然，另一方面千反田还是依然未表现出对折木的喜欢。&lt;/p&gt;
+&lt;h3 id=&#34;看穿真身&#34;&gt;看穿真身&lt;/h3&gt;
+&lt;p&gt;第二个短篇讲述了古典部四人来到乡下温泉旅行的故事以及期间发生的“幽灵”事件。自古七八出福利，温泉日常回自然也少不了福利镜头，当然了，这福利恰巧和二人的情感相联系。折木这回接受了来自千反田的“游玩”邀约，也算是突破了仅在好奇心之下的妥协了（&lt;s&gt;听老婆话已经拓宽到休闲娱乐的业务&lt;/s&gt;）。折木去温泉时刚好遇到了同行的千反田，一路上聊起了兄弟姐妹的话题（也是本话的隐藏主题），到了门口时，千反田一句“这里不是混浴的吧”把折木吓得一哆嗦（少女你在期待一些什么呢），也激起了少年骚动的内心。&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;8&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/SkeathyTomas/img/main/img/image-20200412165417195.png&#34; alt=&#34;image-20200412165417195&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;折木在泡温泉的时候居然注意到了隔壁千反田的声音，然后开始了羞耻的yy，然后还羞耻地在温泉里泡晕了。之后千反田听闻折木的情况来折木房间探望，孤男寡女，光线昏暗，气氛十分暧昧。千反田出乎意料的一记摸脸杀又让折木慌了神，本就发烫的他因为脸红害羞就更烫了，眼神不自觉地瞟到了千反田的领口，然后一个侧身缩成一团（男孩子们都懂的，坏笑）。&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;9&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/SkeathyTomas/img/main/img/image-20200412231733549.png&#34; alt=&#34;image-20200412231733549&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;本来只是如此的话折木也不至于羞愧成这副模样，关键是之前在温泉里yy了千反田。所以折木对千反田的喜欢已经从不自觉地投入更多的关注到涉及色欲的方面；千反田一方的话，尽管做出了很多会让小男生心动不已的骚操作，但我觉得依旧是没有感情升温的变现，依然是那个民风淳朴的千反田。第二天，二人又相约去泡温泉，还约好了一起出来，也算再发了一次糖。&lt;/p&gt;
+&lt;h3 id=&#34;愚者的片尾&#34;&gt;愚者的片尾&lt;/h3&gt;
+&lt;p&gt;两个短篇结束之后，动画的讲述了一个长篇。这一章的故事是为拙劣的自制电影竞选优秀的结尾，出场一位颇有领袖水平的学姐女帝，隐藏主题是关于天才和普通人的思考，很容易想到《樱花庄的宠物女孩》这部作品，详细的就不介绍了，有机会可以另开一文，这里依然重点在于男女主情感交流的介绍（虽然只有一点点）。&lt;/p&gt;
+&lt;p&gt;炎炎夏日，古典部答应了女帝学姐的请求，前往学校解开电影的结局真相。折木刚出门感受到夏天的热度就缩回了家（&lt;s&gt;俺也一样&lt;/s&gt;），却听到了门铃声，开门看到了前来接自己的千反田，然后就乖乖地去学校了。&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;10&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/SkeathyTomas/img/main/img/image-20200413225513381.png&#34; alt=&#34;image-20200413225513381&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;折木注意到讨论过程中千反田不知不觉吃了太多酒心巧克力，提醒她不要再吃了，而千反田明显是上头了，根本停不下来（&lt;s&gt;这个女人的作用纯粹就是卖萌&lt;/s&gt;），第二天折木也主动关心起宿醉后千反田的情况。&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;11&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/SkeathyTomas/img/main/img/image-20200414224331951.png&#34; alt=&#34;image-20200414224331951&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;12&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/SkeathyTomas/img/main/img/image-20200426205241146.png&#34; alt=&#34;image-20200426205241146&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;13&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/SkeathyTomas/img/main/img/image-20200426211606839.png&#34; alt=&#34;image-20200426211606839&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;故事的结尾，折木发现自己被利用的真相后有点心力憔悴，意外的是千反田也注意到这一点了，对折木有着一点点的担忧。所以尽管她非常好奇原剧本的真相是什么，但也考虑到了折木的心情，没有像以往一样缠着折木问出真相。这也是动画第一次表现出来的千反田对于折木的&lt;strong&gt;个人向的非礼节性的担忧&lt;/strong&gt;（加了这么一长串描述是为了和之前对于折木的关心做出区别，比如温泉回虽然也关心了，但是仔细体会两次关心的性质还是有很大的区别，前者大体为寒暄，后者有关注并留意的情感），在二人的情感发展上迈出了重要一步，尽管有一部分原因是千反田把折木卷进了这一事件中的内疚，或者权当过度解读也没什么问题。&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;14&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/SkeathyTomas/img/main/img/image-20200415000618808.png&#34; alt=&#34;image-20200415000618808&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;故事结束后的补充话，11.5话——应持之物，折木依然没有从电影事件被女帝利用后否认自我价值的阴影中走出来，表现得异常消沉，更加不愿讲话，甚至不愿思考（小说中提到折木因此还病了一场，千反田特意来家中探访，因为动画里没有就不多做介绍）。消沉的折木在姐姐的安排下去游泳池打工（振作精神），好友们听闻此事也纷纷前往泳池看望折木（为折木打气），没错又是泳装福利回。&lt;/p&gt;
+&lt;p&gt;折木看到前来的三位好友，唯独对泳装的千反田上下打量，之后千反田发动好奇之术时也忍不住瞟向千反田的胸部（老色批了）。&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;15&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/SkeathyTomas/img/main/img/image-20200426171604177.png&#34; alt=&#34;image-20200426171604177&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;千反田输了游戏接受惩罚给折木泼水，之后一个劲地道歉。饭间，福部和伊原嘲笑折木的时候，千反田维护起了折木——“你们不要对折木太过分了”。饭后，千反田以千反田的方式安慰着消沉的折木，不经意地提到了才能的话题，并鼓励到折木在她眼里是特别的存在。之后也重复声明折木的才能却有其事，非常感谢折木是可以依靠的“好友”，而折木也终于在三位好友（主要是千反田）的帮助下重新拾回了自我价值，走出了阴影。最后，当千反田问起折木如何发现泳池事件真相的原因时，折木说到“泳池中白色的物体只有冰淇淋了，不，还有一个”（看向了千反田，指她的泳衣），千反田也难得地害羞了，一边脸红，一边用手遮挡，毕竟对人的心态变化了，你看人家伊原就不会害羞。&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;16&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/SkeathyTomas/img/main/img/image-20200425160416090.png&#34; alt=&#34;image-20200425160416090&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;果然只有日常话才能发更多的糖，这集发的糖可比上一整章都多了，男二女二也是发了不少糖。正如上一章结尾提到的千反田对折木心态的变化，这一话更多地表现出来了。千反田认为折木仅有出众的能力，也值得信赖和依靠，是一个特别的存在（虽然补充了其他人也同样是特别的存在），因此也倾注了更多的关注，也真正意义上表现出了指向性的害羞情感（人家折木已经经历过很多回了）。但要说恋爱情感，还是有些早，最多算是恋爱的萌芽吧。而折木这一边，除了更明显的馋身子外，也体验到了千反田对于自己的认可，从她身上获得了动力，想必对于千反田的爱意又添加了几分。&lt;/p&gt;
+&lt;h3 id=&#34;库特莉亚芙卡的排序&#34;&gt;库特莉亚芙卡的排序&lt;/h3&gt;
+&lt;p&gt;这一篇章是我个人在动画里最喜欢的一章了，不仅整体剧情足够吸引我，背后三条暗线的叙述也足够发人深思，表达的主题是上一个篇章主题的进一步探讨，苦涩的青春也在此表现得淋漓尽致。&lt;/p&gt;
+&lt;p&gt;文化祭，古典部的目标是卖文集：福部打着宣传古典部的名号四处玩耍，伊原非常想要提供实质性帮助却在漫研遇上了大麻烦，千反田四处求助交涉却各种分心加上完全不擅长交涉实质上是在卖萌，只有折木在一心一意卖文集，顺便破案的同时也不忘多卖上几本。玩笑归玩笑，这一篇章因为千反田一直来回奔波，男女主的发糖机会还是比较少的。&lt;/p&gt;
+&lt;p&gt;折木在安慰伊原的时候，特意指出了千反田，说是伊原如果一直耿耿于怀的话会让千反田也在意起来（&lt;strong&gt;明里安慰着伊原，暗里护着老婆&lt;/strong&gt;）。&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;17&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/SkeathyTomas/img/main/img/image-20200426171400915.png&#34; alt=&#34;image-20200426171400915&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;对于千反田的贴近更为敏感（脸红ing）。&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;18&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/SkeathyTomas/img/main/img/image-20200426172356123.png&#34; alt=&#34;image-20200426172356123&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;在福部提出千反田进行交涉时，折木注意到了千反田的犹豫，实际上千反田是一点都不懂交涉了。&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;19&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/SkeathyTomas/img/main/img/image-20200426172445253.png&#34; alt=&#34;image-20200426172445253&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;短短几分钟的社团教室时间，折木已经多次注意到千反田了，就如往常一样时时刻刻关注与“暗恋”着她。&lt;/p&gt;
+&lt;p&gt;另一边，千反田因为四处被诱惑，办事效率低，偷偷被拐走拍了写真集，抱着一堆收获的战利品回到了社办，而折木也是眼尖地从一堆物品中立刻就发现了写真（不愧是你），本就无聊的他自然是会偷看的。但是偷看归偷看，被不相关人发现时不要表现得那么慌张啊，也要记得好好放回原位。所以偷看的事情也是肯定会被发现的，气氛突然变得尴尬了起来（配合BGM食用更佳）。千反田害羞的场景都是值得记下的，虽然粗神经的她肯定是发现不了偷看背后的原因的（那个男人喜欢你啊），不过女孩子的害羞都是恋爱的征兆，一次次害羞之下是对折木逐渐累积起的好感。&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;20&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/SkeathyTomas/img/main/img/image-20200427103217806.png&#34; alt=&#34;image-20200427103217806&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;料理大赛中千反田在嘈杂的人声中听到了折木的呼喊声，也算是对于折木的特别关注吧，之后也特意向社办方向鞠了一躬对折木提供的帮助表示感谢。&lt;/p&gt;
+&lt;p&gt;折木在和伊原闲谈时提到了无法抗拒千反田的好奇心之力，所以才会在千反田还未强迫时就主动探寻起了十文字事件的真相，真是越来越听话了。真如伊原所说，无视掉明明是最佳策略，而折木选择了主动出击，引来了伊原的嘲笑，想必聪慧的伊原在这时候也发现了一些什么猫腻。&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;21&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/SkeathyTomas/img/main/img/image-20200427113222947.png&#34; alt=&#34;image-20200427113222947&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;折木在和千反田抢书的时候又看到了领口，然后就乖乖就范把书给了千反田，你们怎么都那么熟练。&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;22&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/SkeathyTomas/img/main/img/image-20200427120630257.png&#34; alt=&#34;image-20200427120630257&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;虽然整章没什么发糖机会，动画组也是能安排上的都安排上了，社办里的氛围还是那么轻松愉快（虽然整个文化祭可谓一团糟了）。其他的诸如折木会刻意关心来回奔波的千反田是否过于劳累了，千反田对折木的死缠烂打等等就不多说了。作为最后动画一个长篇，二人情感的发展也差不多积累的差不多了，折木的宠爱，千反田的依赖，这些都已成既定现实（辉夜大小姐教我新词汇），所以是时候真正拉开恋爱的序幕了。&lt;/p&gt;
+&lt;h2 id=&#34;突破性进展&#34;&gt;突破性进展&lt;/h2&gt;
+&lt;p&gt;动画最后的几集，回到了短篇日常，也的确应该为这一青春校园故事画上完满的结局了，所以这一部分对于男女主，以及男二女二都加入了更直接的情感戏。&lt;/p&gt;
+&lt;p&gt;峰峦是否放晴这一话是男女主情感发展上的重要阶段，硬要说的话千反田是在这时喜欢上折木的也并不过分。因为突然的契机回忆起了一些陈年旧事，小伙伴们之间的谈话却发现了一些矛盾之处，折木因此想要去图书馆查明真相。故事发展到这里，折木在大家的影响下，也是越发充满了活力，会去做一些看上去就很麻烦的事情了。千反田因为好奇折木在在意一些什么，也一同前往（&lt;s&gt;重要的是又有了独处时间呢&lt;/s&gt;）。当千反田提出可以一起骑车时，折木脑补了一下画面，又是丘比特又是玫瑰花的，爱意相当明显，可人家只是想想。&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;23&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/SkeathyTomas/img/main/img/image-20200427151214758.png&#34; alt=&#34;image-20200427151214758&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;解开矛盾的真相时，千反田又进一步问道折木行动的理由。与其他小伙伴想的不同，千反田对于折木充满干劲并不好奇，在意的是明明折木会帮助其他人做各种各样的事情，却对自己的事情不怎么在意，而今天又为何会对自己的事情如此在意。折木解答到不应该不知轻重地谈论其他人，应该站在别人的立场上想想，所以折木看似为了自己行动，实质上还是为了别人。而这一瞬间，千反田感慨万千，甚至不知道如何去表达自己的想法，我的解答是“&lt;strong&gt;少女你恋爱了&lt;/strong&gt;”。&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;24&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/SkeathyTomas/img/main/img/image-20200427153343328.png&#34; alt=&#34;image-20200427153343328&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;这里正好回收了犯下大罪那一话的伏笔——彼时千反田为自己的动怒而反省，此时折木为自己的言辞反省。两人对于对方的反应又是那么类似，都是眼里泛起光芒，加上反省的本质是一致的，都是应该更体贴别人，多站在别人的角度想想，所谓的共鸣就是如此。逐渐积累的好感，加上强烈的共鸣，只是千反田暂时还未弄清这究竟是一种怎样的情感，所以也没表达出来。&lt;/p&gt;
+&lt;p&gt;此事件后，千反田对于折木的情感表现得更为明显了（当然折木的明显就不用多做解释了），比如在相关人员这一话（最精彩的推理），千反田邀请折木为自己的舅舅上一炷香，这已经完全是家事范围了（所以两人都脸红了），而折木也爽快地答应了。之后在推理过程中两人多次因为靠的太近而互相脸红，你们脸红的频率是不是有点太高了，而千反田也在以往无数次贴脸后才终于感到害羞了，至于什么原因也不用多做解释了。&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;25&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/SkeathyTomas/img/main/img/image-20200427155845672.png&#34; alt=&#34;image-20200427155845672&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;26&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/SkeathyTomas/img/main/img/image-20200427160055236.png&#34; alt=&#34;image-20200427160055236&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;再比如开门大吉这一话中，折木欣然接受了和千反田一起去神社进行参拜的提议（&lt;s&gt;因为可以看到老婆穿和服&lt;/s&gt;），更重要的是千反田想要向折木展示自己的和服。之后折木主动为千反田拿东西，和千反田一起去仓库拿东西，在被困储藏室时二人也互相为对方着想。千反田谈及可能会被其他人误会时，实际上心里也确实有了真实的想法，才会有所顾虑，所谓身正不怕影子斜，喜欢一个人并不是那么好藏起来的。&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;27&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/SkeathyTomas/img/main/img/image-20200427161241445.png&#34; alt=&#34;image-20200427161241445&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;再比如手工巧克力事件一话中（虽然是男二女二的主场），千反田和伊原在商店谈论起喜欢的人的话题时，千反田又害羞了，欲言又止，表现得不要太过明显。上学路上，千反田也暗示了家里的习惯并不会对真正亲密的人送礼物，所以情人节也是如此，言下之意就是折木是真正亲密的人，可惜聪明的折木却偏偏在感情上迟钝了一些。之后巧克力事件发生了，折木明明知道事情的真相还配合千反田演戏，就为了给福部一个台阶下。但是没想到却意外地伤害到了千反田，千反田的善良让她对此十分自责，非常对不起伊原。宠妻的折木一方面将事情完美解决（什么叫做情商），一方面也要求福部对此次事件解释缘由（突然很man），就是因为伤害到了千反田。&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;28&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/SkeathyTomas/img/main/img/image-20200427215137748.png&#34; alt=&#34;image-20200427215137748&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;29&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/SkeathyTomas/img/main/img/image-20200427215625541.png&#34; alt=&#34;image-20200427215625541&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;30&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/SkeathyTomas/img/main/img/image-20200427220925019.png&#34; alt=&#34;image-20200427220925019&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;31&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/SkeathyTomas/img/main/img/image-20200427221911354.png&#34; alt=&#34;image-20200427221911354&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;最文艺的告白&#34;&gt;最文艺的告白&lt;/h2&gt;
+&lt;p&gt;在男二女二感情线完美收尾之后，最后一集绕远路的雏人偶终于也为男女主的感情写下了一个完美的浪漫式结尾。折木这次又答应了千反田的为人偶撑伞的“奇怪要求”，离千反田的生活越来越近，而千反田也是越来越信任与依赖折木了。撑伞过程中，折木突破了自己的节能主义，而且对于千反田的爱意也是达到了顶峰。&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;32&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/SkeathyTomas/img/main/img/image-20200427224736049.png&#34; alt=&#34;image-20200427224736049&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;委托结束之后的黄昏，二人散步在绽放的樱花树下，连天色也变得粉里透红，于是全动画最美的片段发生了，这就是史上最文艺的告白。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;千反田：我还是想。。。把这里介绍给折木同学。&lt;/p&gt;
+&lt;p&gt;折木（幻想）：话说回来，关于你放弃了的经营性的战略眼光，由我去学怎么样？&lt;/p&gt;
+&lt;p&gt;折木（现实）：天气变冷了呢。&lt;/p&gt;
+&lt;p&gt;千反田： 不，春天已经到了。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;翻译一下的话，就是（相信大家也在评论区有所耳闻了）：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;千反田：我想和折木同学在一起呢，一起经营家乡。&lt;/p&gt;
+&lt;p&gt;折木（幻想）：好啊，我负责学习经营性的战略。&lt;/p&gt;
+&lt;p&gt;折木（现实）：已经要文理分科了，还是不了吧。&lt;/p&gt;
+&lt;p&gt;千反田：不，我们才刚刚开始。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;硬要说过度解读的话，千反田一方的话还是有待商榷，古有“月色真美”，今有“不，春天已经到了”，结尾的这句台词的完全诠释了东方的含蓄与浪漫，引人无限遐想。也许千反田只是字面上回复了折木的“天冷了”，前面的介绍家乡也只是字面上的意思，不过千反田的心意就是如此，解读成告白也并不过分，何不让结尾更甜一点呢。&lt;/p&gt;
+&lt;p&gt;折木一方的话，就更坐实了。那个经营性战略来自千反田提出的两个治理家乡方针：一是生产商品价值更高的作物，让大家都变得富裕，二是以经营性的战略眼光让生产更具效率。折木理解千反田在第二个方针上能力的缺失，所以提出了自己接手这一方针，意思就是和千反田一起经营家乡，而折木的交涉和经营能力的也是有目共睹的（文化祭让“凶手”帮忙卖文集，被年长者夸成熟稳重），可谓非常适合了。而他回到现实，欲表白又止的行为和福部对待伊原的犹豫完全一致，加上文理分科，两人在现实中可能越走越远，责任感和对现实的未知的消极态度让折木放弃了表白。好在千反田的回答从乐观角度对待未知，不然所有的情感累积就这么白费了，折木你届到了吗？&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;33&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/SkeathyTomas/img/main/img/image-20200427230006775.png&#34; alt=&#34;image-20200427230006775&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;总结&#34;&gt;总结&lt;/h2&gt;
+&lt;p&gt;不知不觉已经写了那么长了，快要突破万字了，大概大量的篇幅都浪费在了日常发糖的流水账上了，而且实质上两人的糖远远多余我提到的部分，带着吃糖的心情看所有的互动都是在发糖。原谅我的不才只能按照动画顺序luo&#39;lie二人的情感发展，如果大家只是对发糖感兴趣的话，可以搜一些MAD剪辑快速吃狗粮。&lt;/p&gt;
+&lt;p&gt;其实最后的表白，在我一刷的时候也是完全没有注意到，直至看到了大佬们的解读，觉得甚有道理。如今完全把《冰菓》作为一部恋爱番，更多地去关注恋爱和发糖的细节，确也收获良多。各种意义上，动画的结局都是最完美的结局，原小说作者这么多年也想不出一个比动画结局更好的结尾了，所以什么天国的第二季之类的虽然之前有所期待，如今看来还是喜欢这样的结局。&lt;/p&gt;
+&lt;p&gt;**折木和千反田的恋爱过于完美而浪漫，相信每一个人都会羡慕这样的恋爱；而福部和伊原的恋爱充满了苦涩，就好比我们的现实。**如此看来，两条恋爱线的交织让这部不怎么像恋爱番的作品的立意又高了不少，希望大家既能遇到浪漫的爱情，也能处理恋爱中必定会遇到的苦涩。&lt;/p&gt;
+&lt;p&gt;最后，借这篇文章表白现实中遇到过的千反田吧。&lt;/p&gt;
+">《冰菓》中的恋爱小故事——折木x千反田</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://SkeathyTomas.github.io/post/《冰菓》中的恋爱小故事——福部x伊原/"" data-c="
+          &lt;p&gt;要说《冰菓》是一部什么类型的番，那当时是恐怖悬疑啦（滑稽）。高中、社团、古典部，虽然是非常常见的日常校园番的配置，也有很多人觉得《冰菓》挺无聊的；但是无论是米泽穗信的小说还是京阿尼的动画制作，都让我特别享受这样轻松散漫的氛围，虽波澜不惊，却意味深长。也许这就是&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我们每天度过的日常,也许就是不断发生的奇迹！——《日常》&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;我可能羡慕他们丰富多彩的高中生活，可能羡慕折木超乎常人的推理天赋，更可能羡慕少男少女之间蔷薇色的爱恋。虽然《冰菓》的主题并不是恋爱，但是却有在一起逐渐发展起来的好感与情愫，以及隐藏在日常之下的淡淡甜味。这里，就让我们先来了解一下男二和女二之间的恋爱小故事吧。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;关于男二和女二的开端，动漫在伊原刚登场的时候就说明了。&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/SkeathyTomas/img/main/img/Snipaste_2019-05-14_16-48-23.png&#34; alt=&#34;Snipaste_2019-05-14_16-48-23&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;code&gt;伊原抱怨福部明明知道自己喜欢他&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;伊原从初中时就迷恋里志了。——折木给出了二人关系的解释&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;简单来说，就是伊原从最开始之前就喜欢上了福部；而福部因为一些原因既没有接受这份喜欢，也没有明确拒绝（或者说给出一个合理的拒绝理由）。这种不怎么愉悦的节奏就这么一直推了一年多，从去年的情人节巧克力，直到今年的手工巧克力事件。&lt;/p&gt;
+&lt;p&gt;好在作者（指动画）还是很温柔的，两人的关系以及周围的氛围并在有因此而变得尴尬而诡异，反而是意外的让人舒适。在大多数的时间里，二人无论怎么看都表现为绝对的好友，而且是带着互相的喜欢与欣赏的好友的感觉，仿佛之前并没有发生什么难堪的事情。&lt;strong&gt;也许，作者也知道——只是喜欢的话，那就当作喜欢处理就好，不要混入其他杂质。&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;当然，这也和巧克力事件的处理方式有关。去年，福部以&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;仅仅放在模具里冷却凝固的巧克力算不上手制&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;的借口拒绝收下伊原的情人节巧克力。而伊原也因此“暴走”立下flag&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/SkeathyTomas/img/main/img/Snipaste_2019-05-14_23-19-08.png&#34; alt=&#34;Snipaste_2019-05-14_23-19-08&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;code&gt;伊原立下flag&lt;/code&gt;&lt;br&gt;
+连拒绝与生气的样子都可以感受到其中的糖分，这段关系又怎会因为这样的小矛盾而变化呢？这么一个flag既让伊原的坚持有了充足的理由，也让福部有了更长的思考与准备时间。怎么说呢，这一拒绝可能反向拉近了两人间的距离。&lt;/p&gt;
+&lt;p&gt;但是新的一年的情人节终于还是到来了，这次伊原大制作的巧克力福部终于没有任何理由拒绝了。但是过了一年，福部依然没有准备好。伊原因为其他社团还有活动，就把巧克力留在古典部让千反田看管。当福部看到社团准备室中的巧克力后，趁千反田不在时偷偷拿走了巧克力。因为自己准备的袋子不够大，还狠下心来掰断了巧克力。（顺便这个分镜转换是真的赞）&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;3&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/SkeathyTomas/img/main/img/bili_v_1557848907441.gif&#34; alt=&#34;bili_v_1557848907441&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;code&gt;福部狠心掰断巧克力&lt;/code&gt;&lt;br&gt;
+当然这一切还是轻易地被折木看透了，并且也算落下了一个挺好的结局。福部向折木解释了其中的缘由，女生们之间也用女生的方式解决了其中不爽。最后，福部在路灯下给伊原打了电话，终于走出了那重要的一步（注意这里是动画原创剧情）。&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;4&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/SkeathyTomas/img/main/img/Snipaste_2019-05-15_00-00-54.png&#34; alt=&#34;Snipaste_2019-05-15_00-00-54&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;code&gt;福部给伊原打电话说明&lt;/code&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;讲完了事件的起因经过与结果，也是时候分析背后的缘由了。伊原喜欢福部吗？必然是喜欢的，只是喜欢的原因就无从得知了。伊原的个性是率真毒舌，对自己熟悉的人更是如此。**喜欢即是喜欢，讨厌即是讨厌，不需要有什么隐瞒与欺骗。**她对于福部的喜欢可谓是表现在方方面面：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;对福部的称呼，亲切地称为“xx酱”（译为阿福小福）；反观对于折木的称呼，就只是普通的“折木”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;因为福部加入了古典部，自己和福部又不同班，所以在自己还在漫研会的背景下继续加入了古典部，也经常因为身兼多职两边都挺忙的&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;明明被拒绝了还是不放弃，依然在来年的情人节送上更豪华的手工巧克力；当然在日常中应该还不断向福部表达过心意，只是每每都被福部用开玩笑的方式糊弄过去；但即使这样，依旧是坚定的喜欢&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;日常中宠溺的眼神以及数不清的小细节，时时刻刻透露着喜欢一个人的样子。比如在学园祭结束时福部因为又一次没比过折木透露失望时幻想自己伸出手拉了下福部表示心疼（因为下一个镜头影子中并没有拉）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;5&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/SkeathyTomas/img/main/img/Snipaste_2019-05-15_14-05-34.png&#34; alt=&#34;Snipaste_2019-05-15_14-05-34&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;code&gt;伊原拉住福部以示安慰&lt;/code&gt;&lt;br&gt;
+在巧克力事件中，伊原也是很快就知道只有福部才干得出这种事情。在回家路上也和千反田表达了自己的想法，达成了福部这样做好过分的共识，并化悲愤为食欲，相约去吃蛋糕。在整个过程中，让伊原难受的是福部的犹豫，自己难以理解福部想法的不安，还有尽管如此依然喜欢福部的矛盾。这也是其中略显虐的一点点苦涩吧。当然这一年中，伊原也是有所成长的，至少不会对着福部大发脾气了，这么说来，其实伊原也在一点点理解了福部。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;另一方面，福部喜欢伊原吗？答案当然也是肯定的。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;从称呼上来说，福部称呼伊原名字“摩耶花”，对于千反田则是姓氏“千反田”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;虽然喜欢开玩笑，但面对伊原时，无论是形式还是内在，表现出来的独特的温柔也是只可意会不可言传&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;6&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/SkeathyTomas/img/main/img/Snipaste_2019-05-15_15-02-20.png&#34; alt=&#34;Snipaste_2019-05-15_15-02-20&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;code&gt;福部对伊原日常中流露的好感&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在巧克力事件中向折木坦白时，也直说伊原是个好女孩，也梦想着能够和她在一起&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;但是，福部一直在犹豫与害怕。他觉得自己配不上这么好的伊原。他觉得自己好不容易放弃了“执着”的这一想法，放弃成为“第一人”，转而去体验过程中的乐趣，这样的生活方式带给了他很多前所未有的快乐。“不执着”成为了福部的信条，直至遇到了喜欢的伊原，矛盾又再次不可避免——自己可以执着于喜欢伊原吗？很多事情确实可以随心所欲，但是感情却不一样，因为它被赋予了很大的责任，接受即意味着责任，福部觉得自己目前并不能承担这样的责任。执着于感情的话，就违背了自己的信条，他害怕自己因此回归到原来那个事事执着的讨厌的自己。可是他又无法回馈伊原的感情，害怕伤害伊原，接受也不是，拒绝也不是，所以只能一味地逃避，尽管这个做法依旧避免不了带给伊原伤害。福部思来想去，一直找不到一个可以不伤害伊原的答案。&lt;/p&gt;
+&lt;p&gt;也许福部的这种想法看上去会比较奇怪与难以理解，但这实际上却非常常见。&lt;strong&gt;当我们遇上自己喜欢的人时，多多少少会表现出犹豫与害怕，这背后的原因可能不是执着与不执着，却可以替换为任何一种逃避的想法。&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;好在我们的男主还是意外地点醒了福部&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;7&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/SkeathyTomas/img/main/img/Snipaste_2019-05-15_16-01-05.png&#34; alt=&#34;Snipaste_2019-05-15_16-01-05&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;code&gt;你还好意思说别人&lt;/code&gt;&lt;br&gt;
+执着或是不执着，有时候并不是那么重要，这更多的只是喜不喜欢的问题，而两者并不矛盾。**喜欢一个人就意味着需要执着于这个人而放弃其他吗？不，喜欢仅仅是喜欢，这意味着生活中多了一件喜欢的人/事/物。**故事的最后，也借伊原之口传达了二人关系的进一步发展，也算是一个圆满的结局。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;至此，关于《冰菓》中男二女二的感情线解读完毕，注意这里主要还是参考了动画中的细节，原作中并没有这样的发糖情节（京阿尼的善意）。本文也夹杂了我生活或是情感的私货与理解，至于为什么会先讲男二女二的感情线，大概是这条线更意味深长贴近现实，也有更多的思考价值。&lt;/p&gt;
+">《冰菓》中的恋爱小故事——福部x伊原</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://SkeathyTomas.github.io/post/梦境物语/"" data-c="
+          &lt;p&gt;附游戏demo项目地址：&lt;a href=&#34;https://github.com/SkeathyTomas/Processing-Game&#34;&gt;点击&lt;/a&gt;&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;h2 id=&#34;1-故事背景&#34;&gt;1-故事背景&lt;/h2&gt;
+&lt;p&gt;在某一天你陷入沉睡之时来到了一个特殊的地方——梦境工厂，工厂的负责人告诉你：你正在长大，你的梦境也随之发生了一些变化，在梦境中隐藏着关于未来的一个秘密。为了发现这隐藏的秘密，所以在沉睡时邀请你来参与梦境的制造。&lt;/p&gt;
+&lt;p&gt;当你刚想要问一些什么的时候，负责人消失了，随之出现了一个奇奇怪怪的门，虽然你有点犹豫， 但是非常好奇，所以进入了这个奇怪的梦境之门。&lt;/p&gt;
+&lt;p&gt;*&lt;em&gt;（&lt;em&gt;每当你完成这梦境建造公司/工厂里的一个任务/订单，你就会获得一个未来碎片。）&lt;/em&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;2-材料设定&#34;&gt;2-材料设定&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;原料&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;云团&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;雨水&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;糖果&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;火焰&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;基层&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;3云团-&amp;gt;云朵基层&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;3个雨水-&amp;gt;雨水基层&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;3个糖果-&amp;gt;糖果基层&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;3个火焰-&amp;gt;火焰基层&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;对应梦境&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;柔软梦境&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;清新梦境&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;甜美梦境&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;炫酷梦境&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;构造梦境所需材料&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;10个云基&amp;amp;2个雨基&amp;amp;1个糖基&amp;amp;5个火焰&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;10个雨基&amp;amp;2个云基&amp;amp;1个火基&amp;amp;5个糖果&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;10个糖基&amp;amp;2个火基&amp;amp;1个云基&amp;amp;5个雨水&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;10个火基&amp;amp;2个糖基&amp;amp;1个雨基&amp;amp;5个云团&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;未来碎片*N(N为关卡数)，每个关卡拥有独立故事&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;3-故事关卡&#34;&gt;3-故事关卡&lt;/h2&gt;
+&lt;h3 id=&#34;3-1-梦的云团&#34;&gt;3-1 梦的云团&lt;/h3&gt;
+&lt;p&gt;云朵小姐（NPC）：嘿，很高兴见到你！你是新来的吗？&lt;/p&gt;
+&lt;p&gt;我：啊...我不是...（刚想要解释的时候被打断）&lt;/p&gt;
+&lt;p&gt;云朵小姐（NPC）：我知道了，你一定是来帮我的吧！那就不多说了，最近的订单/任务非常多呢！&lt;/p&gt;
+&lt;p&gt;我：……（丝毫找不到解释的时间）&lt;/p&gt;
+&lt;p&gt;云朵小姐（NPC）：嘿，你可以帮我把 &lt;strong&gt;3&lt;/strong&gt; 个云团垒在一起吗？这样就有建造&lt;strong&gt;柔软&lt;/strong&gt; 梦境的&lt;strong&gt;云团基层&lt;/strong&gt; 啦！做完的话我可以告诉你一些事情哦！&lt;/p&gt;
+&lt;p&gt;我：（思考了一下然后同意了）那好吧，如果有什么不对的地方请告诉我。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;【制作过程&amp;amp;报错提示】&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;云朵小姐（NPC）：太棒了！你做的很好！可以再帮我做一个 &lt;strong&gt;糖果基层&lt;/strong&gt; 吗？这是建造 &lt;strong&gt;甜美&lt;/strong&gt; 梦境的必需品之一哦！方法就和刚才一样。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;【制作中】&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;云朵小姐（NPC）：非常感谢你！按照约定，我来告诉你关于这里一些事情，请把这个（未来碎片）收好。&lt;/p&gt;
+&lt;p&gt;我：谢谢你！（拿着碎片感到不知所措）&lt;/p&gt;
+&lt;p&gt;云朵小姐（NPC）：（突然小声）不用谢，不过我听说，这里的梦境设计师已经不见了。快去找白鸽小姐吧，她在二楼，我这里要赶紧把这些基层给送过去呢！再见啦！&lt;/p&gt;
+&lt;p&gt;*&lt;em&gt;（&lt;em&gt;获得关于未来的一枚碎片）&lt;/em&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;【自动存档，并且进入了关卡选择页面/直接故事推进？关卡选择考虑像RUSTY LAKE的FAMILY TREE一样， 完成了关卡后出现后续内容。】&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;3-2-雨水的烦恼&#34;&gt;3-2 雨水的烦恼&lt;/h3&gt;
+&lt;p&gt;白鸽小姐（NPC）：你就是从云朵小姐那边过来的吧？&lt;/p&gt;
+&lt;p&gt;我：是的，您好啊白鸽小姐！&lt;/p&gt;
+&lt;p&gt;白鸽小姐（NPC）：你好啊，真是个有礼貌的孩子呢。来帮我做些事情吧，最近来干活的人真是太少啦~&lt;/p&gt;
+&lt;p&gt;白鸽小姐（NPC）：这个订单/任务需要 &lt;strong&gt;10&lt;/strong&gt; 个 &lt;strong&gt;雨水基层&lt;/strong&gt; 哦，你在云朵小姐那边已经学会了制造方法吧。&lt;/p&gt;
+&lt;p&gt;我： &lt;strong&gt;10&lt;/strong&gt; 个？这也太多了吧...&lt;/p&gt;
+&lt;p&gt;白鸽小姐（NPC）：啊嘞啊嘞，太多了吗？明明是很轻松的嘛。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;【制作过程中白鸽小姐提示我使用循环】&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;白鸽小姐（NPC）：你看，是不是很简单。（得意地笑）&lt;/p&gt;
+&lt;p&gt;我：的确变得轻松很多呢...（若有所思）&lt;/p&gt;
+&lt;p&gt;白鸽小姐（NPC）：谢谢你~这是你该获得的奖励，最近不知道为什么这里的员工变少了呢，或许兔子先生会知道一些事情呢，他就在楼上。祝你好运~&lt;/p&gt;
+&lt;p&gt;*&lt;em&gt;（&lt;em&gt;获得关于未来的一枚碎片）&lt;/em&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;【自动存档，并且进入了关卡选择页面/直接故事推进？收集到的未来碎片考虑做成拼图收集的样式？】&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;3-3-选择的烦恼&#34;&gt;3-3 选择的烦恼&lt;/h3&gt;
+&lt;p&gt;兔子先生（NPC）：...... （眉头紧锁好像非常苦恼的样子）&lt;/p&gt;
+&lt;p&gt;我：您好... 请问是兔子先生吗？&lt;/p&gt;
+&lt;p&gt;兔子先生（NPC）：你好，我是管理梦境材料的兔子。（说完又检查起了建造梦境的材料。）&lt;/p&gt;
+&lt;p&gt;我：请问有什么可以帮到您的吗？白鸽小姐说最近这里的员工变少了。&lt;/p&gt;
+&lt;p&gt;兔子先生（NPC）：哦哦！快别提她们两个了，交过来的东西都不合格！嘿，你来的正好，我有些活来安排你做。（不由分说地推搡着我去干活）&lt;/p&gt;
+&lt;p&gt;兔子先生（NPC）：看到这些五颜六色的糖果了吗？不同的颜色代表了不同品质，我需要你制造 &lt;strong&gt;2&lt;/strong&gt;个 &lt;strong&gt;最高品质&lt;/strong&gt; 的糖果基层。真不知道她们是怎么办事的。（苦恼的摇了摇头）&lt;/p&gt;
+&lt;p&gt;我：原来糖果基层还有区别，但是这里的糖果也太多了吧，我该怎么找呢？&lt;/p&gt;
+&lt;p&gt;兔子先生（NPC）：你原来还不会这个技能啊，那我勉为其难地教你一次吧，不过作为回报，你还得帮我制造 &lt;strong&gt;1&lt;/strong&gt; 个 &lt;strong&gt;中等品质&lt;/strong&gt; 的云朵基层。&lt;/p&gt;
+&lt;p&gt;我：好的，谢谢您。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;【制作中】&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;兔子先生（NPC）：做的还行吧，暂时勉强够用了。我：我还以为做得不错呢（苦恼的表情）&lt;/p&gt;
+&lt;p&gt;我：那有什么东西要交给我吗？之前云朵、白鸽小姐都给了我一个非常神秘的东西。&lt;/p&gt;
+&lt;p&gt;兔子先生（NPC）：哎呀，如果想要拿到那个东西的话，光做这些可不够哦！期待你后面的表现。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;【自动存档，并且进入了关卡选择页面/直接故事推进？】&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;3-4-选择的烦恼2&#34;&gt;3-4 选择的烦恼（2）&lt;/h3&gt;
+&lt;p&gt;兔子先生（NPC）：嘿，又见到你了，过得好吗？&lt;/p&gt;
+&lt;p&gt;我：兔子先生！我又来到这里了，请问我还能做些什么吗？我想要那个未来的碎片。&lt;/p&gt;
+&lt;p&gt;兔子先生（NPC）：哎呀哎呀，你这么说我非常开心，我现在有很多事情需要人来做呢。&lt;/p&gt;
+&lt;p&gt;兔子先生（NPC）：你还记得白鸽小姐教给你的东西吗？现在来试一试吧！这次的梦境制造需要 &lt;strong&gt;10&lt;/strong&gt;个 &lt;strong&gt;高品质&lt;/strong&gt; 的 &lt;strong&gt;云朵基层&lt;/strong&gt; 以及 &lt;strong&gt;5&lt;/strong&gt; 个 &lt;strong&gt;中等品质&lt;/strong&gt; 的 &lt;strong&gt;糖果基层&lt;/strong&gt;，另外还有 &lt;strong&gt;15&lt;/strong&gt; 个 &lt;strong&gt;低品质&lt;/strong&gt; 的 &lt;strong&gt;火焰基层&lt;/strong&gt; **。**记清楚了吧，还需要我在念一遍吗？&lt;/p&gt;
+&lt;p&gt;我：虽然好像很困难的样子，但还是先试试吧！&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;【制作中，发现效率非常低】&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;兔子先生（NPC）：你的速度也太慢了吧，这样子怎么能够来得及做完呢。我：非常抱歉，但是白鸽小姐只教给了我这样一个方法。（苦恼的摸摸头）&lt;/p&gt;
+&lt;p&gt;兔子先生（NPC）：嗯哼，我这里有个 &lt;strong&gt;梦境装置&lt;/strong&gt; 可以帮助你提高效率，不过，我可不是白教你的。&lt;/p&gt;
+&lt;p&gt;我：知道了，我会多做一些工作的，兔子先生请教我使用这个 &lt;strong&gt;梦境装置&lt;/strong&gt; 吧。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;【兔子先生教我使用”封装“的方式来制作】&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;我：终于做完了！谢谢兔子先生！这个梦境装置真是了不起啊！&lt;/p&gt;
+&lt;p&gt;兔子先生（NPC）：看你做的还不错，这个东西就给你啦，我看你在制造梦境这方面很有潜力呢！ 去顶楼找太阳先生吧，他好像有事情和你说。&lt;/p&gt;
+&lt;p&gt;*&lt;em&gt;（&lt;em&gt;获得关于未来的一枚碎片）&lt;/em&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;【自动存档，并且进入了关卡选择页面/直接故事推进？】&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;3-5-完整的梦境&#34;&gt;3-5 完整的梦境&lt;/h3&gt;
+&lt;p&gt;我：请问太阳先生在吗？（敲门）&lt;/p&gt;
+&lt;p&gt;太阳先生（NPC）：嘿，你好，终于见到你了。&lt;/p&gt;
+&lt;p&gt;我：你好，太阳先生，你在等我吗？有什么我能做的吗？&lt;/p&gt;
+&lt;p&gt;太阳先生（NPC）：你通过之前的考验，真是非常棒呢。&lt;/p&gt;
+&lt;p&gt;我：考验？（恍然大悟的样子）原来之前的任务都是考验吗？&lt;/p&gt;
+&lt;p&gt;太阳先生（NPC）：是的，但是在接近这个秘密的真相之前，还有最后一个任务。你需要制造一个&lt;strong&gt;柔软的梦境&lt;/strong&gt; 。&lt;/p&gt;
+&lt;p&gt;我：我...我大概可以吧。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;【制作中，手忙脚乱地不知道先后顺序】&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;太阳先生（NPC）：这样子可不行啊，是不知道从什么地方开始吗？（摇了摇头）用一下这个小家伙吧，它会帮助你的。（拿出 &lt;strong&gt;梦境解析仪&lt;/strong&gt; ）&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;【在梦境解析仪上输入“柔软梦境”，界面显示：需要10个云团基层、2个雨水基层、1个糖果基层和5个火焰原料。】&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;太阳先生（NPC）：这样就明白了吧，柔软梦境分为好几个部分，每个部分的原料详情也写清楚了，快去准备吧！&lt;/p&gt;
+&lt;p&gt;我：谢谢太阳先生！&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;【制作柔软梦境】&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;我：终于做完了！太阳先生你快来看！&lt;/p&gt;
+&lt;p&gt;太阳先生（NPC）：恩，很不错，刚才的只是练手，接下来，再帮我制造 &lt;strong&gt;2&lt;/strong&gt;个&lt;strong&gt;甜美梦境&lt;/strong&gt; 和 &lt;strong&gt;1&lt;/strong&gt;个&lt;strong&gt;炫酷梦境&lt;/strong&gt; 吧。记得利用兔子先生交给你的 &lt;strong&gt;梦境装置&lt;/strong&gt; 哦。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;【制作中】&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;我：啊...真的好累啊...感觉非常累呢。&lt;/p&gt;
+&lt;p&gt;太阳先生（NPC）：真是个聪明又勤劳的孩子呢，来，这是你所需要的东西。再会啦！&lt;/p&gt;
+&lt;p&gt;*&lt;em&gt;（&lt;em&gt;获得最后关于未来的一枚碎片）&lt;/em&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;4-故事结尾&#34;&gt;4-故事结尾&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;（播放完未来碎片的故事片段）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;太阳先生（NPC）：很好，孩子，我想你已经知道你为什么会在这里了吧。&lt;/p&gt;
+&lt;p&gt;我：是的，太阳先生......&lt;/p&gt;
+&lt;p&gt;太阳先生（NPC）：非常好，你还有很多事情要去学习，还有很远的路要走。&lt;/p&gt;
+&lt;p&gt;太阳先生（NPC）：不用担心，我和云朵小姐他们都会在这里陪你，现在，我要给你一样东西。这样东西能够帮你继续你的旅程。&lt;/p&gt;
+&lt;p&gt;我：我... 真的可以吗？（颤颤巍巍地发问，不敢相信自己被授予了这样的使命）&lt;/p&gt;
+&lt;p&gt;太阳先生（NPC）：哦亲爱的，不要害怕，你一定能够唤醒造梦之神的。&lt;/p&gt;
+&lt;p&gt;我被太阳先生授予了造梦之神的手杖/控制台，我离开太阳先生的房间后走向了更远的未来......&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;（未来的故事待续..... ）&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;5-未来碎片&#34;&gt;5-未来碎片&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;（使用未来碎片拼成了一副完整的壁画，画从抽象逐渐开始生动变化起来……我感到了惊奇）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;很久很久以前便存在着造梦的神，他守护着千千万万个孩子的梦境，让他们在梦境中获得快乐、勇敢、镇静、安宁的记忆来筑造他们美好的童年……（参考守护者联盟-沙沙）&lt;/p&gt;
+&lt;p&gt;然而人越来越多，人类的文明也越来越发达，造梦之神也向万物之主学习了新的造（bian）梦（cheng）方法来生产梦境给孩子们。&lt;/p&gt;
+&lt;p&gt;可是孩子们的天真烂漫日渐消弭，越来越少的孩子相信有造梦之神的存在，造梦之神的神力逐渐削弱并且开始厌倦了重复批量的造梦工作，造梦之神的力量逐渐被梦魇之魔所侵蚀。&lt;/p&gt;
+&lt;p&gt;为了守护梦境世界，为了唤醒造梦之神，我——最富有创造的小孩被选中。&lt;/p&gt;
+&lt;p&gt;只有当我相信着造梦之神的力量，学习&lt;strong&gt;造梦之力&lt;/strong&gt;并且能够造出**“新”的梦境**才能唤醒造梦之神。&lt;/p&gt;
+&lt;p&gt;如果造梦之神在XX之前没有被唤醒，那么整个地球的孩子的梦境都会陷入梦魇之魔的手爪之中，再也不会获得幸福、快乐、勇敢、安宁的回忆。&lt;/p&gt;
+">梦境物语</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://SkeathyTomas.github.io/post/谈谈我的游戏史/"" data-c="
+          &lt;p&gt;作为一名95后，童年除了学习之外，自然也少不了电视里的动画和动漫，以及各种电子的游戏。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;最早接触的游戏，自然是老式电视上自带的游戏——&lt;strong&gt;俄罗斯方块&lt;/strong&gt;和&lt;strong&gt;推箱子&lt;/strong&gt;，以及信息课上偷偷玩耍的单机游戏——比如&lt;strong&gt;扫雷&lt;/strong&gt;、&lt;strong&gt;蜘蛛纸牌&lt;/strong&gt;、&lt;strong&gt;潜艇大战&lt;/strong&gt;、&lt;strong&gt;三维弹球&lt;/strong&gt;、&lt;strong&gt;打雪仗&lt;/strong&gt;等等。如今看来，这些游戏虽然体量小，但每个游戏都有完整且互相完全不同的玩法机制，本身的乐趣性也比较高（尤其是在偷偷玩的背景下），因此被誉为一个时代的经典也并不过分。&lt;/p&gt;
+&lt;p&gt;之后，浏览器和flash的结合，创生了一系列高质量的网页flash游戏及游戏网站门户（4399，7k7k等）。自然也是花了不少的时间在这些网站中，寻找一些有趣的游戏并和小伙伴们分享。具体的游戏可能并不能记全，但总有一些经典留下了深刻的印象。这里面类型最多的自然是横版闯关类游戏——&lt;strong&gt;合金弹头系列&lt;/strong&gt;、&lt;strong&gt;三国志系列&lt;/strong&gt;、&lt;strong&gt;冒险王系列&lt;/strong&gt;，其他还有解谜类游戏——&lt;strong&gt;森林冰火人&lt;/strong&gt;、&lt;strong&gt;Stanley博士的家&lt;/strong&gt;、&lt;strong&gt;高楼爆破&lt;/strong&gt;，对战类游戏——&lt;strong&gt;拳皇&lt;/strong&gt;、&lt;strong&gt;死神vs火影&lt;/strong&gt;，休闲类游戏——&lt;strong&gt;黄金矿工&lt;/strong&gt;、&lt;strong&gt;连连看&lt;/strong&gt;，塔防游戏——&lt;strong&gt;皇家守卫军&lt;/strong&gt;。如果说最早接触的小游戏是一种启蒙，那么flash游戏则是拓宽了小游戏的认知。&lt;/p&gt;
+&lt;p&gt;再之后就是腾讯的天下了，基于社交体系的各式各类的页游网游模式，比如QQ游戏大厅中各种&lt;strong&gt;玩家对战式棋牌类游戏&lt;/strong&gt;，QQ空间的各种游戏——模拟经营类的&lt;strong&gt;农场&lt;/strong&gt;、&lt;strong&gt;餐厅&lt;/strong&gt;、&lt;strong&gt;商场&lt;/strong&gt;等，回合制卡牌养成与战斗的&lt;strong&gt;Q宠大乐斗&lt;/strong&gt;，塔防类的&lt;strong&gt;家园守卫战&lt;/strong&gt;、&lt;strong&gt;保卫羊村&lt;/strong&gt;，还有&lt;strong&gt;QQ飞车&lt;/strong&gt;、&lt;strong&gt;QQ炫舞&lt;/strong&gt;……腾讯游戏打开了另一种游戏的形式（准确的说是我接触的游戏），借助社交和长线的登陆养成以及pvp模式，让人持续的想去玩一款游戏（上瘾），也做到了商业上的成功。如今看来对于腾讯游戏也是一言难尽——你要说他不好，但确实很多游戏都是童年回忆和经典，是年度爆款，起码良好水准还是有的；你要说他好，似乎也很难说出究竟好在哪里，并没有那么惊艳。真要说的话，只是商业味儿太重了吧。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;终于度过了童年阶段，自身的思维更加成熟，视野也更加开阔，玩游戏也不仅仅只是玩游戏那么简单了，挺多接触的游戏真正有了第九艺术的感觉。由于自身专业的关系，大类中隔壁专业就是数字媒体，身边多了更多的同好，顺便也简单入了个宅，ACG的世界也真正打开了。&lt;/p&gt;
+&lt;p&gt;这个时候所玩的游戏更加多样化，了解了更多的游戏公司，和独立游戏。受到童年时期所玩游戏的影响，对于游戏类型还是有点喜好差异的。比如小时候印象深刻的&lt;strong&gt;塔防&lt;/strong&gt;和&lt;strong&gt;解谜&lt;/strong&gt;，如今依然是最为喜爱的游戏类型，受到QQ飞车影响一度对&lt;strong&gt;赛车类游戏&lt;/strong&gt;抱有好感。当然，对游戏的喜好并不受制于游戏类型，这些年也接触了很多全新模式的游戏，只要这个游戏足够优秀。&lt;/p&gt;
+&lt;p&gt;然后就是游戏平台和方式也都有了很大的变化——随着移动互联网和智能手机的兴起，手机游戏反而变成了一种主流的形式；被朋友拉入了steam大坑；而直播形式，让云游戏云玩家的新游戏形式也都随处可见。&lt;/p&gt;
+&lt;p&gt;由于实在不好以线性文字的形式整理这一阶段尝试和接触的游戏（不完全记录），就以表格形式整理一下吧（分类并不完全准确，每个游戏都可能有多种类型标签，一些非常通用的标签比如rpg就直接略过了）：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;游戏类型&lt;/th&gt;
+&lt;th&gt;深度体验&lt;/th&gt;
+&lt;th&gt;接触与了解&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;音游&lt;/td&gt;
+&lt;td&gt;Deemo，Cytus系列（Rayark，yyds），东方红魔乡，东方妖妖梦等东方游戏（弹幕游戏附赠优秀音乐和同人奇迹，算个音乐游戏也不过分，其实是不知道还可以放哪边）&lt;/td&gt;
+&lt;td&gt;节奏大师，别踩白块&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;塔防&lt;/td&gt;
+&lt;td&gt;植物大战僵尸（初代及二代手游），明日方舟&lt;/td&gt;
+&lt;td&gt;保卫萝卜，东方梦符祭&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;解谜&amp;amp;冒险&lt;/td&gt;
+&lt;td&gt;纪念碑谷，人力资源机器，返校，还愿（政治私货可惜了），烟火&lt;/td&gt;
+&lt;td&gt;机械迷城，Limbo，Sally Face，光遇&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;赛车&lt;/td&gt;
+&lt;td&gt;极品飞车9（经典中的经典）及系列其他，狂野飙车&lt;/td&gt;
+&lt;td&gt;GTA5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;恐怖游戏&lt;/td&gt;
+&lt;td&gt;P.T.，生化危机&lt;/td&gt;
+&lt;td&gt;面容，港诡实录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;二次元&lt;/td&gt;
+&lt;td&gt;阴阳师、原神&lt;/td&gt;
+&lt;td&gt;FGO，碧蓝航线，崩坏3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;MOBA&lt;/td&gt;
+&lt;td&gt;Dota 2&lt;/td&gt;
+&lt;td&gt;英雄联盟、王者荣耀&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;恋爱游戏&lt;/td&gt;
+&lt;td&gt;Air，未定事件簿，Helltaker，以及不可描述&lt;/td&gt;
+&lt;td&gt;Clannad，恋与制作人&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;休闲娱乐&lt;/td&gt;
+&lt;td&gt;BombSquad，雀魂，旅行青蛙&lt;/td&gt;
+&lt;td&gt;Fall Guys，OverCooked，Among us&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;交互式电影&lt;/td&gt;
+&lt;td&gt;底特律：变人&lt;/td&gt;
+&lt;td&gt;隐形守护者&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ACT&lt;/td&gt;
+&lt;td&gt;手残党落泪&lt;/td&gt;
+&lt;td&gt;对马岛之魂、黑暗之魂、只狼&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;其他&lt;/td&gt;
+&lt;td&gt;我的世界，心跳文学社&lt;/td&gt;
+&lt;td&gt;There is no game&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+">谈谈我的游戏史</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://SkeathyTomas.github.io/post/原神玩法总结/"" data-c="
+          &lt;p&gt;作为一款&lt;strong&gt;二次元开放世界抽卡rpg&lt;/strong&gt;游戏，原神在氪金换皮手游领域实现了突破，不仅在&amp;quot;全平台&amp;quot;登录，更是荣获ios、google play两大手机App平台2020年度游戏。众所周知，游戏有四个核心要素——美术、机制（玩法）、故事和技术，作为一名准公测开服玩家，想要从玩家角度来谈谈这一款跨时代游戏的玩法。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;一图流：&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://raw.githubusercontent.com/SkeathyTomas/img/main/img/%E5%8E%9F%E7%A5%9E%E7%8E%A9%E6%B3%95.svg&#34; alt=&#34;一图流&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;核心玩法&#34;&gt;核心玩法&lt;/h2&gt;
+&lt;p&gt;一度被称为“大杂烩缝合怪”的原神，我对于这款游戏的第一串定语就又臭又长——&lt;strong&gt;二次元开放世界抽卡rpg&lt;/strong&gt;，甚至还可以添加多种游戏标签，比如ACT、文字冒险、解谜、收集等等。但谈到原神的核心玩法，我会总结以下三点：&lt;strong&gt;探索&lt;/strong&gt;、&lt;strong&gt;战斗&lt;/strong&gt;、&lt;strong&gt;养成&lt;/strong&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;探索&#34;&gt;探索&lt;/h3&gt;
+&lt;p&gt;用探索这个词来形容一个游戏的核心玩法未免有些不讲道理，因为探索就算被写进游戏的定义也不足为怪，几乎所有的游戏都少不了探索这一玩法，也许是探索游戏世界、故事、机制、解法……&lt;/p&gt;
+&lt;p&gt;这里就简单介绍以下原神以大世界为背景的探索玩法。在游戏pv中，原神就介绍了以7个国家为背景的提瓦特大陆，整个游戏的世界观和所有发生的事件都在这个大世界中。目前只开放了其中两个国家——蒙德和璃月，璃月还有层岩巨渊未开放。在整个大世界中，玩家可以操纵角色（旅行者）以&lt;strong&gt;第三人称视角自由冒险和探索&lt;/strong&gt;（除非因为等级和剧情原因被限制区域），以了解和掌握整个地图，也比较契合旅行者这一角色身份。在探索过程中，通过解锁&lt;strong&gt;七天神像点亮地图&lt;/strong&gt;，方便地图认知和熟悉；也可以解锁&lt;strong&gt;传送锚点&lt;/strong&gt;，实现地区之间的方便传送；另外，大地图中存在各种不连续的&lt;strong&gt;秘境空间&lt;/strong&gt;，也可进行解锁和探索。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;比较遗憾的是，虽然世界是一个整体，但并不是所有的空间都是连续的&lt;/strong&gt;，比如秘境和大多数室内空间，都无法直接从大世界中顺畅进入（望舒客栈：我不配叫室内空间？），需要独立的载入。而且大多数室内都无法进入，目前已知可进入的室内空间只有蒙德骑士团（部分）、蒙德大教堂（地下室剧情过后就无法进入了）、璃月两个非常简陋的“高档”餐厅、&lt;s&gt;立刻就炸了的&lt;/s&gt;群玉阁。考虑到室内室外空间比例设计的差异以及技术层面的画面渲染，这也无可厚非。&lt;/p&gt;
+&lt;p&gt;因为一切的故事都发生在整个大世界中，所以一切剧情、任务都需要与大世界中的地点、人物进行交互（除了纪行中非常特殊的登录、抽卡这类任务）。**主线任务（魔神任务），角色任务（传说任务），支线任务（世界任务），大世界的突发任务，还有日常周常任务，都建立在大世界的探索基础上。**另外，npc除了对话交互外，还有受到攻击躲避和看到角色整活鼓掌两种基础交互逻辑。&lt;/p&gt;
+&lt;h4 id=&#34;基础行为&#34;&gt;基础行为&lt;/h4&gt;
+&lt;p&gt;在大世界探索的过程中，旅行者的行为包括最为基础的&lt;strong&gt;行走、奔跑/冲刺、跳跃、攀爬、游泳和滑翔&lt;/strong&gt;，还有某些位置可让角色&lt;strong&gt;坐下&lt;/strong&gt;，比如板凳、大世界中的石块、树枝等。通过这些基础行为，旅行者可实现陆水空三个层面的探索，所以与大世界的交互就包括&lt;strong&gt;在陆地奔跑/行走，在水中游泳，爬山/楼，以及从高处滑翔至低处&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;值得注意的是，旅行者有体力条的限制，奔跑、游泳、攀爬、飞行需要消耗一定的体力。而在飞行、攀爬、游泳时耗尽体力将会面临跌落致死/溺水的风险，所以在前期体力条不足时需要特别注意探索时的路径和体力规划。体力条主要通过收集神瞳并供奉七天神像获得上限提升。&lt;/p&gt;
+&lt;h4 id=&#34;采集与收集&#34;&gt;采集与收集&lt;/h4&gt;
+&lt;p&gt;此外，除了这些最基础的交互行为，旅行者还可以&lt;strong&gt;采集/收集大世界中的物品&lt;/strong&gt;，包括但不限于植物（甜甜花等），矿物（含奥藏山的琥珀盲盒，雪山地区独特的深赤之石），动物（鸟类、猪等需要攻击，蜥蜴、青蛙等直接采集，鱼可以直接抓也可以攻击后采集鱼肉），以及其他各类掉落物（星螺，击碎木箱子掉落的食材，带闪光提示的各类圣遗物狗粮、基础货币摩拉等）。&lt;/p&gt;
+&lt;p&gt;除去这些会刷新的采集物外，大地图中也有&lt;strong&gt;一次性的收集物品&lt;/strong&gt;，主要包括神瞳（含雪山地区的绯红玉髓）和宝箱，另外还有观景点、书籍等。这一类收集物品具备最基础的解谜性质，比如各种位置的神瞳可能需要思考一下收集的方法；而策划们费劲心思藏起来的各类宝箱，比如仙灵指引的宝箱、藏在碎石和各种机关中的宝箱等找起来也并不容易。&lt;/p&gt;
+&lt;p&gt;这些收集与采集行为，除去直接捡起或开启（宝箱）的物品外，大多需要配合角色的&lt;strong&gt;攻击/技能交互&lt;/strong&gt;。由于角色武器类型的差异，不同武器的角色也具备独特的交互，比如双手剑角色适合挖矿，弓箭类角色适合打猎或射穿空中的气球（风史莱姆和蓬蓬果）。&lt;/p&gt;
+&lt;p&gt;还有一种特殊的采集，需要通过击败大世界中各类怪物获得。不同的怪物会掉落不同类型的养成材料，或是装备。而战斗和养成部分则放在之后两个部分详细介绍。&lt;/p&gt;
+&lt;h4 id=&#34;环境交互&#34;&gt;环境交互&lt;/h4&gt;
+&lt;p&gt;在介绍大世界环境交互之前，首先需要了解游戏的一个基本机制——元素力。在提瓦特世界中，存在七种元素力——&lt;strong&gt;风岩水火冰雷草&lt;/strong&gt;，元素之间可以相互反应，基本和常识一致，比如火可以点燃草，融化冰，水可灭火，冰可以冻结水；再加上无属性，大世界的环境都由这7+1种基本属性组成，而环境交互也都建立在这一属性机制之上。&lt;/p&gt;
+&lt;p&gt;具体的：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;无属性的角色攻击可以破坏草属性的小灌木（有概率掉落松茸鸟蛋蜥蜴）；可以破坏无法获得击杀奖励的小动物，比较特殊的猫和狗会自动闪避攻击；攻击树木有打击感，果树会掉落果子，雪山地区的树木还会掉落雪。&lt;/li&gt;
+&lt;li&gt;高处坠落可致伤、致死，河湖可溺死，这一机制同样适用于应对怪物，暂未发现会游泳的怪物。&lt;/li&gt;
+&lt;li&gt;具备时间和天气系统，不同时间和不同的天气光照、景色会有差异，天气状态也会对角色产生一些状态影响。&lt;/li&gt;
+&lt;li&gt;存在“火炬”、元素方碑等需要特定类型的元素力点亮（解谜要素）。&lt;/li&gt;
+&lt;li&gt;风场提供上身气流供起飞，风环提供飞行加速，风种子和冰种子都可以造出风场，风史莱姆死亡后也可产生短暂风场，岩种子有独特的解谜机制。&lt;/li&gt;
+&lt;li&gt;角色和怪物都可附着元素，而附着方式主要包括角色/怪物技能和环境中的水火冰雷元素接触（河流湖泊水体、火源、冰/火雾花，下雨天气，被落雷击中等，破坏炸药桶、水汽石）。环境中除了水元素附着，大部分元素附着过程都伴随环境伤害。各类元素附着可能会带来角色/怪物属性的变化，比如冰属性附着使角色速度减缓。&lt;/li&gt;
+&lt;li&gt;火元素可以点燃草地、小灌木和多种木制品（箱子、怪物木遁），并造成环境伤害（敌我无差别伤害）。&lt;/li&gt;
+&lt;li&gt;冰元素和水元素接触产生冻结，可以通过此方式冻结角色和怪物，或者冻结水面，实现长距离跨越水面环境（凝冰渡海真君）。&lt;/li&gt;
+&lt;li&gt;水、冰可以灭火。&lt;/li&gt;
+&lt;li&gt;雷元素可使水体感电，造成范围环境伤害。&lt;/li&gt;
+&lt;li&gt;风元素将元素扩散到更大范围，比如草地上的火，水面的冰。&lt;/li&gt;
+&lt;li&gt;岩元素与其他元素反应产生对应的结晶护盾。&lt;/li&gt;
+&lt;li&gt;龙脊雪山独有寒冷机制，暴露于雪山环境会积累寒冷值，达到上限后对角色造成伤害，可以通过火源、火仙灵、传送点、深赤之石等减缓或消除寒冷值。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;战斗&#34;&gt;战斗&lt;/h3&gt;
+&lt;p&gt;原神的战斗是以&lt;strong&gt;上限为四人的冒险小队&lt;/strong&gt;（存在包括试玩的五人小队）为基础的第三人称视角即时类战斗。虽然是四人小队，但是角色并不能同时出场（除了联机模式），而是以快速切换角色的形式每次控制一名角色，毕竟非上帝视角的多操并不符合交互规则。在战斗类型方面，主要包括大世界怪物、精英怪，秘境，大世界boss和深境螺旋，版本活动也多会提供一些高难限时怪物。&lt;/p&gt;
+&lt;h4 id=&#34;进攻&#34;&gt;进攻&lt;/h4&gt;
+&lt;p&gt;角色的进攻形式包括主要三个模组——基础攻击、小技能（元素战技）和大招（元素爆发）。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;基础攻击&lt;/strong&gt;又包括普通攻击、重击和下落攻击，按照角色所使用的武器，基础攻击会有略微的差异，比如攻速、攻击范围和伤害。此外，虽然武器相同，不同角色的基础攻击也略有差异。目前角色可使用的武器类型有5种——单手剑、双手剑、弓箭、长柄武器和法器。其中弓箭和法器一般有较大的攻击距离，双手剑攻速较低但压制力和破盾能力比较强，法器的攻击自带法球伤害，单手剑和长柄武器有较快的攻速。
+&lt;ul&gt;
+&lt;li&gt;普通攻击包含连续的多段攻击（3-6段），每一段攻击之后有短暂后摇，一套完成之后有一段较大的攻击后摇。可以通过跳跃、闪避、重击等多种方法打断连续的攻击及后摇，刷新多段攻击。&lt;/li&gt;
+&lt;li&gt;重击一般需要消耗一定的体力，造成略高的伤害。弓箭类角色的重击较为特殊——进入瞄准模式，蓄力一定时间后造成较高法术伤害。&lt;/li&gt;
+&lt;li&gt;下落攻击（跳劈），指从高处下落时进行攻击操作，下落过程和落地时造成较高的范围伤害。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;技能&lt;/strong&gt;方面，角色各有一个小技能和大招，技能一般造成元素伤害。小技能有cd，有长按和短按的不同释放方式（某些角色可能只有短按的方式）；大招不仅有cd，也有能量条的限制，需要通过小技能击中怪物或打击击杀怪物恢复能量。由于非攻略向的文章，不具体讨论角色技能，只大致介绍技能类型，当然也可进行组合。
+&lt;ul&gt;
+&lt;li&gt;伤害型技能。对一定范围内怪物或单体怪物造成伤害。&lt;/li&gt;
+&lt;li&gt;控制型技能。提供怪物的牵引、嘲讽、位移、石化等控制效果，阻止/打断怪物移动、攻击等行为。&lt;/li&gt;
+&lt;li&gt;保护型技能。恢复队伍内角色生命或者创造可吸收伤害的护盾。&lt;/li&gt;
+&lt;li&gt;位移型技能。提供角色短暂位移，用户躲避上海，追踪怪物等。&lt;/li&gt;
+&lt;li&gt;召唤类技能。后台召唤物技能，可在角色切换后依然在场，提供多种作用。&lt;/li&gt;
+&lt;li&gt;buff类技能。提供角色伤害加成、攻速加成、减短技能cd、怪物易伤等效果。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;防御&#34;&gt;防御&lt;/h4&gt;
+&lt;p&gt;除了进攻之外的战斗方式，防御也是战斗的另一个重要方面。基础的生命、抗性、防御属性和保护型技能可以减少或抵消承受伤害，增加战斗容错率。而在规避伤害方面，机制比较简单，只有&lt;strong&gt;闪避、位移型技能和大招的无敌帧&lt;/strong&gt;。怪物的攻击有前摇和范围，可通过位移和闪避离开范围规避伤害，或在正确的时机利用闪避动作、大招前摇的无敌帧规避伤害。&lt;/p&gt;
+&lt;h4 id=&#34;战斗技巧&#34;&gt;战斗技巧&lt;/h4&gt;
+&lt;p&gt;在战斗中存在一些通用的技巧，既可以用于应对怪物，也能被怪物使用。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;打断&amp;amp;压制&lt;/strong&gt;。无论是怪物或是角色，收到伤害会被打断，进入硬直状态，除非具备高抗打断能力（护盾、各类技能提供的效果等），不同怪物抗打断能力不同并且随怪物状态（特性）也会改变；重击、普通攻击最后一段对于怪物有更强的打断能力，甚至击飞效果。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;弱点打击&lt;/strong&gt;。怪物存在弱点（一般为头部），命中弱点必定暴击，造成更高伤害，并具备强打断效果，甚至让怪物进入瘫痪状态。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;元素反应&#34;&gt;元素反应&lt;/h4&gt;
+&lt;p&gt;准确而言，元素反应也属于战斗技巧，但这一技巧过于特殊，是整个战斗的核心模块，所以单独介绍。前文提及的存在于大世界中的七大元素，也同样适用于战斗之中。拥有神之眼或神之心的角色可以&lt;strong&gt;操纵对应属性的元素&lt;/strong&gt;，主角更可以操纵多种属性的元素力（&lt;strong&gt;选择切换属性&lt;/strong&gt;）。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;使用不同类的元素攻击或技能攻击带元素的怪物（自带元素或附着了元素）可以触发元素反应。&lt;strong&gt;元素反应可以带来&lt;/strong&gt;额外的元素伤害&lt;/strong&gt;（雷火超载，雷冰超导，雷水超载，火草点燃），或是&lt;strong&gt;按照倍率提升伤害&lt;/strong&gt;（火水蒸发，火冰融化），或是&lt;strong&gt;控制效果&lt;/strong&gt;（水冰冻结）。元素反应与四人战斗小队的模式相契合，合理运用元素反应将大大加快战斗进程。四人小队还可以根据元素的类型和数量提供不同的元素共鸣效果，为全队角色提供独特的队伍buff。&lt;/p&gt;
+&lt;p&gt;一些怪物存在元素护盾，护盾存在期间伤害减免或免疫，并提供怪物特殊能力。主要通过&lt;strong&gt;元素反应破盾&lt;/strong&gt;，合理利用&lt;strong&gt;元素克制关系&lt;/strong&gt;可快速破盾，比如火克冰，冰克水，水克火，破盾之后怪物进入虚弱状态，是一轮输出的机会。&lt;/p&gt;
+&lt;h3 id=&#34;养成&#34;&gt;养成&lt;/h3&gt;
+&lt;p&gt;作为第三个核心玩法，原神的养成和其他养成类手游基本类似，都是通过刷刷刷的模式提升角色等级和伤害，并不是通过游戏的探索和玩家的熟练而成长起来的模式。可养成的对象包括角色人物、武器、天赋（技能）和圣遗物，养成材料包含无需树脂（时间体力系统）的大世界怪物击杀奖励，大世界各种捡垃圾和需要消耗树脂的各种世界boss和副本秘境，以及基础货币摩拉。&lt;/p&gt;
+&lt;p&gt;当然最主要的养成对象是角色，其他各种都建立在角色之上，毕竟rpg这一游戏属性就注定了角色成长的重要性。角色的获得方式是抽卡，可惜往往会歪出武器。不同的角色可以搭配不同的武器、圣遗物，以及四人小队可以自由搭配。加上养成素材的限制，合理使用资源，探索阵容和各种装备之间的搭配，是玩家之间讨论最为充分的一个话题，也是整个养成玩法的核心。&lt;/p&gt;
+&lt;h2 id=&#34;其他玩法活动玩法&#34;&gt;其他玩法/活动玩法&lt;/h2&gt;
+&lt;p&gt;这一部分主要对一些特殊/活动的玩法做一些整理，主要以小游戏形式出现，丰富整个游戏的探索和战斗玩法，或提供养成资源。当然官方也知道自己的主线制作进度更不上玩家游玩的速度，所以也通过制作各类小游戏性质的活动玩法，撑起没有什么实质内容的小版本，帮助玩家度过长草期。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;联机系统。玩家可以加入其他人的世界，组成一个真·冒险小队进行世界探索、打怪或一起刷副本，最多可以有四名玩家一起联机。&lt;/li&gt;
+&lt;li&gt;料理系统。游戏中可制作料理，为角色提供复活、回血以及团队buff效果。&lt;/li&gt;
+&lt;li&gt;成就系统。探索结果的展示系统，含不直接显示的隐藏成就。&lt;/li&gt;
+&lt;li&gt;探索派遣。使用角色花费时间获取资源。&lt;/li&gt;
+&lt;li&gt;拍照系统。提供高级截屏功能——拍照系统，可调节镜头景深、角色姿态表情等，用于分享提瓦特美丽的背景和角色。后续也提供了快捷照相机和滤镜照相机功能。春节前活动集五福玩法——通过特殊照相机拍取大世界中特定颜色的物品，可获得不同颜色的卡片。&lt;/li&gt;
+&lt;li&gt;潜行。目前只在剧情任务中出现三次（偷琴、抓猫、逃出请仙现场），透过翻滚、下蹲潜行、投掷干扰物/吸引物引起目标注意，以此基础达成前往目的地的目标。&lt;/li&gt;
+&lt;li&gt;飞行挑战/赶路挑战。按照指定路线，限时通过飞行（加速环）/跑步（击杀怪物）到达终点。&lt;/li&gt;
+&lt;li&gt;空战。剧情打风魔龙专属玩法。&lt;/li&gt;
+&lt;li&gt;讨价还价。璃月花钱雇人特殊玩法。&lt;/li&gt;
+&lt;li&gt;寻宝。通过寻宝罗盘/小精灵等指引宝藏方向进行寻宝活动。&lt;/li&gt;
+&lt;li&gt;外卖/快递。（限时、限方式）跑图任务。&lt;/li&gt;
+&lt;li&gt;塔防模式。海灯节特殊玩法，3D含元素反应模块的塔防。&lt;/li&gt;
+&lt;li&gt;保护/护送/破坏。守护目标不被怪物破坏（货物气球、遗迹），阻止目标到达终点（史莱姆气球）。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;这些日常玩法也在不断丰富中，比如1.4版本前瞻透露的糖豆人模式、galgame模式、音游模式等等。&lt;/p&gt;
+&lt;h2 id=&#34;非官方玩法&#34;&gt;非官方玩法&lt;/h2&gt;
+&lt;p&gt;这类玩法存在于树脂耗尽和版本探索100%后的长草期玩家，依据开放世界的游戏特性由玩家开发出。虽然不是官方玩法，但其本身的乐趣性并不比官方玩法差，经常引起玩家的热烈讨论（主要还是长草期过于无聊）。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;线下pvp。虽然游戏内并没有pvp模式，但玩家可以通过非游戏内方式比较伤害，怪物击杀时间，秀操作，甚至秀最大怪物伤害。&lt;/li&gt;
+&lt;li&gt;玩家攻略。玩家提供游戏的解读和解析，并制作各种探索、战斗、养成攻略。&lt;/li&gt;
+&lt;li&gt;利用环境/世界怪物伤害实现游戏内pvp。比如草地放火大战、冻结水面融化使玩家落水、水面感电大战等等。&lt;/li&gt;
+&lt;li&gt;捉迷藏。限定区域和时间，不借助小地图寻找躲起来的其他玩家。&lt;/li&gt;
+&lt;li&gt;追逃。角色的身高、被动等会影响角色的跑步速度，选择不同角色并限定优势角色的动作（比如不能飞行）可实现追逃模式玩法。&lt;/li&gt;
+&lt;li&gt;岩创造物整活。多人模式下利用钟离的柱子，不接触水面过河。创造物更改npc路径等等。&lt;/li&gt;
+&lt;li&gt;利用实体碰撞机制实现游戏特性（真实的物理引擎）。比如某些位移技能时收到攻击会带来夸张的位移，利用风史莱姆起飞的碰撞实现夸张的位移，利用攻击卡肉机制实现跳跃能力的小提升并使出“登龙斩”。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;总结&#34;&gt;总结&lt;/h2&gt;
+&lt;p&gt;以上就是我作为一名个人玩家对于原神玩法的总结了，当然也肯定有不少遗漏之处。总结下来发现原神的玩法也确实非常多样（尤其是在探索阶段），光是主副线剧情也有几十个小时的游戏时间了，顶个3A大作也并不过分。总结过程大多只是介绍玩法，并没有更多主观情感的评价。不过既然能为一款游戏写下那么多内容，自然也是表达了我对原神的喜爱，尤其是世界架构和9+剧情之下的13+剧情伏笔，轻度的ACT玩法也能适合绝大多数玩家。总之希望原神越做越好，真正构建起一个有趣而美丽的提瓦特世界。&lt;/p&gt;
+">原神玩法总结</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://SkeathyTomas.github.io/post/谁说《天气之子》不能和《你的名字》比较？/"" data-c="
+          &lt;p&gt;利益相关，新海诚多年粉丝，去年《天气之子》国内上映的时候，在了解了一些背景之后也是立刻去影院观看了诚哥三年的又一新作。虽然一些背景的了解带来了轻微的剧透，但丝毫不影响我的观感（和我本人的观影习惯有关，不怎么在意剧透，毕竟除了剧情还有更多可以关注的维度），所以总体观感非常棒，看完之后仍留有很多思考的地方。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;意料之外的是这部非常对我胃口的作品却在圈内引发了大量争议，什么剧情老套，结局争议，诚哥水平不再等等大量负向的言论涌出，又有大量对此反驳的解析向内容产出，最后甚至有两个阵营的创作者互喷对撕的局面，用乌烟瘴气来形容完全不过分。当然我自己看到喜欢的作品被喷成这样也是有点生气，所以也是第一时间去翻了小说设定集，补充一些电影细节的了解，顺便打算写篇文章好好分析一番。可惜自己比较懒，写了个提纲讨论热度就下来了，于是又懒得写了。&lt;/p&gt;
+&lt;p&gt;如今B站上线《天气之子》，于是这个鸽了半年多的文章企划再次启动。主题是《天气之子》和《你的名字。》的对比分析，正如标题所示。可能会有标题党的嫌疑，不过去年争议阶段确实拿两部作品对比的言论大有所在，基本都是一边倒的《天气之子》不如《君名》，但是正儿八经对两部作品对比分析的文章却少之又少。然后就有《天气之子》的粉丝大喝“有什么好比较的“，”捧一踩一有必要吗”，我的观点是&lt;strong&gt;同样是新海诚的作品，主角和剧情架构又有很多类似的地方，有什么不可以比较的呢，有比较才会有好坏的结果，才能进一步促进市场产生更优质的内容。&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;先来说一些两部作品相同的内容——同样的新海诚总监督，同样的人设田中将贺，同样的音乐RADWIMPS。尽管争议很多，在画面和音乐上却毫无争议，一致好评。壁纸狂魔新海诚，每一帧依然都是壁纸；而作为T0级别的人设田中将贺，角色还是香；演出也都非常到位，没有什么大规模的让人吐槽的奇怪演出。音乐鬼才RADWIMPS，在有了前作的铺垫上似乎更有经验和名气了，几首主题曲完美契合作品，情感表达也更加丰富，所以我在预告片的时候就被那首《愛にできることはまだあるがい》副歌部分深深吸引到，期待国内引进了。&lt;/p&gt;
+&lt;p&gt;然后是一些值得进行对比的点，主要从剧情节奏、人物塑造、作品深度三个角度进行分析。&lt;/p&gt;
+&lt;h2 id=&#34;剧情节奏&#34;&gt;剧情节奏&lt;/h2&gt;
+&lt;p&gt;先说结论，这点上无疑是《君名》更胜一筹。在预告片中，《君名》只透露了一个身体交换的爆点，而在正片中这只占到了一小部分，之后的时空错位揭晓的时候让人大呼精彩，这也是新海诚第一次将一个故事讲述得如此精彩。**穿越和互换身体两大永不过时的设定总能玩出点让观众高潮的新花样。**而且整体节奏也非常清晰且有吸引力，用一个欢乐的互换身体作为前奏，然后突然转折引出矛盾，带领观众一起解谜，然后进入核心拯救女主和世界的部分（过程还有许多曲折），在日剧跑和陨石坠落的高潮中完美落幕，最后的相遇结局一反以往的新海诚——“诚哥终于相信爱情了”再次引入一个讨论的高潮。无论是故事本身的趣味，还是故事讲述的波澜，《君名》都足够吸引更加大众化的观众，这也注定了其在票房和大众口碑上的双丰收。&lt;/p&gt;
+&lt;p&gt;而对应的，《天气之子》的整体剧情则相对平淡很多，预告片可以说是毫不吝啬地讲完了整个故事，唯有的期待只剩下“这次少男少女又该怎样拯救世界”，不过好在正片给了这个想法啪啪打脸，不是拯救世界，而是放弃世界拯救女主。《天气之子》没有《君名》那样的爆点要素，一切都显得更加平淡，100%晴天女孩什么的，不过如此，激不起观众的兴趣。此外，《天气之子》的剧情拉的很长，由很多小故事组成，观众的注意力在本就不是那么突出的主线剧情上被多次分散，所以若是只关注主线故事怎么发展，自然少不了平淡无聊的抱怨。&lt;/p&gt;
+&lt;p&gt;虽然在主线剧情表现略逊一筹，但是我觉得《天气之子》的节奏基本没什么大的问题。先来拆分一下剧情（剧透警告）：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;帆高离家出走，东京闯荡，最后在圭介的事务所暂住。&lt;/li&gt;
+&lt;li&gt;帆高“救”阳菜，天气巫女的能力出现，枪的冲突埋下伏笔。&lt;/li&gt;
+&lt;li&gt;阳菜为了维持生计，100%晴天女孩企划启动，在花火大会达到高潮。&lt;/li&gt;
+&lt;li&gt;代价出现了，女主身体透明化，福利院和警察两大矛盾纷纷指向男女主。&lt;/li&gt;
+&lt;li&gt;在恶劣的天气中主角团逃过一劫，在宾馆轻松的一夜。&lt;/li&gt;
+&lt;li&gt;突然女主祭献，天气放晴，男主拯救女主，矛盾正面交锋，全片高潮。&lt;/li&gt;
+&lt;li&gt;东京被淹，结局交代，男女主重逢。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;看起来只是简单的平铺直叙，但是情感唤起程度却在不断波动，在一段紧张的片段之后一定会补上舒缓的片段（比如夏美大姐姐的胸），在平淡之后也会稍稍补充一些高潮部分（比如中间的花火大会），看似缓和了又突然引发了矛盾（宾馆一夜天亮后阳菜消失）。在主线上又不断推进，最高潮部分的展开做足了铺垫。情绪流的起伏至少让我既不会觉得无聊也不会突然接受爆炸的信息而跟不上节奏。所以，稍稍用点心的话，剧情还是颇为有趣的（站在制作组的角度）。&lt;/p&gt;
+&lt;h2 id=&#34;人物塑造&#34;&gt;人物塑造&lt;/h2&gt;
+&lt;p&gt;《君名》的人物塑造，可以说是基本没有，人物都是为剧情服务的，除了男女主，其他配角基本只是个工具人。男女主因为有比较强的情感表达与交流，所以还不至于沦为工具人的地步，毕竟主打少男少女的爱恋的作品讲述情感也是相当重要的。不过还有一个疑问，男女主是怎么喜欢上彼此的？在《前前前世》的BGM中，男女主在争吵中似乎就莫名其妙地喜欢上对方了，虽然也可以理解，毕竟和人交换身体什么的，总能萌生出异样的情感。男主的设定是一个喜欢打工餐厅前辈的都市高中生，女主设定是一心想去东京大都市的乡村神社继承人，如此简单的设定之后也没有做更多的解剖，自然也就少了很多角色魅力，让人总体对《君名》这部作品有感，而对其中的角色没什么太多的感情。好在感情戏和泪点制造的相当出色，而且爱恋故事似乎对于人物塑造什么的也不是那么重要，观众也不在乎，扳回一局。&lt;/p&gt;
+&lt;p&gt;《天气之子》的人物塑造则出色得太多。首先是男女主的设定，一个离家出走，独自闯荡东京，一个父母双亡，还要照顾上学的弟弟。这样的设定直接就立体了很多，不是随便抓一个人就可以开始的故事，稍微特殊的人群（小人物）也更容易植入更加值得思考的问题。男女主本身设定上的类似点，男女主前期的互助，到后期的奋不顾身也要为了对方，拯救对方，至少逻辑上没什么大的问题，所以男女主情感上的交流与发展也显得更加自然、真挚而动人。再说说主要的配角，男二中年大叔圭介，年轻的时候和男主类似的性格，而随着年龄的增大迫于社会各方面的压力而妥协，最终在枪战对峙中一瞬间找回了自己的初心。女二夏美大姐姐，初入社会忙着找工作的元气大姐姐，敢想敢做，一度开始被社会蚕食，又能在关键时刻放飞自我。还有男三把妹达人凪，年纪小小却有自己的理解和想要守护的东西，还有古板的警察。。。除了（Besides）最主要的男女主，主要配角的塑造也都相当成功，甚至可以被解读成社会中人的各种不同阶段，妙啊。出色的人物塑造，自然会把观众的注意力引向对于人物的喜爱，比如我可太喜欢夏美大姐姐了。&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;https://pic4.zhimg.com/80/v2-4c455fea5a72a6bb9f85a70d64e5d5bb_1440w.jpg&#34; alt=&#34;偷偷抱走&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;作品深度&#34;&gt;作品深度&lt;/h2&gt;
+&lt;p&gt;《君名》的深度，并不容易理解，这是一种类似于宗教信仰之类的概念，是人与人之间的连接，是使命与任务之类的抽象概念。在表的爱情故事之下，隐藏的是新海诚的哲学思考，这里的表达和诚哥早期的作品还是有很多相似程度的，是一部纯粹的理想主义作品。&lt;/p&gt;
+&lt;p&gt;《天气之子》的深度，更容易理解但是变得复杂了。最明显的一些主题探讨：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;天空是比海洋更深邃的地方，天空从以前就属于不同的世界。这是一种对自然的敬畏，在自然面前，人能做到的极为有限，倒是和宫崎骏的作品有共同之处，最终的结局也在表达这样的观点。&lt;/li&gt;
+&lt;li&gt;代价，天气巫女可以通过牺牲自己换来暂时的理想天气，那么，电车难题应该怎么解决？可以为了集体牺牲个体吗？&lt;/li&gt;
+&lt;li&gt;初心，不同社会阶段的人群，面对社会的毒打，又该怎样保持初心，还是融入社会之中呢？&lt;/li&gt;
+&lt;li&gt;小人物，作品的主视角都面向了繁华都市中接近于底层的人们，很容易想到星爷小人物主题的故事，整个社会又应该对这一群体做一些什么呢？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;整体来说，《天气之子》可以很有深度，加上使用一个颇具争议的结局让观众来解读零散的主题。我并不认为如此复杂的主题是一件好事，甚至我自己也理不清到底在讲什么样的主题，有兴趣的人可以去看大佬们的深度解析。但是我佩服新海诚，能够突破自己，第一次讲述了一个那么复杂的故事，让一个理想主义的作品发生在现实主义的背景下，通过出色的主配角人物塑造发人深思。&lt;/p&gt;
+&lt;h2 id=&#34;总结与彩蛋&#34;&gt;总结与彩蛋&lt;/h2&gt;
+&lt;p&gt;分析了那么多，主要还是想说《天气之子》比起《君名》，并不是那么不堪，整体上并不输《君名》。至于口碑和票房上的差距，原因只是正如新海诚自己所说的——“这并不是面向所有人的作品”，如果你恰好和我同感，就一起在bilibili去看看刚刚上线的《天气之子》吧。&lt;/p&gt;
+&lt;p&gt;P.S. 天空坠落的那个片段，男主脸上的挂彩，不知不觉绝想到了《幽灵公主》里的女主，进而又想到了《天空之城》的设定，还有《千与千寻》里的白龙莫名和天空里的龙也有点类似来着，所以自然想到了和宫崎骏作品的主题。至于其他联动彩蛋什么的，其他人都讲烂了，我就懒得讲了。&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;https://pic2.zhimg.com/80/v2-798f144fc0d5cd6d230fc0696bcb4a31_1440w.jpg&#34; alt=&#34;天气之子&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;3&#34;&gt;&lt;img src=&#34;https://pic4.zhimg.com/80/v2-a643d1daa562d41c96748c8c4faeb883_1440w.jpg&#34; alt=&#34;幽灵公主&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+">谁说《天气之子》不能和《你的名字》比较？</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://SkeathyTomas.github.io/post/about/"" data-c="
+          &lt;blockquote&gt;
+&lt;p&gt;欢迎来到我的小站呀，很高兴遇见你！🤝&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;关于本站&#34;&gt;🏠 关于本站&lt;/h2&gt;
+&lt;p&gt;个人博客，主要整理并记录一些奇思妙想，多为个人兴趣爱好或专业相关的小思考✨。&lt;/p&gt;
+&lt;h2 id=&#34;博主是谁&#34;&gt;👨‍💻 博主是谁&lt;/h2&gt;
+&lt;p&gt;浙江大学，工业设计本硕，不务正业的designer，美术、产品、商业、代码、心理学、设计、吹逼样样精通（才怪哩）😊。&lt;/p&gt;
+&lt;h2 id=&#34;兴趣爱好&#34;&gt;⛹ 兴趣爱好&lt;/h2&gt;
+&lt;p&gt;动漫游戏影视，二次元预警，死宅预定😉。&lt;/p&gt;
+&lt;h2 id=&#34;联系我呀&#34;&gt;📬 联系我呀&lt;/h2&gt;
+&lt;p&gt;欢迎私戳主页留下的各类链接！&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/SkeathyTomas&#34;&gt;Github&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://space.bilibili.com/27096171&#34;&gt;Bilibili&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.zhihu.com/people/skeathy&#34;&gt;知乎&lt;/a&gt;&lt;/p&gt;
+">关于</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://SkeathyTomas.github.io/post/hello-gridea/"" data-c="
+          &lt;p&gt;👏  欢迎使用 &lt;strong&gt;Gridea&lt;/strong&gt; ！&lt;br&gt;
+✍️  &lt;strong&gt;Gridea&lt;/strong&gt; 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/getgridea/gridea&#34;&gt;Github&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://gridea.dev/&#34;&gt;Gridea 主页&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;http://fehey.com/&#34;&gt;示例网站&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;特性&#34;&gt;特性👇&lt;/h2&gt;
+&lt;p&gt;📝  你可以使用最酷的 &lt;strong&gt;Markdown&lt;/strong&gt; 语法，进行快速创作&lt;/p&gt;
+&lt;p&gt;🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片&lt;/p&gt;
+&lt;p&gt;🏷️  你可以对文章进行标签分组&lt;/p&gt;
+&lt;p&gt;📋  你可以自定义菜单，甚至可以创建外部链接菜单&lt;/p&gt;
+&lt;p&gt;💻  你可以在 &lt;strong&gt;Windows&lt;/strong&gt;，&lt;strong&gt;MacOS&lt;/strong&gt; 或 &lt;strong&gt;Linux&lt;/strong&gt; 设备上使用此客户端&lt;/p&gt;
+&lt;p&gt;🌎  你可以使用 &lt;strong&gt;𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌&lt;/strong&gt; 或 &lt;strong&gt;Coding Pages&lt;/strong&gt; 向世界展示，未来将支持更多平台&lt;/p&gt;
+&lt;p&gt;💬  你可以进行简单的配置，接入 &lt;a href=&#34;https://github.com/gitalk/gitalk&#34;&gt;Gitalk&lt;/a&gt; 或 &lt;a href=&#34;https://github.com/SukkaW/DisqusJS&#34;&gt;DisqusJS&lt;/a&gt; 评论系统&lt;/p&gt;
+&lt;p&gt;🇬🇧  你可以使用&lt;strong&gt;中文简体&lt;/strong&gt;或&lt;strong&gt;英语&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力&lt;/p&gt;
+&lt;p&gt;🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步&lt;/p&gt;
+&lt;p&gt;🌱 当然 &lt;strong&gt;Gridea&lt;/strong&gt; 还很年轻，有很多不足，但请相信，它会不停向前 🏃&lt;/p&gt;
+&lt;p&gt;未来，它一定会成为你离不开的伙伴&lt;/p&gt;
+&lt;p&gt;尽情发挥你的才华吧！&lt;/p&gt;
+&lt;p&gt;😘 Enjoy~&lt;/p&gt;
+">Hello Gridea</a>
+      </div>
+      
+    </div>
+    <div class="page">
+      <div id="page_ul"></div>
+    </div>
+  </div>
+</div>
+<script>
+  !function () {
+    let searchMask = document.querySelector('#search_mask');
+    let result = document.querySelector('#result');
+    let items = document.querySelectorAll('.item');
+    let searchBox = document.querySelector('#search');
+    let statCount = document.querySelector('#stat_count');
+    let statTimes = document.querySelector('#stat_times');
+    let pageUl = document.querySelector('#page_ul');
+    let close = document.querySelector('#close');
+    
+    close.addEventListener('click', function() {
+      searchMask.style = 'display: none;'
+    })
+
+    let finds = [];
+    let contents = [];
+    let pageSize = 10;
+    items.forEach(item => {
+      let a = item.querySelector('a');
+      contents.push({
+        title: a.innerText,
+        details: a.dataset.c,
+        link: a.href
+      })
+      item.remove();
+    })
+
+    function insertStr(soure, start, count) {
+      let newStr = soure.substr(start, count);
+      return soure.slice(0, start) + '<em>' + newStr + '</em>' + soure.slice(start + count);
+    }
+
+    pageUl.addEventListener('click', function(event) {
+      let target = event.target;
+      if (target.__proto__ === HTMLSpanElement.prototype) {
+        appendResults(parseInt(target.dataset.i));
+      }
+    })
+
+    function appendResults(index) {
+      let htmlResult = '';
+      let start = index || 0;
+      let end = Math.min(start + pageSize, finds.length);
+      for (let i = start; i < end; i++) {
+        const current = finds[i];
+        let html = current.title;
+        let sum = 0;
+        let positions = current.positions;
+        positions.forEach(position => {
+          html = insertStr(html, position.start + sum, position.count);
+          sum += 9;
+        })
+        htmlResult += `<div class="item"><a class="result-title" href="${current.link}">${html}</a></div>`;
+      }
+      result.innerHTML = htmlResult;
+      pageUl.innerHTML = '';
+      let count = finds.length / pageSize;
+      let lis = '';
+      if (start !== 0) {
+        lis += `<span class="fa fa-angle-left" data-i='${start - 1}'></span>`;
+      }
+      for (let i = 0; i < count; i++) {
+        lis += `<span class='${i === start?'current':''}' data-i='${i}'>${i+1}</span>`;     
+      }
+      if (start+1 < count) {
+        lis += `<span class="fa fa-angle-right" data-i='${start+1}'></span>`;  
+      }
+      pageUl.innerHTML = lis;
+    }
+
+    function search(delay) {
+      let timer = null
+      return function () {
+        clearTimeout(timer)
+        timer = setTimeout(() => {
+          let start = Date.now();
+          let segments = searchBox.value.split(' ').filter(c => c != '');
+          if (segments.length <= 0) {
+            return;
+          }
+          finds = [];
+          let htmlResult = '';
+          contents.forEach(content => {
+            let title = content.title;
+            let positions = [];
+            let find = false;
+            segments.forEach((segment) => {
+              if (content.title.includes(segment)) {
+                find = true;
+                positions.push({
+                  start: content.title.indexOf(segment),
+                  count: segment.length
+                })
+              } else if (content.details.includes(segment)) {
+                find = true;
+              }
+            });
+            if (find) {
+              finds.push({
+                title: content.title,
+                link: content.link,
+                positions
+              });
+            }
+          })
+          appendResults(0);
+          statCount.textContent = finds.length;
+          statTimes.textContent = Date.now() - start;
+        }, delay)
+      }
+    }
+    searchBox.addEventListener('input', search(200));
+  }()
+</script>
+
+<input hidden id="copy" />
+<script>
+  !function () {
+    let times = document.querySelectorAll('.publish-time');
+    for (let i = 0; i < times.length; i++) {
+      let date = times[i].dataset.t;
+      let time = Math.floor((new Date().getTime() - new Date(date).getTime()) / 1000);
+      if (time < 60) {
+        str = time + '秒之前';
+      } else if (time < 3600) {
+        str = Math.floor(time / 60) + '分钟之前';
+      } else if (time >= 3600 && time < 86400) {
+        str = Math.floor(time / 3600) + '小时之前';
+      } else if (time >= 86400 && time < 259200) {
+        str = Math.floor(time / 86400) + '天之前';
+      } else {
+        str = times[i].textContent;
+      }
+      times[i].textContent = str;
+    }
+  }();
+</script>
+
+<script>
+  let language = '';
+  if (language !== '') {
+    let map = new Map();
+    if (language === 'en') {
+      map.set('search', 'Search');
+      map.set('category', 'Categories');
+      map.set('article', 'Articles');
+      map.set('tag', 'Tags');
+      map.set('top', 'Top');
+      map.set('publish', 'published');
+      map.set('minute', ' minutes');
+      map.set('read-more', 'Read More');
+      map.set('view', 'View');
+      map.set('words', ' words');
+      map.set('category-in', 'category in');
+      map.set('preview', 'Meta');
+      map.set('index', 'Toc');
+      map.set('no-archives', "You haven't created yet");
+      map.set('archives', " articles in total");
+      map.set('cloud-tags', " tags in total");
+      map.set('copyright', "Copyright: ");
+      map.set('author', "Author: ");
+      map.set('link', "Link: ");
+      map.set('leave-message', "Leave a message");
+      map.set('format', "Links Format");
+      map.set('site-name', "Name: ");
+      map.set('site-link', "Link: ");
+      map.set('site-desc', "Desc: ");
+      map.set('stat', " related results, taking ");
+      map.set('stat-time', " ms");
+      map.set('site-img', "Image: ");
+    }
+
+    if (map.size > 0) {
+      let lanElems = document.querySelectorAll('.language');
+      lanElems.forEach(elem => {
+        let lan = elem.dataset.lan, text = map.get(lan);
+        if (elem.__proto__ === HTMLInputElement.prototype) {
+          elem.placeholder = text
+        } else {
+          if (elem.dataset.count) {
+            text = elem.dataset.count + text;
+          }
+          elem.textContent = text;
+        }
+      })
+    }
+  }
+  //拿来主义(真香)^_^，Clipboard 实现摘自掘金 https://juejin.im/post/5aefeb6e6fb9a07aa43c20af
+  window.Clipboard = (function (window, document, navigator) {
+    var textArea,
+      copy;
+
+    // 判断是不是ios端
+    function isOS() {
+      return navigator.userAgent.match(/ipad|iphone/i);
+    }
+    //创建文本元素
+    function createTextArea(text) {
+      textArea = document.createElement('textArea');
+      textArea.value = text;
+      textArea.style.width = 0;
+      textArea.style.height = 0;
+      textArea.clientHeight = 0;
+      textArea.clientWidth = 0;
+      document.body.appendChild(textArea);
+    }
+    //选择内容
+    function selectText() {
+      var range,
+        selection;
+
+      if (isOS()) {
+        range = document.createRange();
+        range.selectNodeContents(textArea);
+        selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+        textArea.setSelectionRange(0, 999999);
+      } else {
+        textArea.select();
+      }
+    }
+
+    //复制到剪贴板
+    function copyToClipboard() {
+      try {
+        document.execCommand("Copy")
+      } catch (err) {
+        alert("复制错误！请手动复制！")
+      }
+      document.body.removeChild(textArea);
+    }
+
+    copy = function (text) {
+      createTextArea(text);
+      selectText();
+      copyToClipboard();
+    };
+
+    return {
+      copy: copy
+    };
+  })(window, document, navigator);
+
+  function copyCode(e) {
+    if (e.srcElement.tagName === 'SPAN' && e.srcElement.classList.contains('copy-code')) {
+      let code = e.currentTarget.querySelector('code');
+      var text = code.innerText;
+      if (e.srcElement.textContent === '复制成功') {
+        return;
+      }
+      e.srcElement.textContent = '复制成功';
+      (function (elem) {
+        setTimeout(() => {
+          if (elem.textContent === '复制成功') {
+            elem.textContent = '复制代码'
+          }
+        }, 1000);
+      })(e.srcElement)
+      Clipboard.copy(text);
+    }
+  }
+
+  let pres = document.querySelectorAll('pre');
+  pres.forEach(pre => {
+    let code = pre.querySelector('code');
+    let copyElem = document.createElement('span');
+    copyElem.classList.add('copy-code');
+    copyElem.textContent = '复制代码';
+    pre.appendChild(copyElem);
+    pre.onclick = copyCode
+  })
+
+</script>
+<script src="/media/js/motion.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+<script>
+  var scroll = new SmoothScroll('a[href*="#"]', {
+    speed: 200
+  });
+</script>
+
+
+
+<script src="/media/js/cool.js"></script>
+
+
+
+
+</html>
