@@ -173,7 +173,7 @@
 </nav>
 
     <div class="banner" id="banner" parallax=true
-         style="background: url('/img/default.png') no-repeat center center;
+         style="background: url('https://clearvision.gitlab.io/images/sapphire.jpg') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
@@ -238,6 +238,12 @@
           <article class="post-content mx-auto">
             <!-- SEO header -->
             <h1 style="display: none">原神玩法总结</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：2021年9月24日 凌晨
+                
+              </p>
             
             <div class="markdown-body">
               <p>作为一款<strong>二次元开放世界抽卡rpg</strong>游戏，原神在氪金换皮手游领域实现了突破，不仅在”全平台”登录，更是荣获ios、google play两大手机App平台2020年度游戏。众所周知，游戏有四个核心要素——美术、机制（玩法）、故事和技术，作为一名准公测开服玩家，想要从玩家角度来谈谈这一款跨时代游戏的玩法。</p>
@@ -388,6 +394,24 @@
                   
                 
                 
+  <div id="gitalk-container"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#gitalk-container', function() {
+      Fluid.utils.createCssLink('/css/gitalk.css')
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', function() {
+        var options = Object.assign(
+          {"clientID":"658faad5dc784f8ec14b","clientSecret":"b1c37d084a7aa0367a81f3a12c863a11ec088597","repo":"skeathytomas.github.io","owner":"skeathytomas","admin":["skeathytomas"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
+          {
+            id: 'd9708c75535155db67c2c6a69529e7e6'
+          }
+        )
+        var gitalk = new Gitalk(options);
+        gitalk.render('gitalk-container');
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
 
               </article>
             

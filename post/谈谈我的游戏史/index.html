@@ -170,7 +170,7 @@
 </nav>
 
     <div class="banner" id="banner" parallax=true
-         style="background: url('/img/default.png') no-repeat center center;
+         style="background: url('https://clearvision.gitlab.io/images/sapphire.jpg') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
@@ -235,6 +235,12 @@
           <article class="post-content mx-auto">
             <!-- SEO header -->
             <h1 style="display: none">谈谈我的游戏史</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：2021年7月6日 中午
+                
+              </p>
             
             <div class="markdown-body">
               <p>作为一名95后，童年除了学习之外，自然也少不了电视里的动画和动漫，以及各种电子的游戏。</p>
@@ -372,6 +378,24 @@
                   
                 
                 
+  <div id="gitalk-container"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#gitalk-container', function() {
+      Fluid.utils.createCssLink('/css/gitalk.css')
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', function() {
+        var options = Object.assign(
+          {"clientID":"658faad5dc784f8ec14b","clientSecret":"b1c37d084a7aa0367a81f3a12c863a11ec088597","repo":"skeathytomas.github.io","owner":"skeathytomas","admin":["skeathytomas"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
+          {
+            id: 'c4304bd14b9d63b30d47e0a87f904fa5'
+          }
+        )
+        var gitalk = new Gitalk(options);
+        gitalk.render('gitalk-container');
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
 
               </article>
             
