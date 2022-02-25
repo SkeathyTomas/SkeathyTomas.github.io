@@ -16,20 +16,22 @@
   <meta name="description" content="">
   <meta name="author" content="Skeathy">
   <meta name="keywords" content="">
-  <meta name="description" content="作为一名95后，童年除了学习之外，自然也少不了电视里的动画和动漫，以及各种电子的游戏。 最早接触的游戏，自然是老式电视上自带的游戏——俄罗斯方块和推箱子，以及信息课上偷偷玩耍的单机游戏——比如扫雷、蜘蛛纸牌、潜艇大战、三维弹球、打雪仗等等。如今看来，这些游戏虽然体量小，但每个游戏都有完整且互相完全不同的玩法机制，本身的乐趣性也比较高（尤其是在偷偷玩的背景下），因此被誉为一个时代的经典也并不过分。">
+  <meta name="description" content="This is a test for post writing in English, as well as my writing skill practice. The test is to check the Google search data in Google Search Console for English posts. I chose LeetCode problems for">
 <meta property="og:type" content="article">
-<meta property="og:title" content="谈谈我的游戏史">
-<meta property="og:url" content="https://skeathytomas.github.io/post/%E8%B0%88%E8%B0%88%E6%88%91%E7%9A%84%E6%B8%B8%E6%88%8F%E5%8F%B2/index.html">
+<meta property="og:title" content="LeetCode No.3 Longest Substring Without Repeating Characters">
+<meta property="og:url" content="https://skeathytomas.github.io/post/LeetCode-No-3-Longest-Substring-Without-Repeating-Characters/index.html">
 <meta property="og:site_name" content="Skeathy的奇思妙想">
-<meta property="og:description" content="作为一名95后，童年除了学习之外，自然也少不了电视里的动画和动漫，以及各种电子的游戏。 最早接触的游戏，自然是老式电视上自带的游戏——俄罗斯方块和推箱子，以及信息课上偷偷玩耍的单机游戏——比如扫雷、蜘蛛纸牌、潜艇大战、三维弹球、打雪仗等等。如今看来，这些游戏虽然体量小，但每个游戏都有完整且互相完全不同的玩法机制，本身的乐趣性也比较高（尤其是在偷偷玩的背景下），因此被誉为一个时代的经典也并不过分。">
+<meta property="og:description" content="This is a test for post writing in English, as well as my writing skill practice. The test is to check the Google search data in Google Search Console for English posts. I chose LeetCode problems for">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-03-13T06:53:36.000Z">
-<meta property="article:modified_time" content="2021-10-14T13:03:42.916Z">
+<meta property="article:published_time" content="2022-02-23T08:03:33.000Z">
+<meta property="article:modified_time" content="2022-02-25T03:08:56.208Z">
 <meta property="article:author" content="Skeathy">
-<meta property="article:tag" content="游戏">
+<meta property="article:tag" content="Coding">
+<meta property="article:tag" content="Algorithm">
+<meta property="article:tag" content="LeetCode">
 <meta name="twitter:card" content="summary_large_image">
   
-  <title>谈谈我的游戏史 - Skeathy的奇思妙想</title>
+  <title>LeetCode No.3 Longest Substring Without Repeating Characters - Skeathy的奇思妙想</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -171,12 +173,12 @@
 </nav>
 
     <div class="banner" id="banner" parallax=true
-         style="background: url('https://raw.githubusercontent.com/SkeathyTomas/img/main/imgdbdfdaed5e27b844319c29da1d898716.jpeg') no-repeat center center;
+         style="background: url('https://clearvision.gitlab.io/images/sapphire.jpg') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="谈谈我的游戏史">
+            <span class="h2" id="subtitle" title="LeetCode No.3 Longest Substring Without Repeating Characters">
               
             </span>
 
@@ -186,8 +188,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-03-13 14:53" pubdate>
-        2021年3月13日 下午
+      <time datetime="2022-02-23 16:03" pubdate>
+        2022年2月23日 下午
       </time>
     </span>
   
@@ -197,7 +199,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.7k 字
+      1.9k 字
     </span>
   
 
@@ -206,7 +208,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      5 分钟
+      6 分钟
     </span>
   
 
@@ -235,93 +237,39 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">谈谈我的游戏史</h1>
+            <h1 style="display: none">LeetCode No.3 Longest Substring Without Repeating Characters</h1>
             
               <p class="note note-info">
                 
-                  本文最后更新于：2021年10月14日 晚上
+                  本文最后更新于：2022年2月25日 上午
                 
               </p>
             
             <div class="markdown-body">
-              <p>作为一名95后，童年除了学习之外，自然也少不了电视里的动画和动漫，以及各种电子的游戏。</p>
-<p>最早接触的游戏，自然是老式电视上自带的游戏——<strong>俄罗斯方块</strong>和<strong>推箱子</strong>，以及信息课上偷偷玩耍的单机游戏——比如<strong>扫雷</strong>、<strong>蜘蛛纸牌</strong>、<strong>潜艇大战</strong>、<strong>三维弹球</strong>、<strong>打雪仗</strong>等等。如今看来，这些游戏虽然体量小，但每个游戏都有完整且互相完全不同的玩法机制，本身的乐趣性也比较高（尤其是在偷偷玩的背景下），因此被誉为一个时代的经典也并不过分。</p>
-<p>之后，浏览器和flash的结合，创生了一系列高质量的网页flash游戏及游戏网站门户（4399，7k7k等）。自然也是花了不少的时间在这些网站中，寻找一些有趣的游戏并和小伙伴们分享。具体的游戏可能并不能记全，但总有一些经典留下了深刻的印象。这里面类型最多的自然是横版闯关类游戏——<strong>合金弹头系列</strong>、<strong>三国志系列</strong>、<strong>冒险王系列</strong>，其他还有解谜类游戏——<strong>森林冰火人</strong>、<strong>Stanley博士的家</strong>、<strong>高楼爆破</strong>，对战类游戏——<strong>拳皇</strong>、<strong>死神vs火影</strong>，休闲类游戏——<strong>黄金矿工</strong>、<strong>连连看</strong>，塔防游戏——<strong>皇家守卫军</strong>。如果说最早接触的小游戏是一种启蒙，那么flash游戏则是拓宽了小游戏的认知。</p>
-<p>再之后就是腾讯的天下了，基于社交体系的各式各类的页游网游模式，比如QQ游戏大厅中各种<strong>玩家对战式棋牌类游戏</strong>，QQ空间的各种游戏——模拟经营类的<strong>农场</strong>、<strong>餐厅</strong>、<strong>商场</strong>等，回合制卡牌养成与战斗的<strong>Q宠大乐斗</strong>，塔防类的<strong>家园守卫战</strong>、<strong>保卫羊村</strong>，还有<strong>QQ飞车</strong>、<strong>QQ炫舞</strong>……腾讯游戏打开了另一种游戏的形式（准确的说是我接触的游戏），借助社交和长线的登陆养成以及pvp模式，让人持续的想去玩一款游戏（上瘾），也做到了商业上的成功。如今看来对于腾讯游戏也是一言难尽——你要说他不好，但确实很多游戏都是童年回忆和经典，是年度爆款，起码良好水准还是有的；你要说他好，似乎也很难说出究竟好在哪里，并没有那么惊艳。真要说的话，只是商业味儿太重了吧。</p>
-<hr>
-<p>终于度过了童年阶段，自身的思维更加成熟，视野也更加开阔，玩游戏也不仅仅只是玩游戏那么简单了，挺多接触的游戏真正有了第九艺术的感觉。由于自身专业的关系，大类中隔壁专业就是数字媒体，身边多了更多的同好，顺便也简单入了个宅，ACG的世界也真正打开了。</p>
-<p>这个时候所玩的游戏更加多样化，了解了更多的游戏公司，和独立游戏。受到童年时期所玩游戏的影响，对于游戏类型还是有点喜好差异的。比如小时候印象深刻的<strong>塔防</strong>和<strong>解谜</strong>，如今依然是最为喜爱的游戏类型，受到QQ飞车影响一度对<strong>赛车类游戏</strong>抱有好感。当然，对游戏的喜好并不受制于游戏类型，这些年也接触了很多全新模式的游戏，只要这个游戏足够优秀。</p>
-<p>然后就是游戏平台和方式也都有了很大的变化——随着移动互联网和智能手机的兴起，手机游戏反而变成了一种主流的形式；被朋友拉入了steam大坑；而直播形式，让云游戏云玩家的新游戏形式也都随处可见。</p>
-<p>由于实在不好以线性文字的形式整理这一阶段尝试和接触的游戏（不完全记录），就以表格形式整理一下吧（分类并不完全准确，每个游戏都可能有多种类型标签，一些非常通用的标签比如rpg就直接略过了）：</p>
-<table>
-<thead>
-<tr>
-<th>游戏类型</th>
-<th>深度体验</th>
-<th>接触与了解</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>音游</td>
-<td>Deemo，Cytus系列（Rayark，yyds），东方红魔乡，东方妖妖梦等东方游戏（弹幕游戏附赠优秀音乐和同人奇迹，算个音乐游戏也不过分，其实是不知道还可以放哪边）</td>
-<td>节奏大师，别踩白块</td>
-</tr>
-<tr>
-<td>塔防</td>
-<td>植物大战僵尸（初代及二代手游），明日方舟</td>
-<td>保卫萝卜，东方梦符祭</td>
-</tr>
-<tr>
-<td>解谜&amp;冒险</td>
-<td>纪念碑谷，人力资源机器，返校，还愿（政治私货可惜了），烟火</td>
-<td>机械迷城，Limbo，Sally Face，光遇</td>
-</tr>
-<tr>
-<td>赛车</td>
-<td>极品飞车9（经典中的经典）及系列其他，狂野飙车</td>
-<td>GTA5</td>
-</tr>
-<tr>
-<td>恐怖游戏</td>
-<td>P.T.，生化危机</td>
-<td>面容，港诡实录</td>
-</tr>
-<tr>
-<td>二次元</td>
-<td>阴阳师、原神</td>
-<td>FGO，碧蓝航线，崩坏3</td>
-</tr>
-<tr>
-<td>MOBA</td>
-<td>Dota 2</td>
-<td>英雄联盟、王者荣耀</td>
-</tr>
-<tr>
-<td>恋爱游戏</td>
-<td>Air，未定事件簿，Helltaker，以及不可描述</td>
-<td>Clannad，恋与制作人</td>
-</tr>
-<tr>
-<td>休闲娱乐</td>
-<td>BombSquad，雀魂，旅行青蛙</td>
-<td>Fall Guys，OverCooked，Among us</td>
-</tr>
-<tr>
-<td>交互式电影</td>
-<td>底特律：变人</td>
-<td>隐形守护者</td>
-</tr>
-<tr>
-<td>ACT</td>
-<td>手残党落泪</td>
-<td>对马岛之魂、黑暗之魂、只狼</td>
-</tr>
-<tr>
-<td>其他</td>
-<td>我的世界，心跳文学社</td>
-<td>There is no game</td>
-</tr>
-</tbody></table>
+              <p>This is a test for post writing in English, as well as my writing skill practice. The test is to check the Google search data in Google Search Console for English posts.</p>
+<p>I chose LeetCode problems for the test. Since I am not an expert in algorithm, I just show my solutions with explanations for the problems and do not pursue better performance. The series of the posts will be updated due to my personal interest if the problem attracts me, and more importantly, I am able to solve the problems 😛.</p>
+<p>P.S. I use Python 3 in LeetCode.</p>
+<h1 id="Problem-Description"><a href="#Problem-Description" class="headerlink" title="Problem Description"></a>Problem Description</h1><p>Check the original <a target="_blank" rel="noopener" href="https://leetcode.com/problems/longest-substring-without-repeating-characters/">URL</a>:</p>
+<blockquote>
+<p>Given a string <code>s</code>, find the length of the <strong>longest substring</strong> without repeating characters.</p>
+<figure class="highlight vbnet"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs vbnet">Example <span class="hljs-number">1</span>:<br><br><span class="hljs-symbol">Input:</span> s = <span class="hljs-string">&quot;abcabcbb&quot;</span><br><span class="hljs-symbol">Output:</span> <span class="hljs-number">3</span><br><span class="hljs-symbol">xplanation:</span> The answer <span class="hljs-built_in">is</span> <span class="hljs-string">&quot;abc&quot;</span>, <span class="hljs-keyword">with</span> the length <span class="hljs-keyword">of</span> <span class="hljs-number">3</span>.<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight vbnet"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs vbnet">Example <span class="hljs-number">2</span>:<br><br><span class="hljs-symbol">Input:</span> s = <span class="hljs-string">&quot;bbbbb&quot;</span><br><span class="hljs-symbol">Output:</span> <span class="hljs-number">1</span><br><span class="hljs-symbol">Explanation:</span> The answer <span class="hljs-built_in">is</span> <span class="hljs-string">&quot;b&quot;</span>, <span class="hljs-keyword">with</span> the length <span class="hljs-keyword">of</span> <span class="hljs-number">1</span>.<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs livecodeserver">Example <span class="hljs-number">3</span>:<br><br>Input: s = <span class="hljs-string">&quot;pwwkew&quot;</span><br>Output: <span class="hljs-number">3</span><br>Explanation: The answer is <span class="hljs-string">&quot;wke&quot;</span>, <span class="hljs-keyword">with</span> <span class="hljs-keyword">the</span> <span class="hljs-built_in">length</span> <span class="hljs-keyword">of</span> <span class="hljs-number">3.</span><br>Notice that <span class="hljs-keyword">the</span> answer must be <span class="hljs-keyword">a</span> substring, <span class="hljs-string">&quot;pwke&quot;</span> is <span class="hljs-keyword">a</span> subsequence <span class="hljs-keyword">and</span> <span class="hljs-keyword">not</span> <span class="hljs-keyword">a</span> substring.<br></code></pre></td></tr></table></figure>
+
+<p><strong>Constraints:</strong></p>
+<ul>
+<li><code>0 &lt;= s.length &lt;= 5 * 104</code></li>
+<li><code>s</code> consists of English letters, digits, symbols and spaces.</li>
+</ul>
+</blockquote>
+<h1 id="My-Idea"><a href="#My-Idea" class="headerlink" title="My Idea"></a>My Idea</h1><p>The main idea is to read the items in the string one by one, meanwhile construct a new substring to store the read items. The length of the new substring should be counted as our goal is to find the maximum length.</p>
+<p>Here comes to the duplicated items:</p>
+<p>In the loop of item reading, if we find the newest item is duplicated in previous substring, we should update the substring to avoid duplication with trim the early used item. For example, if the previous substring is <code>***x***</code> (<code>*</code> is not <code>x</code>) and the newest item is <code>x</code>, then the previous 4 items should be trimmed and substring should be update to <code>***x</code>. So the method is to find the index of the duplicated item and complete the trim.</p>
+<p>After all the items are read, return the maximum length of substrings.</p>
+<h1 id="My-Code"><a href="#My-Code" class="headerlink" title="My Code"></a>My Code</h1><p>Here is my submitted code:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span>:</span><br>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">lengthOfLongestSubstring</span>(<span class="hljs-params">self, s: <span class="hljs-built_in">str</span></span>) -&gt; <span class="hljs-built_in">int</span>:</span><br>        <span class="hljs-built_in">max</span> = <span class="hljs-number">0</span><br>        a = []<br>        count = <span class="hljs-number">0</span><br>        <span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> s:<br>            <span class="hljs-keyword">if</span> item <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> a:<br>                a.append(item)<br>                count = count + <span class="hljs-number">1</span><br>                <span class="hljs-keyword">if</span> count &gt; <span class="hljs-built_in">max</span>:<br>                    <span class="hljs-built_in">max</span> = count<br>            <span class="hljs-keyword">else</span>:<br>                index = a.index(item)<br>                a = a[index + <span class="hljs-number">1</span>::]<br>                a.append(item)<br>                count = <span class="hljs-built_in">len</span>(a)<br>        <span class="hljs-keyword">return</span> <span class="hljs-built_in">max</span><br></code></pre></td></tr></table></figure>
 
             </div>
             <hr>
@@ -331,7 +279,7 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/%E6%B8%B8%E6%88%8F/">游戏</a>
+                      <a class="hover-with-bg" href="/categories/Coding/">Coding</a>
                     
                   </div>
                 
@@ -339,7 +287,11 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/%E6%B8%B8%E6%88%8F/">游戏</a>
+                      <a class="hover-with-bg" href="/tags/Coding/">Coding</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Algorithm/">Algorithm</a>
+                    
+                      <a class="hover-with-bg" href="/tags/LeetCode/">LeetCode</a>
                     
                   </div>
                 
@@ -356,18 +308,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/post/%E6%A2%A6%E5%A2%83%E7%89%A9%E8%AF%AD/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">梦境物语</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/post/%E5%8E%9F%E7%A5%9E%E7%8E%A9%E6%B3%95%E6%80%BB%E7%BB%93/">
-                        <span class="hidden-mobile">原神玩法总结</span>
+                      <a href="/post/%E8%81%8A%E4%B8%80%E8%81%8A%E7%A4%BE%E4%BA%A4%E2%80%94%E2%80%94%E5%8F%AF%E8%AF%9DApp%E4%BA%A7%E5%93%81%E4%BD%93%E9%AA%8C%E6%89%8B%E8%AE%B0/">
+                        <span class="hidden-mobile">聊一聊社交——可话App产品体验手记</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -392,7 +338,7 @@
         var options = Object.assign(
           {"clientID":"658faad5dc784f8ec14b","clientSecret":"b1c37d084a7aa0367a81f3a12c863a11ec088597","repo":"skeathytomas.github.io","owner":"skeathytomas","admin":["skeathytomas"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
           {
-            id: 'c4304bd14b9d63b30d47e0a87f904fa5'
+            id: 'd5ea0426f36d38bd087665428708390b'
           }
         )
         var gitalk = new Gitalk(options);

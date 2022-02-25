@@ -6,7 +6,7 @@
   <link href="https://skeathytomas.github.io/atom.xml" rel="self"/>
   
   <link href="https://skeathytomas.github.io/"/>
-  <updated>2022-02-18T15:00:39.807Z</updated>
+  <updated>2022-02-25T03:08:56.208Z</updated>
   <id>https://skeathytomas.github.io/</id>
   
   <author>
@@ -17,11 +17,40 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>LeetCode No.3 Longest Substring Without Repeating Characters</title>
+    <link href="https://skeathytomas.github.io/post/LeetCode-No-3-Longest-Substring-Without-Repeating-Characters/"/>
+    <id>https://skeathytomas.github.io/post/LeetCode-No-3-Longest-Substring-Without-Repeating-Characters/</id>
+    <published>2022-02-23T08:03:33.000Z</published>
+    <updated>2022-02-25T03:08:56.208Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;This is a test for post writing in English, as well as my writing skill practice. The test is to check the Google search data in Google</summary>
+        
+      
+    
+    
+    
+    <category term="Coding" scheme="https://skeathytomas.github.io/categories/Coding/"/>
+    
+    
+    <category term="Coding" scheme="https://skeathytomas.github.io/tags/Coding/"/>
+    
+    <category term="Algorithm" scheme="https://skeathytomas.github.io/tags/Algorithm/"/>
+    
+    <category term="LeetCode" scheme="https://skeathytomas.github.io/tags/LeetCode/"/>
+    
+  </entry>
+  
+  <entry>
     <title>聊一聊社交——可话App产品体验手记</title>
     <link href="https://skeathytomas.github.io/post/%E8%81%8A%E4%B8%80%E8%81%8A%E7%A4%BE%E4%BA%A4%E2%80%94%E2%80%94%E5%8F%AF%E8%AF%9DApp%E4%BA%A7%E5%93%81%E4%BD%93%E9%AA%8C%E6%89%8B%E8%AE%B0/"/>
     <id>https://skeathytomas.github.io/post/%E8%81%8A%E4%B8%80%E8%81%8A%E7%A4%BE%E4%BA%A4%E2%80%94%E2%80%94%E5%8F%AF%E8%AF%9DApp%E4%BA%A7%E5%93%81%E4%BD%93%E9%AA%8C%E6%89%8B%E8%AE%B0/</id>
     <published>2022-02-04T16:21:29.000Z</published>
-    <updated>2022-02-18T15:00:39.807Z</updated>
+    <updated>2022-02-18T15:00:39.000Z</updated>
     
     
       
@@ -50,7 +79,7 @@
     <link href="https://skeathytomas.github.io/post/Scoop%E2%80%94%E2%80%94%E4%B9%9F%E8%AE%B8%E6%98%AFWindows%E5%B9%B3%E5%8F%B0%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E8%BD%AF%E4%BB%B6%EF%BC%88%E5%8C%85%EF%BC%89%E7%AE%A1%E7%90%86%E5%99%A8/"/>
     <id>https://skeathytomas.github.io/post/Scoop%E2%80%94%E2%80%94%E4%B9%9F%E8%AE%B8%E6%98%AFWindows%E5%B9%B3%E5%8F%B0%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E8%BD%AF%E4%BB%B6%EF%BC%88%E5%8C%85%EF%BC%89%E7%AE%A1%E7%90%86%E5%99%A8/</id>
     <published>2022-01-17T06:14:01.000Z</published>
-    <updated>2022-02-13T07:35:50.389Z</updated>
+    <updated>2022-02-13T07:35:50.000Z</updated>
     
     
       
@@ -79,7 +108,7 @@
     <link href="https://skeathytomas.github.io/post/%E4%BB%8E%E4%BA%8C%E6%AC%A1%E5%85%83%E4%BA%BA%E8%AE%BE%E5%88%B0%E4%B8%89%E6%AC%A1%E5%85%83%E4%BA%BA%E8%AE%BE%E2%80%94%E2%80%94%E4%BA%BA%E8%AE%BE%E7%9A%84%E5%95%86%E4%B8%9A%E4%BB%B7%E5%80%BC/"/>
     <id>https://skeathytomas.github.io/post/%E4%BB%8E%E4%BA%8C%E6%AC%A1%E5%85%83%E4%BA%BA%E8%AE%BE%E5%88%B0%E4%B8%89%E6%AC%A1%E5%85%83%E4%BA%BA%E8%AE%BE%E2%80%94%E2%80%94%E4%BA%BA%E8%AE%BE%E7%9A%84%E5%95%86%E4%B8%9A%E4%BB%B7%E5%80%BC/</id>
     <published>2022-01-01T13:04:55.000Z</published>
-    <updated>2022-01-21T02:48:20.000Z</updated>
+    <updated>2022-01-21T02:48:20.593Z</updated>
     
     
       
@@ -97,17 +126,17 @@
     <category term="产品" scheme="https://skeathytomas.github.io/categories/%E4%BA%A7%E5%93%81/"/>
     
     
-    <category term="动漫" scheme="https://skeathytomas.github.io/tags/%E5%8A%A8%E6%BC%AB/"/>
+    <category term="产品" scheme="https://skeathytomas.github.io/tags/%E4%BA%A7%E5%93%81/"/>
     
-    <category term="游戏" scheme="https://skeathytomas.github.io/tags/%E6%B8%B8%E6%88%8F/"/>
+    <category term="动漫" scheme="https://skeathytomas.github.io/tags/%E5%8A%A8%E6%BC%AB/"/>
     
     <category term="商业" scheme="https://skeathytomas.github.io/tags/%E5%95%86%E4%B8%9A/"/>
     
     <category term="设计" scheme="https://skeathytomas.github.io/tags/%E8%AE%BE%E8%AE%A1/"/>
     
-    <category term="产品" scheme="https://skeathytomas.github.io/tags/%E4%BA%A7%E5%93%81/"/>
-    
     <category term="影视" scheme="https://skeathytomas.github.io/tags/%E5%BD%B1%E8%A7%86/"/>
+    
+    <category term="游戏" scheme="https://skeathytomas.github.io/tags/%E6%B8%B8%E6%88%8F/"/>
     
   </entry>
   
@@ -116,7 +145,7 @@
     <link href="https://skeathytomas.github.io/post/%E5%8E%9F%E7%A5%9E%E6%B4%BB%E5%8A%A8%E7%8E%A9%E6%B3%95%E8%AF%84%E6%9E%90/"/>
     <id>https://skeathytomas.github.io/post/%E5%8E%9F%E7%A5%9E%E6%B4%BB%E5%8A%A8%E7%8E%A9%E6%B3%95%E8%AF%84%E6%9E%90/</id>
     <published>2021-04-20T17:28:36.000Z</published>
-    <updated>2022-01-13T01:44:54.000Z</updated>
+    <updated>2022-01-13T01:44:54.142Z</updated>
     
     
       
@@ -132,9 +161,9 @@
     <category term="游戏" scheme="https://skeathytomas.github.io/categories/%E6%B8%B8%E6%88%8F/"/>
     
     
-    <category term="原神" scheme="https://skeathytomas.github.io/tags/%E5%8E%9F%E7%A5%9E/"/>
-    
     <category term="游戏" scheme="https://skeathytomas.github.io/tags/%E6%B8%B8%E6%88%8F/"/>
+    
+    <category term="原神" scheme="https://skeathytomas.github.io/tags/%E5%8E%9F%E7%A5%9E/"/>
     
   </entry>
   
@@ -143,7 +172,7 @@
     <link href="https://skeathytomas.github.io/post/%E3%80%8A%E5%86%B0%E8%8F%93%E3%80%8B%E4%B8%AD%E7%9A%84%E6%81%8B%E7%88%B1%E5%B0%8F%E6%95%85%E4%BA%8B%E2%80%94%E2%80%94%E6%8A%98%E6%9C%A8x%E5%8D%83%E5%8F%8D%E7%94%B0/"/>
     <id>https://skeathytomas.github.io/post/%E3%80%8A%E5%86%B0%E8%8F%93%E3%80%8B%E4%B8%AD%E7%9A%84%E6%81%8B%E7%88%B1%E5%B0%8F%E6%95%85%E4%BA%8B%E2%80%94%E2%80%94%E6%8A%98%E6%9C%A8x%E5%8D%83%E5%8F%8D%E7%94%B0/</id>
     <published>2021-03-27T17:11:07.000Z</published>
-    <updated>2021-11-28T17:18:25.615Z</updated>
+    <updated>2021-11-28T17:18:25.000Z</updated>
     
     
       
@@ -173,7 +202,7 @@
     <link href="https://skeathytomas.github.io/post/%E3%80%8A%E5%86%B0%E8%8F%93%E3%80%8B%E4%B8%AD%E7%9A%84%E6%81%8B%E7%88%B1%E5%B0%8F%E6%95%85%E4%BA%8B%E2%80%94%E2%80%94%E7%A6%8F%E9%83%A8x%E4%BC%8A%E5%8E%9F/"/>
     <id>https://skeathytomas.github.io/post/%E3%80%8A%E5%86%B0%E8%8F%93%E3%80%8B%E4%B8%AD%E7%9A%84%E6%81%8B%E7%88%B1%E5%B0%8F%E6%95%85%E4%BA%8B%E2%80%94%E2%80%94%E7%A6%8F%E9%83%A8x%E4%BC%8A%E5%8E%9F/</id>
     <published>2021-03-19T16:10:38.000Z</published>
-    <updated>2021-10-14T12:58:09.000Z</updated>
+    <updated>2021-10-14T12:58:09.266Z</updated>
     
     
       
@@ -203,7 +232,7 @@
     <link href="https://skeathytomas.github.io/post/%E6%A2%A6%E5%A2%83%E7%89%A9%E8%AF%AD/"/>
     <id>https://skeathytomas.github.io/post/%E6%A2%A6%E5%A2%83%E7%89%A9%E8%AF%AD/</id>
     <published>2021-03-14T12:24:06.000Z</published>
-    <updated>2021-10-14T13:02:53.000Z</updated>
+    <updated>2021-10-14T13:02:53.804Z</updated>
     
     
       
@@ -220,9 +249,9 @@
     <category term="游戏" scheme="https://skeathytomas.github.io/categories/%E6%B8%B8%E6%88%8F/"/>
     
     
-    <category term="游戏" scheme="https://skeathytomas.github.io/tags/%E6%B8%B8%E6%88%8F/"/>
-    
     <category term="设计" scheme="https://skeathytomas.github.io/tags/%E8%AE%BE%E8%AE%A1/"/>
+    
+    <category term="游戏" scheme="https://skeathytomas.github.io/tags/%E6%B8%B8%E6%88%8F/"/>
     
   </entry>
   
@@ -231,7 +260,7 @@
     <link href="https://skeathytomas.github.io/post/%E8%B0%88%E8%B0%88%E6%88%91%E7%9A%84%E6%B8%B8%E6%88%8F%E5%8F%B2/"/>
     <id>https://skeathytomas.github.io/post/%E8%B0%88%E8%B0%88%E6%88%91%E7%9A%84%E6%B8%B8%E6%88%8F%E5%8F%B2/</id>
     <published>2021-03-13T06:53:36.000Z</published>
-    <updated>2021-10-14T13:03:42.000Z</updated>
+    <updated>2021-10-14T13:03:42.916Z</updated>
     
     
       
@@ -257,7 +286,7 @@
     <link href="https://skeathytomas.github.io/post/%E5%8E%9F%E7%A5%9E%E7%8E%A9%E6%B3%95%E6%80%BB%E7%BB%93/"/>
     <id>https://skeathytomas.github.io/post/%E5%8E%9F%E7%A5%9E%E7%8E%A9%E6%B3%95%E6%80%BB%E7%BB%93/</id>
     <published>2021-03-04T11:00:45.000Z</published>
-    <updated>2021-10-14T13:04:20.000Z</updated>
+    <updated>2021-10-14T13:04:20.349Z</updated>
     
     
       
@@ -273,9 +302,9 @@
     <category term="游戏" scheme="https://skeathytomas.github.io/categories/%E6%B8%B8%E6%88%8F/"/>
     
     
-    <category term="原神" scheme="https://skeathytomas.github.io/tags/%E5%8E%9F%E7%A5%9E/"/>
-    
     <category term="游戏" scheme="https://skeathytomas.github.io/tags/%E6%B8%B8%E6%88%8F/"/>
+    
+    <category term="原神" scheme="https://skeathytomas.github.io/tags/%E5%8E%9F%E7%A5%9E/"/>
     
   </entry>
   
@@ -284,7 +313,7 @@
     <link href="https://skeathytomas.github.io/post/%E8%B0%81%E8%AF%B4%E3%80%8A%E5%A4%A9%E6%B0%94%E4%B9%8B%E5%AD%90%E3%80%8B%E4%B8%8D%E8%83%BD%E5%92%8C%E3%80%8A%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%97%E3%80%8B%E6%AF%94%E8%BE%83%EF%BC%9F/"/>
     <id>https://skeathytomas.github.io/post/%E8%B0%81%E8%AF%B4%E3%80%8A%E5%A4%A9%E6%B0%94%E4%B9%8B%E5%AD%90%E3%80%8B%E4%B8%8D%E8%83%BD%E5%92%8C%E3%80%8A%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%97%E3%80%8B%E6%AF%94%E8%BE%83%EF%BC%9F/</id>
     <published>2021-02-19T06:22:38.000Z</published>
-    <updated>2021-10-22T03:25:19.625Z</updated>
+    <updated>2021-10-22T03:25:19.000Z</updated>
     
     
       
