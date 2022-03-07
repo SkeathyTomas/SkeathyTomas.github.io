@@ -6,7 +6,7 @@
   <link href="https://skeathytomas.github.io/atom.xml" rel="self"/>
   
   <link href="https://skeathytomas.github.io/"/>
-  <updated>2022-02-25T03:08:56.208Z</updated>
+  <updated>2022-03-07T12:13:51.543Z</updated>
   <id>https://skeathytomas.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://skeathytomas.github.io/post/LeetCode-No-3-Longest-Substring-Without-Repeating-Characters/"/>
     <id>https://skeathytomas.github.io/post/LeetCode-No-3-Longest-Substring-Without-Repeating-Characters/</id>
     <published>2022-02-23T08:03:33.000Z</published>
-    <updated>2022-02-25T03:08:56.208Z</updated>
+    <updated>2022-03-07T12:13:51.543Z</updated>
     
     
       
@@ -40,6 +40,8 @@
     <category term="Coding" scheme="https://skeathytomas.github.io/tags/Coding/"/>
     
     <category term="Algorithm" scheme="https://skeathytomas.github.io/tags/Algorithm/"/>
+    
+    <category term="Python" scheme="https://skeathytomas.github.io/tags/Python/"/>
     
     <category term="LeetCode" scheme="https://skeathytomas.github.io/tags/LeetCode/"/>
     
@@ -189,11 +191,11 @@
     <category term="动漫" scheme="https://skeathytomas.github.io/categories/%E5%8A%A8%E6%BC%AB/"/>
     
     
+    <category term="动漫" scheme="https://skeathytomas.github.io/tags/%E5%8A%A8%E6%BC%AB/"/>
+    
     <category term="冰菓" scheme="https://skeathytomas.github.io/tags/%E5%86%B0%E8%8F%93/"/>
     
     <category term="京阿尼" scheme="https://skeathytomas.github.io/tags/%E4%BA%AC%E9%98%BF%E5%B0%BC/"/>
-    
-    <category term="动漫" scheme="https://skeathytomas.github.io/tags/%E5%8A%A8%E6%BC%AB/"/>
     
   </entry>
   
@@ -219,11 +221,11 @@
     <category term="动漫" scheme="https://skeathytomas.github.io/categories/%E5%8A%A8%E6%BC%AB/"/>
     
     
+    <category term="动漫" scheme="https://skeathytomas.github.io/tags/%E5%8A%A8%E6%BC%AB/"/>
+    
     <category term="冰菓" scheme="https://skeathytomas.github.io/tags/%E5%86%B0%E8%8F%93/"/>
     
     <category term="京阿尼" scheme="https://skeathytomas.github.io/tags/%E4%BA%AC%E9%98%BF%E5%B0%BC/"/>
-    
-    <category term="动漫" scheme="https://skeathytomas.github.io/tags/%E5%8A%A8%E6%BC%AB/"/>
     
   </entry>
   
@@ -260,15 +262,14 @@
     <link href="https://skeathytomas.github.io/post/%E8%B0%88%E8%B0%88%E6%88%91%E7%9A%84%E6%B8%B8%E6%88%8F%E5%8F%B2/"/>
     <id>https://skeathytomas.github.io/post/%E8%B0%88%E8%B0%88%E6%88%91%E7%9A%84%E6%B8%B8%E6%88%8F%E5%8F%B2/</id>
     <published>2021-03-13T06:53:36.000Z</published>
-    <updated>2021-10-14T13:03:42.916Z</updated>
+    <updated>2022-03-07T12:55:36.512Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;作为一名95后，童年除了学习之外，自然也少不了电视里的动画和动漫，以及各种电子的游戏。&lt;/p&gt;
-&lt;p&gt;最早接触的游戏，自然是老式电视上自带的游戏——&lt;strong&gt;俄罗斯方块&lt;/strong&gt;和&lt;strong&gt;推箱子&lt;/strong&gt;，以及信息课上偷偷玩耍的单机游戏——比如</summary>
+    <summary type="html">&lt;h1 id=&quot;2022-03更新&quot;&gt;&lt;a href=&quot;#2022-03更新&quot; class=&quot;headerlink&quot;</summary>
         
       
     
