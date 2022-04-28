@@ -6,7 +6,7 @@
   <link href="https://skeathytomas.github.io/atom.xml" rel="self"/>
   
   <link href="https://skeathytomas.github.io/"/>
-  <updated>2022-04-28T10:26:52.996Z</updated>
+  <updated>2022-04-28T10:48:59.631Z</updated>
   <id>https://skeathytomas.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://skeathytomas.github.io/post/220423-%E6%8A%BD%E5%8D%A1%E4%B8%8E%E6%8E%89%E8%90%BD%EF%BC%882%E9%81%93%E6%A6%82%E7%8E%87%E9%A2%98%EF%BC%89/"/>
     <id>https://skeathytomas.github.io/post/220423-%E6%8A%BD%E5%8D%A1%E4%B8%8E%E6%8E%89%E8%90%BD%EF%BC%882%E9%81%93%E6%A6%82%E7%8E%87%E9%A2%98%EF%BC%89/</id>
     <published>2022-04-23T05:49:05.000Z</published>
-    <updated>2022-04-28T10:26:52.996Z</updated>
+    <updated>2022-04-28T10:48:59.631Z</updated>
     
     
       
@@ -34,6 +34,8 @@
       
     
     
+    
+    <category term="Coding" scheme="https://skeathytomas.github.io/categories/Coding/"/>
     
     
     <category term="游戏" scheme="https://skeathytomas.github.io/tags/%E6%B8%B8%E6%88%8F/"/>
@@ -225,9 +227,9 @@
     <category term="产品" scheme="https://skeathytomas.github.io/categories/%E4%BA%A7%E5%93%81/"/>
     
     
-    <category term="游戏" scheme="https://skeathytomas.github.io/tags/%E6%B8%B8%E6%88%8F/"/>
-    
     <category term="动漫" scheme="https://skeathytomas.github.io/tags/%E5%8A%A8%E6%BC%AB/"/>
+    
+    <category term="游戏" scheme="https://skeathytomas.github.io/tags/%E6%B8%B8%E6%88%8F/"/>
     
     <category term="设计" scheme="https://skeathytomas.github.io/tags/%E8%AE%BE%E8%AE%A1/"/>
     
