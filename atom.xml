@@ -6,7 +6,7 @@
   <link href="https://skeathytomas.github.io/atom.xml" rel="self"/>
   
   <link href="https://skeathytomas.github.io/"/>
-  <updated>2022-04-20T03:02:39.660Z</updated>
+  <updated>2022-04-28T10:26:52.996Z</updated>
   <id>https://skeathytomas.github.io/</id>
   
   <author>
@@ -17,11 +17,41 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>抽卡与掉落（2道概率题）</title>
+    <link href="https://skeathytomas.github.io/post/220423-%E6%8A%BD%E5%8D%A1%E4%B8%8E%E6%8E%89%E8%90%BD%EF%BC%882%E9%81%93%E6%A6%82%E7%8E%87%E9%A2%98%EF%BC%89/"/>
+    <id>https://skeathytomas.github.io/post/220423-%E6%8A%BD%E5%8D%A1%E4%B8%8E%E6%8E%89%E8%90%BD%EF%BC%882%E9%81%93%E6%A6%82%E7%8E%87%E9%A2%98%EF%BC%89/</id>
+    <published>2022-04-23T05:49:05.000Z</published>
+    <updated>2022-04-28T10:26:52.996Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;之前接触数值的时候遇到了一些有趣的概率题目，涉及氪金游戏的抽卡，物品掉落等等。一直留着代码却迟迟没有记录下来并给出解释，也不知道把代码继续存到那里。于是打算整理成文章，一则可以保留代码，二则可以保留思路甚至与他人交流。&lt;/p&gt;
+&lt;p&gt;我的解法都是基于代码的硬算，使用了期望的</summary>
+        
+      
+    
+    
+    
+    
+    <category term="游戏" scheme="https://skeathytomas.github.io/tags/%E6%B8%B8%E6%88%8F/"/>
+    
+    <category term="Coding" scheme="https://skeathytomas.github.io/tags/Coding/"/>
+    
+    <category term="Python" scheme="https://skeathytomas.github.io/tags/Python/"/>
+    
+    <category term="概率" scheme="https://skeathytomas.github.io/tags/%E6%A6%82%E7%8E%87/"/>
+    
+  </entry>
+  
+  <entry>
     <title>注意力与工作效率——番茄钟的使用体验</title>
     <link href="https://skeathytomas.github.io/post/220406-%E6%B3%A8%E6%84%8F%E5%8A%9B%E4%B8%8E%E5%B7%A5%E4%BD%9C%E6%95%88%E7%8E%87%E2%80%94%E2%80%94%E7%95%AA%E8%8C%84%E9%92%9F%E7%9A%84%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/"/>
     <id>https://skeathytomas.github.io/post/220406-%E6%B3%A8%E6%84%8F%E5%8A%9B%E4%B8%8E%E5%B7%A5%E4%BD%9C%E6%95%88%E7%8E%87%E2%80%94%E2%80%94%E7%95%AA%E8%8C%84%E9%92%9F%E7%9A%84%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/</id>
     <published>2022-04-06T12:10:36.000Z</published>
-    <updated>2022-04-20T03:02:39.660Z</updated>
+    <updated>2022-04-20T03:02:39.000Z</updated>
     
     
       
@@ -55,7 +85,7 @@
     <link href="https://skeathytomas.github.io/post/220314-%E4%BA%A4%E4%BA%92%E8%AE%BE%E8%AE%A1%E7%90%86%E8%AE%BA%E5%9C%A8%E6%B8%B8%E6%88%8F%E5%9C%B0%E5%9B%BE%E8%AE%BE%E8%AE%A1%E4%B8%8A%E7%9A%84%E5%BA%94%E7%94%A8/"/>
     <id>https://skeathytomas.github.io/post/220314-%E4%BA%A4%E4%BA%92%E8%AE%BE%E8%AE%A1%E7%90%86%E8%AE%BA%E5%9C%A8%E6%B8%B8%E6%88%8F%E5%9C%B0%E5%9B%BE%E8%AE%BE%E8%AE%A1%E4%B8%8A%E7%9A%84%E5%BA%94%E7%94%A8/</id>
     <published>2022-03-13T16:58:49.000Z</published>
-    <updated>2022-04-07T08:09:12.000Z</updated>
+    <updated>2022-04-07T08:09:12.289Z</updated>
     
     
       
@@ -88,7 +118,7 @@
     <link href="https://skeathytomas.github.io/post/220223-LeetCode-No-3-Longest-Substring-Without-Repeating-Characters/"/>
     <id>https://skeathytomas.github.io/post/220223-LeetCode-No-3-Longest-Substring-Without-Repeating-Characters/</id>
     <published>2022-02-23T08:03:33.000Z</published>
-    <updated>2022-03-14T16:47:34.496Z</updated>
+    <updated>2022-03-07T12:13:51.543Z</updated>
     
     
       
@@ -119,7 +149,7 @@
     <link href="https://skeathytomas.github.io/post/220205-%E8%81%8A%E4%B8%80%E8%81%8A%E7%A4%BE%E4%BA%A4%E2%80%94%E2%80%94%E5%8F%AF%E8%AF%9DApp%E4%BA%A7%E5%93%81%E4%BD%93%E9%AA%8C%E6%89%8B%E8%AE%B0/"/>
     <id>https://skeathytomas.github.io/post/220205-%E8%81%8A%E4%B8%80%E8%81%8A%E7%A4%BE%E4%BA%A4%E2%80%94%E2%80%94%E5%8F%AF%E8%AF%9DApp%E4%BA%A7%E5%93%81%E4%BD%93%E9%AA%8C%E6%89%8B%E8%AE%B0/</id>
     <published>2022-02-04T16:21:29.000Z</published>
-    <updated>2022-03-14T16:49:34.548Z</updated>
+    <updated>2022-02-18T15:00:39.000Z</updated>
     
     
       
@@ -148,7 +178,7 @@
     <link href="https://skeathytomas.github.io/post/220117-Scoop%E2%80%94%E2%80%94%E4%B9%9F%E8%AE%B8%E6%98%AFWindows%E5%B9%B3%E5%8F%B0%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E8%BD%AF%E4%BB%B6%EF%BC%88%E5%8C%85%EF%BC%89%E7%AE%A1%E7%90%86%E5%99%A8/"/>
     <id>https://skeathytomas.github.io/post/220117-Scoop%E2%80%94%E2%80%94%E4%B9%9F%E8%AE%B8%E6%98%AFWindows%E5%B9%B3%E5%8F%B0%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E8%BD%AF%E4%BB%B6%EF%BC%88%E5%8C%85%EF%BC%89%E7%AE%A1%E7%90%86%E5%99%A8/</id>
     <published>2022-01-17T06:14:01.000Z</published>
-    <updated>2022-03-14T16:47:01.985Z</updated>
+    <updated>2022-02-13T07:35:50.000Z</updated>
     
     
       
@@ -177,7 +207,7 @@
     <link href="https://skeathytomas.github.io/post/220101-%E4%BB%8E%E4%BA%8C%E6%AC%A1%E5%85%83%E4%BA%BA%E8%AE%BE%E5%88%B0%E4%B8%89%E6%AC%A1%E5%85%83%E4%BA%BA%E8%AE%BE%E2%80%94%E2%80%94%E4%BA%BA%E8%AE%BE%E7%9A%84%E5%95%86%E4%B8%9A%E4%BB%B7%E5%80%BC/"/>
     <id>https://skeathytomas.github.io/post/220101-%E4%BB%8E%E4%BA%8C%E6%AC%A1%E5%85%83%E4%BA%BA%E8%AE%BE%E5%88%B0%E4%B8%89%E6%AC%A1%E5%85%83%E4%BA%BA%E8%AE%BE%E2%80%94%E2%80%94%E4%BA%BA%E8%AE%BE%E7%9A%84%E5%95%86%E4%B8%9A%E4%BB%B7%E5%80%BC/</id>
     <published>2022-01-01T13:04:55.000Z</published>
-    <updated>2022-03-14T16:49:45.509Z</updated>
+    <updated>2022-01-21T02:48:20.593Z</updated>
     
     
       
@@ -195,15 +225,15 @@
     <category term="产品" scheme="https://skeathytomas.github.io/categories/%E4%BA%A7%E5%93%81/"/>
     
     
-    <category term="动漫" scheme="https://skeathytomas.github.io/tags/%E5%8A%A8%E6%BC%AB/"/>
-    
     <category term="游戏" scheme="https://skeathytomas.github.io/tags/%E6%B8%B8%E6%88%8F/"/>
+    
+    <category term="动漫" scheme="https://skeathytomas.github.io/tags/%E5%8A%A8%E6%BC%AB/"/>
     
     <category term="设计" scheme="https://skeathytomas.github.io/tags/%E8%AE%BE%E8%AE%A1/"/>
     
-    <category term="产品" scheme="https://skeathytomas.github.io/tags/%E4%BA%A7%E5%93%81/"/>
-    
     <category term="商业" scheme="https://skeathytomas.github.io/tags/%E5%95%86%E4%B8%9A/"/>
+    
+    <category term="产品" scheme="https://skeathytomas.github.io/tags/%E4%BA%A7%E5%93%81/"/>
     
     <category term="影视" scheme="https://skeathytomas.github.io/tags/%E5%BD%B1%E8%A7%86/"/>
     
@@ -214,7 +244,7 @@
     <link href="https://skeathytomas.github.io/post/210421-%E5%8E%9F%E7%A5%9E%E6%B4%BB%E5%8A%A8%E7%8E%A9%E6%B3%95%E8%AF%84%E6%9E%90/"/>
     <id>https://skeathytomas.github.io/post/210421-%E5%8E%9F%E7%A5%9E%E6%B4%BB%E5%8A%A8%E7%8E%A9%E6%B3%95%E8%AF%84%E6%9E%90/</id>
     <published>2021-04-20T17:28:36.000Z</published>
-    <updated>2022-03-14T16:48:17.617Z</updated>
+    <updated>2022-01-13T01:44:54.142Z</updated>
     
     
       
@@ -241,7 +271,7 @@
     <link href="https://skeathytomas.github.io/post/210328-%E3%80%8A%E5%86%B0%E8%8F%93%E3%80%8B%E4%B8%AD%E7%9A%84%E6%81%8B%E7%88%B1%E5%B0%8F%E6%95%85%E4%BA%8B%E2%80%94%E2%80%94%E6%8A%98%E6%9C%A8x%E5%8D%83%E5%8F%8D%E7%94%B0/"/>
     <id>https://skeathytomas.github.io/post/210328-%E3%80%8A%E5%86%B0%E8%8F%93%E3%80%8B%E4%B8%AD%E7%9A%84%E6%81%8B%E7%88%B1%E5%B0%8F%E6%95%85%E4%BA%8B%E2%80%94%E2%80%94%E6%8A%98%E6%9C%A8x%E5%8D%83%E5%8F%8D%E7%94%B0/</id>
     <published>2021-03-27T17:11:07.000Z</published>
-    <updated>2022-03-14T16:50:04.797Z</updated>
+    <updated>2021-11-28T17:18:25.000Z</updated>
     
     
       
@@ -271,7 +301,7 @@
     <link href="https://skeathytomas.github.io/post/210320-%E3%80%8A%E5%86%B0%E8%8F%93%E3%80%8B%E4%B8%AD%E7%9A%84%E6%81%8B%E7%88%B1%E5%B0%8F%E6%95%85%E4%BA%8B%E2%80%94%E2%80%94%E7%A6%8F%E9%83%A8x%E4%BC%8A%E5%8E%9F/"/>
     <id>https://skeathytomas.github.io/post/210320-%E3%80%8A%E5%86%B0%E8%8F%93%E3%80%8B%E4%B8%AD%E7%9A%84%E6%81%8B%E7%88%B1%E5%B0%8F%E6%95%85%E4%BA%8B%E2%80%94%E2%80%94%E7%A6%8F%E9%83%A8x%E4%BC%8A%E5%8E%9F/</id>
     <published>2021-03-19T16:10:38.000Z</published>
-    <updated>2022-03-14T16:50:19.331Z</updated>
+    <updated>2021-10-14T12:58:09.266Z</updated>
     
     
       
@@ -301,7 +331,7 @@
     <link href="https://skeathytomas.github.io/post/210314-%E6%A2%A6%E5%A2%83%E7%89%A9%E8%AF%AD/"/>
     <id>https://skeathytomas.github.io/post/210314-%E6%A2%A6%E5%A2%83%E7%89%A9%E8%AF%AD/</id>
     <published>2021-03-14T12:24:06.000Z</published>
-    <updated>2022-03-14T16:49:09.907Z</updated>
+    <updated>2021-10-14T13:02:53.804Z</updated>
     
     
       
@@ -329,7 +359,7 @@
     <link href="https://skeathytomas.github.io/post/210313-%E8%B0%88%E8%B0%88%E6%88%91%E7%9A%84%E6%B8%B8%E6%88%8F%E5%8F%B2/"/>
     <id>https://skeathytomas.github.io/post/210313-%E8%B0%88%E8%B0%88%E6%88%91%E7%9A%84%E6%B8%B8%E6%88%8F%E5%8F%B2/</id>
     <published>2021-03-13T06:53:36.000Z</published>
-    <updated>2022-04-07T08:43:11.000Z</updated>
+    <updated>2022-04-07T08:43:11.848Z</updated>
     
     
       
@@ -354,7 +384,7 @@
     <link href="https://skeathytomas.github.io/post/210304-%E5%8E%9F%E7%A5%9E%E7%8E%A9%E6%B3%95%E6%80%BB%E7%BB%93/"/>
     <id>https://skeathytomas.github.io/post/210304-%E5%8E%9F%E7%A5%9E%E7%8E%A9%E6%B3%95%E6%80%BB%E7%BB%93/</id>
     <published>2021-03-04T11:00:45.000Z</published>
-    <updated>2022-03-14T16:47:57.899Z</updated>
+    <updated>2021-10-14T13:04:20.349Z</updated>
     
     
       
@@ -381,7 +411,7 @@
     <link href="https://skeathytomas.github.io/post/210219-%E8%B0%81%E8%AF%B4%E3%80%8A%E5%A4%A9%E6%B0%94%E4%B9%8B%E5%AD%90%E3%80%8B%E4%B8%8D%E8%83%BD%E5%92%8C%E3%80%8A%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%97%E3%80%8B%E6%AF%94%E8%BE%83%EF%BC%9F/"/>
     <id>https://skeathytomas.github.io/post/210219-%E8%B0%81%E8%AF%B4%E3%80%8A%E5%A4%A9%E6%B0%94%E4%B9%8B%E5%AD%90%E3%80%8B%E4%B8%8D%E8%83%BD%E5%92%8C%E3%80%8A%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%97%E3%80%8B%E6%AF%94%E8%BE%83%EF%BC%9F/</id>
     <published>2021-02-19T06:22:38.000Z</published>
-    <updated>2022-03-14T16:48:56.670Z</updated>
+    <updated>2021-10-22T03:25:19.000Z</updated>
     
     
       
