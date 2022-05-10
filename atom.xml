@@ -6,7 +6,7 @@
   <link href="https://skeathytomas.github.io/atom.xml" rel="self"/>
   
   <link href="https://skeathytomas.github.io/"/>
-  <updated>2022-04-28T10:48:59.631Z</updated>
+  <updated>2022-05-10T13:49:43.848Z</updated>
   <id>https://skeathytomas.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>阿宅也体验了一把疫情</title>
+    <link href="https://skeathytomas.github.io/post/220505-%E9%98%BF%E5%AE%85%E4%B9%9F%E4%BD%93%E9%AA%8C%E4%BA%86%E4%B8%80%E6%8A%8A%E7%96%AB%E6%83%85/"/>
+    <id>https://skeathytomas.github.io/post/220505-%E9%98%BF%E5%AE%85%E4%B9%9F%E4%BD%93%E9%AA%8C%E4%BA%86%E4%B8%80%E6%8A%8A%E7%96%AB%E6%83%85/</id>
+    <published>2022-05-05T12:24:21.000Z</published>
+    <updated>2022-05-10T13:49:43.848Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;想不到这里会新增「生活」的分组和标签，难不成写作/创作已经构成了我的「生活」？&lt;/p&gt;
+&lt;p&gt;这篇文章大抵只是一些关于疫情生活体验的碎碎念，记录一下作为一个宅在近两三年中疫情中的体验及变化。&lt;/p&gt;
+&lt;h1 id=&quot;早期&quot;&gt;&lt;a href=&quot;#早期&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="生活" scheme="https://skeathytomas.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+    <category term="生活" scheme="https://skeathytomas.github.io/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+    <category term="疫情" scheme="https://skeathytomas.github.io/tags/%E7%96%AB%E6%83%85/"/>
+    
+    <category term="宅" scheme="https://skeathytomas.github.io/tags/%E5%AE%85/"/>
+    
+  </entry>
   
   <entry>
     <title>抽卡与掉落（2道概率题）</title>
@@ -227,9 +258,9 @@
     <category term="产品" scheme="https://skeathytomas.github.io/categories/%E4%BA%A7%E5%93%81/"/>
     
     
-    <category term="游戏" scheme="https://skeathytomas.github.io/tags/%E6%B8%B8%E6%88%8F/"/>
-    
     <category term="动漫" scheme="https://skeathytomas.github.io/tags/%E5%8A%A8%E6%BC%AB/"/>
+    
+    <category term="游戏" scheme="https://skeathytomas.github.io/tags/%E6%B8%B8%E6%88%8F/"/>
     
     <category term="设计" scheme="https://skeathytomas.github.io/tags/%E8%AE%BE%E8%AE%A1/"/>
     
