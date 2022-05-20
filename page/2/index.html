@@ -33,15 +33,21 @@
 <meta name="twitter:card" content="summary_large_image">
   
   
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
   <title>Skeathy的奇思妙想</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
 
 
-<!-- 主题依赖的图标库，不要自行修改 -->
 
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
 
 
 
@@ -50,22 +56,41 @@
 
 <link  rel="stylesheet" href="/css/main.css" />
 
-<!-- 自定义样式保持在最底部 -->
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
 
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"skeathytomas.github.io","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":2},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":"G-FJM6NG4T2X","gtag":"G-FJM6NG4T2X","tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"skeathytomas.github.io","root":"/","version":"1.9.0","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":"G-FJM6NG4T2X","gtag":"G-FJM6NG4T2X","tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Skeathy的奇思妙想" type="application/atom+xml">
+
+  
+<!-- hexo injector head_end start --><script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title="Skeathy的奇思妙想" type="application/atom+xml">
 </head>
 
 
 <body>
-  <header style="height: 100vh;">
-    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 100vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
       <strong>Skeathy的奇思妙想</strong>
@@ -147,6 +172,7 @@
               &nbsp;<i class="iconfont icon-search"></i>&nbsp;
             </a>
           </li>
+          
         
         
           <li class="nav-item" id="color-toggle-btn">
@@ -159,34 +185,40 @@
   </div>
 </nav>
 
-    <div class="banner" id="banner" parallax=true
-         style="background: url('https://clearvision.gitlab.io/images/sapphire.jpg') no-repeat center center;
-           background-size: cover;">
-      <div class="full-bg-img">
-        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-          <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Better Life by Design. Better Design by Life.">
-              
-            </span>
+  
 
-            
-          </div>
-
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://clearvision.gitlab.io/images/sapphire.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
           
-            <div class="scroll-down-bar">
-              <i class="iconfont icon-arrowdown"></i>
-            </div>
+            <span id="subtitle" data-typed-text="Better Life by Design. Better Design by Life."></span>
           
         </div>
+
+        
       </div>
+
+      
+        <div class="scroll-down-bar">
+          <i class="iconfont icon-arrowdown"></i>
+        </div>
+      
     </div>
+  </div>
+</div>
+
+</div>
+
   </header>
 
   <main>
     
       <div class="container nopadding-x-md">
-        <div class="py-5" id="board"
-          style=margin-top:0>
+        <div id="board"
+          style="margin-top: 0">
           
           <div class="container">
             <div class="row">
@@ -211,12 +243,12 @@
         </a>
       </h1>
 
-      <p class="index-excerpt">
-        <a href="/post/210320-%E3%80%8A%E5%86%B0%E8%8F%93%E3%80%8B%E4%B8%AD%E7%9A%84%E6%81%8B%E7%88%B1%E5%B0%8F%E6%95%85%E4%BA%8B%E2%80%94%E2%80%94%E7%A6%8F%E9%83%A8x%E4%BC%8A%E5%8E%9F/" target="_self">
+      <a class="index-excerpt" href="/post/210320-%E3%80%8A%E5%86%B0%E8%8F%93%E3%80%8B%E4%B8%AD%E7%9A%84%E6%81%8B%E7%88%B1%E5%B0%8F%E6%95%85%E4%BA%8B%E2%80%94%E2%80%94%E7%A6%8F%E9%83%A8x%E4%BC%8A%E5%8E%9F/" target="_self">
+        <div>
           
           要说《冰菓》是一部什么类型的番，那当时是恐怖悬疑啦（滑稽）。高中、社团、古典部，虽然是非常常见的日常校园番的配置，也有很多人觉得《冰菓》挺无聊的；但是无论是米泽穗信的小说还是京阿尼的动画制作，都让我特别享受这样轻松散漫的氛围，虽波澜不惊，却意味深长。也许这就是  我们每天度过的日常,也许就是不断发生的奇迹！——《日常》  我可能羡慕他们丰富多彩的高中生活，可能羡慕折木超乎常人的推理天赋，更可能羡慕
-        </a>
-      </p>
+        </div>
+      </a>
 
       <div class="index-btm post-metas">
         
@@ -228,22 +260,36 @@
           </div>
         
         
-          <div class="post-meta mr-3">
+          <div class="post-meta mr-3 d-flex align-items-center">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/%E5%8A%A8%E6%BC%AB/">动漫</a>
-            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%8A%A8%E6%BC%AB/" class="category-chain-item">动漫</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
           </div>
         
         
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/%E5%8A%A8%E6%BC%AB/">动漫</a>
+              <a href="/tags/%E5%8A%A8%E6%BC%AB/">#动漫</a>
             
-              <a href="/tags/%E5%86%B0%E8%8F%93/">冰菓</a>
+              <a href="/tags/%E5%86%B0%E8%8F%93/">#冰菓</a>
             
-              <a href="/tags/%E4%BA%AC%E9%98%BF%E5%B0%BC/">京阿尼</a>
+              <a href="/tags/%E4%BA%AC%E9%98%BF%E5%B0%BC/">#京阿尼</a>
             
           </div>
         
@@ -268,12 +314,12 @@
         </a>
       </h1>
 
-      <p class="index-excerpt">
-        <a href="/post/210314-%E6%A2%A6%E5%A2%83%E7%89%A9%E8%AF%AD/" target="_self">
+      <a class="index-excerpt" href="/post/210314-%E6%A2%A6%E5%A2%83%E7%89%A9%E8%AF%AD/" target="_self">
+        <div>
           
           附游戏demo项目地址：点击 1-故事背景在某一天你陷入沉睡之时来到了一个特殊的地方——梦境工厂，工厂的负责人告诉你：你正在长大，你的梦境也随之发生了一些变化，在梦境中隐藏着关于未来的一个秘密。为了发现这隐藏的秘密，所以在沉睡时邀请你来参与梦境的制造。 当你刚想要问一些什么的时候，负责人消失了，随之出现了一个奇奇怪怪的门，虽然你有点犹豫， 但是非常好奇，所以进入了这个奇怪的梦境之门。 （*每当你完
-        </a>
-      </p>
+        </div>
+      </a>
 
       <div class="index-btm post-metas">
         
@@ -285,20 +331,34 @@
           </div>
         
         
-          <div class="post-meta mr-3">
+          <div class="post-meta mr-3 d-flex align-items-center">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/%E6%B8%B8%E6%88%8F/">游戏</a>
-            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%B8%B8%E6%88%8F/" class="category-chain-item">游戏</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
           </div>
         
         
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/%E6%B8%B8%E6%88%8F/">游戏</a>
+              <a href="/tags/%E6%B8%B8%E6%88%8F/">#游戏</a>
             
-              <a href="/tags/%E8%AE%BE%E8%AE%A1/">设计</a>
+              <a href="/tags/%E8%AE%BE%E8%AE%A1/">#设计</a>
             
           </div>
         
@@ -323,12 +383,12 @@
         </a>
       </h1>
 
-      <p class="index-excerpt">
-        <a href="/post/210313-%E8%B0%88%E8%B0%88%E6%88%91%E7%9A%84%E6%B8%B8%E6%88%8F%E5%8F%B2/" target="_self">
+      <a class="index-excerpt" href="/post/210313-%E8%B0%88%E8%B0%88%E6%88%91%E7%9A%84%E6%B8%B8%E6%88%8F%E5%8F%B2/" target="_self">
+        <div>
           
           2022.03更新由于每年会玩些新游戏，但记录游戏又不像影视作品那样容易，很多只是简单玩一玩然后云通关（社畜之后玩游戏的时间和精力更少了），去steam下留评论总感觉不合适，于是就在这篇文章里更新一下「游戏史」吧。当然这里只是简单回顾并总结一下，值得单开文章的自然会单开。 这一年还在持续玩的网游：  原神：2.0之后（以及之前一版本的海岛），更图速度太快了，单机跑图玩家很快乐。 明日方舟：正常的活
-        </a>
-      </p>
+        </div>
+      </a>
 
       <div class="index-btm post-metas">
         
@@ -340,18 +400,32 @@
           </div>
         
         
-          <div class="post-meta mr-3">
+          <div class="post-meta mr-3 d-flex align-items-center">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/%E6%B8%B8%E6%88%8F/">游戏</a>
-            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%B8%B8%E6%88%8F/" class="category-chain-item">游戏</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
           </div>
         
         
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/%E6%B8%B8%E6%88%8F/">游戏</a>
+              <a href="/tags/%E6%B8%B8%E6%88%8F/">#游戏</a>
             
           </div>
         
@@ -376,12 +450,12 @@
         </a>
       </h1>
 
-      <p class="index-excerpt">
-        <a href="/post/210304-%E5%8E%9F%E7%A5%9E%E7%8E%A9%E6%B3%95%E6%80%BB%E7%BB%93/" target="_self">
+      <a class="index-excerpt" href="/post/210304-%E5%8E%9F%E7%A5%9E%E7%8E%A9%E6%B3%95%E6%80%BB%E7%BB%93/" target="_self">
+        <div>
           
           作为一款二次元开放世界抽卡rpg游戏，原神在氪金换皮手游领域实现了突破，不仅在”全平台”登录，更是荣获ios、google play两大手机App平台2020年度游戏。众所周知，游戏有四个核心要素——美术、机制（玩法）、故事和技术，作为一名准公测开服玩家，想要从玩家角度来谈谈这一款跨时代游戏的玩法。 一图流：  核心玩法一度被称为“大杂烩缝合怪”的原神，我对于这款游戏的第一串定语就又臭又长——二次
-        </a>
-      </p>
+        </div>
+      </a>
 
       <div class="index-btm post-metas">
         
@@ -393,20 +467,34 @@
           </div>
         
         
-          <div class="post-meta mr-3">
+          <div class="post-meta mr-3 d-flex align-items-center">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/%E6%B8%B8%E6%88%8F/">游戏</a>
-            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%B8%B8%E6%88%8F/" class="category-chain-item">游戏</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
           </div>
         
         
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/%E6%B8%B8%E6%88%8F/">游戏</a>
+              <a href="/tags/%E6%B8%B8%E6%88%8F/">#游戏</a>
             
-              <a href="/tags/%E5%8E%9F%E7%A5%9E/">原神</a>
+              <a href="/tags/%E5%8E%9F%E7%A5%9E/">#原神</a>
             
           </div>
         
@@ -431,12 +519,12 @@
         </a>
       </h1>
 
-      <p class="index-excerpt">
-        <a href="/post/210219-%E8%B0%81%E8%AF%B4%E3%80%8A%E5%A4%A9%E6%B0%94%E4%B9%8B%E5%AD%90%E3%80%8B%E4%B8%8D%E8%83%BD%E5%92%8C%E3%80%8A%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%97%E3%80%8B%E6%AF%94%E8%BE%83%EF%BC%9F/" target="_self">
+      <a class="index-excerpt" href="/post/210219-%E8%B0%81%E8%AF%B4%E3%80%8A%E5%A4%A9%E6%B0%94%E4%B9%8B%E5%AD%90%E3%80%8B%E4%B8%8D%E8%83%BD%E5%92%8C%E3%80%8A%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%97%E3%80%8B%E6%AF%94%E8%BE%83%EF%BC%9F/" target="_self">
+        <div>
           
           利益相关，新海诚多年粉丝，去年《天气之子》国内上映的时候，在了解了一些背景之后也是立刻去影院观看了诚哥三年的又一新作。虽然一些背景的了解带来了轻微的剧透，但丝毫不影响我的观感（和我本人的观影习惯有关，不怎么在意剧透，毕竟除了剧情还有更多可以关注的维度），所以总体观感非常棒，看完之后仍留有很多思考的地方。 意料之外的是这部非常对我胃口的作品却在圈内引发了大量争议，什么剧情老套，结局争议，诚哥水平不再
-        </a>
-      </p>
+        </div>
+      </a>
 
       <div class="index-btm post-metas">
         
@@ -448,20 +536,34 @@
           </div>
         
         
-          <div class="post-meta mr-3">
+          <div class="post-meta mr-3 d-flex align-items-center">
             <i class="iconfont icon-category"></i>
             
-              <a href="/categories/%E5%8A%A8%E6%BC%AB/">动漫</a>
-            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%8A%A8%E6%BC%AB/" class="category-chain-item">动漫</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
           </div>
         
         
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/%E5%8A%A8%E6%BC%AB/">动漫</a>
+              <a href="/tags/%E5%8A%A8%E6%BC%AB/">#动漫</a>
             
-              <a href="/tags/%E6%96%B0%E6%B5%B7%E8%AF%9A/">新海诚</a>
+              <a href="/tags/%E6%96%B0%E6%B5%B7%E8%AF%9A/">#新海诚</a>
             
           </div>
         
@@ -506,56 +608,58 @@
       <div class="modal-body mx-3">
         <div class="md-form mb-5">
           <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v"
-                 for="local-search-input">关键词</label>
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
         </div>
         <div class="list-group" id="local-search-result"></div>
       </div>
     </div>
   </div>
 </div>
+
     
 
     
   </main>
 
-  <footer class="text-center mt-5 py-3">
-  <div class="footer-content">
-     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
-  </div>
+  <footer>
+    <div class="footer-inner">
   
-  <div class="statistics">
-    
-    
-
-    
-      
-        <!-- 不蒜子统计PV -->
-        <span id="busuanzi_container_site_pv" style="display: none">
-            总访问量 
-            <span id="busuanzi_value_site_pv"></span>
-             次
-          </span>
-      
-      
-        <!-- 不蒜子统计UV -->
-        <span id="busuanzi_container_site_uv" style="display: none">
-            总访客数 
-            <span id="busuanzi_value_site_uv"></span>
-             人
-          </span>
-      
-    
-  </div>
-
-
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
   
 
   
-</footer>
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
 
+  
+  
+  
+</div>
 
-  <!-- SCRIPTS -->
+  </footer>
+
+  <!-- Scripts -->
   
   <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
@@ -574,48 +678,21 @@
 <script  src="/js/events.js" ></script>
 <script  src="/js/plugins.js" ></script>
 
-<!-- Plugins -->
-
-
-  <script  src="/js/local-search.js" ></script>
-
-
-
-  
-    <script  src="/js/img-lazyload.js" ></script>
-  
-
-
-
-  
-
-
-
-
-
-  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
-
-
-
 
   <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
   <script>
     (function (window, document) {
       var typing = Fluid.plugins.typing;
-      var title = document.getElementById('subtitle').title;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
       
-        typing(title);
+        typing(text);
       
     })(window, document);
   </script>
-
-
-
-
-
-
-
-
 
 
 
@@ -625,22 +702,28 @@
   
     <!-- Google Analytics -->
     <script defer>
-      window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) };
-      ga.l = +new Date;
-      ga('create', 'G-FJM6NG4T2X', 'auto');
-      ga('send', 'pageview');
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript('https://www.google-analytics.com/analytics.js', function() {
+          window.ga = window.ga || function() { (ga.q = ga.q || []).push(arguments) };
+          ga.l = +new Date;
+          ga('create', 'G-FJM6NG4T2X', 'auto');
+          ga('send', 'pageview');
+        });
+      }
     </script>
-    <script async src='https://www.google-analytics.com/analytics.js'></script>
   
 
   
     <!-- Google gtag.js -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FJM6NG4T2X"></script>
     <script defer>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-FJM6NG4T2X');
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript('https://www.googletagmanager.com/gtag/js?id=G-FJM6NG4T2X', function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-FJM6NG4T2X');
+        });
+      }
     </script>
   
 
@@ -650,13 +733,35 @@
 
   
 
+  
 
 
 
 
-<!-- 主题的启动项 保持在最底部 -->
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
 <script  src="/js/boot.js" ></script>
 
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/shifuku.model.json"},"display":{"position":"left","width":200,"height":400},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body>
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/shifuku.model.json"},"display":{"position":"right","width":200,"height":400},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body>
 </html>
