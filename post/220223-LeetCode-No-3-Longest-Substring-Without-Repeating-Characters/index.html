@@ -24,11 +24,11 @@
 <meta property="og:description" content="This is a test for post writing in English, as well as my writing skill practice. The test is to check the Google search data in Google Search Console for English posts. I chose LeetCode problems for">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-02-23T08:03:33.000Z">
-<meta property="article:modified_time" content="2022-03-14T16:47:34.496Z">
+<meta property="article:modified_time" content="2022-06-03T12:38:45.082Z">
 <meta property="article:author" content="Skeathy">
 <meta property="article:tag" content="Coding">
-<meta property="article:tag" content="Python">
 <meta property="article:tag" content="Algorithm">
+<meta property="article:tag" content="Python">
 <meta property="article:tag" content="LeetCode">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -74,7 +74,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"skeathytomas.github.io","root":"/","version":"1.9.0","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":2},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":"G-FJM6NG4T2X","gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"skeathytomas.github.io","root":"/","version":"1.9.0","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":3},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":"G-FJM6NG4T2X","gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -287,7 +287,7 @@
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2022年3月15日 凌晨
+                    本文最后更新于：2022年6月3日 晚上
                   
                 
               </p>
@@ -297,7 +297,7 @@
               <p>This is a test for post writing in English, as well as my writing skill practice. The test is to check the Google search data in Google Search Console for English posts.</p>
 <p>I chose LeetCode problems for the test. Since I am not an expert in algorithm, I just show my solutions with explanations for the problems and do not pursue better performance. The series of the posts will be updated due to my personal interest if the problem attracts me, and more importantly, I am able to solve the problems 😛.</p>
 <p>P.S. I use Python 3 in LeetCode.</p>
-<h1 id="Problem-Description"><a href="#Problem-Description" class="headerlink" title="Problem Description"></a>Problem Description</h1><p>Check the original <a target="_blank" rel="noopener" href="https://leetcode.com/problems/longest-substring-without-repeating-characters/">URL</a>:</p>
+<h2 id="Problem-Description"><a href="#Problem-Description" class="headerlink" title="Problem Description"></a>Problem Description</h2><p>Check the original <a target="_blank" rel="noopener" href="https://leetcode.com/problems/longest-substring-without-repeating-characters/">URL</a>:</p>
 <blockquote>
 <p>Given a string <code>s</code>, find the length of the <strong>longest substring</strong> without repeating characters.</p>
 <figure class="highlight vbnet"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs vbnet">Example <span class="hljs-number">1</span>:<br><br><span class="hljs-symbol">Input:</span> s = <span class="hljs-string">&quot;abcabcbb&quot;</span><br><span class="hljs-symbol">Output:</span> <span class="hljs-number">3</span><br><span class="hljs-symbol">xplanation:</span> The answer <span class="hljs-built_in">is</span> <span class="hljs-string">&quot;abc&quot;</span>, <span class="hljs-keyword">with</span> the length <span class="hljs-keyword">of</span> <span class="hljs-number">3</span>.<br></code></pre></td></tr></table></figure>
@@ -312,11 +312,11 @@
 <li><code>s</code> consists of English letters, digits, symbols and spaces.</li>
 </ul>
 </blockquote>
-<h1 id="My-Idea"><a href="#My-Idea" class="headerlink" title="My Idea"></a>My Idea</h1><p>The main idea is to read the items in the string one by one, meanwhile construct a new substring to store the read items. The length of the new substring should be counted as our goal is to find the maximum length.</p>
+<h2 id="My-Idea"><a href="#My-Idea" class="headerlink" title="My Idea"></a>My Idea</h2><p>The main idea is to read the items in the string one by one, meanwhile construct a new substring to store the read items. The length of the new substring should be counted as our goal is to find the maximum length.</p>
 <p>Here comes to the duplicated items:</p>
 <p>In the loop of item reading, if we find the newest item is duplicated in previous substring, we should update the substring to avoid duplication with trim the early used item. For example, if the previous substring is <code>***x***</code> (<code>*</code> is not <code>x</code>) and the newest item is <code>x</code>, then the previous 4 items should be trimmed and substring should be update to <code>***x</code>. So the method is to find the index of the duplicated item and complete the trim.</p>
 <p>After all the items are read, return the maximum length of substrings.</p>
-<h1 id="My-Code"><a href="#My-Code" class="headerlink" title="My Code"></a>My Code</h1><p>Here is my submitted code:</p>
+<h2 id="My-Code"><a href="#My-Code" class="headerlink" title="My Code"></a>My Code</h2><p>Here is my submitted code:</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">lengthOfLongestSubstring</span>(<span class="hljs-params">self, s: <span class="hljs-built_in">str</span></span>) -&gt; <span class="hljs-built_in">int</span>:<br>        <span class="hljs-built_in">max</span> = <span class="hljs-number">0</span><br>        a = []<br>        count = <span class="hljs-number">0</span><br>        <span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> s:<br>            <span class="hljs-keyword">if</span> item <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> a:<br>                a.append(item)<br>                count = count + <span class="hljs-number">1</span><br>                <span class="hljs-keyword">if</span> count &gt; <span class="hljs-built_in">max</span>:<br>                    <span class="hljs-built_in">max</span> = count<br>            <span class="hljs-keyword">else</span>:<br>                index = a.index(item)<br>                a = a[index + <span class="hljs-number">1</span>::]<br>                a.append(item)<br>                count = <span class="hljs-built_in">len</span>(a)<br>        <span class="hljs-keyword">return</span> <span class="hljs-built_in">max</span><br></code></pre></td></tr></table></figure>
 
               
@@ -352,9 +352,9 @@
       
         <a href="/tags/Coding/">#Coding</a>
       
-        <a href="/tags/Python/">#Python</a>
-      
         <a href="/tags/Algorithm/">#Algorithm</a>
+      
+        <a href="/tags/Python/">#Python</a>
       
         <a href="/tags/LeetCode/">#LeetCode</a>
       

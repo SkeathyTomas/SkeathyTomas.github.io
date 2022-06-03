@@ -16,30 +16,28 @@
   <meta name="author" content="Skeathy">
   <meta name="keywords" content="互联网,产品经理,设计,游戏,动漫,Coding">
   
-    <meta name="description" content="成为社畜以来已经快一年时间了，由此说来还并没有写过关于工作方面的文章，特别是工作经验、方法论相关的总结。于是新开一个分类，专门记录工作总结、感想，复盘一些通用性的工作方法，同时激励自己坚持使用这些方法。 本篇文章从注意力角度出发，聊一聊如何在工作中提升注意力，不被各种闲杂的消息分散注意力，从而更高效地完成工作目标，毕竟完成之后就可以毫无顾虑地愉快摸鱼了。 注意力和精力注意本是一个医学&#x2F;心">
+    <meta name="description" content="本篇从标题里就可以看出是一个系列，后续系列文章会在开头处添加相关链接，供自己同时也供读者进行快速查阅。 背景这是本项目启动的第一个文档，整个项目来源于和朋友们一起玩《原神》时吐槽的垃圾圣遗物管理系统。虽然已经有了不少第三方工具辅助，但总感觉用起来有不顺手的地方。虽然有重复造轮子的嫌疑，但一时兴起一句「不如自己做一个」启动了这个项目。 我将以产品经理的角度去实现这么一个第三方工具的设计与开发，重视产">
 <meta property="og:type" content="article">
-<meta property="og:title" content="注意力与工作效率——番茄钟的使用体验">
-<meta property="og:url" content="https://skeathytomas.github.io/post/220406-%E6%B3%A8%E6%84%8F%E5%8A%9B%E4%B8%8E%E5%B7%A5%E4%BD%9C%E6%95%88%E7%8E%87%E2%80%94%E2%80%94%E7%95%AA%E8%8C%84%E9%92%9F%E7%9A%84%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/index.html">
+<meta property="og:title" content="220601-如何做一个《原神》圣遗物管理系统（一）：产品调研与分析">
+<meta property="og:url" content="https://skeathytomas.github.io/post/220601-%E5%A6%82%E4%BD%95%E5%81%9A%E4%B8%80%E4%B8%AA%E3%80%8A%E5%8E%9F%E7%A5%9E%E3%80%8B%E5%9C%A3%E9%81%97%E7%89%A9%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E4%BA%A7%E5%93%81%E8%B0%83%E7%A0%94%E4%B8%8E%E5%88%86%E6%9E%90/index.html">
 <meta property="og:site_name" content="Skeathy的奇思妙想">
-<meta property="og:description" content="成为社畜以来已经快一年时间了，由此说来还并没有写过关于工作方面的文章，特别是工作经验、方法论相关的总结。于是新开一个分类，专门记录工作总结、感想，复盘一些通用性的工作方法，同时激励自己坚持使用这些方法。 本篇文章从注意力角度出发，聊一聊如何在工作中提升注意力，不被各种闲杂的消息分散注意力，从而更高效地完成工作目标，毕竟完成之后就可以毫无顾虑地愉快摸鱼了。 注意力和精力注意本是一个医学&#x2F;心">
+<meta property="og:description" content="本篇从标题里就可以看出是一个系列，后续系列文章会在开头处添加相关链接，供自己同时也供读者进行快速查阅。 背景这是本项目启动的第一个文档，整个项目来源于和朋友们一起玩《原神》时吐槽的垃圾圣遗物管理系统。虽然已经有了不少第三方工具辅助，但总感觉用起来有不顺手的地方。虽然有重复造轮子的嫌疑，但一时兴起一句「不如自己做一个」启动了这个项目。 我将以产品经理的角度去实现这么一个第三方工具的设计与开发，重视产">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20220420012653.png">
-<meta property="article:published_time" content="2022-04-06T12:10:36.000Z">
-<meta property="article:modified_time" content="2022-06-03T12:43:25.442Z">
+<meta property="article:published_time" content="2022-06-01T13:20:34.000Z">
+<meta property="article:modified_time" content="2022-06-03T12:44:58.380Z">
 <meta property="article:author" content="Skeathy">
-<meta property="article:tag" content="软件">
-<meta property="article:tag" content="教程">
-<meta property="article:tag" content="工作">
-<meta property="article:tag" content="效率">
-<meta property="article:tag" content="番茄钟">
+<meta property="article:tag" content="游戏">
+<meta property="article:tag" content="原神">
+<meta property="article:tag" content="产品">
+<meta property="article:tag" content="需求分析">
+<meta property="article:tag" content="竞品分析">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20220420012653.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>注意力与工作效率——番茄钟的使用体验 - Skeathy的奇思妙想</title>
+  <title>220601-如何做一个《原神》圣遗物管理系统（一）：产品调研与分析 - Skeathy的奇思妙想</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -197,13 +195,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20220420012653.png') no-repeat center center; background-size: cover;">
+     style="background: url('https://clearvision.gitlab.io/images/sapphire.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="注意力与工作效率——番茄钟的使用体验"></span>
+            <span id="subtitle" data-typed-text="220601-如何做一个《原神》圣遗物管理系统（一）：产品调研与分析"></span>
           
         </div>
 
@@ -214,8 +212,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-04-06 20:10" pubdate>
-          2022年4月6日 晚上
+        <time datetime="2022-06-01 21:20" pubdate>
+          2022年6月1日 晚上
         </time>
       </span>
     
@@ -226,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          3.6k 字
+          348 字
         
       </span>
     
@@ -237,7 +235,7 @@
         
         
         
-          30 分钟
+          3 分钟
         
       </span>
     
@@ -285,7 +283,7 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">注意力与工作效率——番茄钟的使用体验</h1>
+            <h1 style="display: none">220601-如何做一个《原神》圣遗物管理系统（一）：产品调研与分析</h1>
             
               <p class="note note-info">
                 
@@ -297,56 +295,10 @@
             
             <div class="markdown-body">
               
-              <p>成为社畜以来已经快一年时间了，由此说来还并没有写过关于工作方面的文章，特别是工作经验、方法论相关的总结。于是新开一个分类，专门记录工作总结、感想，复盘一些通用性的工作方法，同时激励自己坚持使用这些方法。</p>
-<p>本篇文章从注意力角度出发，聊一聊如何在工作中提升注意力，不被各种闲杂的消息分散注意力，从而更高效地完成工作目标，<del>毕竟完成之后就可以毫无顾虑地愉快摸鱼了。</del></p>
-<h2 id="注意力和精力"><a href="#注意力和精力" class="headerlink" title="注意力和精力"></a>注意力和精力</h2><p>注意本是一个医学&#x2F;心理学概念，</p>
-<blockquote>
-<p>是一种导致局部刺激的意识水平提高的知觉的选择性的集中。</p>
-</blockquote>
-<p>另外注意力的临床表现包含五个面向，但是这些解释与研究都太复杂抽象了。所以我更愿意用通俗一点的解释——人的心理活动指向和集中于某种事物的能力，不过大家也都心知肚明。</p>
-<p>精力，类比于体力，一般我都理解为某种能量值，工作或者专注时会消耗能量值，休息时可以恢复能量值。精力和注意力密切相关，比如能量值高的时候可以有较高的注意力，而低能量时则集中注意力比较困难。</p>
-<p>我们都知道集中注意力的时候可以快速推进任务的执行，提高工作效率。集中注意力的最大障碍是注意力的干扰，包含各种环境、事件、信息等的影响；另外注意自己的精力（能量值），也会改善自我对于注意力的控制。</p>
-<h2 id="心流理论"><a href="#心流理论" class="headerlink" title="心流理论"></a>心流理论</h2><p>有关于注意力和精力有一个比较有名的理论——心流（Flow），大致说的是一种进入某种沉浸式状态从而忘记时间并且高度兴奋愉悦。</p>
-<p>不过我个人感觉这一理论除了在游戏领域的应用外，大多只是对于专注力的另一套说法（所谓的噱头），有兴趣可以看看理论开创者的书<a target="_blank" rel="noopener" href="https://book.douban.com/subject/27186106/">《心流：最优体验心理学》</a>。</p>
-<h2 id="减少注意力的分散"><a href="#减少注意力的分散" class="headerlink" title="减少注意力的分散"></a>减少注意力的分散</h2><p>在讨论如何减少注意力分散的问题之前，首先要了解注意力被分散到了哪些地方。以下场景针对桌面办公场景，按照频率由高到低排序：</p>
-<ol>
-<li>被各种工作消息通知打断，包含聊天消息、电话&#x2F;视频&#x2F;现场会议、当面交流、突发任务等等。</li>
-<li>浏览各种无关信息，包括刷手机、刷网页等。</li>
-<li>想东想西，注意力的迷离，由工作内容主题偏离到比较边缘无关的方向。</li>
-</ol>
-<h3 id="有关信息干扰"><a href="#有关信息干扰" class="headerlink" title="有关信息干扰"></a>有关信息干扰</h3><p>针对第一种场景，工作避免不了交流，所以这种打断比较难解决，该中断的时候就必须要中断。所以主要的解决方案是在一天的工作计划中预设这些杂七杂八的事件，并在剩余的时间中专注完成今日的计划。</p>
-<p>此外，屏蔽一些无关的聊天群消息通知，取消任务栏图标闪动（或者收进扩展栏隐藏图标），周期性地处理非紧急的聊天消息也是一种方法。</p>
-<h3 id="无关信息干扰"><a href="#无关信息干扰" class="headerlink" title="无关信息干扰"></a>无关信息干扰</h3><p>第二种场景，大多数无关消息的浏览诱因是各种消息推送，包括手机的通知和桌面的通知。主要的解决方法就是主动屏蔽这些通知。比如我的手机基本上只允许即时通讯类应用发送通知，且各种聊天群该取消通知的都取消通知；办公软件因为在桌面可以看到消息推送，手机端也关了通知（下班时间也影响不到我，美滋滋）。桌面的消息推送设置同理，当然也可另外设置勿扰模式（专注助手），对通知权限、勿扰时间进行设置。</p>
-<p><img src="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20220412235745.png" srcset="/img/loading.gif" lazyload alt="Win 11专注助手设置（虽然基本没什么通知所以我也懒得设置，甚至不开）"></p>
-<p>至于刷网页，基本需要靠自制力去控制，通过设定一定的规则并去遵循实现，比如番茄工作法。</p>
-<h3 id="思想迷离"><a href="#思想迷离" class="headerlink" title="思想迷离"></a>思想迷离</h3><p>第三种场景，对于我来说是最为艰难的一点。在大多数并无唯一正解的脑力工作中，思维的发散和收敛都是必须的过程，而这一过程非常容易走偏，不经意间就会陷入某个思维深渊并不知不觉地耗费时间。表面上看是专注了，实际上可能已经被各种打开的资料、记录的笔记等分散了注意力，导致产出的下降。</p>
-<p>这一场景我一般通过工作计划+番茄钟的方式进行适当调整，主观感觉上有一定效果。</p>
-<h2 id="恢复精力"><a href="#恢复精力" class="headerlink" title="恢复精力"></a>恢复精力</h2><p>最主要的还是要保证充足的休息时间，尤其是睡眠时间，大部分情况下需要保证每天必需的7-8个小时的晚上睡眠时间。此外，合适的午睡时间也可以让整个下午的工作时间中头脑更加清醒一些。</p>
-<p>除去最为彻底的睡眠外，也可以在其他时间适当补充些精神放松方法以恢复精力，比如闭眼放空自己（发呆？冥想？）、轻娱乐消遣活动（水手机、刷网页、休闲游戏等）。</p>
-<p>除了精神力需要放松外，肉体也需要放松。比如工作时间周期性地从工位上起来溜达一圈，和周围的同事聊聊天，活动一下筋骨，倒杯水等；非工作时间也可以低强度地锻炼锻炼，瑜伽、健身都是不错的选择。</p>
-<p>最后也要痛斥一下加班文化，加班只是一种对紧急事件的特殊处理的措施。常态化的加班并不会提高工作效率，反而只会拉长工作周期，就更不用说带来的其他身体、情绪、热情、精力、个人成长方面的副作用了。</p>
-<h2 id="番茄工作法"><a href="#番茄工作法" class="headerlink" title="番茄工作法"></a>番茄工作法</h2><p>番茄工作法（Pomodoro Technique）基本就是一种围绕减少注意力分散和恢复精力两个方面展开的时间管理方法。</p>
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/3/34/Il_pomodoro.jpg" srcset="/img/loading.gif" lazyload alt="厨房用番茄定时器"></p>
-<p>简单来说，就是设定好一个最小工作周期（番茄钟），一个周期内包含工作时间和休息时间（一个标准的番茄钟包含25分钟工作时间和5分钟休息时间）。然后必须要遵循的规则就是在工作时间集中注意力工作，休息时间完全放松休息。</p>
-<p>至于其他的，比如开始之前的工作计划设定，完成计划后增加休息时间，并用于复盘或是制定下一个计划，基本属于工作中都需要注意的点，按照自己的节奏来就行。</p>
-<p>番茄工作法通过较短的时间周期（其实也可自定义拉长周期，工作时间：休息时间一般为5:1左右，差不多一个小时内有10-15分钟的休息），实现注意力和休息的平衡。</p>
-<p>稍微需要的是休息时间不要过长，否则容易从「高速」的工作流中脱离出来，重新进入状态需要时间，反而降低了整体效率；另外「频繁+较长时间」的休息时间也会强烈压缩工作时间，可能时间真的就不够用了，工作一个小时休息二十分钟（工作时间：休息时间 &#x3D; 2:1）就有些「三天打鱼，两天晒网」的味道了。</p>
-<p>整个番茄工作法与学校里的排课上课时间安排非常类似，相信这也是番茄工作法得到实际应用的有效验证。</p>
-<h2 id="软件使用与心得"><a href="#软件使用与心得" class="headerlink" title="软件使用与心得"></a>软件使用与心得</h2><p>番茄工作法需要一个基本的工具进行辅助——定时器，用于在设定好的时间进行休息&#x2F;工作的消息提醒。这个定时器的名称一般也称为「番茄钟」。</p>
-<h3 id="软件介绍"><a href="#软件介绍" class="headerlink" title="软件介绍"></a>软件介绍</h3><p>有关于番茄钟的软件应用很多，搜索「番茄钟」或「Pomodoro」即可。不过大多数番茄钟是基于手机平台的，本人大多数的工作基于桌面平台。所以对我而言，Windows平台的番茄钟应用是我的第一选择。</p>
-<p>在一番搜索之后，我选择了Windows自带的「闹钟」应用，其在最近的更新中添加了「专注时段」的新功能，可以简单实现番茄钟的作用。</p>
-<p><img src="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/image-20220420001733561.png" srcset="/img/loading.gif" lazyload alt="时钟——专注时段"></p>
-<p>应用非常简单，只要设定好一段时间并启动「专注时段」，系统就会开始倒计时模式，并在准确的时间点通过通知中心的弹窗提醒你该休息&#x2F;工作了。关于工作&#x2F;休息的时长可在设置中进行调整，我使用了默认的设置，工作时间自动，休息时间5分钟。自动模式下，一般工作时间会设定在20多分钟，随一开始设定的总专注周期而定。</p>
-<p><img src="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/image-20220420002416407.png" srcset="/img/loading.gif" lazyload alt="专注时段——倒计时模式"></p>
-<p><img src="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/image-20220420004817996.png" srcset="/img/loading.gif" lazyload alt="专注时段——消息通知"></p>
-<p>右边的每日进度还可以统计你每天的专注时间段完成情况，在一定程度上培养起专注的习惯。虽然我自己这一模块用的不多，毕竟有其他的日报、周报等辅助完成工作目标。重要的不是究竟花了多少时间，而是完成了工作目标。</p>
-<h3 id="使用心得"><a href="#使用心得" class="headerlink" title="使用心得"></a>使用心得</h3><p>具体的使用上，我会在周期启动前先设定好这一专注周期的总体目标，如果任务比较长则对任务进行拆解。由于一般的工作周期为3-4小时（上下午），除去一些准备时间、衔接时间等，我会将一个专注周期设定为2-3小时。在一个专注周期中，尽可能地完成任务目标。</p>
-<p>当然，预估时间完全可能不准确，可能提早完成或是延期完成，在一个精确的专注周期中更是如此。所以番茄钟的作用对于我而言更多是一种规则束缚，提醒我不要走神并投入足够的时间和精力在工作中。若是提早完成任务，我会根据整体工作进度选择继续下一个计划或是适当的调整休息；若是当前任务未完成，我会在下一个周期中继续完成当前任务。</p>
-<p>有了这么一种规则的约束，我可以感受到自己的工作时间的走神时间减少，比如自己随手刷起网页来会提醒自己还在工作时间而终止。另外，工作产出也得到有效提升，比如在写这篇文章的时候我对比了使用番茄钟和不使用番茄钟的效果，结果不使用番茄钟时产出大大降低。虽然没有严谨的对比实验，但主观上使用番茄钟给我带来了不小的帮助。</p>
-<p>短短的5分钟休息时间，是一种良好的奖励措施，它会提醒我在工作时间保持专注，之后就可以好好休息。这种微不足道的「假想奖励」却实实在在有提升我的兴奋感和快乐感，大约确实有在促进多巴胺的产生。</p>
-<p>一般休息时间的提醒一出 ，我会立刻闭眼后躺，放空大脑，大约持续1-2分钟。之后起身稍稍活动一下，喝点水，然后回到座位随便浏览下信息。等到专注时间的提醒出来，便重新回到专注状态。因为时间比较短，不必担心思路打断，很快就会回到状态，且专注精神的疲惫感也会有不少的缓解。</p>
-<p>最后一个专注周期的结束时，我会心安理得地划水，并在划水满足后复盘任务执行情况并安排下一个专注周期（往往就推到下午或第二天了）。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>虽然番茄工作法最终依然要靠本人的自制力，但通过这种详细的时间规划和限制后，自制力可以比较现实地实行下来。所以如果你也有注意力和工作效率方面的困扰，不妨尝试一下使用番茄钟和番茄工作法。</p>
+              <p>本篇从标题里就可以看出是一个系列，后续系列文章会在开头处添加相关链接，供自己同时也供读者进行快速查阅。</p>
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>这是本项目启动的第一个文档，整个项目来源于和朋友们一起玩《原神》时吐槽的垃圾圣遗物管理系统。虽然已经有了不少第三方工具辅助，但总感觉用起来有不顺手的地方。虽然有重复造轮子的嫌疑，但一时兴起一句「不如自己做一个」启动了这个项目。</p>
+<p>我将以产品经理的角度去实现这么一个第三方工具的设计与开发，重视产品的需求分析和相关文档的整理，当然UI、程序也全包了。不考虑商业目的，打算开源（希望能捞到一些大佬帮我羞羞代码什么的🥲）。</p>
+<p>本文是第一篇文章，主要探讨「圣遗物管理」的需求到底是什么。并结合一下对官方系统和第三方系统的竞品分析，总结新产品的优势和核心竞争点，基于此做出一个可用的MVP（最小可用模型）。</p>
 
               
             </div>
@@ -364,7 +316,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E5%B7%A5%E4%BD%9C/" class="category-chain-item">工作</a>
+  <a href="/categories/%E4%BA%A7%E5%93%81/" class="category-chain-item">产品</a>
   
   
 
@@ -379,15 +331,15 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E8%BD%AF%E4%BB%B6/">#软件</a>
+        <a href="/tags/%E6%B8%B8%E6%88%8F/">#游戏</a>
       
-        <a href="/tags/%E6%95%99%E7%A8%8B/">#教程</a>
+        <a href="/tags/%E5%8E%9F%E7%A5%9E/">#原神</a>
       
-        <a href="/tags/%E5%B7%A5%E4%BD%9C/">#工作</a>
+        <a href="/tags/%E4%BA%A7%E5%93%81/">#产品</a>
       
-        <a href="/tags/%E6%95%88%E7%8E%87/">#效率</a>
+        <a href="/tags/%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90/">#需求分析</a>
       
-        <a href="/tags/%E7%95%AA%E8%8C%84%E9%92%9F/">#番茄钟</a>
+        <a href="/tags/%E7%AB%9E%E5%93%81%E5%88%86%E6%9E%90/">#竞品分析</a>
       
     </div>
   
@@ -399,8 +351,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>注意力与工作效率——番茄钟的使用体验</div>
-      <div>https://skeathytomas.github.io/post/220406-注意力与工作效率——番茄钟的使用体验/</div>
+      <div>220601-如何做一个《原神》圣遗物管理系统（一）：产品调研与分析</div>
+      <div>https://skeathytomas.github.io/post/220601-如何做一个《原神》圣遗物管理系统（一）：产品调研与分析/</div>
     </div>
     <div class="license-meta">
       
@@ -412,7 +364,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年4月6日</div>
+          <div>2022年6月1日</div>
         </div>
       
       
@@ -438,29 +390,6 @@
 
 
               
-                <div class="post-prevnext my-3">
-                  <article class="post-prev col-6">
-                    
-                    
-                      <a href="/post/220423-%E6%8A%BD%E5%8D%A1%E4%B8%8E%E6%8E%89%E8%90%BD%EF%BC%882%E9%81%93%E6%A6%82%E7%8E%87%E9%A2%98%EF%BC%89/" title="抽卡与掉落（2道概率题）">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">抽卡与掉落（2道概率题）</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
-                  </article>
-                  <article class="post-next col-6">
-                    
-                    
-                      <a href="/post/220314-%E4%BA%A4%E4%BA%92%E8%AE%BE%E8%AE%A1%E7%90%86%E8%AE%BA%E5%9C%A8%E6%B8%B8%E6%88%8F%E5%9C%B0%E5%9B%BE%E8%AE%BE%E8%AE%A1%E4%B8%8A%E7%9A%84%E5%BA%94%E7%94%A8/" title="交互设计理论在游戏地图设计上的应用">
-                        <span class="hidden-mobile">交互设计理论在游戏地图设计上的应用</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
-                    
-                  </article>
-                </div>
-              
             </div>
 
             
@@ -474,7 +403,7 @@
         var options = Object.assign(
           {"clientID":"658faad5dc784f8ec14b","clientSecret":"b1c37d084a7aa0367a81f3a12c863a11ec088597","repo":"skeathytomas.github.io","owner":"skeathytomas","admin":["skeathytomas"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
           {
-            id: '9b7cc0f18daf7bf7fb623bab6ca39c04'
+            id: 'be8cb526605e3f4fce79e00be3783f74'
           }
         )
         var gitalk = new Gitalk(options);
@@ -495,67 +424,6 @@
 
     <div class="side-col d-none d-lg-block col-lg-2">
       
-  <aside class="sidebar category-bar" style="margin-left: -1rem">
-    
-
-
-
-
-
-<div class="category-list">
-  
-  
-    
-    
-    
-    <div class="category row nomargin-x">
-      <a class="category-item 
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="工作"
-        id="heading-9a018b21ab114a51dd7b5979198a941b" role="tab" data-toggle="collapse" href="#collapse-9a018b21ab114a51dd7b5979198a941b"
-        aria-expanded="true"
-      >
-        工作
-        <span class="list-group-count">(2)</span>
-        <i class="iconfont icon-arrowright"></i>
-      </a>
-      
-      <div class="category-collapse collapse show" id="collapse-9a018b21ab114a51dd7b5979198a941b"
-           role="tabpanel" aria-labelledby="heading-9a018b21ab114a51dd7b5979198a941b">
-        
-        
-          
-  <div class="category-post-list">
-    
-    
-      
-      
-        <a href="/post/220517-%E5%B7%A5%E4%BD%9C%E8%B8%A9%E5%9D%91%E5%BD%95%EF%BC%9A%E5%9B%A2%E9%98%9F%E3%80%81%E4%BA%A4%E6%B5%81%E3%80%81%E5%8D%8F%E4%BD%9C%E4%B8%8E%E6%89%A7%E8%A1%8C/" title="工作踩坑录：团队、交流、协作与执行"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">工作踩坑录：团队、交流、协作与执行</span>
-        </a>
-      
-    
-      
-      
-        <a href="/post/220406-%E6%B3%A8%E6%84%8F%E5%8A%9B%E4%B8%8E%E5%B7%A5%E4%BD%9C%E6%95%88%E7%8E%87%E2%80%94%E2%80%94%E7%95%AA%E8%8C%84%E9%92%9F%E7%9A%84%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/" title="注意力与工作效率——番茄钟的使用体验"
-           class="list-group-item list-group-item-action
-           active">
-          <span class="category-post">注意力与工作效率——番茄钟的使用体验</span>
-        </a>
-      
-    
-  </div>
-
-        
-      </div>
-    </div>
-  
-</div>
-
-
-  </aside>
-
 
     </div>
   </div>
