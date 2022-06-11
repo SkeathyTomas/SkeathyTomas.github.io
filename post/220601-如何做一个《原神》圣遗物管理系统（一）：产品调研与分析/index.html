@@ -1,0 +1,797 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20210220171446.jpg">
+  <link rel="icon" href="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20210220171446.jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Skeathy">
+  <meta name="keywords" content="互联网,产品经理,设计,游戏,动漫,Coding">
+  
+    <meta name="description" content="本篇从标题里就可以看出是一个系列，后续系列文章会在开头处添加相关链接，供自己同时也供读者进行快速查阅。 背景这是本项目启动的第一个文档，整个项目来源于和朋友们一起玩《原神》时吐槽的垃圾圣遗物管理系统。虽然已经有了不少第三方工具辅助，但总感觉用起来有不顺手的地方。虽然有重复造轮子的嫌疑，但一时兴起一句「不如自己做一个」启动了这个项目。 我将以产品经理的角度去实现这么一个第三方工具的设计与开发，重视产">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何做一个《原神》圣遗物管理系统（一）：产品调研与分析">
+<meta property="og:url" content="https://skeathytomas.github.io/post/220601-%E5%A6%82%E4%BD%95%E5%81%9A%E4%B8%80%E4%B8%AA%E3%80%8A%E5%8E%9F%E7%A5%9E%E3%80%8B%E5%9C%A3%E9%81%97%E7%89%A9%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E4%BA%A7%E5%93%81%E8%B0%83%E7%A0%94%E4%B8%8E%E5%88%86%E6%9E%90/index.html">
+<meta property="og:site_name" content="Skeathy的奇思妙想">
+<meta property="og:description" content="本篇从标题里就可以看出是一个系列，后续系列文章会在开头处添加相关链接，供自己同时也供读者进行快速查阅。 背景这是本项目启动的第一个文档，整个项目来源于和朋友们一起玩《原神》时吐槽的垃圾圣遗物管理系统。虽然已经有了不少第三方工具辅助，但总感觉用起来有不顺手的地方。虽然有重复造轮子的嫌疑，但一时兴起一句「不如自己做一个」启动了这个项目。 我将以产品经理的角度去实现这么一个第三方工具的设计与开发，重视产">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://skeathytomas.github.io/">
+<meta property="og:image" content="https://skeathytomas.github.io/">
+<meta property="og:image" content="https://skeathytomas.github.io/">
+<meta property="og:image" content="https://skeathytomas.github.io/">
+<meta property="og:image" content="https://skeathytomas.github.io/">
+<meta property="article:published_time" content="2022-06-01T13:20:34.000Z">
+<meta property="article:modified_time" content="2022-06-10T13:52:14.000Z">
+<meta property="article:author" content="Skeathy">
+<meta property="article:tag" content="游戏">
+<meta property="article:tag" content="原神">
+<meta property="article:tag" content="产品">
+<meta property="article:tag" content="需求分析">
+<meta property="article:tag" content="竞品分析">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://skeathytomas.github.io/">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>如何做一个《原神》圣遗物管理系统（一）：产品调研与分析 - Skeathy的奇思妙想</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hint.css@2/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"skeathytomas.github.io","root":"/","version":"1.9.0","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":3},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":"G-FJM6NG4T2X","tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+
+  
+<meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title="Skeathy的奇思妙想" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Skeathy的奇思妙想</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://clearvision.gitlab.io/images/sapphire.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="如何做一个《原神》圣遗物管理系统（一）：产品调研与分析"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-06-01 21:20" pubdate>
+          2022年6月1日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          2.4k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          20 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">如何做一个《原神》圣遗物管理系统（一）：产品调研与分析</h1>
+            
+              <p class="note note-info">
+                
+                  
+                    本文最后更新于：2022年6月10日 晚上
+                  
+                
+              </p>
+            
+            <div class="markdown-body">
+              
+              <p>本篇从标题里就可以看出是一个系列，后续系列文章会在开头处添加相关链接，供自己同时也供读者进行快速查阅。</p>
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>这是本项目启动的第一个文档，整个项目来源于和朋友们一起玩《原神》时吐槽的垃圾圣遗物管理系统。虽然已经有了不少第三方工具辅助，但总感觉用起来有不顺手的地方。虽然有重复造轮子的嫌疑，但一时兴起一句「不如自己做一个」启动了这个项目。</p>
+<p>我将以产品经理的角度去实现这么一个第三方工具的设计与开发，重视产品的需求分析和相关文档的整理，当然UI、程序也全包了。不考虑商业目的，打算开源（希望能捞到一些大佬帮我修修代码什么的🥲）。</p>
+<p>本文是第一篇文章，主要探讨「圣遗物管理」的需求到底是什么。并结合一下对官方系统和第三方系统的竞品分析，挖掘痛点并提炼出新产品的核心竞争点，基于此做出一个可用的MVP（最小可用模型）。</p>
+<h2 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h2><p>谈起圣遗物管理的时候，我们（玩家）到底需要什么？</p>
+<p>在讨论这个问题之前，我想先谈谈圣遗物这一系统。首先作为一个被御魂系统折磨的《阴阳师》前玩家，我基本对圣遗物系统不抱有兴趣（甚至有一些厌恶）。讨厌纯粹的刷刷刷行为（<strong>而且看不到尽头</strong>），虽然有策略性但是很多情况下属于看完圣遗物的说明就失去了策略性，或者很多策略性被精准的数值平衡得大差不差，完全比不上升级带来的有效副属性数值提升。另外，2.0版本的绝缘套带来的对于大招后台角色的普适性，也在很大程度上打破了策略性这一要素。</p>
+<p>但是我完全认同圣遗物系统在手游中的成功，其和体力系统的联动和一定的随机性在很大程度上消耗而又限制玩家的游戏时间并延长游戏寿命。所以，玩家们为什么「沉迷」于刷圣遗物？又在圣遗物管理上需要什么？</p>
+<p>前一个问题的回答是「玩家想要变强」。这一目标的终极体现是深渊满星，或者说深渊满星「激励」着玩家想要变强。说来也惭愧，我这个59级的萌新至今也没满星过。</p>
+<p>所以后一个问题的回答是「量化玩家变强的数值」。在等级、武器、天赋等其他变强途径中，只有圣遗物这一途径是量化不明显的。所以一个圣遗物管理系统需要的是帮助玩家更加快速地评定<strong>圣遗物及套装</strong>对于<strong>特定角色</strong>的强度数值。当然，圣遗物并非完全绑定角色，适当条件下评估单独的圣遗物强度数值也是另一个需求。</p>
+<p>另外，圣遗物的数量不会只有一个，所以一个合格的管理系统必定包含排序&#x2F;查找&#x2F;筛选&#x2F;对比等列表的基本功能。</p>
+<h2 id="竞品分析"><a href="#竞品分析" class="headerlink" title="竞品分析"></a>竞品分析</h2><p>基于以上基础的圣遗物管理需求分析，本节主要调研下官方和一些第三方工具的情况，分析这些工具是如何评估圣遗物强度数值并进行管理的。</p>
+<h3 id="官方工具"><a href="#官方工具" class="headerlink" title="官方工具"></a>官方工具</h3><p>官方游戏内置有两个主要的圣遗物管理系统：</p>
+<ol>
+<li>背包面板的圣遗物分页。</li>
+<li>角色面板的圣遗物装配系统。</li>
+</ol>
+<p>另外在圣遗物强化时以及合成台废物替换时也涉及到一些列表排序方面的面板，但总体相差不大就不具体分析了。</p>
+<h4 id="背包中的圣遗物"><a href="#背包中的圣遗物" class="headerlink" title="背包中的圣遗物"></a>背包中的圣遗物</h4><p><img src="/" srcset="/img/loading.gif" lazyload alt="背包面板的圣遗物"></p>
+<p>记得远古版本的时候，这个系统里的圣遗物排序用户体验可以用「couldn’t be worse」来形容——不仅同一种圣遗物不一定排在一起，而且五个位置也会莫名被打乱，研究了好一阵子发现不了什么规律，一度怀疑是按照获取的时间戳排序的。所以这个系统对我来说一度只剩一个查阅圣遗物总数的作用。</p>
+<p>好在现在写文章分析这个问题的时候，惊奇地发现这个排序问题已被优化了。总结一下优化后的排序规则：</p>
+<ol>
+<li>有两个最高优先级的排序规则并可由用户选择：按照等级排序&#x2F;按照品质排序，可切换升序或降序。</li>
+<li>第二层排序规则是圣遗物种类，在等级&#x2F;品质一致时，会将同类的圣遗物排在一起。</li>
+<li>第三层排序规则是圣遗物的位置，在同一种圣遗物子序列中，会按照花&#x2F;羽毛&#x2F;沙漏&#x2F;杯子&#x2F;头的顺序排序。</li>
+</ol>
+<p>另外，此系统还允许对圣遗物的种类进行筛选操作，方便仅针对其中一种圣遗物进行管理查阅，比较符合玩家对于套装管理的需求。至于玩家呼声比较高的圣遗物套装方案保存与一键装备功能，官方似乎还没有动作（《阴阳师》的御魂倒是已经有了）。</p>
+<p><img src="/" srcset="/img/loading.gif" lazyload alt="圣遗物筛选操作"></p>
+<p>不过，此系统不允许按照圣遗物的位置进行筛选，对于圣遗物的强度评估&#x2F;排序仅限制于等级和品质，完全比不上角色面板中的圣遗物装配系统。想必使用频率上完全比不上另一个系统。</p>
+<h4 id="角色面板的圣遗物装配系统"><a href="#角色面板的圣遗物装配系统" class="headerlink" title="角色面板的圣遗物装配系统"></a>角色面板的圣遗物装配系统</h4><p><img src="/" srcset="/img/loading.gif" lazyload alt="角色面板的圣遗物"></p>
+<p>相比起背包中的系统，这个系统将角色圣遗物装备位置作为入口，从逻辑上更符合玩家对于圣遗物的管理需求。因为一般圣遗物的数量远大于需要装配的数量，玩家的需求更多情况下是在较为有限的角色中装配几个「有用」的圣遗物。</p>
+<p>操作页面上，这一系统第一层级就将圣遗物按照五个位置进行筛选，同一页面中仅能查阅一个位置的圣遗物。在排序上，在满足等级&#x2F;品质的一级排序上和圣遗物种类的二级排序外，允许玩家根据圣遗物的属性自选两个属性进行三级&#x2F;四级排序。当然，对于圣遗物的种类的筛选也完全满足，且在五个位置一级筛选页面切换过程中，后续的选择的排序&#x2F;筛选规则予以保留。</p>
+<p><img src="/" srcset="/img/loading.gif" lazyload alt="自选排序属性"></p>
+<p>从功能上来看，这一系统额外增加了默认的一级位置筛选和手动数值排序功能，增加了筛选以及强度比较方面的便利性。另外，若选择的装配位置已有圣遗物，可以将后续选择的圣遗物面板和已装配的圣遗物面板进行比较，也算是一种强度方面的快速对比。</p>
+<p><img src="/" srcset="/img/loading.gif" lazyload alt="圣遗物面板对比"></p>
+<p>不过以上种种还不能满足我对于圣遗物管理的需求，主要包含两个方面：</p>
+<ol>
+<li>圣遗物强度的量化和对比过于复杂。一个满级圣遗物一般包含1个主属性和4个副属性，主属性可以不去考虑对比，但是4个副属性比较起来究竟孰强孰弱还是比较困难的。更何况一个角色可以装配5个圣遗物，整体上的复杂度对比就更高了。</li>
+<li>自选排序属性并不区分主属性和副属性，导致排序结果中会突然插入几个主属性并不满足的圣遗物。在后期玩家中，一个有效的未强化圣遗物胚子至少要考虑主属性和2个副属性，这对于筛选胚子而言降低了用户体验，可能相对于改版前的仅筛选主属性反而是某种负优化。当然因为整体圣遗物数量不是很大，这一影响并不大。</li>
+</ol>
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3>
+              
+            </div>
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E4%BA%A7%E5%93%81/" class="category-chain-item">产品</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E6%B8%B8%E6%88%8F/">#游戏</a>
+      
+        <a href="/tags/%E5%8E%9F%E7%A5%9E/">#原神</a>
+      
+        <a href="/tags/%E4%BA%A7%E5%93%81/">#产品</a>
+      
+        <a href="/tags/%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90/">#需求分析</a>
+      
+        <a href="/tags/%E7%AB%9E%E5%93%81%E5%88%86%E6%9E%90/">#竞品分析</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>如何做一个《原神》圣遗物管理系统（一）：产品调研与分析</div>
+      <div>https://skeathytomas.github.io/post/220601-如何做一个《原神》圣遗物管理系统（一）：产品调研与分析/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Skeathy</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2022年6月1日</div>
+        </div>
+      
+      
+      <div class="license-meta-item">
+        <div>许可协议</div>
+        <div>
+          
+            
+            
+              <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+              <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                <i class="iconfont icon-by"></i>
+              </span>
+              </a>
+            
+          
+        </div>
+      </div>
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+            </div>
+
+            
+  <article id="comments" lazyload>
+    
+  <div id="gitalk-container"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#gitalk-container', function() {
+      Fluid.utils.createCssLink('/css/gitalk.css')
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', function() {
+        var options = Object.assign(
+          {"clientID":"658faad5dc784f8ec14b","clientSecret":"b1c37d084a7aa0367a81f3a12c863a11ec088597","repo":"skeathytomas.github.io","owner":"skeathytomas","admin":["skeathytomas"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
+          {
+            id: 'be8cb526605e3f4fce79e00be3783f74'
+          }
+        )
+        var gitalk = new Gitalk(options);
+        gitalk.render('gitalk-container');
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+  </article>
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+
+  
+
+  
+    <!-- Google gtag.js -->
+    <script defer>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript('https://www.googletagmanager.com/gtag/js?id=G-FJM6NG4T2X', function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-FJM6NG4T2X');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      headingSelector : CONFIG.toc.headingSelector || 'h1,h2,h3,h4,h5,h6',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      collapseDepth   : CONFIG.toc.collapseDepth || 0,
+      scrollSmooth    : true,
+      headingsOffset  : -boardTop
+    });
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+  });
+</script>
+
+
+  <script>
+  (function() {
+    var enableLang = CONFIG.code_language.enable && CONFIG.code_language.default;
+    var enableCopy = CONFIG.copy_btn;
+    if (!enableLang && !enableCopy) {
+      return;
+    }
+
+    function getBgClass(ele) {
+      return Fluid.utils.getBackgroundLightness(ele) >= 0 ? 'code-widget-light' : 'code-widget-dark';
+    }
+
+    var copyTmpl = '';
+    copyTmpl += '<div class="code-widget">';
+    copyTmpl += 'LANG';
+    copyTmpl += '</div>';
+    jQuery('.markdown-body pre').each(function() {
+      var $pre = jQuery(this);
+      if ($pre.find('code.mermaid').length > 0) {
+        return;
+      }
+      if ($pre.find('span.line').length > 0) {
+        return;
+      }
+
+      var lang = '';
+
+      if (enableLang) {
+        lang = CONFIG.code_language.default;
+        if ($pre[0].children.length > 0 && $pre[0].children[0].classList.length >= 2 && $pre.children().hasClass('hljs')) {
+          lang = $pre[0].children[0].classList[1];
+        } else if ($pre[0].getAttribute('data-language')) {
+          lang = $pre[0].getAttribute('data-language');
+        } else if ($pre.parent().hasClass('sourceCode') && $pre[0].children.length > 0 && $pre[0].children[0].classList.length >= 2) {
+          lang = $pre[0].children[0].classList[1];
+          $pre.parent().addClass('code-wrapper');
+        } else if ($pre.parent().hasClass('markdown-body') && $pre[0].classList.length === 0) {
+          $pre.wrap('<div class="code-wrapper"></div>');
+        }
+        lang = lang.toUpperCase().replace('NONE', CONFIG.code_language.default);
+      }
+      $pre.append(copyTmpl.replace('LANG', lang).replace('code-widget">',
+        getBgClass($pre[0]) + (enableCopy ? ' code-widget copy-btn" data-clipboard-snippet><i class="iconfont icon-copy"></i>' : ' code-widget">')));
+
+      if (enableCopy) {
+        Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js', function() {
+          var clipboard = new window.ClipboardJS('.copy-btn', {
+            target: function(trigger) {
+              var nodes = trigger.parentNode.childNodes;
+              for (var i = 0; i < nodes.length; i++) {
+                if (nodes[i].tagName === 'CODE') {
+                  return nodes[i];
+                }
+              }
+            }
+          });
+          clipboard.on('success', function(e) {
+            e.clearSelection();
+            e.trigger.innerHTML = e.trigger.innerHTML.replace('icon-copy', 'icon-success');
+            setTimeout(function() {
+              e.trigger.innerHTML = e.trigger.innerHTML.replace('icon-success', 'icon-copy');
+            }, 2000);
+          });
+        });
+      }
+    });
+  })();
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+<!-- hexo injector body_end start --><script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css"><!-- hexo injector body_end end --><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/shifuku.model.json"},"display":{"position":"right","width":200,"height":400},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body>
+</html>

@@ -1,0 +1,977 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20210220171446.jpg">
+  <link rel="icon" href="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20210220171446.jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Skeathy">
+  <meta name="keywords" content="互联网,产品经理,设计,游戏,动漫,Coding">
+  
+    <meta name="description" content="附游戏demo项目地址：点击 1-故事背景在某一天你陷入沉睡之时来到了一个特殊的地方——梦境工厂，工厂的负责人告诉你：你正在长大，你的梦境也随之发生了一些变化，在梦境中隐藏着关于未来的一个秘密。为了发现这隐藏的秘密，所以在沉睡时邀请你来参与梦境的制造。 当你刚想要问一些什么的时候，负责人消失了，随之出现了一个奇奇怪怪的门，虽然你有点犹豫， 但是非常好奇，所以进入了这个奇怪的梦境之门。 （*每当你完">
+<meta property="og:type" content="article">
+<meta property="og:title" content="梦境物语">
+<meta property="og:url" content="https://skeathytomas.github.io/post/210314-%E6%A2%A6%E5%A2%83%E7%89%A9%E8%AF%AD/index.html">
+<meta property="og:site_name" content="Skeathy的奇思妙想">
+<meta property="og:description" content="附游戏demo项目地址：点击 1-故事背景在某一天你陷入沉睡之时来到了一个特殊的地方——梦境工厂，工厂的负责人告诉你：你正在长大，你的梦境也随之发生了一些变化，在梦境中隐藏着关于未来的一个秘密。为了发现这隐藏的秘密，所以在沉睡时邀请你来参与梦境的制造。 当你刚想要问一些什么的时候，负责人消失了，随之出现了一个奇奇怪怪的门，虽然你有点犹豫， 但是非常好奇，所以进入了这个奇怪的梦境之门。 （*每当你完">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20210314203414.png">
+<meta property="article:published_time" content="2021-03-14T12:24:06.000Z">
+<meta property="article:modified_time" content="2022-06-03T16:43:45.275Z">
+<meta property="article:author" content="Skeathy">
+<meta property="article:tag" content="游戏">
+<meta property="article:tag" content="设计">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20210314203414.png">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>梦境物语 - Skeathy的奇思妙想</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hint.css@2/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"skeathytomas.github.io","root":"/","version":"1.9.0","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":3},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":"G-FJM6NG4T2X","tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+
+  
+<meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title="Skeathy的奇思妙想" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Skeathy的奇思妙想</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20210314203414.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="梦境物语"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2021-03-14 20:24" pubdate>
+          2021年3月14日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          3.7k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          31 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar category-bar" style="margin-right: -1rem">
+    
+
+
+
+
+
+<div class="category-list">
+  
+  
+    
+    
+    
+    <div class="category row nomargin-x">
+      <a class="category-item 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="游戏"
+        id="heading-ba08216f13dd1742157412386eee1225" role="tab" data-toggle="collapse" href="#collapse-ba08216f13dd1742157412386eee1225"
+        aria-expanded="true"
+      >
+        游戏
+        <span class="list-group-count">(4)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-ba08216f13dd1742157412386eee1225"
+           role="tabpanel" aria-labelledby="heading-ba08216f13dd1742157412386eee1225">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/post/210421-%E5%8E%9F%E7%A5%9E%E6%B4%BB%E5%8A%A8%E7%8E%A9%E6%B3%95%E8%AF%84%E6%9E%90/" title="原神活动玩法评析"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">原神活动玩法评析</span>
+        </a>
+      
+    
+      
+      
+        <a href="/post/210304-%E5%8E%9F%E7%A5%9E%E7%8E%A9%E6%B3%95%E6%80%BB%E7%BB%93/" title="原神玩法总结"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">原神玩法总结</span>
+        </a>
+      
+    
+      
+      
+        <a href="/post/210314-%E6%A2%A6%E5%A2%83%E7%89%A9%E8%AF%AD/" title="梦境物语"
+           class="list-group-item list-group-item-action
+           active">
+          <span class="category-post">梦境物语</span>
+        </a>
+      
+    
+      
+      
+        <a href="/post/210313-%E8%B0%88%E8%B0%88%E6%88%91%E7%9A%84%E6%B8%B8%E6%88%8F%E5%8F%B2/" title="谈谈我的游戏史"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">谈谈我的游戏史</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+</div>
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">梦境物语</h1>
+            
+              <p class="note note-info">
+                
+                  
+                    本文最后更新于：2022年6月4日 凌晨
+                  
+                
+              </p>
+            
+            <div class="markdown-body">
+              
+              <p>附游戏demo项目地址：<a target="_blank" rel="noopener" href="https://github.com/SkeathyTomas/Processing-Game">点击</a></p>
+<h2 id="1-故事背景"><a href="#1-故事背景" class="headerlink" title="1-故事背景"></a>1-故事背景</h2><p>在某一天你陷入沉睡之时来到了一个特殊的地方——梦境工厂，工厂的负责人告诉你：你正在长大，你的梦境也随之发生了一些变化，在梦境中隐藏着关于未来的一个秘密。为了发现这隐藏的秘密，所以在沉睡时邀请你来参与梦境的制造。</p>
+<p>当你刚想要问一些什么的时候，负责人消失了，随之出现了一个奇奇怪怪的门，虽然你有点犹豫， 但是非常好奇，所以进入了这个奇怪的梦境之门。</p>
+<p><strong>（*每当你完成这梦境建造公司&#x2F;工厂里的一个任务&#x2F;订单，你就会获得一个未来碎片。）</strong></p>
+<hr>
+<h2 id="2-材料设定"><a href="#2-材料设定" class="headerlink" title="2-材料设定"></a>2-材料设定</h2><table>
+<thead>
+<tr>
+<th align="center">原料</th>
+<th align="center">云团</th>
+<th align="center">雨水</th>
+<th align="center">糖果</th>
+<th align="center">火焰</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">基层</td>
+<td align="center">3云团-&gt;云朵基层</td>
+<td align="center">3个雨水-&gt;雨水基层</td>
+<td align="center">3个糖果-&gt;糖果基层</td>
+<td align="center">3个火焰-&gt;火焰基层</td>
+</tr>
+<tr>
+<td align="center">对应梦境</td>
+<td align="center">柔软梦境</td>
+<td align="center">清新梦境</td>
+<td align="center">甜美梦境</td>
+<td align="center">炫酷梦境</td>
+</tr>
+<tr>
+<td align="center">构造梦境所需材料</td>
+<td align="center">10个云基&amp;2个雨基&amp;1个糖基&amp;5个火焰</td>
+<td align="center">10个雨基&amp;2个云基&amp;1个火基&amp;5个糖果</td>
+<td align="center">10个糖基&amp;2个火基&amp;1个云基&amp;5个雨水</td>
+<td align="center">10个火基&amp;2个糖基&amp;1个雨基&amp;5个云团</td>
+</tr>
+</tbody></table>
+<p><strong>未来碎片*N(N为关卡数)，每个关卡拥有独立故事</strong></p>
+<hr>
+<h2 id="3-故事关卡"><a href="#3-故事关卡" class="headerlink" title="3-故事关卡"></a>3-故事关卡</h2><h3 id="3-1-梦的云团"><a href="#3-1-梦的云团" class="headerlink" title="3-1 梦的云团"></a>3-1 梦的云团</h3><p>云朵小姐（NPC）：嘿，很高兴见到你！你是新来的吗？</p>
+<p>我：啊…我不是…（刚想要解释的时候被打断）</p>
+<p>云朵小姐（NPC）：我知道了，你一定是来帮我的吧！那就不多说了，最近的订单&#x2F;任务非常多呢！</p>
+<p>我：……（丝毫找不到解释的时间）</p>
+<p>云朵小姐（NPC）：嘿，你可以帮我把 <strong>3</strong> 个云团垒在一起吗？这样就有建造<strong>柔软</strong> 梦境的<strong>云团基层</strong> 啦！做完的话我可以告诉你一些事情哦！</p>
+<p>我：（思考了一下然后同意了）那好吧，如果有什么不对的地方请告诉我。</p>
+<p><strong>【制作过程&amp;报错提示】</strong></p>
+<p>云朵小姐（NPC）：太棒了！你做的很好！可以再帮我做一个 <strong>糖果基层</strong> 吗？这是建造 <strong>甜美</strong> 梦境的必需品之一哦！方法就和刚才一样。</p>
+<p><strong>【制作中】</strong></p>
+<p>云朵小姐（NPC）：非常感谢你！按照约定，我来告诉你关于这里一些事情，请把这个（未来碎片）收好。</p>
+<p>我：谢谢你！（拿着碎片感到不知所措）</p>
+<p>云朵小姐（NPC）：（突然小声）不用谢，不过我听说，这里的梦境设计师已经不见了。快去找白鸽小姐吧，她在二楼，我这里要赶紧把这些基层给送过去呢！再见啦！</p>
+<p><strong>（*获得关于未来的一枚碎片）</strong></p>
+<p><strong>【自动存档，并且进入了关卡选择页面&#x2F;直接故事推进？关卡选择考虑像RUSTY LAKE的FAMILY TREE一样， 完成了关卡后出现后续内容。】</strong></p>
+<h3 id="3-2-雨水的烦恼"><a href="#3-2-雨水的烦恼" class="headerlink" title="3-2 雨水的烦恼"></a>3-2 雨水的烦恼</h3><p>白鸽小姐（NPC）：你就是从云朵小姐那边过来的吧？ </p>
+<p>我：是的，您好啊白鸽小姐！</p>
+<p>白鸽小姐（NPC）：你好啊，真是个有礼貌的孩子呢。来帮我做些事情吧，最近来干活的人真是太少啦~</p>
+<p>白鸽小姐（NPC）：这个订单&#x2F;任务需要 <strong>10</strong> 个 <strong>雨水基层</strong> 哦，你在云朵小姐那边已经学会了制造方法吧。</p>
+<p>我： <strong>10</strong> 个？这也太多了吧…</p>
+<p>白鸽小姐（NPC）：啊嘞啊嘞，太多了吗？明明是很轻松的嘛。</p>
+<p><strong>【制作过程中白鸽小姐提示我使用循环】</strong></p>
+<p>白鸽小姐（NPC）：你看，是不是很简单。（得意地笑） </p>
+<p>我：的确变得轻松很多呢…（若有所思）</p>
+<p>白鸽小姐（NPC）：谢谢你~这是你该获得的奖励，最近不知道为什么这里的员工变少了呢，或许兔子先生会知道一些事情呢，他就在楼上。祝你好运~</p>
+<p><strong>（*获得关于未来的一枚碎片）</strong></p>
+<p><strong>【自动存档，并且进入了关卡选择页面&#x2F;直接故事推进？收集到的未来碎片考虑做成拼图收集的样式？】</strong></p>
+<h3 id="3-3-选择的烦恼"><a href="#3-3-选择的烦恼" class="headerlink" title="3-3 选择的烦恼"></a>3-3 选择的烦恼</h3><p>兔子先生（NPC）：…… （眉头紧锁好像非常苦恼的样子）</p>
+<p>我：您好… 请问是兔子先生吗？</p>
+<p>兔子先生（NPC）：你好，我是管理梦境材料的兔子。（说完又检查起了建造梦境的材料。） </p>
+<p>我：请问有什么可以帮到您的吗？白鸽小姐说最近这里的员工变少了。</p>
+<p>兔子先生（NPC）：哦哦！快别提她们两个了，交过来的东西都不合格！嘿，你来的正好，我有些活来安排你做。（不由分说地推搡着我去干活）</p>
+<p>兔子先生（NPC）：看到这些五颜六色的糖果了吗？不同的颜色代表了不同品质，我需要你制造 <strong>2</strong>个 <strong>最高品质</strong> 的糖果基层。真不知道她们是怎么办事的。（苦恼的摇了摇头）</p>
+<p>我：原来糖果基层还有区别，但是这里的糖果也太多了吧，我该怎么找呢？</p>
+<p>兔子先生（NPC）：你原来还不会这个技能啊，那我勉为其难地教你一次吧，不过作为回报，你还得帮我制造 <strong>1</strong> 个 <strong>中等品质</strong> 的云朵基层。</p>
+<p>我：好的，谢谢您。</p>
+<p><strong>【制作中】</strong></p>
+<p>兔子先生（NPC）：做的还行吧，暂时勉强够用了。我：我还以为做得不错呢（苦恼的表情）</p>
+<p>我：那有什么东西要交给我吗？之前云朵、白鸽小姐都给了我一个非常神秘的东西。</p>
+<p>兔子先生（NPC）：哎呀，如果想要拿到那个东西的话，光做这些可不够哦！期待你后面的表现。</p>
+<p><strong>【自动存档，并且进入了关卡选择页面&#x2F;直接故事推进？】</strong></p>
+<h3 id="3-4-选择的烦恼（2）"><a href="#3-4-选择的烦恼（2）" class="headerlink" title="3-4 选择的烦恼（2）"></a>3-4 选择的烦恼（2）</h3><p>兔子先生（NPC）：嘿，又见到你了，过得好吗？</p>
+<p>我：兔子先生！我又来到这里了，请问我还能做些什么吗？我想要那个未来的碎片。</p>
+<p>兔子先生（NPC）：哎呀哎呀，你这么说我非常开心，我现在有很多事情需要人来做呢。</p>
+<p>兔子先生（NPC）：你还记得白鸽小姐教给你的东西吗？现在来试一试吧！这次的梦境制造需要 <strong>10</strong>个 <strong>高品质</strong> 的 <strong>云朵基层</strong> 以及 <strong>5</strong> 个 <strong>中等品质</strong> 的 <strong>糖果基层</strong>，另外还有 <strong>15</strong> 个 <strong>低品质</strong> 的 <strong>火焰基层</strong> <strong>。</strong>记清楚了吧，还需要我在念一遍吗？</p>
+<p>我：虽然好像很困难的样子，但还是先试试吧！</p>
+<p><strong>【制作中，发现效率非常低】</strong></p>
+<p>兔子先生（NPC）：你的速度也太慢了吧，这样子怎么能够来得及做完呢。我：非常抱歉，但是白鸽小姐只教给了我这样一个方法。（苦恼的摸摸头）</p>
+<p>兔子先生（NPC）：嗯哼，我这里有个 <strong>梦境装置</strong> 可以帮助你提高效率，不过，我可不是白教你的。</p>
+<p>我：知道了，我会多做一些工作的，兔子先生请教我使用这个 <strong>梦境装置</strong> 吧。 </p>
+<p><strong>【兔子先生教我使用”封装“的方式来制作】</strong></p>
+<p>我：终于做完了！谢谢兔子先生！这个梦境装置真是了不起啊！</p>
+<p>兔子先生（NPC）：看你做的还不错，这个东西就给你啦，我看你在制造梦境这方面很有潜力呢！ 去顶楼找太阳先生吧，他好像有事情和你说。</p>
+<p><strong>（*获得关于未来的一枚碎片）</strong></p>
+<p> <strong>【自动存档，并且进入了关卡选择页面&#x2F;直接故事推进？】</strong></p>
+<h3 id="3-5-完整的梦境"><a href="#3-5-完整的梦境" class="headerlink" title="3-5 完整的梦境"></a>3-5 完整的梦境</h3><p>我：请问太阳先生在吗？（敲门）</p>
+<p>太阳先生（NPC）：嘿，你好，终于见到你了。</p>
+<p>我：你好，太阳先生，你在等我吗？有什么我能做的吗？ </p>
+<p>太阳先生（NPC）：你通过之前的考验，真是非常棒呢。</p>
+<p>我：考验？（恍然大悟的样子）原来之前的任务都是考验吗？</p>
+<p>太阳先生（NPC）：是的，但是在接近这个秘密的真相之前，还有最后一个任务。你需要制造一个<strong>柔软的梦境</strong> 。</p>
+<p>我：我…我大概可以吧。</p>
+<p><strong>【制作中，手忙脚乱地不知道先后顺序】</strong></p>
+<p>太阳先生（NPC）：这样子可不行啊，是不知道从什么地方开始吗？（摇了摇头）用一下这个小家伙吧，它会帮助你的。（拿出 <strong>梦境解析仪</strong> ） </p>
+<p><strong>【在梦境解析仪上输入“柔软梦境”，界面显示：需要10个云团基层、2个雨水基层、1个糖果基层和5个火焰原料。】</strong></p>
+<p> 太阳先生（NPC）：这样就明白了吧，柔软梦境分为好几个部分，每个部分的原料详情也写清楚了，快去准备吧！</p>
+<p>我：谢谢太阳先生！</p>
+<p><strong>【制作柔软梦境】</strong></p>
+<p>我：终于做完了！太阳先生你快来看！</p>
+<p>太阳先生（NPC）：恩，很不错，刚才的只是练手，接下来，再帮我制造 <strong>2</strong>个<strong>甜美梦境</strong> 和 <strong>1</strong>个<strong>炫酷梦境</strong> 吧。记得利用兔子先生交给你的 <strong>梦境装置</strong> 哦。</p>
+<p><strong>【制作中】</strong></p>
+<p>我：啊…真的好累啊…感觉非常累呢。</p>
+<p>太阳先生（NPC）：真是个聪明又勤劳的孩子呢，来，这是你所需要的东西。再会啦！</p>
+<p><strong>（*获得最后关于未来的一枚碎片）</strong></p>
+<hr>
+<h2 id="4-故事结尾"><a href="#4-故事结尾" class="headerlink" title="4-故事结尾"></a>4-故事结尾</h2><p><strong>（播放完未来碎片的故事片段）</strong></p>
+<p>太阳先生（NPC）：很好，孩子，我想你已经知道你为什么会在这里了吧。</p>
+<p>我：是的，太阳先生……</p>
+<p>太阳先生（NPC）：非常好，你还有很多事情要去学习，还有很远的路要走。</p>
+<p>太阳先生（NPC）：不用担心，我和云朵小姐他们都会在这里陪你，现在，我要给你一样东西。这样东西能够帮你继续你的旅程。</p>
+<p>我：我… 真的可以吗？（颤颤巍巍地发问，不敢相信自己被授予了这样的使命）</p>
+<p>太阳先生（NPC）：哦亲爱的，不要害怕，你一定能够唤醒造梦之神的。</p>
+<p>我被太阳先生授予了造梦之神的手杖&#x2F;控制台，我离开太阳先生的房间后走向了更远的未来……</p>
+<p><strong>（未来的故事待续….. ）</strong></p>
+<hr>
+<h2 id="5-未来碎片"><a href="#5-未来碎片" class="headerlink" title="5-未来碎片"></a>5-未来碎片</h2><p><strong>（使用未来碎片拼成了一副完整的壁画，画从抽象逐渐开始生动变化起来……我感到了惊奇）</strong></p>
+<p>很久很久以前便存在着造梦的神，他守护着千千万万个孩子的梦境，让他们在梦境中获得快乐、勇敢、镇静、安宁的记忆来筑造他们美好的童年……（参考守护者联盟-沙沙）</p>
+<p>然而人越来越多，人类的文明也越来越发达，造梦之神也向万物之主学习了新的造（bian）梦（cheng）方法来生产梦境给孩子们。</p>
+<p>可是孩子们的天真烂漫日渐消弭，越来越少的孩子相信有造梦之神的存在，造梦之神的神力逐渐削弱并且开始厌倦了重复批量的造梦工作，造梦之神的力量逐渐被梦魇之魔所侵蚀。</p>
+<p>为了守护梦境世界，为了唤醒造梦之神，我——最富有创造的小孩被选中。</p>
+<p>只有当我相信着造梦之神的力量，学习<strong>造梦之力</strong>并且能够造出<strong>“新”的梦境</strong>才能唤醒造梦之神。</p>
+<p>如果造梦之神在XX之前没有被唤醒，那么整个地球的孩子的梦境都会陷入梦魇之魔的手爪之中，再也不会获得幸福、快乐、勇敢、安宁的回忆。</p>
+
+              
+            </div>
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%B8%B8%E6%88%8F/" class="category-chain-item">游戏</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E6%B8%B8%E6%88%8F/">#游戏</a>
+      
+        <a href="/tags/%E8%AE%BE%E8%AE%A1/">#设计</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>梦境物语</div>
+      <div>https://skeathytomas.github.io/post/210314-梦境物语/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Skeathy</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2021年3月14日</div>
+        </div>
+      
+      
+      <div class="license-meta-item">
+        <div>许可协议</div>
+        <div>
+          
+            
+            
+              <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+              <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                <i class="iconfont icon-by"></i>
+              </span>
+              </a>
+            
+          
+        </div>
+      </div>
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/post/210320-%E3%80%8A%E5%86%B0%E8%8F%93%E3%80%8B%E4%B8%AD%E7%9A%84%E6%81%8B%E7%88%B1%E5%B0%8F%E6%95%85%E4%BA%8B%E2%80%94%E2%80%94%E7%A6%8F%E9%83%A8x%E4%BC%8A%E5%8E%9F/" title="《冰菓》中的恋爱小故事——福部x伊原">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">《冰菓》中的恋爱小故事——福部x伊原</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/post/210313-%E8%B0%88%E8%B0%88%E6%88%91%E7%9A%84%E6%B8%B8%E6%88%8F%E5%8F%B2/" title="谈谈我的游戏史">
+                        <span class="hidden-mobile">谈谈我的游戏史</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  <article id="comments" lazyload>
+    
+  <div id="gitalk-container"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#gitalk-container', function() {
+      Fluid.utils.createCssLink('/css/gitalk.css')
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', function() {
+        var options = Object.assign(
+          {"clientID":"658faad5dc784f8ec14b","clientSecret":"b1c37d084a7aa0367a81f3a12c863a11ec088597","repo":"skeathytomas.github.io","owner":"skeathytomas","admin":["skeathytomas"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
+          {
+            id: '32fc83964eb3de4dd04ce2b8e5b4dcc1'
+          }
+        )
+        var gitalk = new Gitalk(options);
+        gitalk.render('gitalk-container');
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+  </article>
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+
+  
+
+  
+    <!-- Google gtag.js -->
+    <script defer>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript('https://www.googletagmanager.com/gtag/js?id=G-FJM6NG4T2X', function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-FJM6NG4T2X');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      headingSelector : CONFIG.toc.headingSelector || 'h1,h2,h3,h4,h5,h6',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      collapseDepth   : CONFIG.toc.collapseDepth || 0,
+      scrollSmooth    : true,
+      headingsOffset  : -boardTop
+    });
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+  });
+</script>
+
+
+  <script>
+  (function() {
+    var enableLang = CONFIG.code_language.enable && CONFIG.code_language.default;
+    var enableCopy = CONFIG.copy_btn;
+    if (!enableLang && !enableCopy) {
+      return;
+    }
+
+    function getBgClass(ele) {
+      return Fluid.utils.getBackgroundLightness(ele) >= 0 ? 'code-widget-light' : 'code-widget-dark';
+    }
+
+    var copyTmpl = '';
+    copyTmpl += '<div class="code-widget">';
+    copyTmpl += 'LANG';
+    copyTmpl += '</div>';
+    jQuery('.markdown-body pre').each(function() {
+      var $pre = jQuery(this);
+      if ($pre.find('code.mermaid').length > 0) {
+        return;
+      }
+      if ($pre.find('span.line').length > 0) {
+        return;
+      }
+
+      var lang = '';
+
+      if (enableLang) {
+        lang = CONFIG.code_language.default;
+        if ($pre[0].children.length > 0 && $pre[0].children[0].classList.length >= 2 && $pre.children().hasClass('hljs')) {
+          lang = $pre[0].children[0].classList[1];
+        } else if ($pre[0].getAttribute('data-language')) {
+          lang = $pre[0].getAttribute('data-language');
+        } else if ($pre.parent().hasClass('sourceCode') && $pre[0].children.length > 0 && $pre[0].children[0].classList.length >= 2) {
+          lang = $pre[0].children[0].classList[1];
+          $pre.parent().addClass('code-wrapper');
+        } else if ($pre.parent().hasClass('markdown-body') && $pre[0].classList.length === 0) {
+          $pre.wrap('<div class="code-wrapper"></div>');
+        }
+        lang = lang.toUpperCase().replace('NONE', CONFIG.code_language.default);
+      }
+      $pre.append(copyTmpl.replace('LANG', lang).replace('code-widget">',
+        getBgClass($pre[0]) + (enableCopy ? ' code-widget copy-btn" data-clipboard-snippet><i class="iconfont icon-copy"></i>' : ' code-widget">')));
+
+      if (enableCopy) {
+        Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js', function() {
+          var clipboard = new window.ClipboardJS('.copy-btn', {
+            target: function(trigger) {
+              var nodes = trigger.parentNode.childNodes;
+              for (var i = 0; i < nodes.length; i++) {
+                if (nodes[i].tagName === 'CODE') {
+                  return nodes[i];
+                }
+              }
+            }
+          });
+          clipboard.on('success', function(e) {
+            e.clearSelection();
+            e.trigger.innerHTML = e.trigger.innerHTML.replace('icon-copy', 'icon-success');
+            setTimeout(function() {
+              e.trigger.innerHTML = e.trigger.innerHTML.replace('icon-success', 'icon-copy');
+            }, 2000);
+          });
+        });
+      }
+    });
+  })();
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+<!-- hexo injector body_end start --><script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css"><!-- hexo injector body_end end --><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/shifuku.model.json"},"display":{"position":"right","width":200,"height":400},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body>
+</html>

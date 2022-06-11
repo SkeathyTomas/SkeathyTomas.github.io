@@ -1,0 +1,1035 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20210220171446.jpg">
+  <link rel="icon" href="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20210220171446.jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Skeathy">
+  <meta name="keywords" content="互联网,产品经理,设计,游戏,动漫,Coding">
+  
+    <meta name="description" content="当我们谈论起Windows平台软件安装的话题，总是避免不了想起被各种流氓软件和捆绑安装支配的日子。这背后的原因，一方面是软件厂商的流氓，各种强行捆绑而且默认勾选；另一方面是搜索引擎的流氓，搜索软件出来的第一个永远是xx软件园而非官方平台，一个不留神就是各种全家桶伺候。 解决这一软件生态问题的故事自然离不开苹果的应用商店，无论是IOS的App Store还是macOS的Mac App Store。把">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Scoop——也许是Windows平台最好用的软件（包）管理器">
+<meta property="og:url" content="https://skeathytomas.github.io/post/220117-Scoop%E2%80%94%E2%80%94%E4%B9%9F%E8%AE%B8%E6%98%AFWindows%E5%B9%B3%E5%8F%B0%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E8%BD%AF%E4%BB%B6%EF%BC%88%E5%8C%85%EF%BC%89%E7%AE%A1%E7%90%86%E5%99%A8/index.html">
+<meta property="og:site_name" content="Skeathy的奇思妙想">
+<meta property="og:description" content="当我们谈论起Windows平台软件安装的话题，总是避免不了想起被各种流氓软件和捆绑安装支配的日子。这背后的原因，一方面是软件厂商的流氓，各种强行捆绑而且默认勾选；另一方面是搜索引擎的流氓，搜索软件出来的第一个永远是xx软件园而非官方平台，一个不留神就是各种全家桶伺候。 解决这一软件生态问题的故事自然离不开苹果的应用商店，无论是IOS的App Store还是macOS的Mac App Store。把">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20220130200233.png">
+<meta property="article:published_time" content="2022-01-17T06:14:01.000Z">
+<meta property="article:modified_time" content="2022-06-09T09:44:49.000Z">
+<meta property="article:author" content="Skeathy">
+<meta property="article:tag" content="产品">
+<meta property="article:tag" content="软件">
+<meta property="article:tag" content="教程">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20220130200233.png">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>Scoop——也许是Windows平台最好用的软件（包）管理器 - Skeathy的奇思妙想</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hint.css@2/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"skeathytomas.github.io","root":"/","version":"1.9.0","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":3},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":"G-FJM6NG4T2X","tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+
+  
+<meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title="Skeathy的奇思妙想" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Skeathy的奇思妙想</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20220130200233.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="Scoop——也许是Windows平台最好用的软件（包）管理器"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-01-17 14:14" pubdate>
+          2022年1月17日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          8.8k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          74 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar category-bar" style="margin-right: -1rem">
+    
+
+
+
+
+
+<div class="category-list">
+  
+  
+    
+    
+    
+    <div class="category row nomargin-x">
+      <a class="category-item 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="产品"
+        id="heading-a015434e0df90bded79afc4957f7768e" role="tab" data-toggle="collapse" href="#collapse-a015434e0df90bded79afc4957f7768e"
+        aria-expanded="true"
+      >
+        产品
+        <span class="list-group-count">(3)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-a015434e0df90bded79afc4957f7768e"
+           role="tabpanel" aria-labelledby="heading-a015434e0df90bded79afc4957f7768e">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/post/220117-Scoop%E2%80%94%E2%80%94%E4%B9%9F%E8%AE%B8%E6%98%AFWindows%E5%B9%B3%E5%8F%B0%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E8%BD%AF%E4%BB%B6%EF%BC%88%E5%8C%85%EF%BC%89%E7%AE%A1%E7%90%86%E5%99%A8/" title="Scoop——也许是Windows平台最好用的软件（包）管理器"
+           class="list-group-item list-group-item-action
+           active">
+          <span class="category-post">Scoop——也许是Windows平台最好用的软件（包）管理器</span>
+        </a>
+      
+    
+      
+      
+        <a href="/post/220101-%E4%BB%8E%E4%BA%8C%E6%AC%A1%E5%85%83%E4%BA%BA%E8%AE%BE%E5%88%B0%E4%B8%89%E6%AC%A1%E5%85%83%E4%BA%BA%E8%AE%BE%E2%80%94%E2%80%94%E4%BA%BA%E8%AE%BE%E7%9A%84%E5%95%86%E4%B8%9A%E4%BB%B7%E5%80%BC/" title="从二次元人设到三次元人设——人设的商业价值"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">从二次元人设到三次元人设——人设的商业价值</span>
+        </a>
+      
+    
+      
+      
+        <a href="/post/220205-%E8%81%8A%E4%B8%80%E8%81%8A%E7%A4%BE%E4%BA%A4%E2%80%94%E2%80%94%E5%8F%AF%E8%AF%9DApp%E4%BA%A7%E5%93%81%E4%BD%93%E9%AA%8C%E6%89%8B%E8%AE%B0/" title="聊一聊社交——可话App产品体验手记"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">聊一聊社交——可话App产品体验手记</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+</div>
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Scoop——也许是Windows平台最好用的软件（包）管理器</h1>
+            
+              <p class="note note-info">
+                
+                  
+                    本文最后更新于：2022年6月9日 下午
+                  
+                
+              </p>
+            
+            <div class="markdown-body">
+              
+              <p>当我们谈论起Windows平台软件安装的话题，总是避免不了想起被各种流氓软件和捆绑安装支配的日子。这背后的原因，一方面是软件厂商的流氓，各种强行捆绑而且默认勾选；另一方面是搜索引擎的流氓，搜索软件出来的第一个永远是xx软件园而非官方平台，一个不留神就是各种全家桶伺候。</p>
+<p>解决这一软件生态问题的故事自然离不开苹果的应用商店，无论是IOS的App Store还是macOS的Mac App Store。把各种软件的分发和下载规范化，让用户使用上安全稳定的软件，一方面满足用户对于软件的管理需求，一方面也为应用商店增加营收入口。</p>
+<p>所谓平台概念，就是如此。当然这一应用商店模式，也拓展到各大操作系统，比如移动端另一大阵营安卓的Google Play及国内本地化的各大应用商城，Windows的Microsoft Store (曾用名Windows Store)，以及Linux许多发行版的应用商店等等。</p>
+<h2 id="软件管理的需求"><a href="#软件管理的需求" class="headerlink" title="软件管理的需求"></a>软件管理的需求</h2><p>回顾一下软件管理的需求，然后判断当前的软件管理模式是否满足需求（不感兴趣的读者请直接跳过）。</p>
+<h3 id="基本需求"><a href="#基本需求" class="headerlink" title="基本需求"></a>基本需求</h3><ul>
+<li>查看已安装软件的名称、信息、状态等。</li>
+<li>浏览与搜索想要的软件，这背后是足够丰富的软件生态链的支持，即我想要什么基本都可是找到。</li>
+<li>安装目标软件。</li>
+<li>了解已安装软件是否可更新，软件更新的主要功能说明，并可选择更新软件。</li>
+<li>卸载不需要的软件。</li>
+</ul>
+<h3 id="高级需求"><a href="#高级需求" class="headerlink" title="高级需求"></a>高级需求</h3><ul>
+<li>回滚版本或安装特定版本：某些软件更新后导致负体验的背景下产生该需求。</li>
+<li>锁定版本：为维持软件及其他相关环境的稳定性，更新为非必要需求，或者纯粹不想更新某软件，需要锁定软件版本，防止更新。</li>
+<li>用户数据的清理：强迫症患者需求，一般这个功能会交给各种清理软件，但是谁会比软件自己的开发者更了解产生并储存了哪些用户数据呢？更有一些软件因为卸载后的残留问题导致下次安装时的各种问题就属于软件本身的问题了，这里也不多探讨。</li>
+<li>软件备份与迁移：当有多设备，或者某次重装系统，需要重新安装各种常用软件是一件头疼的事，所以当前设备软件的导出备份与迁移安装至新设备是一大需求，特别是对于某些装系统人员或者运维人员。</li>
+</ul>
+<h3 id="需求满足度"><a href="#需求满足度" class="headerlink" title="需求满足度"></a>需求满足度</h3><p>基本需求方面，大多数需求是满足了的，只不过并没有那么的切合。</p>
+<ul>
+<li>绝大多数应用商店的目的是盈利，所以什么推送、广告、排名等一系列手段玩得相当成熟。至于真正为用户推送「好」软件，那大概需要某些第三方非盈利平台了。还有如果整个应用商店的设计中心是在推广软件的话，其他方面的功能需求就被稀释或者淡化，甚至造成负体验。</li>
+<li>对于已安装软件&#x2F;应用的管理（查看已安装与卸载），大部分应用商店并不支持，而是把相关需求移交给了系统层级的应用管理，或者直接在桌面&#x2F;开始菜单&#x2F;Launchpad里的图标上进行右键管理或者长按操作管理。</li>
+<li>高级需求基本都没怎么实现，往往需要通过备份系统镜像的方式曲线救国。手机方面应用云同步相对做的好一些，只是用户数据备份方面还没到应用层（除开相册、日程、通讯录之类）。</li>
+</ul>
+<h2 id="Scoop的基本介绍"><a href="#Scoop的基本介绍" class="headerlink" title="Scoop的基本介绍"></a>Scoop的基本介绍</h2><p>Scoop是一款适用于Windows平台的命令行软件（包）管理工具，这里是<a target="_blank" rel="noopener" href="https://github.com/ScoopInstaller/Scoop">GitHub介绍页</a>。简单来说，就是可以通过命令行工具（PowerShell、CMD等）实现软件（包）的安装管理等需求，<strong>通过简单的一行代码实现软件的下载、安装、卸载、更新等操作</strong>。其灵感来源于macOS的<a target="_blank" rel="noopener" href="https://github.com/Homebrew/brew">Homebrew</a>，Mac用户可以去了解了解。</p>
+<p>当然如果用过Linux系统，使用apt-get工具安装过软件，或者用过Python，知道pip工具用于管理Python各种依赖包，那么理解Scoop就比较容易，这些工具的设计理念与使用方法都非常类似。</p>
+<p>Scoop一般用来管理绿色软件，即是一种通过解压压缩包即可就地使用的软件，对于比较专业软件（比如Office、Adobe等）支持不好（虽然有大神在自制这样的第三方仓库，不过好像一直没实现）。</p>
+<h3 id="一些软件知识补充"><a href="#一些软件知识补充" class="headerlink" title="一些软件知识补充"></a>一些软件知识补充</h3><p>一般软件包含三种数据：</p>
+<ol>
+<li>软件本体数据，维持软件正常运行。</li>
+<li>软件与用户交互的数据，为了让用户更好的使用软件，比如缓存文件、自定义配置文件、日志文件等。</li>
+<li>用户通过软件创造的直接面向用户的数据，比如各类文档。</li>
+</ol>
+<p>用户在安装软件的时候，一般仅能自定义软件的安装目录（有一些甚至不能自定义），而无权管理软件与用户交互产生的数据的目录，至于第三类数据大家都很熟悉属于用户完全操纵。其中用户无法直接管理的第二类数据一般储存在「AppData」隐藏目录中，强迫症流泪。</p>
+<h3 id="Scoop的软件管理逻辑"><a href="#Scoop的软件管理逻辑" class="headerlink" title="Scoop的软件管理逻辑"></a>Scoop的软件管理逻辑</h3><p>而对于Scoop来说，其数据存储逻辑是先划好一块地盘——「Scoop」根目录，然后软件本体一个「apps」目录，用户数据一个「persist」目录。当然实际使用过程中，其实有挺多第三方仓库中的软件没有实现这一逻辑，依然把用户数据藏在「AppData」目录中，这就是需要优化的后话了。</p>
+<p>由于一眼就爱上了这么一种软件管理逻辑，所以就一直使用Scoop至今，已有两三年了吧，期间换过不少Windows机子也一直使用着，觉着甚是方便。所以，如今来写篇教程也不过分吧。</p>
+<h2 id="Scoop基本使用教程"><a href="#Scoop基本使用教程" class="headerlink" title="Scoop基本使用教程"></a>Scoop基本使用教程</h2><p>下面就是正式的教程时间，我会从前置条件、Scoop的安装、常用的命令工具、推荐软件仓库四个方向介绍主要的用法。</p>
+<h3 id="Scoop安装前置条件"><a href="#Scoop安装前置条件" class="headerlink" title="Scoop安装前置条件"></a>Scoop安装前置条件</h3><p>根据官方的条件要求，你需要：</p>
+<ol>
+<li>Windows 7 SP1+或Windows Server 2008+（当然你用主流的Windows 10或Windows 11更没有什么问题）。</li>
+<li><a target="_blank" rel="noopener" href="https://www.microsoft.com/en-us/download/details.aspx?id=54616">PowerShell 5</a>（及以上，包含<a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.2&viewFallbackFrom=powershell-6">PowerShell Core</a>）和<a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.2&viewFallbackFrom=powershell-6">.NET Framework 4.5</a>（及以上）（当然我相信读者朋友们肯定都满足了，实在未满足可通过文本链接前去下载）。</li>
+</ol>
+<p>还有两个中国用户需要确认的额外的条件（当然我觉得你能看到这篇文章自然也都满足了）：</p>
+<ol>
+<li>由于众所周知的天朝网络原因，你需要能够正常访问GitHub并下载其资源。</li>
+<li>由于环境变量中文路径的支持问题，你的Windows用户名或自定义的安装路径不得包含中文。</li>
+</ol>
+<h3 id="Scoop工具的安装"><a href="#Scoop工具的安装" class="headerlink" title="Scoop工具的安装"></a>Scoop工具的安装</h3><p>第一步，也是最重要的一步，就是先完成Scoop工具的安装。按照官方的教程，我们需要打开PowerShell（这个应该不用教了吧，当然我强烈建议使用新一代终端Windows Terminal，标签页、多种命令行工具多开、高颜值、更人性化的文本编辑等等太香了）。</p>
+<p><img src="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/image-20220130144340046.png" srcset="/img/loading.gif" lazyload alt="Windows Terminal"></p>
+<h4 id="设置PowerShell权限"><a href="#设置PowerShell权限" class="headerlink" title="设置PowerShell权限"></a>设置PowerShell权限</h4><p>为了让PowerShell可以执行脚本，首先需要设置PowerShell执行策略，通过输入以下命令<code>Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser</code>即可。（如果之前已开启，可忽略。）</p>
+<h4 id="安装Scoop"><a href="#安装Scoop" class="headerlink" title="安装Scoop"></a>安装Scoop</h4><p>通过以下命令，可以将Scoop安装到默认目录（<code>C:\Users\&lt;username&gt;\scoop</code>）：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-built_in">Invoke-Expression</span> (<span class="hljs-built_in">New-Object</span> System.Net.WebClient).DownloadString(<span class="hljs-string">&#x27;https://get.scoop.sh&#x27;</span>)<br></code></pre></td></tr></table></figure>
+
+<p>或者另一条更短的命令：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-built_in">iwr</span> <span class="hljs-literal">-useb</span> get.scoop.sh | <span class="hljs-built_in">iex</span><br></code></pre></td></tr></table></figure>
+
+<p>如果你需要更改默认的安装目录，则需要在执行以上命令前添加环境变量的定义，通过执行以下命令完成：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-variable">$env:SCOOP</span>=<span class="hljs-string">&#x27;D:\Applications\Scoop&#x27;</span><br>[<span class="hljs-type">Environment</span>]::SetEnvironmentVariable(<span class="hljs-string">&#x27;SCOOP&#x27;</span>, <span class="hljs-variable">$env:SCOOP</span>, <span class="hljs-string">&#x27;User&#x27;</span>)<br></code></pre></td></tr></table></figure>
+
+<p>其中目录<code>D:\Applications\Scoop</code>可根据自己的情况修改。</p>
+<p>完成之后，相应位置就会生成一个scoop文件夹，如图所示：</p>
+<p><img src="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/image-20220130151538522.png" srcset="/img/loading.gif" lazyload alt="scoop文件夹示意"></p>
+<p>简单解释下子目录中其他文件夹的含义：</p>
+<ul>
+<li>apps——所有通过scoop安装的软件都在里面。</li>
+<li>buckets——管理软件的仓库，用于记录哪些软件可以安装、更新等信息，默认添加<code>main</code>仓库，主要包含无需GUI的软件，可手动添加其他仓库或自建仓库，具体在<a href="#%E6%8E%A8%E8%8D%90%E8%BD%AF%E4%BB%B6%E4%BB%93%E5%BA%93">推荐软件仓库</a>中介绍。</li>
+<li>cache——软件下载后安装包暂存目录。</li>
+<li>persit——用于储存一些用户数据，不会随软件更新而替换。</li>
+<li>shims——用于软链接应用，使应用之间不会互相干扰，实际使用过程中无用户操作不必细究。</li>
+</ul>
+<h4 id="中国用户专享"><a href="#中国用户专享" class="headerlink" title="中国用户专享"></a>中国用户专享</h4><p>如果你访问GitHub有问题，或下载其中的资源有问题，可尝试以下方法：</p>
+<ol>
+<li>设置Scoop代理。在命令行中输入（PowerShell或者CMD中都行）<code>scoop config proxy 127.0.0.1:7890</code>（一看就是clash用户）让scoop网络连接走代理，后面的ip地址和端口根据自己的代理设置。</li>
+<li>使用<a target="_blank" rel="noopener" href="https://gitee.com/squallliu/scoop">Gitee镜像源</a>。可能备份更新得不是那么勤快，以及实际下载软件包同样会有网络问题，所以不推荐。在命令行中输入<code>scoop config SCOOP_REPO https://gitee.com/squallliu/scoop</code>修改仓库源的地址。</li>
+</ol>
+<p>（或者更直接点，找到Scoop配置文件，路径<code>C:\Users\username\.config\scoop\config.json</code>，然后直接修改里面的配置，如下图：</p>
+<p><img src="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/image-20220130155909588.png" srcset="/img/loading.gif" lazyload alt="Scoop配置文件">)</p>
+<h3 id="Scoop常用命令"><a href="#Scoop常用命令" class="headerlink" title="Scoop常用命令"></a>Scoop常用命令</h3><p>Scoop的操作命令十分简单，基本结构是<code>scoop + 动词 + 对象</code>，动词就是一个操作动作，如安装、卸载，对象一般就是软件名了（支持通配符*操作），当然这需要你先打开命令行工具。比如我想安装typora，通过输入<code>scoop install typora</code>即可自动完成软件的官网进入+下载+安装等操作。</p>
+<p>以下是一些常用的命令说明：</p>
+<ul>
+<li>search——搜索仓库中是否有相应软件。</li>
+<li>install——安装软件。</li>
+<li>uninstall——卸载软件。</li>
+<li>update——更新软件。可通过<code>scoop update *</code>更新所有已安装软件，或通过<code>scoop update</code>更新所有软件仓库资料及Scoop自身而不更新软件。</li>
+<li>hold——锁定软件阻止其更新。</li>
+<li>info——查询软件简要信息。</li>
+<li>home——打开浏览器进入软件官网。</li>
+</ul>
+<p>如果忘记了，可通过输入<code>scoop help</code>来查询语法，以及更多不怎么常用的操作指导。</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><code class="hljs powershell">C:\Users\skeathy&gt;scoop help<br>Usage: scoop &lt;command&gt; [&lt;<span class="hljs-type">args</span>&gt;]<br><br>Some useful commands are:<br><br>alias       Manage scoop aliases<br>bucket      Manage Scoop buckets<br>cache       Show or <span class="hljs-built_in">clear</span> the download cache<br><span class="hljs-built_in">cat</span>         Show content of specified manifest.<br>checkup     Check <span class="hljs-keyword">for</span> potential problems<br>cleanup     Cleanup apps by removing old versions<br>config      Get or <span class="hljs-built_in">set</span> configuration values<br>create      Create a custom app manifest<br>depends     List dependencies <span class="hljs-keyword">for</span> an app<br>export      Exports (an importable) list of installed apps<br>help        Show help <span class="hljs-keyword">for</span> a command<br>hold        Hold an app to disable updates<br>home        Opens the app homepage<br>info        Display information about an app<br>install     Install apps<br>list        List installed apps<br>prefix      Returns the path to the specified app<br>reset       Reset an app to resolve conflicts<br>search      Search available apps<br>status      Show status and check <span class="hljs-keyword">for</span> new app versions<br>unhold      Unhold an app to enable updates<br>uninstall   Uninstall an app<br>update      Update apps, or Scoop itself<br>virustotal  Look <span class="hljs-keyword">for</span> app<span class="hljs-string">&#x27;s hash on virustotal.com</span><br><span class="hljs-string">which       Locate a shim/executable (similar to &#x27;</span>which<span class="hljs-string">&#x27; on Linux)</span><br><span class="hljs-string"></span><br><span class="hljs-string"></span><br><span class="hljs-string">Type &#x27;</span>scoop help &lt;command&gt;<span class="hljs-string">&#x27; to get help for a specific command.</span><br></code></pre></td></tr></table></figure>
+
+<p>在实际使用过程中，我们可以先通过<code>search</code>命令查询一下是否有相应软件，软件名称是否正确，然后通过<code>install</code>命令完成软件的安装。另外，有两个必备的软件需要安装——git和7zip，建议完成Scoop安装后先执行以下命令：<code>scoop install git 7zip</code>（没错，Scoop支持多个软件同时依次安装），虽然后续操作中未安装这两个软件时也会提醒用户安装就是了。</p>
+<h3 id="推荐软件仓库"><a href="#推荐软件仓库" class="headerlink" title="推荐软件仓库"></a>推荐软件仓库</h3><p>软件仓库是Scoop软件管理的重要基础，通过json文件记录仓库中每一个软件的信息，从而实现软件的管理等便捷命令行操作，并由仓库管理员（其实开源项目都是大家用爱发电）负责软件信息的更新。</p>
+<p>前面提到，默认安装Scoop后仅有<code>main</code>仓库，其中主要是面向程序员的工具，对于一般用户而言并不是那么实用。好在Scoop本身考虑到了这一点，添加了面向一般用户的软件仓库<code>extras</code>，其中收录大量好用的小软件，足够日常的使用。</p>
+<p>Scoop添加软件仓库的命令是<code>scoop bucket add bucketname (+ url可选)</code>。如添加<code>extras</code>的命令是<code>scoop bucket add extras</code>，执行此命令后会在scoop文件夹中的buckets子文件夹中添加extras文件夹。</p>
+<p>此外，Scoop官方还有一些仓库可供使用，本人没有什么需求就不在此处介绍了，仅贴一下官方的介绍：</p>
+<blockquote>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/ScoopInstaller/Main">main</a> - Default bucket for the most common (mostly CLI) apps</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/ScoopInstaller/Extras">extras</a> - Apps that don’t fit the main bucket’s <a target="_blank" rel="noopener" href="https://github.com/ScoopInstaller/Scoop/wiki/Criteria-for-including-apps-in-the-main-bucket">criteria</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/Calinou/scoop-games">games</a> - Open source&#x2F;freeware games and game-related tools</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/matthewjberger/scoop-nerd-fonts">nerd-fonts</a> - Nerd Fonts</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/kodybrown/scoop-nirsoft">nirsoft</a> - Almost all of the <a target="_blank" rel="noopener" href="https://rasa.github.io/scoop-directory/by-apps#kodybrown_scoop-nirsoft">250+</a> apps from <a target="_blank" rel="noopener" href="https://nirsoft.net/">Nirsoft</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/ScoopInstaller/Java">java</a> - A collection of Java development kits (JDKs), Java runtime engines (JREs), Java’s virtual machine debugging tools and Java based runtime engines.</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/TheRandomLabs/scoop-nonportable">nonportable</a> - Non-portable apps (may require UAC)</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/ScoopInstaller/PHP">php</a> - Installers for most versions of PHP</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/ScoopInstaller/Versions">versions</a> - Alternative versions of apps found in other buckets</li>
+</ul>
+</blockquote>
+<p>除了官方的软件仓库，Scoop也支持用户自建仓库并共享，于是又有很多大佬提供了许多好用的软件仓库。这里强推<a target="_blank" rel="noopener" href="https://github.com/chawyehsu/dorado">dorado</a>仓库，里面有许多适合中国用户的软件，或者你有兴趣可以去看看仓库作者<a target="_blank" rel="noopener" href="https://chawyehsu.com/blog/talk-about-scoop-the-package-manager-for-windows-again">关于Scoop更多技术方面的探讨</a>。添加<code>dorado</code>仓库的命令如下：<code>scoop bucket add dorado https://github.com/chawyehsu/dorado</code>。</p>
+<p>此外，若多个仓库间的软件名称冲突，可以通过在软件名前添加仓库名的方式避免冲突，如<code>scoop install dorado/appname</code>。</p>
+<p>最后，分享一下自己的软件列表：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><code class="hljs powershell">C:\Users\skeathy&gt;scoop list<br>Installed apps:<br><br>  <span class="hljs-number">7</span>zip <span class="hljs-number">21.07</span> [<span class="hljs-type">main</span>]<br>  aria2 <span class="hljs-number">1.36</span>.<span class="hljs-number">0</span><span class="hljs-literal">-1</span> [<span class="hljs-type">main</span>]<br>  captura <span class="hljs-number">8.0</span>.<span class="hljs-number">0</span> [<span class="hljs-type">extras</span>]<br>  ccleaner <span class="hljs-number">5.89</span>.<span class="hljs-number">9401</span> [<span class="hljs-type">extras</span>]<br>  clash<span class="hljs-literal">-for-windows</span> <span class="hljs-number">0.19</span>.<span class="hljs-number">7</span> [<span class="hljs-type">dorado</span>]<br>  dark <span class="hljs-number">3.11</span>.<span class="hljs-number">2</span> [<span class="hljs-type">main</span>]<br>  dingtalk <span class="hljs-number">6.3</span>.<span class="hljs-number">25.1219101</span> [<span class="hljs-type">dorado</span>]<br>  dismplusplus <span class="hljs-number">10.1</span>.<span class="hljs-number">1002.1</span> [<span class="hljs-type">extras</span>]<br>  draw.io <span class="hljs-number">16.5</span>.<span class="hljs-number">1</span> [<span class="hljs-type">extras</span>]<br>  ffmpeg <span class="hljs-number">5.0</span> [<span class="hljs-type">main</span>]<br>  git <span class="hljs-number">2.35</span>.<span class="hljs-number">0</span>.windows.<span class="hljs-number">1</span> [<span class="hljs-type">main</span>]<br>  github <span class="hljs-number">2.9</span>.<span class="hljs-number">6</span> [<span class="hljs-type">extras</span>]<br>  gridea <span class="hljs-number">0.9</span>.<span class="hljs-number">2</span> [<span class="hljs-type">extras</span>]<br>  innounp <span class="hljs-number">0.50</span> [<span class="hljs-type">main</span>]<br>  lessmsi <span class="hljs-number">1.10</span>.<span class="hljs-number">0</span> [<span class="hljs-type">main</span>]<br>  marktext <span class="hljs-number">0.16</span>.<span class="hljs-number">3</span> [<span class="hljs-type">extras</span>]<br>  neteasemusic <span class="hljs-number">2.9</span>.<span class="hljs-number">6.199543</span> [<span class="hljs-type">dorado</span>]<br>  nodejs <span class="hljs-number">17.4</span>.<span class="hljs-number">0</span> [<span class="hljs-type">main</span>]<br>  obs<span class="hljs-literal">-studio</span> <span class="hljs-number">27.1</span>.<span class="hljs-number">3</span> [<span class="hljs-type">extras</span>]<br>  pandoc <span class="hljs-number">2.17</span>.<span class="hljs-number">0.1</span> [<span class="hljs-type">main</span>]<br>  picgo <span class="hljs-number">2.3</span>.<span class="hljs-number">0</span> [<span class="hljs-type">dorado</span>]<br>  potplayer <span class="hljs-number">220106</span> [<span class="hljs-type">extras</span>]<br>  qbittorrent <span class="hljs-number">4.4</span>.<span class="hljs-number">0</span> [<span class="hljs-type">extras</span>]<br>  rufus <span class="hljs-number">3.17</span> [<span class="hljs-type">extras</span>]<br>  steam nightly<span class="hljs-literal">-20200720</span> [<span class="hljs-type">extras</span>]<br>  sublime<span class="hljs-literal">-text</span> <span class="hljs-number">4</span><span class="hljs-literal">-4126</span> [<span class="hljs-type">extras</span>]<br>  sumatrapdf <span class="hljs-number">3.3</span>.<span class="hljs-number">3</span> [<span class="hljs-type">extras</span>]<br>  trafficmonitor <span class="hljs-number">1.82</span> [<span class="hljs-type">extras</span>]<br>  typora <span class="hljs-number">0.11</span>.<span class="hljs-number">18</span> *hold* [<span class="hljs-type">extras</span>]<br>  utools <span class="hljs-number">2.5</span>.<span class="hljs-number">2</span> [<span class="hljs-type">dorado</span>]<br>  ventoy <span class="hljs-number">1.0</span>.<span class="hljs-number">64</span> [<span class="hljs-type">extras</span>]<br>  wechat nightly<span class="hljs-literal">-20201231</span> [<span class="hljs-type">dorado</span>]<br>  xmind8 <span class="hljs-number">3.7</span>.<span class="hljs-number">9</span> [<span class="hljs-type">extras</span>]<br></code></pre></td></tr></table></figure>
+
+<h2 id="相关类似工具对比"><a href="#相关类似工具对比" class="headerlink" title="相关类似工具对比"></a>相关类似工具对比</h2><p>最好的教程肯定是官方文档，所以有需求的读者可以直接访问<a target="_blank" rel="noopener" href="https://github.com/ScoopInstaller/Scoop">官方网站</a>。这篇文章也主要不是来写教程的，而是一种产品体验与思考。所以，在文章的最后，我想简单做个竞品分析，说说是什么让我最终一直在使用Scoop。</p>
+<p>有关于同类产品，这里主要总结三个：</p>
+<ol>
+<li>Microsoft Store软件商店，含GUI的常规软件商店。</li>
+<li>Chocolatey，另一个第三方命令行软件管理工具。</li>
+<li>Winget，微软官方近两年的开源命令行软件管理工具。</li>
+</ol>
+<h3 id="竞品对比列表"><a href="#竞品对比列表" class="headerlink" title="竞品对比列表"></a>竞品对比列表</h3><table>
+<thead>
+<tr>
+<th>评估指标</th>
+<th>Microsoft Store</th>
+<th>Chocolatey</th>
+<th>Winget</th>
+<th>Scoop</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>GUI</td>
+<td>✅</td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>开源</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>软件搜索、安装、更新</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>已安装软件查看与卸载</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>回滚版本与锁定版本</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>导出与备份</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>数据管理与清理</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+</tbody></table>
+<p>（以上表格为核心需求对比，可能有不准确的地方待修改。）</p>
+<ul>
+<li>GUI——Windows 11的Microsoft Store颜值非常高，Chocolatey有一个不怎么好看的GUI，Scoop有第三方GUI。不过实际使用下来发现命令行一行代码的体验也不差，反而清晰明了更加高效，GUI在用户体验方面也不一定是优势。</li>
+<li>开源——我可太爱开源软件了，虽然开源软件一般不如商业软件稳定，但是我可以自己提需求甚至自己去改很是舒服。</li>
+<li>软件搜索、安装、更新——需求中基础的基础，不能实现的话也别用了。为了更好地使用最新版的软件，体验稳定的新功能，我可是积极的更新派，但是让我去使用不稳定的beta版本当测试就不是那么愿意了。</li>
+<li>回滚版本与锁定版本——并不是那么要紧的需求，但对于某些开发人员来说为了稳定就是非常重要的需求了。</li>
+<li>导出与备份——并不是那么要紧的需求，但对于某些人员来说快速安装系统是非常重要的需求。</li>
+<li>数据管理与清理——主要就是软件管理逻辑方面的需求了（强迫症需求），除了Scoop其他工具的数据管理一言难尽吧，虽然Scoop许多第三方仓库中的软件也没实现好。</li>
+</ul>
+<h3 id="对比总结"><a href="#对比总结" class="headerlink" title="对比总结"></a>对比总结</h3><p>综合而言，Scoop最能满足我的需求——软件生态链基本满足我的需求（大型软件我会另外安装），对于小软件的管理实在方便；理论上备份Scoop中的软件只需要复制整个根目录，然后新系统上安装好Scoop再覆盖掉初始文件即可；有一些小bug，比如安装的软件在控制面板找不着，固定到任务栏有奇怪的双开bug，不过这些实际上对于用户体验影响不大，完全可以接受；另外就算有一些严重影响使用的问题，GitHub上提交个issue马上就有大佬解决了。</p>
+<p>Chocolatey各方面都与Scoop类似，在软件生态和稳定性方面更优。在开源和数据管理方面略输一筹，不能设定安装目录（高级版似乎可以），使用默认安装包逻辑安装稍微有一些劝退。</p>
+<p>Winget是一个还没怎么完善的产品，可以肯定Winget启发于Chocolatey或Scoop。但是目前似乎bug还挺多，更新软件后依旧显示未更新的版本是我忍受不了的一个bug，所以虽然系统已经自带，不过我还是没怎么使用。Winget也使用软件默认安装包的逻辑进行安装，对于小众开源软件支持不佳，此外据说甚至会有捆绑安装的现象，属实劝退。当然，winget也有其最大的优势，可以和常规安装的方式共存，通过命令行操作扫描所有已安装软件，且对大众软件的支持最佳。期待后续版本可以做得更好。</p>
+<p>Microsoft Store挺好用的，有很多软件我也一直在应用商店下载更新。只是软件生态太差了，好多软件不支持或者更新远比不上同一桌面端软件，期待后续软件生态可以更好，做到类似Mac App Store的程度。</p>
+<p>*<em>那么有没有大佬想要构建一个基于Scoop的GUI工具呢？之前找到的那个<a target="_blank" rel="noopener" href="https://github.com/prezesp/scoop-viewer">GUI工具</a>似乎不是那么好用。。。毕竟不是所有人都喜欢使用命令行工具的。</em></p>
+
+              
+            </div>
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E4%BA%A7%E5%93%81/" class="category-chain-item">产品</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E4%BA%A7%E5%93%81/">#产品</a>
+      
+        <a href="/tags/%E8%BD%AF%E4%BB%B6/">#软件</a>
+      
+        <a href="/tags/%E6%95%99%E7%A8%8B/">#教程</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Scoop——也许是Windows平台最好用的软件（包）管理器</div>
+      <div>https://skeathytomas.github.io/post/220117-Scoop——也许是Windows平台最好用的软件（包）管理器/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Skeathy</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2022年1月17日</div>
+        </div>
+      
+      
+      <div class="license-meta-item">
+        <div>许可协议</div>
+        <div>
+          
+            
+            
+              <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+              <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                <i class="iconfont icon-by"></i>
+              </span>
+              </a>
+            
+          
+        </div>
+      </div>
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/post/220205-%E8%81%8A%E4%B8%80%E8%81%8A%E7%A4%BE%E4%BA%A4%E2%80%94%E2%80%94%E5%8F%AF%E8%AF%9DApp%E4%BA%A7%E5%93%81%E4%BD%93%E9%AA%8C%E6%89%8B%E8%AE%B0/" title="聊一聊社交——可话App产品体验手记">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">聊一聊社交——可话App产品体验手记</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/post/220101-%E4%BB%8E%E4%BA%8C%E6%AC%A1%E5%85%83%E4%BA%BA%E8%AE%BE%E5%88%B0%E4%B8%89%E6%AC%A1%E5%85%83%E4%BA%BA%E8%AE%BE%E2%80%94%E2%80%94%E4%BA%BA%E8%AE%BE%E7%9A%84%E5%95%86%E4%B8%9A%E4%BB%B7%E5%80%BC/" title="从二次元人设到三次元人设——人设的商业价值">
+                        <span class="hidden-mobile">从二次元人设到三次元人设——人设的商业价值</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  <article id="comments" lazyload>
+    
+  <div id="gitalk-container"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#gitalk-container', function() {
+      Fluid.utils.createCssLink('/css/gitalk.css')
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', function() {
+        var options = Object.assign(
+          {"clientID":"658faad5dc784f8ec14b","clientSecret":"b1c37d084a7aa0367a81f3a12c863a11ec088597","repo":"skeathytomas.github.io","owner":"skeathytomas","admin":["skeathytomas"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
+          {
+            id: 'd61ad8e4fbb0a5cb219f1941faf3c176'
+          }
+        )
+        var gitalk = new Gitalk(options);
+        gitalk.render('gitalk-container');
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+  </article>
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+
+  
+
+  
+    <!-- Google gtag.js -->
+    <script defer>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript('https://www.googletagmanager.com/gtag/js?id=G-FJM6NG4T2X', function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-FJM6NG4T2X');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      headingSelector : CONFIG.toc.headingSelector || 'h1,h2,h3,h4,h5,h6',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      collapseDepth   : CONFIG.toc.collapseDepth || 0,
+      scrollSmooth    : true,
+      headingsOffset  : -boardTop
+    });
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+  });
+</script>
+
+
+  <script>
+  (function() {
+    var enableLang = CONFIG.code_language.enable && CONFIG.code_language.default;
+    var enableCopy = CONFIG.copy_btn;
+    if (!enableLang && !enableCopy) {
+      return;
+    }
+
+    function getBgClass(ele) {
+      return Fluid.utils.getBackgroundLightness(ele) >= 0 ? 'code-widget-light' : 'code-widget-dark';
+    }
+
+    var copyTmpl = '';
+    copyTmpl += '<div class="code-widget">';
+    copyTmpl += 'LANG';
+    copyTmpl += '</div>';
+    jQuery('.markdown-body pre').each(function() {
+      var $pre = jQuery(this);
+      if ($pre.find('code.mermaid').length > 0) {
+        return;
+      }
+      if ($pre.find('span.line').length > 0) {
+        return;
+      }
+
+      var lang = '';
+
+      if (enableLang) {
+        lang = CONFIG.code_language.default;
+        if ($pre[0].children.length > 0 && $pre[0].children[0].classList.length >= 2 && $pre.children().hasClass('hljs')) {
+          lang = $pre[0].children[0].classList[1];
+        } else if ($pre[0].getAttribute('data-language')) {
+          lang = $pre[0].getAttribute('data-language');
+        } else if ($pre.parent().hasClass('sourceCode') && $pre[0].children.length > 0 && $pre[0].children[0].classList.length >= 2) {
+          lang = $pre[0].children[0].classList[1];
+          $pre.parent().addClass('code-wrapper');
+        } else if ($pre.parent().hasClass('markdown-body') && $pre[0].classList.length === 0) {
+          $pre.wrap('<div class="code-wrapper"></div>');
+        }
+        lang = lang.toUpperCase().replace('NONE', CONFIG.code_language.default);
+      }
+      $pre.append(copyTmpl.replace('LANG', lang).replace('code-widget">',
+        getBgClass($pre[0]) + (enableCopy ? ' code-widget copy-btn" data-clipboard-snippet><i class="iconfont icon-copy"></i>' : ' code-widget">')));
+
+      if (enableCopy) {
+        Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js', function() {
+          var clipboard = new window.ClipboardJS('.copy-btn', {
+            target: function(trigger) {
+              var nodes = trigger.parentNode.childNodes;
+              for (var i = 0; i < nodes.length; i++) {
+                if (nodes[i].tagName === 'CODE') {
+                  return nodes[i];
+                }
+              }
+            }
+          });
+          clipboard.on('success', function(e) {
+            e.clearSelection();
+            e.trigger.innerHTML = e.trigger.innerHTML.replace('icon-copy', 'icon-success');
+            setTimeout(function() {
+              e.trigger.innerHTML = e.trigger.innerHTML.replace('icon-success', 'icon-copy');
+            }, 2000);
+          });
+        });
+      }
+    });
+  })();
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+<!-- hexo injector body_end start --><script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css"><!-- hexo injector body_end end --><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/shifuku.model.json"},"display":{"position":"right","width":200,"height":400},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body>
+</html>
