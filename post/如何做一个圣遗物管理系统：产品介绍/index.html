@@ -16,26 +16,32 @@
   <meta name="author" content="Skeathy">
   <meta name="keywords" content="互联网,产品经理,设计,游戏,动漫,Coding">
   
-    <meta name="description" content="2022.03更新由于每年会玩些新游戏，但记录游戏又不像影视作品那样容易，很多只是简单玩一玩然后云通关（社畜之后玩游戏的时间和精力更少了），去steam下留评论总感觉不合适，于是就在这篇文章里更新一下「游戏史」吧。当然这里只是简单回顾并总结一下，值得单开文章的自然会单开。 这一年还在持续玩的网游：  原神：2.0之后（以及之前一版本的海岛），更图速度太快了，单机跑图玩家很快乐。 明日方舟：正常的活">
+    <meta name="description" content="系列文章：  如何做一个圣遗物管理系统：产品调研与分析 如何做一个圣遗物管理系统：产品需求文档 如何做一个圣遗物管理系统：产品介绍（本篇）  属于总结性质的产品使用说明，大体摘自相关项目的 README。项目链接： 刻晴办公桌 简介帮你在游戏中整理圣遗物背包时更便捷地了解、查阅圣遗物的评分，然后把评分最高的圣遗物装配给希望的角色。 demo 视频  环境与准备OCR 引擎 OCR 引擎 tesse">
 <meta property="og:type" content="article">
-<meta property="og:title" content="谈谈我的游戏史">
-<meta property="og:url" content="https://skeathytomas.github.io/post/%E8%B0%88%E8%B0%88%E6%88%91%E7%9A%84%E6%B8%B8%E6%88%8F%E5%8F%B2/index.html">
+<meta property="og:title" content="如何做一个圣遗物管理系统：产品介绍">
+<meta property="og:url" content="https://skeathytomas.github.io/post/%E5%A6%82%E4%BD%95%E5%81%9A%E4%B8%80%E4%B8%AA%E5%9C%A3%E9%81%97%E7%89%A9%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%EF%BC%9A%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/index.html">
 <meta property="og:site_name" content="Skeathy的奇思妙想">
-<meta property="og:description" content="2022.03更新由于每年会玩些新游戏，但记录游戏又不像影视作品那样容易，很多只是简单玩一玩然后云通关（社畜之后玩游戏的时间和精力更少了），去steam下留评论总感觉不合适，于是就在这篇文章里更新一下「游戏史」吧。当然这里只是简单回顾并总结一下，值得单开文章的自然会单开。 这一年还在持续玩的网游：  原神：2.0之后（以及之前一版本的海岛），更图速度太快了，单机跑图玩家很快乐。 明日方舟：正常的活">
+<meta property="og:description" content="系列文章：  如何做一个圣遗物管理系统：产品调研与分析 如何做一个圣遗物管理系统：产品需求文档 如何做一个圣遗物管理系统：产品介绍（本篇）  属于总结性质的产品使用说明，大体摘自相关项目的 README。项目链接： 刻晴办公桌 简介帮你在游戏中整理圣遗物背包时更便捷地了解、查阅圣遗物的评分，然后把评分最高的圣遗物装配给希望的角色。 demo 视频  环境与准备OCR 引擎 OCR 引擎 tesse">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://raw.githubusercontent.com/SkeathyTomas/img/main/imgdbdfdaed5e27b844319c29da1d898716.jpeg">
-<meta property="article:published_time" content="2021-03-13T06:53:36.000Z">
-<meta property="article:modified_time" content="2022-06-03T12:32:15.000Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20220801125435.png">
+<meta property="article:published_time" content="2022-08-02T08:34:54.000Z">
+<meta property="article:modified_time" content="2022-08-05T06:58:22.814Z">
 <meta property="article:author" content="Skeathy">
 <meta property="article:tag" content="游戏">
+<meta property="article:tag" content="原神">
+<meta property="article:tag" content="产品">
+<meta property="article:tag" content="Coding">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="工具">
+<meta property="article:tag" content="GitHub">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/SkeathyTomas/img/main/imgdbdfdaed5e27b844319c29da1d898716.jpeg">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20220801125435.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>谈谈我的游戏史 - Skeathy的奇思妙想</title>
+  <title>如何做一个圣遗物管理系统：产品介绍 - Skeathy的奇思妙想</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -222,13 +228,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('https://raw.githubusercontent.com/SkeathyTomas/img/main/imgdbdfdaed5e27b844319c29da1d898716.jpeg') no-repeat center center; background-size: cover;">
+     style="background: url('https://clearvision.gitlab.io/images/sapphire.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="谈谈我的游戏史"></span>
+            <span id="subtitle" data-typed-text="如何做一个圣遗物管理系统：产品介绍"></span>
           
         </div>
 
@@ -239,8 +245,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2021-03-13 14:53" pubdate>
-          2021年3月13日 下午
+        <time datetime="2022-08-02 16:34" pubdate>
+          2022年8月2日 下午
         </time>
       </span>
     
@@ -251,7 +257,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.4k 字
+          1.7k 字
         
       </span>
     
@@ -262,7 +268,7 @@
         
         
         
-          20 分钟
+          15 分钟
         
       </span>
     
@@ -307,17 +313,17 @@
     
     <div class="category row nomargin-x">
       <a class="category-item 
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="游戏"
-        id="heading-ba08216f13dd1742157412386eee1225" role="tab" data-toggle="collapse" href="#collapse-ba08216f13dd1742157412386eee1225"
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="产品"
+        id="heading-a015434e0df90bded79afc4957f7768e" role="tab" data-toggle="collapse" href="#collapse-a015434e0df90bded79afc4957f7768e"
         aria-expanded="true"
       >
-        游戏
-        <span class="list-group-count">(4)</span>
+        产品
+        <span class="list-group-count">(6)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-ba08216f13dd1742157412386eee1225"
-           role="tabpanel" aria-labelledby="heading-ba08216f13dd1742157412386eee1225">
+      <div class="category-collapse collapse show" id="collapse-a015434e0df90bded79afc4957f7768e"
+           role="tabpanel" aria-labelledby="heading-a015434e0df90bded79afc4957f7768e">
         
         
           
@@ -326,37 +332,55 @@
     
       
       
-        <a href="/post/%E5%8E%9F%E7%A5%9E%E6%B4%BB%E5%8A%A8%E7%8E%A9%E6%B3%95%E8%AF%84%E6%9E%90/" title="原神活动玩法评析"
+        <a href="/post/scoop%E2%80%94%E2%80%94%E4%B9%9F%E8%AE%B8%E6%98%AFwindows%E5%B9%B3%E5%8F%B0%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E8%BD%AF%E4%BB%B6%EF%BC%88%E5%8C%85%EF%BC%89%E7%AE%A1%E7%90%86%E5%99%A8/" title="Scoop——也许是Windows平台最好用的软件（包）管理器"
            class="list-group-item list-group-item-action
            ">
-          <span class="category-post">原神活动玩法评析</span>
+          <span class="category-post">Scoop——也许是Windows平台最好用的软件（包）管理器</span>
         </a>
       
     
       
       
-        <a href="/post/%E5%8E%9F%E7%A5%9E%E7%8E%A9%E6%B3%95%E6%80%BB%E7%BB%93/" title="原神玩法总结"
+        <a href="/post/%E4%BB%8E%E4%BA%8C%E6%AC%A1%E5%85%83%E4%BA%BA%E8%AE%BE%E5%88%B0%E4%B8%89%E6%AC%A1%E5%85%83%E4%BA%BA%E8%AE%BE%E2%80%94%E2%80%94%E4%BA%BA%E8%AE%BE%E7%9A%84%E5%95%86%E4%B8%9A%E4%BB%B7%E5%80%BC/" title="从二次元人设到三次元人设——人设的商业价值"
            class="list-group-item list-group-item-action
            ">
-          <span class="category-post">原神玩法总结</span>
+          <span class="category-post">从二次元人设到三次元人设——人设的商业价值</span>
         </a>
       
     
       
       
-        <a href="/post/%E6%A2%A6%E5%A2%83%E7%89%A9%E8%AF%AD/" title="梦境物语"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">梦境物语</span>
-        </a>
-      
-    
-      
-      
-        <a href="/post/%E8%B0%88%E8%B0%88%E6%88%91%E7%9A%84%E6%B8%B8%E6%88%8F%E5%8F%B2/" title="谈谈我的游戏史"
+        <a href="/post/%E5%A6%82%E4%BD%95%E5%81%9A%E4%B8%80%E4%B8%AA%E5%9C%A3%E9%81%97%E7%89%A9%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%EF%BC%9A%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/" title="如何做一个圣遗物管理系统：产品介绍"
            class="list-group-item list-group-item-action
            active">
-          <span class="category-post">谈谈我的游戏史</span>
+          <span class="category-post">如何做一个圣遗物管理系统：产品介绍</span>
+        </a>
+      
+    
+      
+      
+        <a href="/post/%E5%A6%82%E4%BD%95%E5%81%9A%E4%B8%80%E4%B8%AA%E5%9C%A3%E9%81%97%E7%89%A9%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%EF%BC%9A%E4%BA%A7%E5%93%81%E8%B0%83%E7%A0%94%E4%B8%8E%E5%88%86%E6%9E%90/" title="如何做一个圣遗物管理系统：产品调研与分析"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">如何做一个圣遗物管理系统：产品调研与分析</span>
+        </a>
+      
+    
+      
+      
+        <a href="/post/%E5%A6%82%E4%BD%95%E5%81%9A%E4%B8%80%E4%B8%AA%E5%9C%A3%E9%81%97%E7%89%A9%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%EF%BC%9A%E4%BA%A7%E5%93%81%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3/" title="如何做一个圣遗物管理系统：产品需求文档"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">如何做一个圣遗物管理系统：产品需求文档</span>
+        </a>
+      
+    
+      
+      
+        <a href="/post/%E8%81%8A%E4%B8%80%E8%81%8A%E7%A4%BE%E4%BA%A4%E2%80%94%E2%80%94%E5%8F%AF%E8%AF%9Dapp%E4%BA%A7%E5%93%81%E4%BD%93%E9%AA%8C%E6%89%8B%E8%AE%B0/" title="聊一聊社交——可话App产品体验手记"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">聊一聊社交——可话App产品体验手记</span>
         </a>
       
     
@@ -379,12 +403,12 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">谈谈我的游戏史</h1>
+            <h1 style="display: none">如何做一个圣遗物管理系统：产品介绍</h1>
             
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2022年6月3日 晚上
+                    本文最后更新于：2022年8月5日 下午
                   
                 
               </p>
@@ -392,101 +416,63 @@
             
               <div class="markdown-body">
                 
-                <h2 id="2022-03更新"><a href="#2022-03更新" class="headerlink" title="2022.03更新"></a>2022.03更新</h2><p>由于每年会玩些新游戏，但记录游戏又不像影视作品那样容易，很多只是简单玩一玩然后云通关（社畜之后玩游戏的时间和精力更少了），去steam下留评论总感觉不合适，于是就在这篇文章里更新一下「游戏史」吧。当然这里只是简单回顾并总结一下，值得单开文章的自然会单开。</p>
-<p>这一年还在持续玩的网游：</p>
+                <p>系列文章：</p>
+<ol>
+<li><a href="https://skeathytomas.github.io/post/%E4%BA%A7%E5%93%81%E8%B0%83%E7%A0%94%E4%B8%8E%E5%88%86%E6%9E%90/">如何做一个圣遗物管理系统：产品调研与分析</a></li>
+<li><a href="https://skeathytomas.github.io/post/%E4%BA%A7%E5%93%81%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3/">如何做一个圣遗物管理系统：产品需求文档</a></li>
+<li>如何做一个圣遗物管理系统：产品介绍（本篇）</li>
+</ol>
+<p>属于总结性质的产品使用说明，大体摘自相关项目的 README。项目链接： <a target="_blank" rel="noopener" href="https://github.com/SkeathyTomas/genshin_artifact_auxiliary">刻晴办公桌</a></p>
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>帮你在游戏中整理圣遗物背包时更便捷地了解、查阅圣遗物的评分，然后把评分最高的圣遗物装配给希望的角色。 <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1XB4y1k7au/">demo 视频</a></p>
+<p><img src="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20220801125435.png" srcset="/img/loading.gif" lazyload alt="使用截图"></p>
+<h2 id="环境与准备"><a href="#环境与准备" class="headerlink" title="环境与准备"></a>环境与准备</h2><h3 id="OCR-引擎"><a href="#OCR-引擎" class="headerlink" title="OCR 引擎"></a>OCR 引擎</h3><ol>
+<li>OCR 引擎 <a target="_blank" rel="noopener" href="https://github.com/tesseract-ocr/tesseract">tesserect</a> ，安装过程详见原项目，或者参考 <a target="_blank" rel="noopener" href="https://www.jianshu.com/p/f7cb0b3f337a">这篇文章</a> ，安装链接 <a target="_blank" rel="noopener" href="https://digi.bib.uni-mannheim.de/tesseract/tesseract-ocr-w64-setup-v5.2.0.20220712.exe">tesseract-ocr-w64-setup-v5.2.0.20220712.exe</a> (64位)。如果你使用<code>scoop</code>，可以使用<code>scoop install tesseract</code>快速安装。安装完成后，可在命令行输入<code>tesseract</code>检验是否安装成功。</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/tesseract-ocr/tessdata/blob/main/chi_sim.traineddata">tesseract 中文简体数据文件</a> ，下载完成后保存到tesseract数据目录<code>tessdata</code>中（如果是<code>scoop</code>安装的话，放在<code>./scoop/persist/tesseract/tessdata</code>文件夹中）。</li>
+</ol>
+<h3 id="如果你需要直接运行-python-程序"><a href="#如果你需要直接运行-python-程序" class="headerlink" title="如果你需要直接运行 python 程序"></a>如果你需要直接运行 python 程序</h3><ol>
+<li>Python 3.6+ (作者开发环境 Python 3.10.5)。</li>
+<li>必备的 Python 包：<br>   1.  PySide6，GUI 框架<br>   2.  pynput，监听窗口外鼠标操作<br>   3.  pywin32，获取设备分辨率、缩放信息，用于兼容不同分辨率<br>   4.  Pillow，截图<br>   5.  pytesseract，tesseract 的 python 接口</li>
+</ol>
+<h3 id="使用打包的-exe-文件"><a href="#使用打包的-exe-文件" class="headerlink" title="使用打包的 exe 文件"></a>使用打包的 exe 文件</h3><ol>
+<li>在 release 中下载最新的压缩包。</li>
+<li>解压。</li>
+</ol>
+<p><em>注：同样需要安装 OCR 引擎。</em></p>
+<h2 id="使用教程"><a href="#使用教程" class="headerlink" title="使用教程"></a>使用教程</h2><ol>
+<li>方式 1：运行打包好的程序。解压好的程序包后，找到并用管理员模式运行 keqing.exe（必须，否则程序运行中无法监听游戏中的鼠标操作）。</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20220805144258.png" srcset="/img/loading.gif" lazyload alt="keqing.exe"></p>
+<ol start="2">
+<li>方式 2：下载源码，使用管理员模式打开命令行工具（必须，否则程序运行中无法监听游戏中的鼠标操作），并打开程序目录，使用命令 <code>python app.py</code> 运行程序。</li>
+<li>在主窗口中选择角色（不选的话，默认评估双爆+攻击词条）。</li>
+<li>打开游戏，调整窗口大小为非全屏下最大的一档。（因为全屏状态下评分结果贴图无法置顶。）</li>
+<li>打开背包-圣遗物，随意选择圣遗物，点击<strong>右键</strong>进行圣遗物评分，评分结果随后标记在对应圣遗物右下角。（暂未对滚动条进行适配，若下拉滚动条使第一行圣遗物显示不全，贴图结果可能会有偏离。）</li>
+<li>选中某个贴图结果，使用快捷键 <code>Z</code> 删除该贴图；使用全局快捷键 <code>Ctrl+Z</code> 删除所有贴图，可进行新一批圣遗物的评估。</li>
+</ol>
+<h2 id="评分方法"><a href="#评分方法" class="headerlink" title="评分方法"></a>评分方法</h2><p><del>参考 <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/EUc-o95gpovHv5ctKaQNFw">圣遗物评分方法</a> 。</del></p>
+<p>更新了 <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/DxyS8Rll3_eLSelvjiwKwQ">圣遗物评分方法</a> ，调整了角色的有效词条，增加了每个角色相对于固定词条的二级系数（如同样是大攻击对于一般主C和胡桃的评分系数就有所不同），删除了不同打法流派的角色。</p>
+<p>具体每一个角色的有效词条和词条的评分系数可参考 <a href="img_process.py">img_process.py</a> 中的配置，如与需求不符可自行前往源文件修改参数。</p>
+<h2 id="已知问题"><a href="#已知问题" class="headerlink" title="已知问题"></a>已知问题</h2><h3 id="分辨率适配"><a href="#分辨率适配" class="headerlink" title="分辨率适配"></a>分辨率适配</h3><p>当前仅在自己的机子上做了分辨率适配，所以理论上只有 2560*1600 分辨率下可以较为正常的运行。不过分辨率适配框架已经搭好，就差热心玩家给一些不同分辨率的截图做坐标定位和测试了。需要把游戏窗口化为非全屏下最大的一档，打开背包-圣遗物，别去调窗口位置，然后全屏截图私发一下我。</p>
+<p>目前已适配分辨率：</p>
+<p>16:10</p>
 <ul>
-<li>原神：2.0之后（以及之前一版本的海岛），更图速度太快了，单机跑图玩家很快乐。</li>
-<li>明日方舟：正常的活动与推图，还有新增的常驻肉鸽模式。</li>
-<li>雀魂：原来雀魂也是魂系游戏，第四届CC98杯雀魂挑战赛由于懒得肝海选，初赛就淘汰了。</li>
-<li>DotA 2: TI 10又PTSD了，后来的The Internet倒是挺快乐的。新版本炸弹人重做，以及MOBA类游戏确实有些力不从心了。</li>
+<li><input checked="" disabled="" type="checkbox"> 2560 * 1600</li>
 </ul>
-<p>一些新游戏：</p>
+<p>16:9</p>
 <ul>
-<li>塞尔达：旷野之息，塞尔达是天。新手村的极致体验，原来游戏还能这样；后期确实有些厌倦换皮和数值替换，然后持续吃灰，至今还有大半地图未探索。</li>
-<li>宫崎英高的黑暗之魂3和新出的艾尔登法环, 稍微玩了一会儿，看来开放世界确实是潮流了呢。</li>
-<li>幻塔：披着开发世界皮的MMORPG，被PC游玩麻烦、手感细碎、重度刮痧、恶行bug等一种劝退，但是玩法真的多，把旷野之息抄得有模有样的。</li>
-<li>主播女孩重度依赖：每一个关注Vup的玩家都会被这款养成类文字冒险游戏刷屏吧，不能简单用游戏性来评价的游戏。</li>
-<li>崩坏3：想不到5年前的ACT手游放在现在还是蛮有竞争力的（全靠同行衬托），就更不用说后崩里的新技术测验了。米忽悠究竟能在一个游戏里塞进多少新游戏？因为UI稀烂被各种关不完的弹窗劝退。</li>
-<li>英雄联盟：被周围的人带着简单玩了一下，不好评价。</li>
+<li><input checked="" disabled="" type="checkbox"> 2560 * 1440</li>
+<li><input checked="" disabled="" type="checkbox"> 1920 * 1080 等</li>
 </ul>
-<h2 id="2021-03首次整理并发布"><a href="#2021-03首次整理并发布" class="headerlink" title="2021.03首次整理并发布"></a>2021.03首次整理并发布</h2><p>作为一名95后，童年除了学习之外，自然也少不了电视里的动画和动漫，以及各种电子的游戏。</p>
-<p>最早接触的游戏，自然是老式电视上自带的游戏——<strong>俄罗斯方块</strong>和<strong>推箱子</strong>，以及信息课上偷偷玩耍的单机游戏——比如<strong>扫雷</strong>、<strong>蜘蛛纸牌</strong>、<strong>潜艇大战</strong>、<strong>三维弹球</strong>、<strong>打雪仗</strong>等等。如今看来，这些游戏虽然体量小，但每个游戏都有完整且互相完全不同的玩法机制，本身的乐趣性也比较高（尤其是在偷偷玩的背景下），因此被誉为一个时代的经典也并不过分。</p>
-<p>之后，浏览器和flash的结合，创生了一系列高质量的网页flash游戏及游戏网站门户（4399，7k7k等）。自然也是花了不少的时间在这些网站中，寻找一些有趣的游戏并和小伙伴们分享。具体的游戏可能并不能记全，但总有一些经典留下了深刻的印象。这里面类型最多的自然是横版闯关类游戏——<strong>合金弹头系列</strong>、<strong>三国志系列</strong>、<strong>冒险王系列</strong>，其他还有解谜类游戏——<strong>森林冰火人</strong>、<strong>Stanley博士的家</strong>、<strong>高楼爆破</strong>，对战类游戏——<strong>拳皇</strong>、<strong>死神vs火影</strong>，休闲类游戏——<strong>黄金矿工</strong>、<strong>连连看</strong>，塔防游戏——<strong>皇家守卫军</strong>。如果说最早接触的小游戏是一种启蒙，那么flash游戏则是拓宽了小游戏的认知。</p>
-<p>再之后就是腾讯的天下了，基于社交体系的各式各类的页游网游模式，比如QQ游戏大厅中各种<strong>玩家对战式棋牌类游戏</strong>，QQ空间的各种游戏——模拟经营类的<strong>农场</strong>、<strong>餐厅</strong>、<strong>商场</strong>等，回合制卡牌养成与战斗的<strong>Q宠大乐斗</strong>，塔防类的<strong>家园守卫战</strong>、<strong>保卫羊村</strong>，还有<strong>QQ飞车</strong>、<strong>QQ炫舞</strong>……腾讯游戏打开了另一种游戏的形式（准确的说是我接触的游戏），借助社交和长线的登陆养成以及pvp模式，让人持续的想去玩一款游戏（上瘾），也做到了商业上的成功。如今看来对于腾讯游戏也是一言难尽——你要说他不好，但确实很多游戏都是童年回忆和经典，是年度爆款，起码良好水准还是有的；你要说他好，似乎也很难说出究竟好在哪里，并没有那么惊艳。真要说的话，只是商业味儿太重了吧。</p>
-<hr>
-<p>终于度过了童年阶段，自身的思维更加成熟，视野也更加开阔，玩游戏也不仅仅只是玩游戏那么简单了，挺多接触的游戏真正有了第九艺术的感觉。由于自身专业的关系，大类中隔壁专业就是数字媒体，身边多了更多的同好，顺便也简单入了个宅，ACG的世界也真正打开了。</p>
-<p>这个时候所玩的游戏更加多样化，了解了更多的游戏公司，和独立游戏。受到童年时期所玩游戏的影响，对于游戏类型还是有点喜好差异的。比如小时候印象深刻的<strong>塔防</strong>和<strong>解谜</strong>，如今依然是最为喜爱的游戏类型，受到QQ飞车影响一度对<strong>赛车类游戏</strong>抱有好感。当然，对游戏的喜好并不受制于游戏类型，这些年也接触了很多全新模式的游戏，只要这个游戏足够优秀。</p>
-<p>然后就是游戏平台和方式也都有了很大的变化——随着移动互联网和智能手机的兴起，手机游戏反而变成了一种主流的形式；被朋友拉入了steam大坑；而直播形式，让云游戏云玩家的新游戏形式也都随处可见。</p>
-<p>由于实在不好以线性文字的形式整理这一阶段尝试和接触的游戏（不完全记录），就以表格形式整理一下吧（分类并不完全准确，每个游戏都可能有多种类型标签，一些非常通用的标签比如rpg就直接略过了）：</p>
-<table>
-<thead>
-<tr>
-<th>游戏类型</th>
-<th>深度体验</th>
-<th>接触与了解</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>音游</td>
-<td>Deemo，Cytus系列（Rayark，yyds），东方红魔乡，东方妖妖梦等东方游戏（弹幕游戏附赠优秀音乐和同人奇迹，算个音乐游戏也不过分，其实是不知道还可以放哪边）</td>
-<td>节奏大师，别踩白块</td>
-</tr>
-<tr>
-<td>塔防</td>
-<td>植物大战僵尸（初代及二代手游），明日方舟</td>
-<td>保卫萝卜，东方梦符祭</td>
-</tr>
-<tr>
-<td>解谜&amp;冒险</td>
-<td>纪念碑谷，人力资源机器，返校，还愿（政治私货可惜了），烟火</td>
-<td>机械迷城，Limbo，Sally Face，光遇</td>
-</tr>
-<tr>
-<td>赛车</td>
-<td>极品飞车9（经典中的经典）及系列其他，狂野飙车</td>
-<td>GTA5</td>
-</tr>
-<tr>
-<td>恐怖游戏</td>
-<td>P.T.，生化危机</td>
-<td>面容，港诡实录</td>
-</tr>
-<tr>
-<td>二次元</td>
-<td>阴阳师、原神</td>
-<td>FGO，碧蓝航线，崩坏3</td>
-</tr>
-<tr>
-<td>MOBA</td>
-<td>Dota 2</td>
-<td>英雄联盟、王者荣耀</td>
-</tr>
-<tr>
-<td>恋爱游戏</td>
-<td>Air，未定事件簿，Helltaker，以及不可描述</td>
-<td>Clannad，恋与制作人</td>
-</tr>
-<tr>
-<td>休闲娱乐</td>
-<td>BombSquad，雀魂，旅行青蛙</td>
-<td>Fall Guys，OverCooked，Among us</td>
-</tr>
-<tr>
-<td>交互式电影</td>
-<td>底特律：变人</td>
-<td>隐形守护者</td>
-</tr>
-<tr>
-<td>ACT</td>
-<td>手残党落泪</td>
-<td>对马岛之魂、黑暗之魂、只狼</td>
-</tr>
-<tr>
-<td>其他</td>
-<td>我的世界，心跳文学社</td>
-<td>There is no game</td>
-</tr>
-</tbody></table>
+<h3 id="能不能在圣遗物装配中使用"><a href="#能不能在圣遗物装配中使用" class="headerlink" title="能不能在圣遗物装配中使用"></a>能不能在圣遗物装配中使用</h3><p>本来一开始确实是按照这个开发的，后来发现这个界面识别老是出错。背景飘过的白点和文字重叠基本就识别不出来了，所以放弃了。</p>
+<p>有兴趣可以运行 <code>python test/app_character.py</code> 尝试下效果，当然角色配置还未同步过去。</p>
+<h3 id="关于-GUI"><a href="#关于-GUI" class="headerlink" title="关于 GUI"></a>关于 GUI</h3><p>Bug 一堆，问就是还在学，不过用着应该没什么问题。</p>
+<h3 id="语言支持"><a href="#语言支持" class="headerlink" title="语言支持"></a>语言支持</h3><ul>
+<li><input checked="" disabled="" type="checkbox"> 中文简体</li>
+</ul>
+<h2 id="风险和声明"><a href="#风险和声明" class="headerlink" title="风险和声明"></a>风险和声明</h2><p>本程序不收集任何用户信息，所有数据保留在本地。</p>
+<p>理论上未对任何游戏数据进行非法获取和修改，仅通过截图和 OCR 技术实现相关分析，且没有使用自动化程序帮助玩家获取游戏内资源，应该不在官方打击范围。</p>
+<p>如若官方觉得不妥，我就删库跑路。</p>
+<h2 id="问题反馈"><a href="#问题反馈" class="headerlink" title="问题反馈"></a>问题反馈</h2><p>提 Issue，最好提供下命令行的输出（如识别错误、环境错误等）。有人的话可以考虑建个交流群什么的。</p>
 
                 
               </div>
@@ -505,7 +491,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E6%B8%B8%E6%88%8F/" class="category-chain-item">游戏</a>
+  <a href="/categories/%E4%BA%A7%E5%93%81/" class="category-chain-item">产品</a>
   
   
 
@@ -522,6 +508,18 @@
       
         <a href="/tags/%E6%B8%B8%E6%88%8F/">#游戏</a>
       
+        <a href="/tags/%E5%8E%9F%E7%A5%9E/">#原神</a>
+      
+        <a href="/tags/%E4%BA%A7%E5%93%81/">#产品</a>
+      
+        <a href="/tags/Coding/">#Coding</a>
+      
+        <a href="/tags/Python/">#Python</a>
+      
+        <a href="/tags/%E5%B7%A5%E5%85%B7/">#工具</a>
+      
+        <a href="/tags/GitHub/">#GitHub</a>
+      
     </div>
   
 </div>
@@ -532,8 +530,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>谈谈我的游戏史</div>
-      <div>https://skeathytomas.github.io/post/谈谈我的游戏史/</div>
+      <div>如何做一个圣遗物管理系统：产品介绍</div>
+      <div>https://skeathytomas.github.io/post/如何做一个圣遗物管理系统：产品介绍/</div>
     </div>
     <div class="license-meta">
       
@@ -545,7 +543,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2021年3月13日</div>
+          <div>2022年8月2日</div>
         </div>
       
       
@@ -575,18 +573,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/post/%E6%A2%A6%E5%A2%83%E7%89%A9%E8%AF%AD/" title="梦境物语">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">梦境物语</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/post/%E5%8E%9F%E7%A5%9E%E7%8E%A9%E6%B3%95%E6%80%BB%E7%BB%93/" title="原神玩法总结">
-                        <span class="hidden-mobile">原神玩法总结</span>
+                      <a href="/post/%E5%A6%82%E4%BD%95%E5%81%9A%E4%B8%80%E4%B8%AA%E5%9C%A3%E9%81%97%E7%89%A9%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%EF%BC%9A%E4%BA%A7%E5%93%81%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3/" title="如何做一个圣遗物管理系统：产品需求文档">
+                        <span class="hidden-mobile">如何做一个圣遗物管理系统：产品需求文档</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -607,7 +599,7 @@
         var options = Object.assign(
           {"clientID":"658faad5dc784f8ec14b","clientSecret":"b1c37d084a7aa0367a81f3a12c863a11ec088597","repo":"skeathytomas.github.io","owner":"skeathytomas","admin":["skeathytomas"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
           {
-            id: 'c4304bd14b9d63b30d47e0a87f904fa5'
+            id: '6c7b8b074fd8b73908dea33d5f962859'
           }
         )
         var gitalk = new Gitalk(options);
