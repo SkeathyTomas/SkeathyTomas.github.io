@@ -1,0 +1,870 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20210220171446.jpg">
+  <link rel="icon" href="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20210220171446.jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Skeathy">
+  <meta name="keywords" content="互联网,产品经理,设计,游戏,动漫,Coding">
+  
+    <meta name="description" content="先丢个项目地址： 刻晴办公桌 ，功能介绍可参考 README 或封面图，有兴趣的玩家可以前往 release 下载最新版本体验。 真正意义上第一个附带 GUI 的桌面应用开发，总感觉需要有一篇技术总结。不过我也不是专业程序员，只是简单学过 C，懂一点面向过程与面向对象的区别，之后用 Python 做过数据分析类研究。要是遇到各种不规范问题，欢迎帮我重构，我就随便写着玩的。 这个工具的需求及想法来源">
+<meta property="og:type" content="article">
+<meta property="og:title" content="圣遗物评分工具：刻晴办公桌技术整理与总结">
+<meta property="og:url" content="https://skeathytomas.github.io/post/%E5%9C%A3%E9%81%97%E7%89%A9%E8%AF%84%E5%88%86%E5%B7%A5%E5%85%B7%EF%BC%9A%E5%88%BB%E6%99%B4%E5%8A%9E%E5%85%AC%E6%A1%8C%E6%8A%80%E6%9C%AF%E6%95%B4%E7%90%86%E4%B8%8E%E6%80%BB%E7%BB%93/index.html">
+<meta property="og:site_name" content="Skeathy的奇思妙想">
+<meta property="og:description" content="先丢个项目地址： 刻晴办公桌 ，功能介绍可参考 README 或封面图，有兴趣的玩家可以前往 release 下载最新版本体验。 真正意义上第一个附带 GUI 的桌面应用开发，总感觉需要有一篇技术总结。不过我也不是专业程序员，只是简单学过 C，懂一点面向过程与面向对象的区别，之后用 Python 做过数据分析类研究。要是遇到各种不规范问题，欢迎帮我重构，我就随便写着玩的。 这个工具的需求及想法来源">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20221027205559.png">
+<meta property="article:published_time" content="2022-09-23T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-10-27T13:30:46.346Z">
+<meta property="article:author" content="Skeathy">
+<meta property="article:tag" content="原神">
+<meta property="article:tag" content="产品">
+<meta property="article:tag" content="Coding">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="工具">
+<meta property="article:tag" content="OCR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20221027205559.png">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>圣遗物评分工具：刻晴办公桌技术整理与总结 - Skeathy的奇思妙想</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hint.css@2/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"skeathytomas.github.io","root":"/","version":"1.9.2","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":3},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":"G-FJM6NG4T2X","tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+
+  
+    <!-- Google gtag.js -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript('https://www.googletagmanager.com/gtag/js?id=G-FJM6NG4T2X', function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-FJM6NG4T2X');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<!-- hexo injector head_end start --><meta name="google-site-verification" content="gJdLap9gisGh9MvwPvVggcqtTox32KqWLtDnWPDLV3I" /><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title="Skeathy的奇思妙想" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Skeathy的奇思妙想</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20221027205559.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="圣遗物评分工具：刻晴办公桌技术整理与总结"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-09-24 00:00" pubdate>
+          2022年9月24日 凌晨
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          9.8k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          82 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar category-bar" style="margin-right: -1rem">
+    
+
+
+
+
+
+<div class="category-list">
+  
+  
+    
+    
+    
+    <div class="category row nomargin-x">
+      <a class="category-item 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Coding"
+        id="heading-cddcade0405954c4325ee1fb11e3dc0e" role="tab" data-toggle="collapse" href="#collapse-cddcade0405954c4325ee1fb11e3dc0e"
+        aria-expanded="true"
+      >
+        Coding
+        <span class="list-group-count">(3)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-cddcade0405954c4325ee1fb11e3dc0e"
+           role="tabpanel" aria-labelledby="heading-cddcade0405954c4325ee1fb11e3dc0e">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/post/leetcode-no-3-longest-substring-without-repeating-characters/" title="LeetCode No.3 Longest Substring Without Repeating Characters"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">LeetCode No.3 Longest Substring Without Repeating Characters</span>
+        </a>
+      
+    
+      
+      
+        <a href="/post/%E5%9C%A3%E9%81%97%E7%89%A9%E8%AF%84%E5%88%86%E5%B7%A5%E5%85%B7%EF%BC%9A%E5%88%BB%E6%99%B4%E5%8A%9E%E5%85%AC%E6%A1%8C%E6%8A%80%E6%9C%AF%E6%95%B4%E7%90%86%E4%B8%8E%E6%80%BB%E7%BB%93/" title="圣遗物评分工具：刻晴办公桌技术整理与总结"
+           class="list-group-item list-group-item-action
+           active">
+          <span class="category-post">圣遗物评分工具：刻晴办公桌技术整理与总结</span>
+        </a>
+      
+    
+      
+      
+        <a href="/post/%E6%8A%BD%E5%8D%A1%E4%B8%8E%E6%8E%89%E8%90%BD%EF%BC%882-%E9%81%93%E6%A6%82%E7%8E%87%E9%A2%98%EF%BC%89/" title="抽卡与掉落（2 道概率题）"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">抽卡与掉落（2 道概率题）</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+</div>
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">圣遗物评分工具：刻晴办公桌技术整理与总结</h1>
+            
+              <p class="note note-info">
+                
+                  
+                    本文最后更新于：2022年10月27日 晚上
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <p>先丢个项目地址： <a target="_blank" rel="noopener" href="https://github.com/SkeathyTomas/genshin_artifact_auxiliary">刻晴办公桌</a> ，功能介绍可参考 README 或封面图，有兴趣的玩家可以前往 release 下载最新版本体验。</p>
+<p>真正意义上第一个附带 GUI 的桌面应用开发，总感觉需要有一篇技术总结。不过我也不是专业程序员，只是简单学过 C，懂一点面向过程与面向对象的区别，之后用 Python 做过数据分析类研究。要是遇到各种不规范问题，欢迎帮我重构，我就随便写着玩的。</p>
+<p>这个工具的需求及想法来源在之前几篇文章里已经介绍得非常清楚了（虽然后续迭代变化&#x2F;增加了不少需求），本篇主要从技术角度讲讲我是如何作为一个小白将之前的需求实现的。顺带简单聊聊技术之于产品经理这一一直争议不断的话题。</p>
+<h2 id="GUI-框架选择"><a href="#GUI-框架选择" class="headerlink" title="GUI 框架选择"></a>GUI 框架选择</h2><p>在之前需求调研的时候，基本就确定了需要贴图+OCR 两大核心技术。所以相比于其他圣遗物评分工具的网页版、小程序版，本地应用程序基本坐实。简单查了一些常用的 GUI 框架——Qt、Electron、Flutter 等等，可以说 Web 技术的发展完全渗透到本地应用中。</p>
+<p>考虑到自己最近比较熟的是 Python，对于 Web 技术的 JavaScript 又一窍不通，最终选择了 PyQt&#x2F;PySide 框架。算是 Qt 的 Python 版，接口相对来说还是比较全的，大概可以满足我这个稍稍有点不一样的桌面端应用的需求；而且还有一个 GUI 编辑器，方便后期做做 UI 美化什么的。</p>
+<h2 id="需求列表"><a href="#需求列表" class="headerlink" title="需求列表"></a>需求列表</h2><p>面对一个看上去很复杂的应用程序，最重要的是把复杂问题拆分成可解决（查阅相关资料）的小问题。所以在简单学习了一番 Pyside 应用案例之后，便开始构思整体应用的开发。</p>
+<p>主要的需求&#x2F;步骤有：</p>
+<ul>
+<li>贴图窗口</li>
+<li>多窗口</li>
+<li>单贴图窗口关闭</li>
+<li>全局快捷键，关闭&#x2F;重置所有贴图</li>
+<li>鼠标事件跟踪定位贴图，需游戏内鼠标事件可用</li>
+<li>高 DPI 适配</li>
+<li>判定窗口是否存在</li>
+<li>贴图窗口 UI</li>
+<li>主窗口 UI，选择框、搜索功能</li>
+<li>截图与识别</li>
+<li>分数计算</li>
+<li>打包</li>
+<li>……</li>
+</ul>
+<p>其中有不少需求还是在开发过程中遇到的。有些需求很简单，随便查查文档直接就有对应的方法；有些需求则特别复杂，查遍各种资料也未必能有完全符合要求的结果，便对原需求进行适当调整。</p>
+<h2 id="难点与坑"><a href="#难点与坑" class="headerlink" title="难点与坑"></a>难点与坑</h2><p>下面就挑几个难点讲讲，不是随便搜搜就有一堆教程的，花了不少时间摸索实现的需求。</p>
+<h3 id="贴图窗口与多窗口"><a href="#贴图窗口与多窗口" class="headerlink" title="贴图窗口与多窗口"></a>贴图窗口与多窗口</h3><p>用于展示圣遗物评分结果的小贴图，如下图所示。本质上就是一个小窗口+文字显示，所以直接实例化一个窗口就可以。使用 QWidget 建一个新类，然后设置相应的窗口属性（置顶、无边框、隐藏任务栏图标）等等，最后在 MainWindow 里调用这个类即可添加一个贴图窗口。</p>
+<p><img src="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20220929234442.png" srcset="/img/loading.gif" lazyload alt="贴图窗口示例"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">PasteWindow</span>(<span class="hljs-title class_ inherited__">QWidget</span>):<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-built_in">super</span>().__init__()<br><br>        self.setAttribute(Qt.WA_TranslucentBackground)<br>        self.setWindowFlags(Qt.FramelessWindowHint | Qt.WindowStaysOnTopHint | Qt.Tool)<br></code></pre></td></tr></table></figure>
+
+<p>GUI 部分大多还是面向对象的编程思维，一直受制于面向过程的思路，我也是花了一段时间才回忆并适应了各种 Class 内部变量的调用（确实很方便）。</p>
+<p>至于多个贴图窗口的实现，根据屏幕尺寸以及背包&#x2F;角色不同的面板选择，贴图的数量是需要动态管理的。这里简单在 MainWindow 初始化中，就完成所有贴图窗口的初始化，先定义一个窗口组的列表 self.pastes，再根据 row 和 col 确定数量去 append 贴图窗口实例即可。当然因为贴图窗口的定位是根据设备和用户选择写死的，所以在初始化的时候就可以 move 到正确位置（后面有个根据用户选择的是背包还是角色，重新初始化的过程在这里就省略了）。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python">self.pastes = []<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(self.row * self.col):<br>    window = PasteWindow()<br>    self.pastes.append(window)<br>    self.pastes[i].move(self.position[i][<span class="hljs-number">0</span>] / self.SCALE, self.position[i][<span class="hljs-number">1</span>] / self.SCALE)<br></code></pre></td></tr></table></figure>
+
+<h3 id="贴图窗口定位"><a href="#贴图窗口定位" class="headerlink" title="贴图窗口定位"></a>贴图窗口定位</h3><p>贴图的定位问题，包括后续的截图定位，都已经超出了一般的窗口内部应用的范畴。所以整体的定位需要一些屏幕坐标系的知识基础——横向 x 轴，纵向 y 轴，左上角为原点。游戏和本程序是独立的，为了使贴图可以正好在对应圣遗物上，以及截图 OCR 时文字区域截取正确，不得不要求游戏窗口定死。</p>
+<p>然后通过一些作图工具截图、画图、测量坐标，然后写入程序中。不同屏幕的分辨率会有差异，甚至屏幕的长宽比也会不同，导致游戏内部圣遗物网格的布局存在差异。为了适配这些分辨率，需要用到 win32api 获取相关分辨率信息。长宽比一致的分辨率可以通过简单的数学缩放推广演算，不一致的情况就只能重新截图、画图、测量坐标了。（目前适配了 16：9 分辨率，和 2560<code>*</code>1600 分辨率。）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python">hDC = win32gui.GetDC(<span class="hljs-number">0</span>)<br>width_r = win32print.GetDeviceCaps(hDC, win32con.DESKTOPHORZRES)<br>height_r = win32print.GetDeviceCaps(hDC, win32con.DESKTOPVERTRES)<br>width_s = win32api.GetSystemMetrics(<span class="hljs-number">0</span>)<br><span class="hljs-built_in">print</span>(width_r, height_r)<br>SCALE = width_r / width_s<br></code></pre></td></tr></table></figure>
+
+<p>还有需要特别注意的一点，似乎在 pyside6 中默认适配了高 DPI，所以系统缩放会把各种数值进行放大。但是在此程序中，贴图窗口的坐标是真实坐标，无需缩放，因此需要额外计算系统缩放比 SCALE，然后在需要的时候缩小回来。</p>
+<p>由于坐标繁多，包含各种分辨率、截图区域、背包和角色两个页面的不同布局。为了更清晰地展示坐标信息，专门把各种坐标数据独立在了 location.py 中，有需要的时候引用此模块的数据即可，后续有新的分辨率适配任务也可在其中快速添加和修改。</p>
+<h3 id="识别触发行为"><a href="#识别触发行为" class="headerlink" title="识别触发行为"></a>识别触发行为</h3><p>同样，由于触发行为不在游戏主窗口，甚至焦点也不在主窗口中，传统应用内部的鼠标、键盘事件都是无效的，所以自然就想到了系统级的事件监听工具。一番简单的搜索后，采用了 pynput 包进行实现。</p>
+<p>不过整体实现的过程还是有点复杂的。首先需要打通外部的事件信号和 pyside 的信号数据，信号连接的基本数据结构由 pyside 的 Signal 负责。</p>
+<p>由于我这里使用的鼠标事件，所以需要记录鼠标的坐标。通过 pynput 事件信号监听鼠标点击事件，然后在发生事件的时候，把事件数据传回到主窗口中，并与想要达成的目标（比如开启 OCR 识别并显示贴图弹窗，刷新数据）建立连接。这样就可以在游戏窗口中点点鼠标然后启动相应程序贴上评分结果了。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs python">self.manager = OutsideMouseManager()<br>self.manager.right_click.connect(self.open_new_window)<br>self.manager.left_click.connect(self.fresh_main_window)<br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">OutsideMouseManager</span>(<span class="hljs-title class_ inherited__">QObject</span>):<br>    right_click = Signal(<span class="hljs-built_in">int</span>, <span class="hljs-built_in">int</span>)<br>    left_click = Signal(<span class="hljs-built_in">int</span>, <span class="hljs-built_in">int</span>)<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, parent = <span class="hljs-literal">None</span></span>):<br>        <span class="hljs-built_in">super</span>().__init__(parent)<br>        self._listener = mouse.Listener(on_click = self._handle_click)<br>        self._listener.start()<br>    <br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">_handle_click</span>(<span class="hljs-params">self, x, y, button, pressed</span>):<br>        <span class="hljs-keyword">if</span> button == mouse.Button.right <span class="hljs-keyword">and</span> pressed:<br>            self.right_click.emit(x, y)<br>        <span class="hljs-keyword">if</span> button == mouse.Button.left <span class="hljs-keyword">and</span> pressed:<br>            self.left_click.emit(x, y)<br></code></pre></td></tr></table></figure>
+
+<p>不过当我调试完代码，在正常桌面环境运行都正常的时候，打算打开游戏测试下效果，却发现在游戏窗口中毫无反应。一番调试后发现问题竟是在游戏窗口内，鼠标事件在程序中完全监听不到。然后在这一坑中停滞不前了好一会儿，Google 不到有效的资料。尝试过一些其他的鼠标事件库（pydirectinput 等等），说是可以解决游戏窗口监听不到的问题，实际上并没有效果。</p>
+<p>因此一度放弃了使用鼠标事件，而是采用曲线救国的方式：先用键盘&#x2F;主程序按钮事件唤起一个全屏的遮罩窗口，然后在此遮罩窗口中应用窗口内部鼠标监听。为了避免这一遮罩窗口对游戏内容的遮挡，还需要使用较高的透明度（整体思路和截屏软件比较一致）。最后也确实把这一想法整出来了，就放在源代码 <code>test/app_mask.py</code> 中，有兴趣的读者可以了解一下。</p>
+<p>后来意外地在使用其他导出工具时，发现需要管理员权限。于是在管理员模式下打开终端，然后运行程序，发现之前的问题完全得到了解决。也即，无论是运行代码，还是 exe 程序，想要监听游戏窗口内容的鼠标事件，都需要管理员权限。</p>
+<p>此外，还有一个小坑，就是《原神》在全屏模式下，其他窗口的置顶操作优先级都不如游戏窗口高，使得贴图窗口虽然启动了，但都在游戏窗口之下，没有实际的作用。因此需要将游戏调整为窗口化模式，这里使用的是 Alt+Enter 快捷键（似乎是 Unity 3D 封装的快捷键），并以此窗口化模式作为屏幕各坐标定位的依据（前面提到的贴图窗口、截图区域定位问题）。</p>
+<h3 id="OCR"><a href="#OCR" class="headerlink" title="OCR"></a>OCR</h3><p>虽说 OCR 是一个相当古早的技术，市场上应用 OCR 技术的产品多之又多，但我并没有亲自做过 OCR 相关的开发。第一个想到的就是使用成熟的技术——调用 API，貌似许多开源工具也都走了这条路，支持多种 API 混用，自己填写相关 api-key 等等。</p>
+<p>实现 API 也非常简单，注册账号、申请 key，然后使用 requests 库进行网络请求即可。不过简单尝试一些 API 后，发现要么 OCR 效果不尽人意，要么申请各 key 非常麻烦（数量有限，价格略贵，不符合开源精神）。如果是我一个人轻度用用也罢，要是有其他人也想一起用就有点头大了。</p>
+<p>然后找了一些开源方案。PaddlePaddle 安装报错，一番折腾后也没完全搞定，遂放弃。tesseract 安装即用，又有非常好用的 Python 接口，一行代码即可实现对接。之后又在 GitHub 上找到了最新的中文简体语言包，经过测试识别率还算挺高的，遂使用此开源方案。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">txt = pytesseract.image_to_string(img, lang = <span class="hljs-string">&#x27;chi_sim&#x27;</span>)<br></code></pre></td></tr></table></figure>
+
+<p>整体来说，OCR 也算是一门比较成熟的技术了，自己强行去造轮子意义不大。开源方案中可能 PaddlePaddle 更有优势，不过自己也没有继续折腾的精力了，能满足自己的需求就是好的解决方案。</p>
+<p>完成 OCR 初始识别之后就是一些字符处理工作，需要准确提取圣遗物词条的名称及对应的数值。由于识别结果分行展示，同一词条的数据刚好在一行中，可以单独对每行做分析。通过正则表达式提取中文和数字，最后储存相关数据即可。由于攻击、防御、生命存在百分比和数值差异，还需要考虑数值是否是百分比类型，反正我这里就简单 if-else 大法了，简单直白，对于后续计算评分理解起来也方便。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><code class="hljs python">pattern_chinese = <span class="hljs-string">&#x27;[\u4e00-\u9fa5]+&#x27;</span><br>pattern_digit = <span class="hljs-string">&#x27;\d+(\.\d+)?&#x27;</span><br>line = txt.splitlines()<br>result = &#123;&#125;<br><span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> line:<br>    <span class="hljs-keyword">if</span> item != <span class="hljs-string">&#x27;&#x27;</span>:<br>        <span class="hljs-built_in">print</span>(item)<br>        <span class="hljs-keyword">try</span>:<br>            <span class="hljs-comment"># 词条名称</span><br>            name = re.findall(pattern_chinese, item)<br>            name = name[<span class="hljs-number">0</span>]<br>            <span class="hljs-comment"># 数值</span><br>            digit = <span class="hljs-built_in">float</span>(re.search(pattern_digit, item).group())<br>            <span class="hljs-keyword">if</span> name == <span class="hljs-string">&#x27;暴击率&#x27;</span>:<br>                result[<span class="hljs-string">&#x27;暴击率&#x27;</span>] = digit<br>            <span class="hljs-keyword">elif</span> name == <span class="hljs-string">&#x27;暴击伤害&#x27;</span>:<br>                result[<span class="hljs-string">&#x27;暴击伤害&#x27;</span>] = digit<br>            <span class="hljs-keyword">elif</span> name == <span class="hljs-string">&#x27;元素精通&#x27;</span>:<br>                result[<span class="hljs-string">&#x27;元素精通&#x27;</span>] = digit<br>            <span class="hljs-keyword">elif</span> name == <span class="hljs-string">&#x27;攻击力&#x27;</span> <span class="hljs-keyword">and</span> <span class="hljs-string">&#x27;%&#x27;</span> <span class="hljs-keyword">in</span> item:<br>                result[<span class="hljs-string">&#x27;攻击力百分比&#x27;</span>] = digit<br>            <span class="hljs-keyword">elif</span> name == <span class="hljs-string">&#x27;攻击力&#x27;</span>:<br>                result[<span class="hljs-string">&#x27;攻击力&#x27;</span>] = digit<br>            <span class="hljs-keyword">elif</span> name == <span class="hljs-string">&#x27;生命值&#x27;</span> <span class="hljs-keyword">and</span> <span class="hljs-string">&#x27;%&#x27;</span> <span class="hljs-keyword">in</span> item:<br>                result[<span class="hljs-string">&#x27;生命值百分比&#x27;</span>] = digit<br>            <span class="hljs-keyword">elif</span> name == <span class="hljs-string">&#x27;生命值&#x27;</span>:<br>                result[<span class="hljs-string">&#x27;生命值&#x27;</span>] = digit<br>            <span class="hljs-keyword">elif</span> name == <span class="hljs-string">&#x27;防御力&#x27;</span> <span class="hljs-keyword">and</span> <span class="hljs-string">&#x27;%&#x27;</span> <span class="hljs-keyword">in</span> item:<br>                result[<span class="hljs-string">&#x27;防御力百分比&#x27;</span>] = digit<br>            <span class="hljs-keyword">elif</span> name == <span class="hljs-string">&#x27;防御力&#x27;</span>:<br>                result[<span class="hljs-string">&#x27;防御力&#x27;</span>] = digit<br>            <span class="hljs-keyword">elif</span> name == <span class="hljs-string">&#x27;元素充能效率&#x27;</span>:<br>                result[<span class="hljs-string">&#x27;元素充能效率&#x27;</span>] = digit<br>            <span class="hljs-keyword">else</span>:<br>                result[item] = <span class="hljs-number">0</span><br>        <span class="hljs-keyword">except</span>:<br>            result[item] = <span class="hljs-number">0</span><br></code></pre></td></tr></table></figure>
+
+<p>然后是在实际使用中遇到的一些识别问题：</p>
+<ol>
+<li>tesseract 似乎用到了 LSTM，对于上下文重复出现同样的字符容易出现误识别的情况，比如 11.1%，777 之类的数字等等。</li>
+<li>在游戏界面中角色面板装配圣遗物的背景会飘过各种干扰性的遮挡，tesseract 对于这种遮挡基本没招，会大大提高误识别率。</li>
+</ol>
+<p>对于以上两种问题，我也是简单粗暴地处理了一下——对于一些常识别错误的情况，把错误识别的字符替换为原来正确的字符就行。经过几轮校正，虽然误识别还是会发生，但是一般都是遮挡较为严重的特殊情况（这一点确实在技术上很难处理），再重新识别一次一般就没什么问题了。</p>
+<p>又因为整体工具对于重新识别的成本很低（重新点下鼠标），也就基本当作没什么大的问题了，若是之后再遇到必定&#x2F;大概率会识别错误的情况，可以做特殊兼容处理。现在整体识别准确率背包面板 95% 以上，角色面板 60%~70%。</p>
+<h3 id="全局快捷键"><a href="#全局快捷键" class="headerlink" title="全局快捷键"></a>全局快捷键</h3><p>pyside 支持应用内的热键，但是需要窗口处于激活状态，这对于本程序基本是不适用的。因为多数情况下，用户的焦点都在游戏窗口中，需要特意回到主程序再启动热键显然不那么「快捷」。</p>
+<p>吸取了前面窗口外鼠标事件监听的经验，很快想到了使用 pynput 的热键功能。随便找了找 pynput 的热键案例，简单调试了一下便实现了全局热键的功能（其实还是摸索了挺久的）。可以通过自定义按键组合——Ctrl+Shift+Z 关闭所有的贴图窗口（<code>self.reset()</code> 是另外自写的方法）。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs python">window = MainWindow()<br>window.show()<br>window.hotkey()<br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">MainWindow</span>(<span class="hljs-title class_ inherited__">QMainWindow</span>):<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">hotkey</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-keyword">def</span> <span class="hljs-title function_">on_activate</span>():<br>            self.reset()<br>        <br>        <span class="hljs-keyword">def</span> <span class="hljs-title function_">for_canonical</span>(<span class="hljs-params">f</span>):<br>            <span class="hljs-keyword">return</span> <span class="hljs-keyword">lambda</span> k: f(l.canonical(k))<br>        <br>        hotkey = keyboard.HotKey(keyboard.HotKey.parse(<span class="hljs-string">&#x27;&lt;ctrl&gt;+&lt;shift&gt;+z&#x27;</span>), on_activate)<br>        l = keyboard.Listener(<br>            on_press = for_canonical(hotkey.press),<br>            on_release = for_canonical(hotkey.release))<br>        l.start()<br></code></pre></td></tr></table></figure>
+
+<p>值得留意的是，需要在程序实例 window 上直接调用 hotkey()方法，并启动相关键盘事件的监听程序。不过 pynput 热键方法内部还是挺复杂的，我也搞不清具体的作用，只知道自己需要修改的热键组合在哪里，以及在 <code>on_activate()</code> 中定义热键的功能。</p>
+<h3 id="打包"><a href="#打包" class="headerlink" title="打包"></a>打包</h3><p>Python 的打包向来是被诟病的，比如打包后文件巨大。虽然 pyside 有详尽官方的 <a target="_blank" rel="noopener" href="https://github.com/SkeathyTomas/genshin_artifact_auxiliary">打包教程</a> ，不过我依然踩了不少坑，遇到了许多不知道怎么就好了的bug。</p>
+<p>这里还是用了最常用的 pyinstaller 打包，由于这个打包工具会把环境里所有的依赖包都塞进去（不管与项目是否有关），所以最好是专门创建一个打包环境，仅安装项目相关的依赖包。新建一个打包环境 python 自带功能就能实现，以下是 Windows 系统进入虚拟环境的实例。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">python3 -m venv packenv<br>call packenv/scripts/activate.bat<br></code></pre></td></tr></table></figure>
+
+<p>然后就是在虚拟环境里安装必备的包，还有 pyinstaller。pyinstaller 的打包方式也非常简单，直接 <code>pyinstaller app.py</code> 即可，其中 app.py 是整个程序的主程序，其他单文件打包等都可以通过添加相应参数实现，具体的还请参考 pyinstaller 官方文档。</p>
+<p>首次打包后会生成 app.spec 与主程序同名的配置文件，大致内容如下：</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><code class="hljs txt"># -*- mode: python ; coding: utf-8 -*-<br><br>block_cipher = None<br><br>a = Analysis(<br>    [&#x27;app.py&#x27;],<br>    pathex=[],<br>    binaries=[],<br>    datas=[(&#x27;src&#x27;, &#x27;src&#x27;)],<br>    hiddenimports=[],<br>    hookspath=[],<br>    hooksconfig=&#123;&#125;,<br>    runtime_hooks=[],<br>    excludes=[],<br>    win_no_prefer_redirects=False,<br>    win_private_assemblies=False,<br>    cipher=block_cipher,<br>    noarchive=False,<br>)<br>pyz = PYZ(a.pure, a.zipped_data, cipher=block_cipher)<br><br>exe = EXE(<br>    pyz,<br>    a.scripts,<br>    [],<br>    exclude_binaries=True,<br>    name=&#x27;keqing&#x27;,<br>    debug=False,<br>    bootloader_ignore_signals=False,<br>    strip=False,<br>    upx=True,<br>    console=True,<br>    disable_windowed_traceback=False,<br>    argv_emulation=False,<br>    target_arch=None,<br>    codesign_identity=None,<br>    entitlements_file=None,<br>    icon=&#x27;src/keqing.ico&#x27;<br>)<br>coll = COLLECT(<br>    exe,<br>    a.binaries,<br>    a.zipfiles,<br>    a.datas,<br>    strip=False,<br>    upx=True,<br>    upx_exclude=[],<br>    name=&#x27;keqing-0.4.1&#x27;,<br>)<br><br></code></pre></td></tr></table></figure>
+
+<p>配置文件本地保存，修改之后可以直接 <code>pyinstaller app.spec</code> 进行打包，而无需通过命令行记各种参数。这里简单讲一下常用的可修改项：</p>
+<p><code>datas=[(&#39;src&#39;, &#39;src&#39;)]</code> 可以将程序目录的 src 资源文件夹复制到打包好的程序目录中（默认是空的），解决打包后资源丢失的问题。<code>name=&#39;keqing&#39;, icon=&#39;src/keqing.ico&#39;</code> 可以设置打包好后的 exe 文件名称和图标。<code>name=&#39;keqing-0.4.1&#39;</code> 可以管理打包版本，在 dist 目录下生成独立的 keqing-0.4.1 程序目录，有新版本需要重新打包时可以修改。</p>
+<p>还有一个问题，由于本程序使用了 tesseract 第三方程序，打包过程是没有把第三方程序打包好的。所以要是用户没有配置好 tesseract 环境，在任何目录下运行不了 tesseract.exe，就会报错了。为了实现打包环境自带 tesseract 环境，需要对第三方包 pytesseract.py 进行魔改。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># tesseract_cmd = &#x27;tesseract&#x27;</span><br>tesseract_cmd = getcwd() + <span class="hljs-string">&#x27;/pytesseract/tesseract.exe&#x27;</span><br></code></pre></td></tr></table></figure>
+
+<p>其实也很简单，找到 <code>tesseract_cmd</code> 相关参数的一行，修改为以上即可，主要含义为重新定位 tesseract.exe 的目录。之后把整个 tesseract 程序都搬到打包生成的程序目录下，注意 tesseract.exe 相对路径无问题，即搬完的 exe 程序需要在 pytesseract 目录中。（貌似 pytesseract.py 写死了 pytesseract 的一级目录，手动修改会报错。）</p>
+<h2 id="技术力之于产品经理"><a href="#技术力之于产品经理" class="headerlink" title="技术力之于产品经理"></a>技术力之于产品经理</h2><p>兜兜转转终于完成了这么一个小工具的半成品开发，目前项目还有不少问题，大多已在 README 中说明了，一些功能仍在学习和优化中。</p>
+<p>最后趁着这个机会聊一聊产品经理和技术力作为总结。首先，虽然在外行看来我写完这个工具还有有些水平的（不少水友直呼大佬😊），不过我自己还是觉得这只不过是皮毛中的皮毛罢了。大多数只是工具的简单拼凑，核心问题并解决不了，而且能写出来的很大原因是 Python 实在太亲民了。</p>
+<p>然后是关于技术力这个名词，每个职位都需要最核心的技术力，比如产品需要有需求分析与设计的技术力，程序需要有写代码的技术力，UE&#x2F;UI 需要有作图的技术力。产品作为整个研发过程交流的中心，至少也需要了解一些其他两种技术力。</p>
+<p>有一种说法是产品经理可以完全不懂实现层面的技术，然后专注于需求的解读，有什么问题在需求评审的时候再讨论。我实在难以认同这种说法：一来懂一点实现层面的技术可以实现更有效的沟通，需求评审更容易通过，也不容易被程序员拿捏；二来基础层面的技术理解可以更有效地设计产品，不在天方夜谭的需求上耗费时间，及时了解一些新技术的发展也可以拓宽设计思路；三来纯粹的需求层面的技术力整体还是偏弱的，许多项目内的成员也多多少少有一些需求设计的能力，产品的爆火很难归功于纯粹的需求分析和设计，天时地利人和哪一个不重要。强如乔老爷子同样栽倒在 Lisa 项目上，后来的 Macintosh 也败在生态圈的建立上，乔老爷子也因此被董事会扫地出门。</p>
+<p>不过我也不会去深入研究实现方面的技术，而把重心放在自己产品方面的技术力上。比方这个工具，我就懒得去研究性能优化，或者做一个完美的前端，这些都交给真正专业的人士去完成就好。可以的话，我代码都懒得写，不过更多时候代码是一种偷懒技巧，没有人帮忙偷懒，所以还是得自己上。至于自己作为产品的核心竞争力，估计我还得再思考思考。</p>
+<p>最后，我是由衷地钦佩技术能力和技术氛围的。组里最佩服的是技术大佬们，与有技术背景的领导沟通起来也更容易；谷歌的工程师文化，还有技术宅拯救世界什么的，还是有一些向往的。</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Coding/" class="category-chain-item">Coding</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E5%8E%9F%E7%A5%9E/">#原神</a>
+      
+        <a href="/tags/%E4%BA%A7%E5%93%81/">#产品</a>
+      
+        <a href="/tags/Coding/">#Coding</a>
+      
+        <a href="/tags/Python/">#Python</a>
+      
+        <a href="/tags/%E5%B7%A5%E5%85%B7/">#工具</a>
+      
+        <a href="/tags/OCR/">#OCR</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>圣遗物评分工具：刻晴办公桌技术整理与总结</div>
+      <div>https://skeathytomas.github.io/post/圣遗物评分工具：刻晴办公桌技术整理与总结/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Skeathy</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2022年9月24日</div>
+        </div>
+      
+      
+      <div class="license-meta-item">
+        <div>许可协议</div>
+        <div>
+          
+            
+            
+              <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+              <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                <i class="iconfont icon-by"></i>
+              </span>
+              </a>
+            
+          
+        </div>
+      </div>
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/post/%E6%A0%87%E9%A2%98%E6%A0%8F%E5%92%8C%E6%90%9C%E7%B4%A2%E6%A0%8F%E7%9A%84%E6%96%97%E4%BA%89/" title="标题栏和搜索栏的斗争">
+                        <span class="hidden-mobile">标题栏和搜索栏的斗争</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  <article id="comments" lazyload>
+    
+  <div id="gitalk-container"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#gitalk-container', function() {
+      Fluid.utils.createCssLink('/css/gitalk.css')
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', function() {
+        var options = Object.assign(
+          {"clientID":"658faad5dc784f8ec14b","clientSecret":"b1c37d084a7aa0367a81f3a12c863a11ec088597","repo":"skeathytomas.github.io","owner":"skeathytomas","admin":["skeathytomas"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
+          {
+            id: '26c1354822ca57f631182c20cba7f0df'
+          }
+        )
+        var gitalk = new Gitalk(options);
+        gitalk.render('gitalk-container');
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+  </article>
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      headingSelector : CONFIG.toc.headingSelector || 'h1,h2,h3,h4,h5,h6',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      collapseDepth   : CONFIG.toc.collapseDepth || 0,
+      scrollSmooth    : true,
+      headingsOffset  : -boardTop
+    });
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+  });
+</script>
+
+
+  <script src=https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+<!-- hexo injector body_end start --><script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css"><!-- hexo injector body_end end --><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/shifuku.model.json"},"display":{"position":"right","width":200,"height":400},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body>
+</html>

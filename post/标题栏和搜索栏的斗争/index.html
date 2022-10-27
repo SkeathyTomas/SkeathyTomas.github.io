@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20220920115634.png">
 <meta property="article:published_time" content="2022-09-05T05:21:54.000Z">
-<meta property="article:modified_time" content="2022-09-20T07:46:39.780Z">
+<meta property="article:modified_time" content="2022-09-27T12:03:04.000Z">
 <meta property="article:author" content="Skeathy">
 <meta property="article:tag" content="设计">
 <meta property="article:tag" content="产品">
@@ -413,7 +413,7 @@
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2022年9月20日 下午
+                    本文最后更新于：2022年9月27日 晚上
                   
                 
               </p>
@@ -444,7 +444,7 @@
 <p>移动端方面，无论是浏览器还是系统级的搜索，搜索框同样占据顶端标题栏的位置（初始状态下也可能会把搜索框居中，如 Google 首页、高德地图的首页）。并且由于搜索的核心业务，标题栏直接在业务上隐藏或者在搜索栏下补充一个标签页的切换。至于上下滑动后搜索栏和标题栏&#x2F;标签栏的保留情况，一般搜索栏是完全保留的，而标签页似乎保留不保留的情况都较为常见。</p>
 <p><img src="https://i.redd.it/8e3qctu0usd71.jpg" srcset="/img/loading.gif" lazyload alt="iOS Spotlight"></p>
 <h3 id="内容向网站-x2F-应用"><a href="#内容向网站-x2F-应用" class="headerlink" title="内容向网站&#x2F;应用"></a>内容向网站&#x2F;应用</h3><p>以内容推荐为主的网站或应用，比如视频、图文、音乐、购物、通讯等等（其中购物存疑，带有强目的性的购物搜索业务也是很重要的），标题栏和搜索栏的情况又是如何？</p>
-<p>知乎的标题栏&#x2F;导航栏有两层，第一层有一些商业性质，第二层属于内容向分类。而搜索栏置于第一层标题栏，同时在搜索框中默认进行内容推荐。另外，在页面滚动操作后，标题栏置顶并改为一层。使用原第二层标题栏，并对用户信息相关按钮进行省略；搜索栏也不再推荐内容，仅作操作提示。很难对标题栏的两种形态进行分析（最多也只是强行揣测），值得注意的仅仅是搜索栏始终保留（尽管知乎的搜索做得很拉）。</p>
+<p>知乎的标题栏&#x2F;导航栏有两层，第一层有一些商业性质，第二层属于内容向分类。而搜索栏置于第一层标题栏，同时在搜索框中默认进行内容推荐。另外，在页面滚动操作后，标题栏置顶并改为一层。在下滚操作后使用原第二层标题栏，并对用户信息相关按钮进行省略；搜索栏也不再推荐内容，仅作操作提示；上滚操作则回到第一层导航栏。很难对标题栏的两种形态进行分析（最多也只是强行揣测），值得注意的仅仅是搜索栏始终保留（尽管知乎的搜索做得很拉）。</p>
 <p><img src="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20220916142040.png" srcset="/img/loading.gif" lazyload alt="知乎标题栏的两种形态"></p>
 <p>GitHub Explore 页面也有两层标题栏，第一层附带搜索框，第二层以标签页形式进行切换；且在页面滚动后隐藏第一层标题栏，同时搜索栏也无了。可以看出搜索业务在浏览内容推送时弱化，不过这个两层标题栏还带重复的架构着实有点蒙圈。</p>
 <p><img src="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20220916153004.png" srcset="/img/loading.gif" lazyload alt="GitHub 标题栏"></p>
@@ -567,6 +567,12 @@
                 <div class="post-prevnext my-3">
                   <article class="post-prev col-6">
                     
+                    
+                      <a href="/post/%E5%9C%A3%E9%81%97%E7%89%A9%E8%AF%84%E5%88%86%E5%B7%A5%E5%85%B7%EF%BC%9A%E5%88%BB%E6%99%B4%E5%8A%9E%E5%85%AC%E6%A1%8C%E6%8A%80%E6%9C%AF%E6%95%B4%E7%90%86%E4%B8%8E%E6%80%BB%E7%BB%93/" title="圣遗物评分工具：刻晴办公桌技术整理与总结">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">圣遗物评分工具：刻晴办公桌技术整理与总结</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
                     
                   </article>
                   <article class="post-next col-6">
