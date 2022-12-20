@@ -68,7 +68,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"skeathytomas.github.io","root":"/","version":"1.9.2","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":3},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":"G-FJM6NG4T2X","tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"skeathytomas.github.io","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":3},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":"G-FJM6NG4T2X","tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -142,7 +142,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/">
                 <i class="iconfont icon-home-fill"></i>
-                首页
+                <span>首页</span>
               </a>
             </li>
           
@@ -154,7 +154,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/archives/">
                 <i class="iconfont icon-archive-fill"></i>
-                归档
+                <span>归档</span>
               </a>
             </li>
           
@@ -166,7 +166,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/categories/">
                 <i class="iconfont icon-category-fill"></i>
-                分类
+                <span>分类</span>
               </a>
             </li>
           
@@ -178,7 +178,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/tags/">
                 <i class="iconfont icon-tags-fill"></i>
-                标签
+                <span>标签</span>
               </a>
             </li>
           
@@ -190,7 +190,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/about/">
                 <i class="iconfont icon-user-fill"></i>
-                关于
+                <span>关于</span>
               </a>
             </li>
           
@@ -198,15 +198,16 @@
         
           <li class="nav-item" id="search-btn">
             <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
-              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+              <i class="iconfont icon-search"></i>
             </a>
           </li>
           
         
         
           <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
-                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
           </li>
         
       </ul>
@@ -254,6 +255,81 @@
               <div class="col-12 col-md-10 m-auto">
                 
 
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/post/%E6%90%9C%E7%B4%A2%E4%B8%8E%E5%8C%B9%E9%85%8D%E8%A7%84%E5%88%99/" target="_self">
+          <img src="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20221220145316.png" srcset="/img/loading.gif" lazyload alt="搜索与匹配规则">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/post/%E6%90%9C%E7%B4%A2%E4%B8%8E%E5%8C%B9%E9%85%8D%E8%A7%84%E5%88%99/" target="_self">
+          搜索与匹配规则
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt " href="/post/%E6%90%9C%E7%B4%A2%E4%B8%8E%E5%8C%B9%E9%85%8D%E8%A7%84%E5%88%99/" target="_self">
+        <div>
+          对于搜索功能以及搜索想要的结果（匹配规则）一直都不是那么清晰，和开发交流的时候也不好讲清楚到底是怎样的需求。特此整理本篇搜索相关的笔记，供自己与读者学习。当然本篇重点在于搜索行为和用户想要的搜索结果之间的逻辑，而非界面&#x2F;交互层面的元素整理。 什么是搜索简单来说，搜索就是在一个集合里找到想要的元素。 这个集合可能是明确的，比如我桌上堆了一堆书，我知道里面有一本书 A，搜索就是在这堆「明确」
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-10-27 00:00" pubdate>
+              2022-10-27
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E4%BA%A7%E5%93%81/" class="category-chain-item">产品</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E4%BA%A7%E5%93%81/">#产品</a>
+            
+              <a href="/tags/%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C/">#用户体验</a>
+            
+              <a href="/tags/%E6%90%9C%E7%B4%A2/">#搜索</a>
+            
+              <a href="/tags/%E5%8C%B9%E9%85%8D%E8%A7%84%E5%88%99/">#匹配规则</a>
+            
+              <a href="/tags/ChatGPT/">#ChatGPT</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
 
   <div class="row mx-auto index-card">
     
@@ -314,13 +390,13 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/%E5%8E%9F%E7%A5%9E/">#原神</a>
-            
               <a href="/tags/%E4%BA%A7%E5%93%81/">#产品</a>
             
               <a href="/tags/Coding/">#Coding</a>
             
               <a href="/tags/Python/">#Python</a>
+            
+              <a href="/tags/%E5%8E%9F%E7%A5%9E/">#原神</a>
             
               <a href="/tags/%E5%B7%A5%E5%85%B7/">#工具</a>
             
@@ -462,11 +538,11 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
+              <a href="/tags/%E8%AE%BE%E8%AE%A1/">#设计</a>
+            
               <a href="/tags/%E6%B8%B8%E6%88%8F/">#游戏</a>
             
               <a href="/tags/%E5%8E%9F%E7%A5%9E/">#原神</a>
-            
-              <a href="/tags/%E8%AE%BE%E8%AE%A1/">#设计</a>
             
               <a href="/tags/%E7%A8%BB%E5%A6%BB/">#稻妻</a>
             
@@ -535,15 +611,15 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/%E6%B8%B8%E6%88%8F/">#游戏</a>
-            
-              <a href="/tags/%E5%8E%9F%E7%A5%9E/">#原神</a>
-            
               <a href="/tags/%E4%BA%A7%E5%93%81/">#产品</a>
+            
+              <a href="/tags/%E6%B8%B8%E6%88%8F/">#游戏</a>
             
               <a href="/tags/Coding/">#Coding</a>
             
               <a href="/tags/Python/">#Python</a>
+            
+              <a href="/tags/%E5%8E%9F%E7%A5%9E/">#原神</a>
             
               <a href="/tags/%E5%B7%A5%E5%85%B7/">#工具</a>
             
@@ -614,11 +690,11 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
+              <a href="/tags/%E4%BA%A7%E5%93%81/">#产品</a>
+            
               <a href="/tags/%E6%B8%B8%E6%88%8F/">#游戏</a>
             
               <a href="/tags/%E5%8E%9F%E7%A5%9E/">#原神</a>
-            
-              <a href="/tags/%E4%BA%A7%E5%93%81/">#产品</a>
             
               <a href="/tags/%E4%BA%A7%E5%93%81%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3/">#产品需求文档</a>
             
@@ -760,11 +836,11 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
+              <a href="/tags/%E4%BA%A7%E5%93%81/">#产品</a>
+            
               <a href="/tags/%E6%B8%B8%E6%88%8F/">#游戏</a>
             
               <a href="/tags/%E5%8E%9F%E7%A5%9E/">#原神</a>
-            
-              <a href="/tags/%E4%BA%A7%E5%93%81/">#产品</a>
             
               <a href="/tags/%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90/">#需求分析</a>
             
@@ -913,79 +989,6 @@
               <a href="/tags/%E7%96%AB%E6%83%85/">#疫情</a>
             
               <a href="/tags/%E5%AE%85/">#宅</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/post/%E6%8A%BD%E5%8D%A1%E4%B8%8E%E6%8E%89%E8%90%BD%EF%BC%882-%E9%81%93%E6%A6%82%E7%8E%87%E9%A2%98%EF%BC%89/" target="_self">
-          <img src="https://i.imgur.com/dehQeEP.jpg" srcset="/img/loading.gif" lazyload alt="抽卡与掉落（2 道概率题）">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/post/%E6%8A%BD%E5%8D%A1%E4%B8%8E%E6%8E%89%E8%90%BD%EF%BC%882-%E9%81%93%E6%A6%82%E7%8E%87%E9%A2%98%EF%BC%89/" target="_self">
-          抽卡与掉落（2 道概率题）
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt " href="/post/%E6%8A%BD%E5%8D%A1%E4%B8%8E%E6%8E%89%E8%90%BD%EF%BC%882-%E9%81%93%E6%A6%82%E7%8E%87%E9%A2%98%EF%BC%89/" target="_self">
-        <div>
-          之前接触数值的时候遇到了一些有趣的概率题目，涉及氪金游戏的抽卡，物品掉落等等。一直留着代码却迟迟没有记录下来并给出解释，也不知道把代码继续存到那里。于是打算整理成文章，一则可以保留代码，二则可以保留思路甚至与他人交流。 我的解法都是基于代码的硬算，使用了期望的基本定义： $$\mathbb{E}(X)&#x3D;\sum_i^N x_i*p_i$$ 即事件*概率的累加。 题目 1：伪随机思路的抽卡
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-04-23 13:49" pubdate>
-              2022-04-23
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/Coding/" class="category-chain-item">Coding</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E6%B8%B8%E6%88%8F/">#游戏</a>
-            
-              <a href="/tags/Coding/">#Coding</a>
-            
-              <a href="/tags/Python/">#Python</a>
-            
-              <a href="/tags/%E6%A6%82%E7%8E%87/">#概率</a>
             
           </div>
         
