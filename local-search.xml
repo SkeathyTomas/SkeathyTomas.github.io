@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>总会踩一次 Python 引用与拷贝的坑</title>
+    <link href="/post/%E6%80%BB%E4%BC%9A%E8%B8%A9%E4%B8%80%E6%AC%A1-python-%E5%BC%95%E7%94%A8%E4%B8%8E%E6%8B%B7%E8%B4%9D%E7%9A%84%E5%9D%91/"/>
+    <url>/post/%E6%80%BB%E4%BC%9A%E8%B8%A9%E4%B8%80%E6%AC%A1-python-%E5%BC%95%E7%94%A8%E4%B8%8E%E6%8B%B7%E8%B4%9D%E7%9A%84%E5%9D%91/</url>
+    
+    <content type="html"><![CDATA[<p>起因是在写<a href="https://github.com/SkeathyTomas/genshin_artifact_auxiliary">刻晴办公桌</a>新功能本地数据保存的时候，需要加载与更新数据，然后就莫名踩了一次动态数据类型的坑。正好借着这个机会整理一下 Python 中的数据类型，以及引用和拷贝相关的知识。虽说网上总结很多，但这一次想要自己记录一遍。</p><h2 id="Python-的数据类型与赋值"><a href="#Python-的数据类型与赋值" class="headerlink" title="Python 的数据类型与赋值"></a>Python 的数据类型与赋值</h2><p>Python 中变量不需要声明，而是用赋值（&#x3D;）的方式创建。某种意义上，变量就像指针（但是这个指针也没有类型），指向内存中具体的数据，而赋值就是完成「指向」这一操作。如果等号右边是具体的数据，也顺便完成了数据在内存中的创建操作。</p><p>虽说变量没有类型一说，但是具体的数据 Python 还是有类型的，Python 3 有 6 种标准数据类型——Number（数字）、String（字符串）、Tuple（元组）、List（列表）、Set（集合）和 Dictionary（字典）。其中前三种是静态数据类型（不可变），后三种是动态数据类型（可变），具体每一种数据类型的含义不再继续展开。可变与不可变的含义为是否可对该内存中的数据进行修改。</p><h2 id="引用与拷贝"><a href="#引用与拷贝" class="headerlink" title="引用与拷贝"></a>引用与拷贝</h2><p>从本质上讲，赋值操作即是一种引用，前面提到的「指向」和「引用」含义是一致的。除了初始化这种建立变量到内存数据的引用，对旧变量重新赋值、变量之间互相赋值也是常见的引用，比如<code>b = a</code>。</p><p>重新赋值是把就旧变量指向新的数据，而引用变量并不是再创建一份数据，而是把新变量指向赋值变量引用的数据。</p><p><img src="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20221230145626.png" alt="静态变量引用"></p><p>以上对于静态数据和动态数据（整体）都是成立的，但是动态数据包含索引操作，比如需要改变列表中第一个数值，就会用到<code>a[0] = xx</code>这样的操作。前面提到动态数据是可变的，索引赋值就是改变同一内存地址数据的操作。所以如果<code>a, b</code> 同时引用了一个列表数据，而对<code>b</code>进行了索引赋值修改，由于<code>a</code>还是指向了同一个已修改的数据，所以会出现反直觉的<code>a</code>也修改了数据的情况。</p><p><img src="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20221230151319.png" alt="动态数据索引赋值"></p><p>补充一下代码及输出：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span>a = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>b = a<br><span class="hljs-meta">&gt;&gt;&gt; </span>b[<span class="hljs-number">0</span>] = <span class="hljs-number">2</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>b<br>[<span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>a<br>[<span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]<br></code></pre></td></tr></table></figure><p>不过这样引用肯定会遇到需求上的问题——比如有一份原始数据，现要拿出一部分修改&#x2F;添加，经过校验后返回数据。因为引用数据的修改直接修改了原数据，自然是不妥的。所以需要引入拷贝的概念，即创建一份新内存地址的数据，数据内容和原来一样，但互相独立。</p><h2 id="浅拷贝与深拷贝"><a href="#浅拷贝与深拷贝" class="headerlink" title="浅拷贝与深拷贝"></a>浅拷贝与深拷贝</h2><p>数据类型可以嵌套，比如列表中套列表。浅拷贝仅拷贝第一层数据，嵌套内的数据还是指向原地址；而深拷贝会将所有嵌套结构都拷贝一份，真正做到两个数据完全独立。</p><p>浅拷贝的方法是切片操作（<code>a[:]</code>）、数据类型自带的<code>copy()</code>方法或是<code>copy</code>模块的<code>copy()</code>方法，深拷贝的方法是<code>copy</code>模块的<code>deepcopy()</code>方法。以上概念都过于抽象，建议结合实例进行理解。</p><p>实例一：浅拷贝对第一层进行拷贝处理，所以<code>b[0]=[2,2]</code>并不会对<code>a</code>进行修改，但<code>b[0][0]=2</code>由于对第二层修改了数据，<code>a</code>也就随之变动。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span>a=[[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>],<span class="hljs-number">3</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>b=a.copy()<br><span class="hljs-meta">&gt;&gt;&gt; </span>b[<span class="hljs-number">0</span>]=[<span class="hljs-number">2</span>,<span class="hljs-number">2</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>b<br>[[<span class="hljs-number">2</span>, <span class="hljs-number">2</span>], <span class="hljs-number">3</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>a<br>[[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>], <span class="hljs-number">3</span>]<br></code></pre></td></tr></table></figure><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span>a=[[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>],<span class="hljs-number">3</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>b=a.copy()<br><span class="hljs-meta">&gt;&gt;&gt; </span>b[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>]=<span class="hljs-number">2</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>b<br>[[<span class="hljs-number">2</span>, <span class="hljs-number">2</span>], <span class="hljs-number">3</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>a<br>[[<span class="hljs-number">2</span>, <span class="hljs-number">2</span>], <span class="hljs-number">3</span>]<br></code></pre></td></tr></table></figure><p>实例二：深拷贝完全独立数据，所以无论<code>b</code>怎么修改，<code>a</code>不会变动。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> copy<br><span class="hljs-meta">&gt;&gt;&gt; </span>a=[[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>],<span class="hljs-number">3</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>b=copy.deepcopy(a)<br><span class="hljs-meta">&gt;&gt;&gt; </span>b[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>]=<span class="hljs-number">2</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>b<br>[[<span class="hljs-number">2</span>, <span class="hljs-number">2</span>], <span class="hljs-number">3</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>a<br>[[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>], <span class="hljs-number">3</span>]<br></code></pre></td></tr></table></figure><p>再补一张<a href="https://draapho.github.io/2016/11/21/1618-python-variable/">大佬</a>做的图帮助理解（切片也是浅拷贝哦）：</p><p><img src="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20221230160051.png" alt="image.png"></p><h2 id="踩坑场景回顾"><a href="#踩坑场景回顾" class="headerlink" title="踩坑场景回顾"></a>踩坑场景回顾</h2><p>回到自己的项目和踩坑时的场景：因为要做圣遗物数据导出与读取功能，避免不了一些本地数据的增删改查操作（实际上删还没做），于是顺利踩坑。当初觉得这种互相引用的方式很蠢，自己写代码的时候肯定会避免这种误导性写法，结果蠢的还是自己。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">self.artifact = self.artifacts[self.<span class="hljs-built_in">type</span>][self.archive.currentText()]<br></code></pre></td></tr></table></figure><p>等号右侧是读取了所有圣遗物保存方案中的一个，数据类型是字典，其中<code>self.archive.currentText</code>是下拉选择框中的方案名称。选择某一个选项相当于读取了数据，并呈现相关数据结果，也即实时数据。因为本工具实时数据结果就是<code>self.artifact</code>，所以当进行了新的识别后，数据就自动更新到<code>self.artifacts</code>这个所有的方案数据中了。</p><p>当初搜遍整个文档，debug 许久，也不明白究竟自己对<code>self.artifacts</code>的数据更新是在哪里完成的，直至回想起 Python 的数据类型。解决方案也非常简单，由于直接对最深层进行拷贝，也不会有浅拷贝与深拷贝相关问题。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">self.artifact = self.artifacts[self.<span class="hljs-built_in">type</span>][self.archive.currentText()].copy()<br></code></pre></td></tr></table></figure><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>尽管自己可能并不是那么适合做基础技术科普，讲得可能没那么专业全面，可能还有潜在错误（如果有的话请尽快通知我），不过本文的主要目的还是给自己长个记性。</p><p>如果下次遇到了莫名其妙的数据突然就被更改了的情况，可能就是在引用和拷贝上踩了坑，不论是我还是身为读者的你。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Coding</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Coding</tag>
+      
+      <tag>Python</tag>
+      
+      <tag>数据结构</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>搜索与匹配规则</title>
     <link href="/post/%E6%90%9C%E7%B4%A2%E4%B8%8E%E5%8C%B9%E9%85%8D%E8%A7%84%E5%88%99/"/>
     <url>/post/%E6%90%9C%E7%B4%A2%E4%B8%8E%E5%8C%B9%E9%85%8D%E8%A7%84%E5%88%99/</url>
@@ -122,8 +151,6 @@
       <tag>游戏</tag>
       
       <tag>原神</tag>
-      
-      <tag>稻妻</tag>
       
     </tags>
     
@@ -439,9 +466,9 @@
       
       <tag>Coding</tag>
       
-      <tag>Algorithm</tag>
-      
       <tag>Python</tag>
+      
+      <tag>Algorithm</tag>
       
       <tag>LeetCode</tag>
       

@@ -16,27 +16,28 @@
   <meta name="author" content="Skeathy">
   <meta name="keywords" content="互联网,产品经理,设计,生活,游戏,动漫,Coding">
   
-    <meta name="description" content="This is a test for post writing in English, as well as my writing skill practice. The test is to check the Google search data in Google Search Console for English posts. I chose LeetCode problems for">
+    <meta name="description" content="起因是在写刻晴办公桌新功能本地数据保存的时候，需要加载与更新数据，然后就莫名踩了一次动态数据类型的坑。正好借着这个机会整理一下 Python 中的数据类型，以及引用和拷贝相关的知识。虽说网上总结很多，但这一次想要自己记录一遍。 Python 的数据类型与赋值Python 中变量不需要声明，而是用赋值（&#x3D;）的方式创建。某种意义上，变量就像指针（但是这个指针也没有类型），指向内存中具体的数据">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode No.3 Longest Substring Without Repeating Characters">
-<meta property="og:url" content="https://skeathytomas.github.io/post/leetcode-no-3-longest-substring-without-repeating-characters/index.html">
+<meta property="og:title" content="总会踩一次 Python 引用与拷贝的坑">
+<meta property="og:url" content="https://skeathytomas.github.io/post/%E6%80%BB%E4%BC%9A%E8%B8%A9%E4%B8%80%E6%AC%A1-python-%E5%BC%95%E7%94%A8%E4%B8%8E%E6%8B%B7%E8%B4%9D%E7%9A%84%E5%9D%91/index.html">
 <meta property="og:site_name" content="智商衰退之后">
-<meta property="og:description" content="This is a test for post writing in English, as well as my writing skill practice. The test is to check the Google search data in Google Search Console for English posts. I chose LeetCode problems for">
+<meta property="og:description" content="起因是在写刻晴办公桌新功能本地数据保存的时候，需要加载与更新数据，然后就莫名踩了一次动态数据类型的坑。正好借着这个机会整理一下 Python 中的数据类型，以及引用和拷贝相关的知识。虽说网上总结很多，但这一次想要自己记录一遍。 Python 的数据类型与赋值Python 中变量不需要声明，而是用赋值（&#x3D;）的方式创建。某种意义上，变量就像指针（但是这个指针也没有类型），指向内存中具体的数据">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-02-23T08:03:33.000Z">
-<meta property="article:modified_time" content="2022-06-03T12:38:45.082Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20221230160051.png">
+<meta property="article:published_time" content="2022-12-11T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-12-30T09:12:31.000Z">
 <meta property="article:author" content="Skeathy">
 <meta property="article:tag" content="Coding">
 <meta property="article:tag" content="Python">
-<meta property="article:tag" content="Algorithm">
-<meta property="article:tag" content="LeetCode">
+<meta property="article:tag" content="数据结构">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20221230160051.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>LeetCode No.3 Longest Substring Without Repeating Characters - 智商衰退之后</title>
+  <title>总会踩一次 Python 引用与拷贝的坑 - 智商衰退之后</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -224,13 +225,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('https://clearvision.gitlab.io/images/sapphire.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20221230160051.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="LeetCode No.3 Longest Substring Without Repeating Characters"></span>
+            <span id="subtitle" data-typed-text="总会踩一次 Python 引用与拷贝的坑"></span>
           
         </div>
 
@@ -241,8 +242,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-02-23 16:03" pubdate>
-          2022年2月23日 下午
+        <time datetime="2022-12-12 00:00" pubdate>
+          2022年12月12日 凌晨
         </time>
       </span>
     
@@ -253,7 +254,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.9k 字
+          2.3k 字
         
       </span>
     
@@ -264,7 +265,7 @@
         
         
         
-          17 分钟
+          20 分钟
         
       </span>
     
@@ -330,7 +331,7 @@
       
         <a href="/post/leetcode-no-3-longest-substring-without-repeating-characters/" title="LeetCode No.3 Longest Substring Without Repeating Characters"
            class="list-group-item list-group-item-action
-           active">
+           ">
           <span class="category-post">LeetCode No.3 Longest Substring Without Repeating Characters</span>
         </a>
       
@@ -348,7 +349,7 @@
       
         <a href="/post/%E6%80%BB%E4%BC%9A%E8%B8%A9%E4%B8%80%E6%AC%A1-python-%E5%BC%95%E7%94%A8%E4%B8%8E%E6%8B%B7%E8%B4%9D%E7%9A%84%E5%9D%91/" title="总会踩一次 Python 引用与拷贝的坑"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">总会踩一次 Python 引用与拷贝的坑</span>
         </a>
       
@@ -381,12 +382,12 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">LeetCode No.3 Longest Substring Without Repeating Characters</h1>
+            <h1 style="display: none">总会踩一次 Python 引用与拷贝的坑</h1>
             
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2022年6月3日 晚上
+                    本文最后更新于：2022年12月30日 下午
                   
                 
               </p>
@@ -394,30 +395,39 @@
             
               <div class="markdown-body">
                 
-                <p>This is a test for post writing in English, as well as my writing skill practice. The test is to check the Google search data in Google Search Console for English posts.</p>
-<p>I chose LeetCode problems for the test. Since I am not an expert in algorithm, I just show my solutions with explanations for the problems and do not pursue better performance. The series of the posts will be updated due to my personal interest if the problem attracts me, and more importantly, I am able to solve the problems 😛.</p>
-<p>P.S. I use Python 3 in LeetCode.</p>
-<h2 id="Problem-Description"><a href="#Problem-Description" class="headerlink" title="Problem Description"></a>Problem Description</h2><p>Check the original <a target="_blank" rel="noopener" href="https://leetcode.com/problems/longest-substring-without-repeating-characters/">URL</a>:</p>
-<blockquote>
-<p>Given a string <code>s</code>, find the length of the <strong>longest substring</strong> without repeating characters.</p>
-<figure class="highlight vbnet"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs vbnet">Example <span class="hljs-number">1</span>:<br><br><span class="hljs-symbol">Input:</span> s = <span class="hljs-string">&quot;abcabcbb&quot;</span><br><span class="hljs-symbol">Output:</span> <span class="hljs-number">3</span><br><span class="hljs-symbol">xplanation:</span> The answer <span class="hljs-built_in">is</span> <span class="hljs-string">&quot;abc&quot;</span>, <span class="hljs-keyword">with</span> the length <span class="hljs-keyword">of</span> <span class="hljs-number">3</span>.<br></code></pre></td></tr></table></figure>
+                <p>起因是在写<a target="_blank" rel="noopener" href="https://github.com/SkeathyTomas/genshin_artifact_auxiliary">刻晴办公桌</a>新功能本地数据保存的时候，需要加载与更新数据，然后就莫名踩了一次动态数据类型的坑。正好借着这个机会整理一下 Python 中的数据类型，以及引用和拷贝相关的知识。虽说网上总结很多，但这一次想要自己记录一遍。</p>
+<h2 id="Python-的数据类型与赋值"><a href="#Python-的数据类型与赋值" class="headerlink" title="Python 的数据类型与赋值"></a>Python 的数据类型与赋值</h2><p>Python 中变量不需要声明，而是用赋值（&#x3D;）的方式创建。某种意义上，变量就像指针（但是这个指针也没有类型），指向内存中具体的数据，而赋值就是完成「指向」这一操作。如果等号右边是具体的数据，也顺便完成了数据在内存中的创建操作。</p>
+<p>虽说变量没有类型一说，但是具体的数据 Python 还是有类型的，Python 3 有 6 种标准数据类型——Number（数字）、String（字符串）、Tuple（元组）、List（列表）、Set（集合）和 Dictionary（字典）。其中前三种是静态数据类型（不可变），后三种是动态数据类型（可变），具体每一种数据类型的含义不再继续展开。可变与不可变的含义为是否可对该内存中的数据进行修改。</p>
+<h2 id="引用与拷贝"><a href="#引用与拷贝" class="headerlink" title="引用与拷贝"></a>引用与拷贝</h2><p>从本质上讲，赋值操作即是一种引用，前面提到的「指向」和「引用」含义是一致的。除了初始化这种建立变量到内存数据的引用，对旧变量重新赋值、变量之间互相赋值也是常见的引用，比如<code>b = a</code>。</p>
+<p>重新赋值是把就旧变量指向新的数据，而引用变量并不是再创建一份数据，而是把新变量指向赋值变量引用的数据。</p>
+<p><img src="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20221230145626.png" srcset="/img/loading.gif" lazyload alt="静态变量引用"></p>
+<p>以上对于静态数据和动态数据（整体）都是成立的，但是动态数据包含索引操作，比如需要改变列表中第一个数值，就会用到<code>a[0] = xx</code>这样的操作。前面提到动态数据是可变的，索引赋值就是改变同一内存地址数据的操作。所以如果<code>a, b</code> 同时引用了一个列表数据，而对<code>b</code>进行了索引赋值修改，由于<code>a</code>还是指向了同一个已修改的数据，所以会出现反直觉的<code>a</code>也修改了数据的情况。</p>
+<p><img src="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20221230151319.png" srcset="/img/loading.gif" lazyload alt="动态数据索引赋值"></p>
+<p>补充一下代码及输出：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span>a = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>b = a<br><span class="hljs-meta">&gt;&gt;&gt; </span>b[<span class="hljs-number">0</span>] = <span class="hljs-number">2</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>b<br>[<span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>a<br>[<span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]<br></code></pre></td></tr></table></figure>
 
-<figure class="highlight vbnet"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs vbnet">Example <span class="hljs-number">2</span>:<br><br><span class="hljs-symbol">Input:</span> s = <span class="hljs-string">&quot;bbbbb&quot;</span><br><span class="hljs-symbol">Output:</span> <span class="hljs-number">1</span><br><span class="hljs-symbol">Explanation:</span> The answer <span class="hljs-built_in">is</span> <span class="hljs-string">&quot;b&quot;</span>, <span class="hljs-keyword">with</span> the length <span class="hljs-keyword">of</span> <span class="hljs-number">1</span>.<br></code></pre></td></tr></table></figure>
+<p>不过这样引用肯定会遇到需求上的问题——比如有一份原始数据，现要拿出一部分修改&#x2F;添加，经过校验后返回数据。因为引用数据的修改直接修改了原数据，自然是不妥的。所以需要引入拷贝的概念，即创建一份新内存地址的数据，数据内容和原来一样，但互相独立。</p>
+<h2 id="浅拷贝与深拷贝"><a href="#浅拷贝与深拷贝" class="headerlink" title="浅拷贝与深拷贝"></a>浅拷贝与深拷贝</h2><p>数据类型可以嵌套，比如列表中套列表。浅拷贝仅拷贝第一层数据，嵌套内的数据还是指向原地址；而深拷贝会将所有嵌套结构都拷贝一份，真正做到两个数据完全独立。</p>
+<p>浅拷贝的方法是切片操作（<code>a[:]</code>）、数据类型自带的<code>copy()</code>方法或是<code>copy</code>模块的<code>copy()</code>方法，深拷贝的方法是<code>copy</code>模块的<code>deepcopy()</code>方法。以上概念都过于抽象，建议结合实例进行理解。</p>
+<p>实例一：浅拷贝对第一层进行拷贝处理，所以<code>b[0]=[2,2]</code>并不会对<code>a</code>进行修改，但<code>b[0][0]=2</code>由于对第二层修改了数据，<code>a</code>也就随之变动。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span>a=[[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>],<span class="hljs-number">3</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>b=a.copy()<br><span class="hljs-meta">&gt;&gt;&gt; </span>b[<span class="hljs-number">0</span>]=[<span class="hljs-number">2</span>,<span class="hljs-number">2</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>b<br>[[<span class="hljs-number">2</span>, <span class="hljs-number">2</span>], <span class="hljs-number">3</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>a<br>[[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>], <span class="hljs-number">3</span>]<br></code></pre></td></tr></table></figure>
 
-<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs livecodeserver">Example <span class="hljs-number">3</span>:<br><br>Input: s = <span class="hljs-string">&quot;pwwkew&quot;</span><br>Output: <span class="hljs-number">3</span><br>Explanation: The answer is <span class="hljs-string">&quot;wke&quot;</span>, <span class="hljs-keyword">with</span> <span class="hljs-keyword">the</span> <span class="hljs-built_in">length</span> <span class="hljs-keyword">of</span> <span class="hljs-number">3.</span><br>Notice that <span class="hljs-keyword">the</span> answer must be <span class="hljs-keyword">a</span> substring, <span class="hljs-string">&quot;pwke&quot;</span> is <span class="hljs-keyword">a</span> subsequence <span class="hljs-keyword">and</span> <span class="hljs-keyword">not</span> <span class="hljs-keyword">a</span> substring.<br></code></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span>a=[[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>],<span class="hljs-number">3</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>b=a.copy()<br><span class="hljs-meta">&gt;&gt;&gt; </span>b[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>]=<span class="hljs-number">2</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>b<br>[[<span class="hljs-number">2</span>, <span class="hljs-number">2</span>], <span class="hljs-number">3</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>a<br>[[<span class="hljs-number">2</span>, <span class="hljs-number">2</span>], <span class="hljs-number">3</span>]<br></code></pre></td></tr></table></figure>
 
-<p><strong>Constraints:</strong></p>
-<ul>
-<li><code>0 &lt;= s.length &lt;= 5 * 104</code></li>
-<li><code>s</code> consists of English letters, digits, symbols and spaces.</li>
-</ul>
-</blockquote>
-<h2 id="My-Idea"><a href="#My-Idea" class="headerlink" title="My Idea"></a>My Idea</h2><p>The main idea is to read the items in the string one by one, meanwhile construct a new substring to store the read items. The length of the new substring should be counted as our goal is to find the maximum length.</p>
-<p>Here comes to the duplicated items:</p>
-<p>In the loop of item reading, if we find the newest item is duplicated in previous substring, we should update the substring to avoid duplication with trim the early used item. For example, if the previous substring is <code>***x***</code> (<code>*</code> is not <code>x</code>) and the newest item is <code>x</code>, then the previous 4 items should be trimmed and substring should be update to <code>***x</code>. So the method is to find the index of the duplicated item and complete the trim.</p>
-<p>After all the items are read, return the maximum length of substrings.</p>
-<h2 id="My-Code"><a href="#My-Code" class="headerlink" title="My Code"></a>My Code</h2><p>Here is my submitted code:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span>:<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">lengthOfLongestSubstring</span>(<span class="hljs-params">self, s: <span class="hljs-built_in">str</span></span>) -&gt; <span class="hljs-built_in">int</span>:<br>        <span class="hljs-built_in">max</span> = <span class="hljs-number">0</span><br>        a = []<br>        count = <span class="hljs-number">0</span><br>        <span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> s:<br>            <span class="hljs-keyword">if</span> item <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> a:<br>                a.append(item)<br>                count = count + <span class="hljs-number">1</span><br>                <span class="hljs-keyword">if</span> count &gt; <span class="hljs-built_in">max</span>:<br>                    <span class="hljs-built_in">max</span> = count<br>            <span class="hljs-keyword">else</span>:<br>                index = a.index(item)<br>                a = a[index + <span class="hljs-number">1</span>::]<br>                a.append(item)<br>                count = <span class="hljs-built_in">len</span>(a)<br>        <span class="hljs-keyword">return</span> <span class="hljs-built_in">max</span><br></code></pre></td></tr></table></figure>
+<p>实例二：深拷贝完全独立数据，所以无论<code>b</code>怎么修改，<code>a</code>不会变动。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> copy<br><span class="hljs-meta">&gt;&gt;&gt; </span>a=[[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>],<span class="hljs-number">3</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>b=copy.deepcopy(a)<br><span class="hljs-meta">&gt;&gt;&gt; </span>b[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>]=<span class="hljs-number">2</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>b<br>[[<span class="hljs-number">2</span>, <span class="hljs-number">2</span>], <span class="hljs-number">3</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>a<br>[[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>], <span class="hljs-number">3</span>]<br></code></pre></td></tr></table></figure>
+
+<p>再补一张<a target="_blank" rel="noopener" href="https://draapho.github.io/2016/11/21/1618-python-variable/">大佬</a>做的图帮助理解（切片也是浅拷贝哦）：</p>
+<p><img src="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20221230160051.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<h2 id="踩坑场景回顾"><a href="#踩坑场景回顾" class="headerlink" title="踩坑场景回顾"></a>踩坑场景回顾</h2><p>回到自己的项目和踩坑时的场景：因为要做圣遗物数据导出与读取功能，避免不了一些本地数据的增删改查操作（实际上删还没做），于是顺利踩坑。当初觉得这种互相引用的方式很蠢，自己写代码的时候肯定会避免这种误导性写法，结果蠢的还是自己。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">self.artifact = self.artifacts[self.<span class="hljs-built_in">type</span>][self.archive.currentText()]<br></code></pre></td></tr></table></figure>
+
+<p>等号右侧是读取了所有圣遗物保存方案中的一个，数据类型是字典，其中<code>self.archive.currentText</code>是下拉选择框中的方案名称。选择某一个选项相当于读取了数据，并呈现相关数据结果，也即实时数据。因为本工具实时数据结果就是<code>self.artifact</code>，所以当进行了新的识别后，数据就自动更新到<code>self.artifacts</code>这个所有的方案数据中了。</p>
+<p>当初搜遍整个文档，debug 许久，也不明白究竟自己对<code>self.artifacts</code>的数据更新是在哪里完成的，直至回想起 Python 的数据类型。解决方案也非常简单，由于直接对最深层进行拷贝，也不会有浅拷贝与深拷贝相关问题。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">self.artifact = self.artifacts[self.<span class="hljs-built_in">type</span>][self.archive.currentText()].copy()<br></code></pre></td></tr></table></figure>
+
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>尽管自己可能并不是那么适合做基础技术科普，讲得可能没那么专业全面，可能还有潜在错误（如果有的话请尽快通知我），不过本文的主要目的还是给自己长个记性。</p>
+<p>如果下次遇到了莫名其妙的数据突然就被更改了的情况，可能就是在引用和拷贝上踩了坑，不论是我还是身为读者的你。</p>
 
                 
               </div>
@@ -455,9 +465,7 @@
       
         <a href="/tags/Python/">#Python</a>
       
-        <a href="/tags/Algorithm/">#Algorithm</a>
-      
-        <a href="/tags/LeetCode/">#LeetCode</a>
+        <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">#数据结构</a>
       
     </div>
   
@@ -469,8 +477,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>LeetCode No.3 Longest Substring Without Repeating Characters</div>
-      <div>https://skeathytomas.github.io/post/leetcode-no-3-longest-substring-without-repeating-characters/</div>
+      <div>总会踩一次 Python 引用与拷贝的坑</div>
+      <div>https://skeathytomas.github.io/post/总会踩一次-python-引用与拷贝的坑/</div>
     </div>
     <div class="license-meta">
       
@@ -482,7 +490,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年2月23日</div>
+          <div>2022年12月12日</div>
         </div>
       
       
@@ -514,18 +522,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/post/%E4%BA%A4%E4%BA%92%E8%AE%BE%E8%AE%A1%E7%90%86%E8%AE%BA%E5%9C%A8%E6%B8%B8%E6%88%8F%E5%9C%B0%E5%9B%BE%E8%AE%BE%E8%AE%A1%E4%B8%8A%E7%9A%84%E5%BA%94%E7%94%A8/" title="交互设计理论在游戏地图设计上的应用">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">交互设计理论在游戏地图设计上的应用</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/post/%E8%81%8A%E4%B8%80%E8%81%8A%E7%A4%BE%E4%BA%A4%E2%80%94%E2%80%94%E5%8F%AF%E8%AF%9Dapp%E4%BA%A7%E5%93%81%E4%BD%93%E9%AA%8C%E6%89%8B%E8%AE%B0/" title="聊一聊社交——可话App产品体验手记">
-                        <span class="hidden-mobile">聊一聊社交——可话App产品体验手记</span>
+                      <a href="/post/%E6%90%9C%E7%B4%A2%E4%B8%8E%E5%8C%B9%E9%85%8D%E8%A7%84%E5%88%99/" title="搜索与匹配规则">
+                        <span class="hidden-mobile">搜索与匹配规则</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -548,7 +550,7 @@
         var options = Object.assign(
           {"clientID":"658faad5dc784f8ec14b","clientSecret":"b1c37d084a7aa0367a81f3a12c863a11ec088597","repo":"skeathytomas.github.io","owner":"skeathytomas","admin":["skeathytomas"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
           {
-            id: '73dd288eb0ed6e0e8b6319c20d687c63'
+            id: '272fab26394d8becd8f6080aa29ad1b5'
           }
         )
         var gitalk = new Gitalk(options);
