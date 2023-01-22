@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20221230160051.png">
 <meta property="article:published_time" content="2022-12-11T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-12-30T09:12:31.000Z">
+<meta property="article:modified_time" content="2022-12-30T10:08:32.760Z">
 <meta property="article:author" content="Skeathy">
 <meta property="article:tag" content="Coding">
 <meta property="article:tag" content="Python">
@@ -387,7 +387,7 @@
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2022年12月30日 下午
+                    本文最后更新于：2022年12月30日 晚上
                   
                 
               </p>
@@ -418,7 +418,7 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> copy<br><span class="hljs-meta">&gt;&gt;&gt; </span>a=[[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>],<span class="hljs-number">3</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>b=copy.deepcopy(a)<br><span class="hljs-meta">&gt;&gt;&gt; </span>b[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>]=<span class="hljs-number">2</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>b<br>[[<span class="hljs-number">2</span>, <span class="hljs-number">2</span>], <span class="hljs-number">3</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>a<br>[[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>], <span class="hljs-number">3</span>]<br></code></pre></td></tr></table></figure>
 
 <p>再补一张<a target="_blank" rel="noopener" href="https://draapho.github.io/2016/11/21/1618-python-variable/">大佬</a>做的图帮助理解（切片也是浅拷贝哦）：</p>
-<p><img src="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20221230160051.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<p><img src="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20221230160051.png" srcset="/img/loading.gif" lazyload alt="浅拷贝与深拷贝"></p>
 <h2 id="踩坑场景回顾"><a href="#踩坑场景回顾" class="headerlink" title="踩坑场景回顾"></a>踩坑场景回顾</h2><p>回到自己的项目和踩坑时的场景：因为要做圣遗物数据导出与读取功能，避免不了一些本地数据的增删改查操作（实际上删还没做），于是顺利踩坑。当初觉得这种互相引用的方式很蠢，自己写代码的时候肯定会避免这种误导性写法，结果蠢的还是自己。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">self.artifact = self.artifacts[self.<span class="hljs-built_in">type</span>][self.archive.currentText()]<br></code></pre></td></tr></table></figure>
 
@@ -521,6 +521,12 @@
                 <div class="post-prevnext my-3">
                   <article class="post-prev col-6">
                     
+                    
+                      <a href="/post/%E5%AF%BB%E6%89%BE%E8%BF%B7%E8%8C%AB%E4%B8%AD%E7%9A%84%E6%9B%99%E5%85%89-2022%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/" title="寻找迷茫中的曙光 | 2022年终总结">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">寻找迷茫中的曙光 | 2022年终总结</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
                     
                   </article>
                   <article class="post-next col-6">
