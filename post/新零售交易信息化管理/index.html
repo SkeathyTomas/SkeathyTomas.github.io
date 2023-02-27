@@ -16,30 +16,29 @@
   <meta name="author" content="Skeathy">
   <meta name="keywords" content="互联网,产品经理,设计,生活,游戏,动漫,Coding">
   
-    <meta name="description" content="对于搜索功能以及搜索想要的结果（匹配规则）一直都不是那么清晰，和开发交流的时候也不好讲清楚到底是怎样的需求。特此整理本篇搜索相关的笔记，供自己与读者学习。当然本篇重点在于搜索行为和用户想要的搜索结果之间的逻辑，而非界面&#x2F;交互层面的元素整理。 什么是搜索简单来说，搜索就是在一个集合里找到想要的元素。 这个集合可能是明确的，比如我桌上堆了一堆书，我知道里面有一本书 A，搜索就是在这堆「明确」">
+    <meta name="description" content="偶然获得一次接触新零售行业的机会，在了解一些行业基础和产品体验后，简单做些总结与提问。对具体产品名称作脱敏处理，具体问题没有标准答案，仅供同行自我反思参考。 新零售背景大约在 5 年前，新零售这一概念突然爆火。这其中的原因：  一是需求层面。更实惠的价格，更高质量的产品，更自由多样的选择，更方便的购物与配送方式——是消费者一直的需求。近十多年来电商全面发展，消费者的购物模式发生了很大的变化，消费者">
 <meta property="og:type" content="article">
-<meta property="og:title" content="搜索与匹配规则">
-<meta property="og:url" content="https://skeathytomas.github.io/post/%E6%90%9C%E7%B4%A2%E4%B8%8E%E5%8C%B9%E9%85%8D%E8%A7%84%E5%88%99/index.html">
+<meta property="og:title" content="新零售交易信息化管理">
+<meta property="og:url" content="https://skeathytomas.github.io/post/%E6%96%B0%E9%9B%B6%E5%94%AE%E4%BA%A4%E6%98%93%E4%BF%A1%E6%81%AF%E5%8C%96%E7%AE%A1%E7%90%86/index.html">
 <meta property="og:site_name" content="智商衰退之后">
-<meta property="og:description" content="对于搜索功能以及搜索想要的结果（匹配规则）一直都不是那么清晰，和开发交流的时候也不好讲清楚到底是怎样的需求。特此整理本篇搜索相关的笔记，供自己与读者学习。当然本篇重点在于搜索行为和用户想要的搜索结果之间的逻辑，而非界面&#x2F;交互层面的元素整理。 什么是搜索简单来说，搜索就是在一个集合里找到想要的元素。 这个集合可能是明确的，比如我桌上堆了一堆书，我知道里面有一本书 A，搜索就是在这堆「明确」">
+<meta property="og:description" content="偶然获得一次接触新零售行业的机会，在了解一些行业基础和产品体验后，简单做些总结与提问。对具体产品名称作脱敏处理，具体问题没有标准答案，仅供同行自我反思参考。 新零售背景大约在 5 年前，新零售这一概念突然爆火。这其中的原因：  一是需求层面。更实惠的价格，更高质量的产品，更自由多样的选择，更方便的购物与配送方式——是消费者一直的需求。近十多年来电商全面发展，消费者的购物模式发生了很大的变化，消费者">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20221220145316.png">
-<meta property="article:published_time" content="2022-10-26T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-12-20T07:35:44.000Z">
+<meta property="og:image" content="http://5b0988e595225.cdn.sohucs.com/images/20190901/53077eb9c13348c2b8d36f0fa4fd71c0.jpeg">
+<meta property="article:published_time" content="2023-02-19T16:00:00.000Z">
+<meta property="article:modified_time" content="2023-02-27T15:16:30.966Z">
 <meta property="article:author" content="Skeathy">
 <meta property="article:tag" content="产品">
-<meta property="article:tag" content="用户体验">
-<meta property="article:tag" content="搜索">
-<meta property="article:tag" content="匹配规则">
-<meta property="article:tag" content="ChatGPT">
+<meta property="article:tag" content="新零售">
+<meta property="article:tag" content="商业模式">
+<meta property="article:tag" content="信息化">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20221220145316.png">
+<meta name="twitter:image" content="http://5b0988e595225.cdn.sohucs.com/images/20190901/53077eb9c13348c2b8d36f0fa4fd71c0.jpeg">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>搜索与匹配规则 - 智商衰退之后</title>
+  <title>新零售交易信息化管理 - 智商衰退之后</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -227,13 +226,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20221220145316.png') no-repeat center center; background-size: cover;">
+     style="background: url('http://5b0988e595225.cdn.sohucs.com/images/20190901/53077eb9c13348c2b8d36f0fa4fd71c0.jpeg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="搜索与匹配规则"></span>
+            <span id="subtitle" data-typed-text="新零售交易信息化管理"></span>
           
         </div>
 
@@ -244,8 +243,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-10-27 00:00" pubdate>
-          2022年10月27日 凌晨
+        <time datetime="2023-02-20 00:00" pubdate>
+          2023年2月20日 凌晨
         </time>
       </span>
     
@@ -256,7 +255,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.7k 字
+          1.8k 字
         
       </span>
     
@@ -267,7 +266,7 @@
         
         
         
-          23 分钟
+          15 分钟
         
       </span>
     
@@ -378,7 +377,7 @@
       
         <a href="/post/%E6%90%9C%E7%B4%A2%E4%B8%8E%E5%8C%B9%E9%85%8D%E8%A7%84%E5%88%99/" title="搜索与匹配规则"
            class="list-group-item list-group-item-action
-           active">
+           ">
           <span class="category-post">搜索与匹配规则</span>
         </a>
       
@@ -387,7 +386,7 @@
       
         <a href="/post/%E6%96%B0%E9%9B%B6%E5%94%AE%E4%BA%A4%E6%98%93%E4%BF%A1%E6%81%AF%E5%8C%96%E7%AE%A1%E7%90%86/" title="新零售交易信息化管理"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">新零售交易信息化管理</span>
         </a>
       
@@ -429,12 +428,12 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">搜索与匹配规则</h1>
+            <h1 style="display: none">新零售交易信息化管理</h1>
             
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2022年12月20日 下午
+                    本文最后更新于：2023年2月27日 晚上
                   
                 
               </p>
@@ -442,40 +441,40 @@
             
               <div class="markdown-body">
                 
-                <p>对于搜索功能以及搜索想要的结果（匹配规则）一直都不是那么清晰，和开发交流的时候也不好讲清楚到底是怎样的需求。特此整理本篇搜索相关的笔记，供自己与读者学习。当然本篇重点在于搜索行为和用户想要的搜索结果之间的逻辑，而非界面&#x2F;交互层面的元素整理。</p>
-<h2 id="什么是搜索"><a href="#什么是搜索" class="headerlink" title="什么是搜索"></a>什么是搜索</h2><p>简单来说，搜索就是在一个集合里找到想要的元素。</p>
-<p>这个集合可能是明确的，比如我桌上堆了一堆书，我知道里面有一本书 A，搜索就是在这堆「明确」的书里找到书 A。这里的「明确」可能还含有数量较少的特点，由于人类一次性能够快速处理的信息数量十分有限，数量一大这个集合本身就算能在数学上清晰定义，对于用户也是抽象的。</p>
-<p>所以更多情况下，这个集合可能不那么「明确」。用户可能不明白这个集合里究竟有什么，也不清楚自己要找的元素究竟在不在集合里。还是拿上面书的例子，还是要找书 A，只是我不确定在不在我桌上这堆里，可能在我的书柜里，也可能带出去了（借给了别人、带到了别处），甚至可能丢了。我所知的信息仅有——我确实买过这本书，这里的集合就是我所有买过的书。</p>
-<h2 id="搜索的基本方法"><a href="#搜索的基本方法" class="headerlink" title="搜索的基本方法"></a>搜索的基本方法</h2><p>以我浅薄的理解，搜索的最基本方法就是一个一个比对集合中的元素，是否与自己的预期一致（复杂度 O(n)）。比如上面书的例子，搜索的方法就是一本一本翻过来，直至翻到自己想要的那本书。</p>
-<p>计算机天然对搜索、比对数据具备优势。所以当搜索集合比较大的时候，计算机能够提供非常大的帮助，搜索&#x2F;查找也是非常基本的算法。至于具体的算法，优化搜索的速度（二分、索引、哈希表之类的），就不具体探讨了。</p>
-<h2 id="搜索的使用场景"><a href="#搜索的使用场景" class="headerlink" title="搜索的使用场景"></a>搜索的使用场景</h2><p>前文大都提到的是比较广泛的搜索概念与方法。在实际的应用中，搜索及相关的业务流程也涵盖诸多方面：从最基础的文字&#x2F;字符串搜索，到图像、声音、视频，再到以图搜图、听音识曲等功能强大的搜索引擎。复杂一点的搜索引擎，都会有专门的团队负责。由于我没有做搜索产品的经验，也就不在这方面多讲，主要还是聊聊最基础的文字搜索与匹配规则。</p>
-<p>所谓文字搜索的场景，指的就是用户的输入是一个「字符串」，系统返回和此「字符串」相关的内容。至于什么叫做「相关」，就由「匹配规则」来决定了。</p>
-<p>逻辑上，相关性包含三种形式：</p>
+                <p>偶然获得一次接触新零售行业的机会，在了解一些行业基础和产品体验后，简单做些总结与提问。对具体产品名称作脱敏处理，具体问题没有标准答案，仅供同行自我反思参考。</p>
+<h2 id="新零售背景"><a href="#新零售背景" class="headerlink" title="新零售背景"></a>新零售背景</h2><p>大约在 5 年前，新零售这一概念突然爆火。这其中的原因：</p>
+<ul>
+<li>一是需求层面。更实惠的价格，更高质量的产品，更自由多样的选择，更方便的购物与配送方式——是消费者一直的需求。近十多年来电商全面发展，消费者的购物模式发生了很大的变化，消费者的需求有了阶梯式的升级。虽然电商在很多层面带来了体验的提升，但并不能完全取代线下零售模式——实感体验、家庭&#x2F;友情场景社交、最快的物流，这些都无可替代。但是传统零售确实在近 10 年发展有限，无论是模式、结构、技术层面都没什么太大的突破，急需一次突破性发展以满足消费者的需求升级。</li>
+<li>二是技术层面。电商的发展为传统零售技术突破摸索了不少基础，然后 5G、物联网之类的基础技术的累积让新零售这一概念有了落地的可能性。</li>
+<li>三是资本&#x2F;商业层面。移动互联网、电商之类的热度和用户规模逐渐达到增长顶峰，资本需要有新的热点方向——其中下沉市场和直播继续延续电商的热度，新零售以电商的对立面开辟新市场。</li>
+</ul>
+<p>新零售的出现是为了最终满足消费者的需求（毕竟最后出钱的还是消费者），但在产品实现上，却很少直接面向消费者。消费者购物的线下购物的模式没有太多的变化，最多在店面装潢、支付形态有了更好的视觉&#x2F;购物体验。</p>
+<p>所以足以成就利益关系的产品仅能面向商家。如何解决商家层面的交易、供应链、库存等管理工作中的痛点，提升其中的效率或降低成本，吸引消费者带来更多营收，从而产生更高的利润，才是面向商家的新零售产品需要考虑的目标。</p>
+<h2 id="Q1-产品定位"><a href="#Q1-产品定位" class="headerlink" title="Q1 产品定位"></a>Q1 产品定位</h2><p>两种基本的产品定位：</p>
 <ol>
-<li>完全一致，即返回结果和用户输入完全一致。对应的使用场景是用户清楚地知道自己输入的准确性，并希望获取准确的结果，比如各类文档内的搜索定位关键字就是这种逻辑（但是从整篇文档角度却是包含逻辑）。</li>
-<li>包含，即搜索结果完全包含用户输入。一般情况下，用户输入较短，而搜索集合中的多个元素都可能包含输入内容。常见的文件搜索（如 Everything）就使用了此逻辑，当然某些高级功能可能在此基础上进行拓展（比如正则表达式）。</li>
-<li>语义相符，即搜索结果包含部份输入或与输入语义上相近。由于用户的输入不受限制，加上用户可能并不能清晰描述自己想要搜索的内容，以上两种逻辑可能并不满足用户的实际需求，产生大量搜索结果为空的情况。所以，此逻辑对用户输入进行分词、同义词替换（语义替换），搜索结果包含全部或部份分词、同义词内容。大多数搜索引擎都采用了此逻辑，当然搜索引擎的相关性逻辑远比这里描述得复杂多。</li>
+<li>帮助个体经营店（店长）经营管理。</li>
+<li>帮助连锁店企业进行各门店管理。</li>
 </ol>
-<p><img src="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20221220145316.png" srcset="/img/loading.gif" lazyload alt="搜索相关性的三种逻辑示意图"></p>
-<h2 id="匹配规则"><a href="#匹配规则" class="headerlink" title="匹配规则"></a>匹配规则</h2><p>至于匹配规则，一般而言有两种：精确匹配和模糊匹配。虽然没有与三种相关性一一对应，但精确匹配包含了「完全一致」和「包含」两种逻辑，而模糊匹配则与「语义相符」对应。</p>
-<h3 id="精确匹配"><a href="#精确匹配" class="headerlink" title="精确匹配"></a>精确匹配</h3><p>首先来说精确匹配，「完全一致」和「包含」在算法上非常接近，都是找到一模一样的字符串。不过「完全一致」往往仅返回一个结果或者无结果（搜索集合元素重复的情况在业务上需要谨慎处理），很多情况下不会仅仅采用「完全一致」的匹配规则。而是把「包含」的结果也都列入结果中，并按照一定的规则排序。</p>
-<p>「包含」的匹配规则可以包括向前匹配、向后匹配、前后匹配，代表补充的内容在前、在后，或是在两端。实际的业务并没有那么高的细致需求，「包含」概念已经比较符合人们的记忆习惯了，无论前后补充，有就可以了。</p>
-<h3 id="模糊匹配"><a href="#模糊匹配" class="headerlink" title="模糊匹配"></a>模糊匹配</h3><p>模糊匹配就与「语义相符」的相关性一样在定义上就显得「模糊」一些，指的是输入的字符串拆分后分布在搜索结果元素中。这就涉及到输入该怎么拆分（分词，特别是中文分词），拆分后是否可以打乱分词顺序，是否可以重复分词，是否可以忽略部份分词，分词之间间隔长度等等因素。</p>
-<p>由于涉及复杂的底层的算法，在业务上又没有那么讲究（除非专门的搜索团队，有一套完善的搜索结果评估体系），大多数是情况下提一下支持模糊匹配也就足够了。</p>
-<h2 id="搜索结果排序"><a href="#搜索结果排序" class="headerlink" title="搜索结果排序"></a>搜索结果排序</h2><p>前面提到了相关性的三种逻辑和两种匹配规则，但在实际的搜索业务中很少单独使用其中的一种，尤其是在使用模糊匹配的时候，精确匹配也同样会用上。所以对于搜索结果，除了需要对同样匹配规则下的结果进行排序，也需要对不同匹配规则下出来的结果进行排序。</p>
-<p>不过搜索结果排序本就是搜索业务的核心之一，如果有商业目标的话还需要考虑用户体验与广告推荐&#x2F;竞价的平衡，这些就不在本文讨论范围之内了。</p>
-<p>回到常规的排序，最基本的顺序就和提出的三种相关性顺序一致：</p>
+<p>两种定位的产品有着完全不同的产品侧重点和商业模式。从体验产品来看，主要是定位 2，类似于 ERP 产品。从产品宣传上来看，系统可同时适配两种定位。但似乎对于定位 1 较为模糊，未能清晰定义需求，存在较多功能冗余。</p>
+<p><strong>Q：目前的主要定位是什么？未来的发展定位是什么？</strong></p>
+<h2 id="Q2-产品功能形态与结构"><a href="#Q2-产品功能形态与结构" class="headerlink" title="Q2 产品功能形态与结构"></a>Q2 产品功能形态与结构</h2><p>在产品试用过程中，存在较多的「使用障碍」——许多名词、功能表述等很难直观理解具体用途，特别是二级菜单下的功能点（当然也可能是我太生疏了）。</p>
+<p>以产品设计师的角度，很难将这个系统称作「一个产品」，而是像一种巨无霸的「功能集合」。我无法理解产品的核心功能点，无法评价系统中的功能究竟是否全面，也暂时无法估计每个功能点用户使用的情况。</p>
+<p>首页有一些常用功能的列表，并且支持一些自定义操作，但感觉只是技术层面的小手段，可能也并不能达到「好用」的程度。</p>
+<p>当然 B 端产品普遍业务复杂，且并不那么在意「用户体验」，绝大多数做到成本可控、产品功能可用程度足以。</p>
+<p><strong>Q：公司对于产品「用户体验」是一种怎样的态度？是否考虑过优化整体产品功能结构，比如优先展示核心&#x2F;最基础的功能，简化二级菜单等等？</strong></p>
+<p>以库存为例，用户层可以直观理解到库存这一功能点，后续的操作可能来源于当前的库存信息，系统是否能根据库存信息情况推荐用户相应功能，而非把库存中所有功能点都列出来。</p>
+<h2 id="Q3-商业模式"><a href="#Q3-商业模式" class="headerlink" title="Q3 商业模式"></a>Q3 商业模式</h2><p>SaaS 型产品的基本模式是整套产品的售卖。另外我有看到一些付费功能点，比如付费 API 会根据使用情况需额外充值购买使用次数（但更多是自负盈亏的感觉，并不作为产品自身的盈利点）。</p>
+<p><strong>Q：当前产品的主要付费模式是否存在一些差异，比如订阅式、依据功能模块拆分付费？前面提到的两种产品定位，付费是否差异化？</strong></p>
+<h2 id="Q4-核心竞争力"><a href="#Q4-核心竞争力" class="headerlink" title="Q4 核心竞争力"></a>Q4 核心竞争力</h2><p>打造一款具备商业价值的产品至少需要：</p>
 <ol>
-<li>完全一致。</li>
-<li>包含。组内排序可以优先选择向后匹配的内容，因为人们的思维习惯就是记住一句话的前面部份。</li>
-<li>语义相关。组内排序可以综合考虑结果包含分词的数量，是否在权重高的位置（标题、标签），分词间隔长度等等进行排序。</li>
+<li>产品满足用户需求，解决痛点，并存在稳定&#x2F;增长的市场机会。</li>
+<li>产品存在一定的技术壁垒或资源壁垒，和竞品相比具备差异性核心竞争力，可以在市场竞争中获取一定优势。</li>
+<li>足够优秀的团队。</li>
+<li>清晰明确的战略目标与计划。</li>
 </ol>
-<p>此外，同一分类下如果还有多个结果，可按照业务需求按照字母&#x2F;拼音顺序、其他数值指标（相关性、评分等）进行排序，或者允许用户切换排序规则与升序&#x2F;降序。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>再次重申，本文仅对搜索这一需求和最简单的文本匹配规则进行思考和整理，不包含任何界面相关的元素（如搜索框、按钮、输入候选提示、结果列表等），而且在匹配算法上也未进行深入探讨。</p>
-<p>不过这些搜索概念的整理，应该已经足够应对非搜索团队内的绝大多数业务了，具体的还可以结合实际的业务给出更加具体的 PRD。</p>
-<p>回到搜索这一需求，虽说在移动互联网大背景下，搜索已完败于智能推荐，搜索自身的算法也并没有太大的升级。用户层无太大的搜索体验升级的感知，反而是被信息爆炸影响大大增加了搜索到想要信息的难度。</p>
-<p>最近比较火热的 ChatGPT，可能是搜索引擎发展方向之一。一来可以帮助过滤信息垃圾，使得用户更快获取搜索结果与问题答案（准确度是未来优化方向）；二来自然对话的方式与上下文记忆使得用户输入与反馈都更加符合情感需求，比起知识图谱这种字典&#x2F;百科式模式有更广泛的应用场景（但专业性和规范性可能有所缺失）。</p>
-<p>无论如何，我都非常看好 ChatGPT 的发展，至少让我看到了完美解决搜索领域痛点的可能性。至于商业目标，之后再考虑吧。</p>
+<p>暂时不考虑第四点。第一点我认可需求的存在和市场发展前景，但在产品是否能够满足前面提到的目标存疑；第二点暂时无法得出结论；第三点需要融入团队进一步打探（根据当前已知的信息认可团队的能力）。</p>
+<p><strong>Q：目标企业是否认可产品带来的价值？相比与传统模式，效率是否提高，成本是否降低，这其中有没有量化方法？</strong></p>
+<p><strong>在技术&#x2F;资源上是否存在一定积累？或者相比于竞品有着无可替代的产品优势？（我并不觉得功能全面性是一种壁垒，别的产品无法实现的核心功能点才是。）</strong></p>
 
                 
               </div>
@@ -511,13 +510,11 @@
       
         <a href="/tags/%E4%BA%A7%E5%93%81/">#产品</a>
       
-        <a href="/tags/%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C/">#用户体验</a>
+        <a href="/tags/%E6%96%B0%E9%9B%B6%E5%94%AE/">#新零售</a>
       
-        <a href="/tags/%E6%90%9C%E7%B4%A2/">#搜索</a>
+        <a href="/tags/%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F/">#商业模式</a>
       
-        <a href="/tags/%E5%8C%B9%E9%85%8D%E8%A7%84%E5%88%99/">#匹配规则</a>
-      
-        <a href="/tags/ChatGPT/">#ChatGPT</a>
+        <a href="/tags/%E4%BF%A1%E6%81%AF%E5%8C%96/">#信息化</a>
       
     </div>
   
@@ -529,8 +526,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>搜索与匹配规则</div>
-      <div>https://skeathytomas.github.io/post/搜索与匹配规则/</div>
+      <div>新零售交易信息化管理</div>
+      <div>https://skeathytomas.github.io/post/新零售交易信息化管理/</div>
     </div>
     <div class="license-meta">
       
@@ -542,7 +539,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年10月27日</div>
+          <div>2023年2月20日</div>
         </div>
       
       
@@ -574,18 +571,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/post/%E6%80%BB%E4%BC%9A%E8%B8%A9%E4%B8%80%E6%AC%A1-python-%E5%BC%95%E7%94%A8%E4%B8%8E%E6%8B%B7%E8%B4%9D%E7%9A%84%E5%9D%91/" title="总会踩一次 Python 引用与拷贝的坑">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">总会踩一次 Python 引用与拷贝的坑</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/post/%E5%9C%A3%E9%81%97%E7%89%A9%E8%AF%84%E5%88%86%E5%B7%A5%E5%85%B7%EF%BC%9A%E5%88%BB%E6%99%B4%E5%8A%9E%E5%85%AC%E6%A1%8C%E6%8A%80%E6%9C%AF%E6%95%B4%E7%90%86%E4%B8%8E%E6%80%BB%E7%BB%93/" title="圣遗物评分工具：刻晴办公桌技术整理与总结">
-                        <span class="hidden-mobile">圣遗物评分工具：刻晴办公桌技术整理与总结</span>
+                      <a href="/post/%E5%AF%BB%E6%89%BE%E8%BF%B7%E8%8C%AB%E4%B8%AD%E7%9A%84%E6%9B%99%E5%85%89-2022%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/" title="寻找迷茫中的曙光 | 2022年终总结">
+                        <span class="hidden-mobile">寻找迷茫中的曙光 | 2022年终总结</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -608,7 +599,7 @@
         var options = Object.assign(
           {"clientID":"658faad5dc784f8ec14b","clientSecret":"b1c37d084a7aa0367a81f3a12c863a11ec088597","repo":"skeathytomas.github.io","owner":"skeathytomas","admin":["skeathytomas"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
           {
-            id: 'ffd8a1640a3b5e08fed7f72963f2d877'
+            id: '570d3d1282f016ea9102993c2e34f161'
           }
         )
         var gitalk = new Gitalk(options);
