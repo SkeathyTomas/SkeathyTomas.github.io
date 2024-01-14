@@ -16,30 +16,28 @@
   <meta name="author" content="Skeathy">
   <meta name="keywords" content="互联网,产品经理,设计,生活,游戏,动漫,Coding">
   
-    <meta name="description" content="速店云掌柜是面向店长、连锁店老板&#x2F;管理员的报表类小程序，帮助相关经营者查询营业相关数据。 数据数据的基本架构为按照单独门店获取相关数据，然后连锁店老板&#x2F;管理员可以查询汇总的数据。数据统计的颗粒度为天，可按天、周、月（或自定义时间周期）查看周期汇总数据。 基础数据类型：  营收相关。含销售额、成本、毛利及毛利率。 销售细节相关。含销售额、优惠金额、退货金额、客单量、客单价、不同渠">
+    <meta name="description" content="老板报表，顾名思义，就是面向店长、连锁店老板&#x2F;管理员的报表，可以帮助相关经营者查询营业相关数据。随着移动化发展的趋势，老板报表也需要迁移到App或者小程序端，让老板可以随时随地查看数据。 数据数据的基本架构为按照单独门店获取相关数据，然后连锁店老板&#x2F;管理员可以查询汇总的数据。数据统计的颗粒度为天，可按天、周、月（或自定义时间周期）查看周期汇总数据。 基础数据类型：  营收相关。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="速店云掌柜（小程序）的一些改进建议">
-<meta property="og:url" content="https://skeathytomas.github.io/post/%E9%80%9F%E5%BA%97%E4%BA%91%E6%8E%8C%E6%9F%9C%EF%BC%88%E5%B0%8F%E7%A8%8B%E5%BA%8F%EF%BC%89%E7%9A%84%E4%B8%80%E4%BA%9B%E6%94%B9%E8%BF%9B%E5%BB%BA%E8%AE%AE/index.html">
+<meta property="og:title" content="移动端老板报表的设计框架">
+<meta property="og:url" content="https://skeathytomas.github.io/post/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E8%80%81%E6%9D%BF%E6%8A%A5%E8%A1%A8%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%A1%86%E6%9E%B6/index.html">
 <meta property="og:site_name" content="智商衰退之后">
-<meta property="og:description" content="速店云掌柜是面向店长、连锁店老板&#x2F;管理员的报表类小程序，帮助相关经营者查询营业相关数据。 数据数据的基本架构为按照单独门店获取相关数据，然后连锁店老板&#x2F;管理员可以查询汇总的数据。数据统计的颗粒度为天，可按天、周、月（或自定义时间周期）查看周期汇总数据。 基础数据类型：  营收相关。含销售额、成本、毛利及毛利率。 销售细节相关。含销售额、优惠金额、退货金额、客单量、客单价、不同渠">
+<meta property="og:description" content="老板报表，顾名思义，就是面向店长、连锁店老板&#x2F;管理员的报表，可以帮助相关经营者查询营业相关数据。随着移动化发展的趋势，老板报表也需要迁移到App或者小程序端，让老板可以随时随地查看数据。 数据数据的基本架构为按照单独门店获取相关数据，然后连锁店老板&#x2F;管理员可以查询汇总的数据。数据统计的颗粒度为天，可按天、周、月（或自定义时间周期）查看周期汇总数据。 基础数据类型：  营收相关。">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/lukas-blazek-mcSDtbWXUZU-unsplash.jpg">
 <meta property="article:published_time" content="2023-02-26T16:00:00.000Z">
-<meta property="article:modified_time" content="2023-02-27T12:33:36.734Z">
+<meta property="article:modified_time" content="2024-01-14T09:37:37.112Z">
 <meta property="article:author" content="Skeathy">
-<meta property="article:tag" content="互联网">
-<meta property="article:tag" content="产品经理">
-<meta property="article:tag" content="设计">
-<meta property="article:tag" content="生活">
-<meta property="article:tag" content="游戏">
-<meta property="article:tag" content="动漫">
-<meta property="article:tag" content="Coding">
+<meta property="article:tag" content="产品">
+<meta property="article:tag" content="新零售">
+<meta property="article:tag" content="可视化">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/lukas-blazek-mcSDtbWXUZU-unsplash.jpg">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>速店云掌柜（小程序）的一些改进建议 - 智商衰退之后</title>
+  <title>移动端老板报表的设计框架 - 智商衰退之后</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -77,7 +75,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"skeathytomas.github.io","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":3},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":null,"gtag":"G-FJM6NG4T2X","tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"skeathytomas.github.io","root":"/","version":"1.9.5","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":3},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":"G-FJM6NG4T2X"},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -91,14 +89,14 @@
   
 
   
-
-  
-    <!-- Google gtag.js -->
+    <!-- Google tag (gtag.js) -->
     <script async>
       if (!Fluid.ctx.dnt) {
-        Fluid.utils.createScript('https://www.googletagmanager.com/gtag/js?id=G-FJM6NG4T2X', function() {
+        Fluid.utils.createScript("https://www.googletagmanager.com/gtag/js?id=G-FJM6NG4T2X", function() {
           window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
+          function gtag() {
+            dataLayer.push(arguments);
+          }
           gtag('js', new Date());
           gtag('config', 'G-FJM6NG4T2X');
         });
@@ -117,7 +115,7 @@
 
 
   
-<!-- hexo injector head_end start --><meta name="google-site-verification" content="gJdLap9gisGh9MvwPvVggcqtTox32KqWLtDnWPDLV3I" /><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title="智商衰退之后" type="application/atom+xml">
+<!-- hexo injector head_end start --><meta name="google-site-verification" content="gJdLap9gisGh9MvwPvVggcqtTox32KqWLtDnWPDLV3I" /><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="智商衰退之后" type="application/atom+xml">
 </head>
 
 
@@ -227,13 +225,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('https://clearvision.gitlab.io/images/sapphire.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('https://raw.githubusercontent.com/SkeathyTomas/img/main/img/lukas-blazek-mcSDtbWXUZU-unsplash.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="速店云掌柜（小程序）的一些改进建议"></span>
+            <span id="subtitle" data-typed-text="移动端老板报表的设计框架"></span>
           
         </div>
 
@@ -256,7 +254,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          867 字
+          926 字
         
       </span>
     
@@ -297,6 +295,139 @@
   <div class="row nomargin-x">
     <div class="side-col d-none d-lg-block col-lg-2">
       
+  <aside class="sidebar category-bar" style="margin-right: -1rem">
+    
+
+
+
+
+
+<div class="category-list">
+  
+  
+    
+    
+    
+    <div class="category row nomargin-x">
+      <a class="category-item 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="产品"
+        id="heading-a015434e0df90bded79afc4957f7768e" role="tab" data-toggle="collapse" href="#collapse-a015434e0df90bded79afc4957f7768e"
+        aria-expanded="true"
+      >
+        产品
+        <span class="list-group-count">(10)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-a015434e0df90bded79afc4957f7768e"
+           role="tabpanel" aria-labelledby="heading-a015434e0df90bded79afc4957f7768e">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/post/scoop%E2%80%94%E2%80%94%E4%B9%9F%E8%AE%B8%E6%98%AFwindows%E5%B9%B3%E5%8F%B0%E6%9C%80%E5%A5%BD%E7%94%A8%E7%9A%84%E8%BD%AF%E4%BB%B6%EF%BC%88%E5%8C%85%EF%BC%89%E7%AE%A1%E7%90%86%E5%99%A8/" title="Scoop——也许是Windows平台最好用的软件（包）管理器"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">Scoop——也许是Windows平台最好用的软件（包）管理器</span>
+        </a>
+      
+    
+      
+      
+        <a href="/post/%E4%BB%8E%E4%BA%8C%E6%AC%A1%E5%85%83%E4%BA%BA%E8%AE%BE%E5%88%B0%E4%B8%89%E6%AC%A1%E5%85%83%E4%BA%BA%E8%AE%BE%E2%80%94%E2%80%94%E4%BA%BA%E8%AE%BE%E7%9A%84%E5%95%86%E4%B8%9A%E4%BB%B7%E5%80%BC/" title="从二次元人设到三次元人设——人设的商业价值"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">从二次元人设到三次元人设——人设的商业价值</span>
+        </a>
+      
+    
+      
+      
+        <a href="/post/%E5%A6%82%E4%BD%95%E5%81%9A%E4%B8%80%E4%B8%AA%E5%9C%A3%E9%81%97%E7%89%A9%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%EF%BC%9A%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D/" title="如何做一个圣遗物管理系统：产品介绍"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">如何做一个圣遗物管理系统：产品介绍</span>
+        </a>
+      
+    
+      
+      
+        <a href="/post/%E5%A6%82%E4%BD%95%E5%81%9A%E4%B8%80%E4%B8%AA%E5%9C%A3%E9%81%97%E7%89%A9%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%EF%BC%9A%E4%BA%A7%E5%93%81%E8%B0%83%E7%A0%94%E4%B8%8E%E5%88%86%E6%9E%90/" title="如何做一个圣遗物管理系统：产品调研与分析"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">如何做一个圣遗物管理系统：产品调研与分析</span>
+        </a>
+      
+    
+      
+      
+        <a href="/post/%E5%A6%82%E4%BD%95%E5%81%9A%E4%B8%80%E4%B8%AA%E5%9C%A3%E9%81%97%E7%89%A9%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%EF%BC%9A%E4%BA%A7%E5%93%81%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3/" title="如何做一个圣遗物管理系统：产品需求文档"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">如何做一个圣遗物管理系统：产品需求文档</span>
+        </a>
+      
+    
+      
+      
+        <a href="/post/%E6%90%9C%E7%B4%A2%E4%B8%8E%E5%8C%B9%E9%85%8D%E8%A7%84%E5%88%99/" title="搜索与匹配规则"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">搜索与匹配规则</span>
+        </a>
+      
+    
+      
+      
+        <a href="/post/%E6%96%B0%E9%9B%B6%E5%94%AE%E4%BA%A4%E6%98%93%E4%BF%A1%E6%81%AF%E5%8C%96%E7%AE%A1%E7%90%86/" title="新零售交易信息化管理"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">新零售交易信息化管理</span>
+        </a>
+      
+    
+      
+      
+        <a href="/post/%E6%A0%87%E9%A2%98%E6%A0%8F%E5%92%8C%E6%90%9C%E7%B4%A2%E6%A0%8F%E7%9A%84%E6%96%97%E4%BA%89/" title="标题栏和搜索栏的斗争"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">标题栏和搜索栏的斗争</span>
+        </a>
+      
+    
+      
+      
+        <a href="/post/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E8%80%81%E6%9D%BF%E6%8A%A5%E8%A1%A8%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%A1%86%E6%9E%B6/" title="移动端老板报表的设计框架"
+           class="list-group-item list-group-item-action
+           active">
+          <span class="category-post">移动端老板报表的设计框架</span>
+        </a>
+      
+    
+      
+      
+        <a href="/post/%E8%81%8A%E4%B8%80%E8%81%8A%E7%A4%BE%E4%BA%A4%E2%80%94%E2%80%94%E5%8F%AF%E8%AF%9Dapp%E4%BA%A7%E5%93%81%E4%BD%93%E9%AA%8C%E6%89%8B%E8%AE%B0/" title="聊一聊社交——可话App产品体验手记"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">聊一聊社交——可话App产品体验手记</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+</div>
+
+
+  </aside>
+
 
     </div>
 
@@ -304,13 +435,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <!-- SEO header -->
-            <h1 style="display: none">速店云掌柜（小程序）的一些改进建议</h1>
+            <h1 id="seo-header">移动端老板报表的设计框架</h1>
             
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2023年2月27日 晚上
+                    本文最后更新于：2024年1月14日 下午
                   
                 
               </p>
@@ -318,7 +448,7 @@
             
               <div class="markdown-body">
                 
-                <p>速店云掌柜是面向店长、连锁店老板&#x2F;管理员的报表类小程序，帮助相关经营者查询营业相关数据。</p>
+                <p>老板报表，顾名思义，就是面向店长、连锁店老板&#x2F;管理员的报表，可以帮助相关经营者查询营业相关数据。随着移动化发展的趋势，老板报表也需要迁移到App或者小程序端，让老板可以随时随地查看数据。</p>
 <h2 id="数据"><a href="#数据" class="headerlink" title="数据"></a>数据</h2><p>数据的基本架构为按照单独门店获取相关数据，然后连锁店老板&#x2F;管理员可以查询汇总的数据。数据统计的颗粒度为天，可按天、周、月（或自定义时间周期）查看周期汇总数据。</p>
 <p>基础数据类型：</p>
 <ol>
@@ -329,21 +459,21 @@
 <li>营销相关。拉动消费额、拉动订单数、客单价。</li>
 <li>订单相关。不同渠道的订单数据、实付金额、退款金额、订单数、客单价。</li>
 </ol>
-<p>在基础数据之上，存在一些环比数据，环比日期根据选择的时间范围，对比上一周期。</p>
-<h2 id="数据的组织结构"><a href="#数据的组织结构" class="headerlink" title="数据的组织结构"></a>数据的组织结构</h2><p>当前的模式是首页展示一些重要数据，然后在数据分页可以查看详细数据。不过首页一些数据的分组和详情中有些差异，分组名称也描述不清，分组中存在一些数据重叠，导致我在整理数据类型、理解业务的时候也有许多不清楚之处。</p>
-<p><strong>个人建议首页可以根据详情数据进行分组，每组中展示一些重要数据，再通过详情去了解分组中的更多数据及统计图表。</strong></p>
-<p>这样可以让数据层级更加清晰一些，同时删减底部的标签页和一些无效页面。至于首页应该放哪些<strong>重要</strong>数据，还需要对于业务更熟悉一些，这里不做建议。</p>
+<p>在基础数据之上，存在一些环比&#x2F;同比数据，其中环比日期根据选择的时间范围，对比上一周期。</p>
+<h2 id="数据的组织结构"><a href="#数据的组织结构" class="headerlink" title="数据的组织结构"></a>数据的组织结构</h2><p>移动端的页面基本架构是导航栏+分页，但数据报表视图并不合适以导航栏的形式分页，更适合一个长页面平铺+部分数据可详情页跳转。</p>
+<p>回到老板报表上，首页可以展示一些重要的基础数据，然后某些数据有更细节的详情可以下钻分页查看详细数据。不过老板的喜好不同，需要查看的数据也不完全相同，建议首页展示的数据可以自定义搭建。</p>
 <h2 id="可视化样式与视觉表现"><a href="#可视化样式与视觉表现" class="headerlink" title="可视化样式与视觉表现"></a>可视化样式与视觉表现</h2><ol>
-<li>某些可视化的方法有待改进。比如：<ol>
-<li>按照日期展示销售额的直方图，采用折线图可以起到更好的对比效果，也可以容下更多数据。</li>
-<li>零售额和环比数据单位差异，放在一个图中会显得混乱，建议切换显示。</li>
+<li>可视化样式非常丰富，但要斟酌哪一种形式更合适。比如：<ol>
+<li>按照日期展示的数据（如：销售额），采用折线图可以起到更好的对比效果，也可以容下更多数据。</li>
+<li>在同一个图表中，有些数据比较维度（单位）存在差异（如业务数据和环比），放在一个图中（尤其是在移动端）会显得混乱，建议切换显示。</li>
 <li>图表需要可交互，点击可显示某一天的具体数据。</li>
 </ol>
 </li>
-<li>可视化图的质感有待提升。具体表现为点、线、面都过于单薄，大量留白，看上去非常空。</li>
-<li>一些文字与数据的排版、大小缺乏层次感，很多时候有一种不知道数字和文字哪一些是成对的感觉。</li>
-<li>具体数据中横向滑动展示更多数据的交互形式不是非常便利，可以考虑采用列表平铺的形式。</li>
+<li>可视化图的质感要求。避免点、线、面都过于单薄应用，大量留白，使得最终可视化结果看上去非常空。</li>
+<li>文字与数据的排版、大小需要有层次感，比如成对的数据贴近，重要数据放大，次要数据缩小等等。</li>
+<li>移动端横向滑动是非常不直观的交互行为，应尽量避免此交互。当横向数据过长时，可以考虑限制时间范围，或者优化为纵向列表平铺的形式。</li>
 </ol>
+<p><img src="https://cdn.dribbble.com/users/600809/screenshots/4386882/music-data-report-d.jpg" srcset="/img/loading.gif" lazyload alt="可视化案例"></p>
 
                 
               </div>
@@ -352,6 +482,38 @@
             <div>
               <div class="post-metas my-3">
   
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E4%BA%A7%E5%93%81/" class="category-chain-item">产品</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E4%BA%A7%E5%93%81/" class="print-no-link">#产品</a>
+      
+        <a href="/tags/%E6%96%B0%E9%9B%B6%E5%94%AE/" class="print-no-link">#新零售</a>
+      
+        <a href="/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/" class="print-no-link">#可视化</a>
+      
+    </div>
   
 </div>
 
@@ -361,8 +523,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>速店云掌柜（小程序）的一些改进建议</div>
-      <div>https://skeathytomas.github.io/post/速店云掌柜（小程序）的一些改进建议/</div>
+      <div>移动端老板报表的设计框架</div>
+      <div>https://skeathytomas.github.io/post/移动端老板报表的设计框架/</div>
     </div>
     <div class="license-meta">
       
@@ -385,7 +547,7 @@
             
               
               
-                <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
                   <span class="hint--top hint--rounded" aria-label="BY - 署名">
                     <i class="iconfont icon-by"></i>
                   </span>
@@ -402,6 +564,23 @@
 
 
               
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/post/%E6%96%B0%E9%9B%B6%E5%94%AE%E4%BA%A4%E6%98%93%E4%BF%A1%E6%81%AF%E5%8C%96%E7%AE%A1%E7%90%86/" title="新零售交易信息化管理">
+                        <span class="hidden-mobile">新零售交易信息化管理</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
             </div>
 
             
@@ -417,7 +596,7 @@
         var options = Object.assign(
           {"clientID":"658faad5dc784f8ec14b","clientSecret":"b1c37d084a7aa0367a81f3a12c863a11ec088597","repo":"skeathytomas.github.io","owner":"skeathytomas","admin":["skeathytomas"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
           {
-            id: '417a954d6eb572bf3301ed36db59d47a'
+            id: 'bd8b1b2982e7c8b624f150112cc7672e'
           }
         )
         var gitalk = new Gitalk(options);
