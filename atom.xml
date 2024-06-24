@@ -6,7 +6,7 @@
   <link href="https://skeathytomas.github.io/atom.xml" rel="self"/>
   
   <link href="https://skeathytomas.github.io/"/>
-  <updated>2024-03-10T03:36:18.351Z</updated>
+  <updated>2024-06-24T13:45:54.020Z</updated>
   <id>https://skeathytomas.github.io/</id>
   
   <author>
@@ -15,6 +15,41 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>聊一聊极有可能被禁止的单踏板模式</title>
+    <link href="https://skeathytomas.github.io/post/%E8%81%8A%E4%B8%80%E8%81%8A%E6%9E%81%E6%9C%89%E5%8F%AF%E8%83%BD%E8%A2%AB%E7%A6%81%E6%AD%A2%E7%9A%84%E5%8D%95%E8%B8%8F%E6%9D%BF%E6%A8%A1%E5%BC%8F/"/>
+    <id>https://skeathytomas.github.io/post/%E8%81%8A%E4%B8%80%E8%81%8A%E6%9E%81%E6%9C%89%E5%8F%AF%E8%83%BD%E8%A2%AB%E7%A6%81%E6%AD%A2%E7%9A%84%E5%8D%95%E8%B8%8F%E6%9D%BF%E6%A8%A1%E5%BC%8F/</id>
+    <published>2024-06-14T16:00:00.000Z</published>
+    <updated>2024-06-24T13:45:54.020Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;最近工信部发布了《乘用车制动系统技术要求及试验方法》（征求意见稿），指出&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在前进挡下通过松开加速踏板实现的制动作用不能使车辆减速至停车。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;也即传统意义上的单踏板可停车的设计模式被禁止。虽然只是</summary>
+        
+      
+    
+    
+    
+    <category term="设计" scheme="https://skeathytomas.github.io/categories/%E8%AE%BE%E8%AE%A1/"/>
+    
+    
+    <category term="产品" scheme="https://skeathytomas.github.io/tags/%E4%BA%A7%E5%93%81/"/>
+    
+    <category term="用户体验" scheme="https://skeathytomas.github.io/tags/%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C/"/>
+    
+    <category term="人机交互" scheme="https://skeathytomas.github.io/tags/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92/"/>
+    
+    <category term="汽车" scheme="https://skeathytomas.github.io/tags/%E6%B1%BD%E8%BD%A6/"/>
+    
+  </entry>
   
   <entry>
     <title>《铃芽之旅》的灾难哲学</title>
