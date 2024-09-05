@@ -16,29 +16,28 @@
   <meta name="author" content="Skeathy">
   <meta name="keywords" content="互联网,产品经理,设计,生活,游戏,动漫,Coding">
   
-    <meta name="description" content="本文是一篇工作随想，主要记录一些团队工作过程中遇到的问题，相应的解决方案，会涉及一些配套的软件、工具，或是管理方法等等。全文没什么专业性，仅为本人经验之谈，尽量讨论一些具备普适性效用的场景，不拘泥于细节的扣扣嗖嗖，欢迎吐槽。 前言虽然我尽量会往普适性的方向讨论相关问题，但还是要说明一下我的工作的主要内容。我是一名产品经理（PM），虽然普遍这么叫，但我自己更愿意称自己为产品设计师（PD）。这个岗位如">
+    <meta name="description" content="最近又兜兜转转用回了 Axure 制作原型。由于用惯了某些在线原型工具现成的高封装组件，倒是对 Axure 这种基础的组件有点不熟悉了。特别是默认组件库中，移动端的交互组件基本没有，上手难度较高。 一番简单的搜索，就找到了一份开源的资源（其实也不能算开源，只是放在 GitHub 仓库里）。  http:&#x2F;&#x2F;refs.cn&#x2F; 原型设计元件库，基于 Axure RP 10&#x2F;9，支持 Andr">
 <meta property="og:type" content="article">
-<meta property="og:title" content="工作踩坑录：团队、交流、协作与执行">
-<meta property="og:url" content="https://skeathytomas.github.io/post/%E5%B7%A5%E4%BD%9C%E8%B8%A9%E5%9D%91%E5%BD%95%EF%BC%9A%E5%9B%A2%E9%98%9F%E3%80%81%E4%BA%A4%E6%B5%81%E3%80%81%E5%8D%8F%E4%BD%9C%E4%B8%8E%E6%89%A7%E8%A1%8C/index.html">
+<meta property="og:title" content="分享一组不错的Axure组件">
+<meta property="og:url" content="https://skeathytomas.github.io/post/%E5%88%86%E4%BA%AB%E4%B8%80%E7%BB%84%E4%B8%8D%E9%94%99%E7%9A%84axure%E7%BB%84%E4%BB%B6/index.html">
 <meta property="og:site_name" content="智商衰退之后">
-<meta property="og:description" content="本文是一篇工作随想，主要记录一些团队工作过程中遇到的问题，相应的解决方案，会涉及一些配套的软件、工具，或是管理方法等等。全文没什么专业性，仅为本人经验之谈，尽量讨论一些具备普适性效用的场景，不拘泥于细节的扣扣嗖嗖，欢迎吐槽。 前言虽然我尽量会往普适性的方向讨论相关问题，但还是要说明一下我的工作的主要内容。我是一名产品经理（PM），虽然普遍这么叫，但我自己更愿意称自己为产品设计师（PD）。这个岗位如">
+<meta property="og:description" content="最近又兜兜转转用回了 Axure 制作原型。由于用惯了某些在线原型工具现成的高封装组件，倒是对 Axure 这种基础的组件有点不熟悉了。特别是默认组件库中，移动端的交互组件基本没有，上手难度较高。 一番简单的搜索，就找到了一份开源的资源（其实也不能算开源，只是放在 GitHub 仓库里）。  http:&#x2F;&#x2F;refs.cn&#x2F; 原型设计元件库，基于 Axure RP 10&#x2F;9，支持 Andr">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20220529002156.png">
-<meta property="article:published_time" content="2022-05-17T12:27:47.000Z">
-<meta property="article:modified_time" content="2022-06-13T16:19:05.536Z">
+<meta property="og:image" content="https://pic1.zhimg.com/70/v2-fdda4629b604c0555549858c32a4980b_1440w.avis?source=172ae18b&biz_tag=Post">
+<meta property="article:published_time" content="2024-09-04T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-09-05T13:51:52.656Z">
 <meta property="article:author" content="Skeathy">
-<meta property="article:tag" content="工作">
-<meta property="article:tag" content="效率">
-<meta property="article:tag" content="团队协作">
-<meta property="article:tag" content="管理">
+<meta property="article:tag" content="产品经理">
+<meta property="article:tag" content="Axure">
+<meta property="article:tag" content="Ant-Design">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20220529002156.png">
+<meta name="twitter:image" content="https://pic1.zhimg.com/70/v2-fdda4629b604c0555549858c32a4980b_1440w.avis?source=172ae18b&biz_tag=Post">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>工作踩坑录：团队、交流、协作与执行 - 智商衰退之后</title>
+  <title>分享一组不错的Axure组件 - 智商衰退之后</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -226,13 +225,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20220529002156.png') no-repeat center center; background-size: cover;">
+     style="background: url('https://pic1.zhimg.com/70/v2-fdda4629b604c0555549858c32a4980b_1440w.avis?source=172ae18b&biz_tag=Post') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="工作踩坑录：团队、交流、协作与执行"></span>
+            <span id="subtitle" data-typed-text="分享一组不错的Axure组件"></span>
           
         </div>
 
@@ -243,8 +242,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-05-17 20:27" pubdate>
-          2022年5月17日 晚上
+        <time datetime="2024-09-05 00:00" pubdate>
+          2024年9月5日 凌晨
         </time>
       </span>
     
@@ -255,7 +254,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          4k 字
+          713 字
         
       </span>
     
@@ -266,7 +265,7 @@
         
         
         
-          34 分钟
+          6 分钟
         
       </span>
     
@@ -341,7 +340,7 @@
       
         <a href="/post/%E5%88%86%E4%BA%AB%E4%B8%80%E7%BB%84%E4%B8%8D%E9%94%99%E7%9A%84axure%E7%BB%84%E4%BB%B6/" title="分享一组不错的Axure组件"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">分享一组不错的Axure组件</span>
         </a>
       
@@ -350,7 +349,7 @@
       
         <a href="/post/%E5%B7%A5%E4%BD%9C%E8%B8%A9%E5%9D%91%E5%BD%95%EF%BC%9A%E5%9B%A2%E9%98%9F%E3%80%81%E4%BA%A4%E6%B5%81%E3%80%81%E5%8D%8F%E4%BD%9C%E4%B8%8E%E6%89%A7%E8%A1%8C/" title="工作踩坑录：团队、交流、协作与执行"
            class="list-group-item list-group-item-action
-           active">
+           ">
           <span class="category-post">工作踩坑录：团队、交流、协作与执行</span>
         </a>
       
@@ -391,12 +390,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">工作踩坑录：团队、交流、协作与执行</h1>
+            <h1 id="seo-header">分享一组不错的Axure组件</h1>
             
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2022年6月14日 凌晨
+                    本文最后更新于：2024年9月5日 晚上
                   
                 
               </p>
@@ -404,50 +403,19 @@
             
               <div class="markdown-body">
                 
-                <p>本文是一篇工作随想，主要记录一些团队工作过程中遇到的问题，相应的解决方案，会涉及一些配套的软件、工具，或是管理方法等等。全文没什么专业性，仅为本人经验之谈，尽量讨论一些具备普适性效用的场景，不拘泥于细节的扣扣嗖嗖，欢迎吐槽。</p>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>虽然我尽量会往普适性的方向讨论相关问题，但还是要说明一下我的工作的主要内容。我是一名产品经理（PM），虽然普遍这么叫，但我自己更愿意称自己为产品设计师（PD）。这个岗位如果对标到游戏领域的话，就是游戏设计师，也即大家普遍称之的策划。</p>
-<p>产品设计师的主要工作自然是设计产品。但是设计这个词涵盖的概念太广了，就我所从事的领域而言就包含方案、交互、视觉、程序四个主要部分。当然，方案、交互、视觉、程序可以分工给不同的工种，而我主要负责的是方案+交互部分的产品设计工作。除了设计的主要工作外，不可避免地需要对产品负责，所以管理工作必不不少，偶尔也会抢占项目经理&#x2F;leader&#x2F;总监的一些工作。</p>
-<p>具体的工作主要包含调研、数据分析、写文档、画原型图、结果验收等。至于具体的团队协作方面的工作，包含需求获取、需求交接&#x2F;评审、需求验收三个部分。</p>
-<ul>
-<li>需求获取：与用户&#x2F;上级&#x2F;其他团队（如市场、运营）交流，知道产品要做什么以及为什么要做这些（用户需求）。</li>
-<li>需求交接&#x2F;评审：在用户需求翻译成实现方案（怎么做&#x2F;产品需求）后，对接执行团队，整个团队评估整体方案的可行性、潜在问题、需要时间等。这个部分交流的目的是保证执行团队可以把需求做出来。</li>
-<li>需求验收：执行团队实际做出了的东西可能会与预期有差异，这个时候就需要及时跟进团队的结果产出，在妥协&#x2F;完善&#x2F;修改中推进整个结果的产出。</li>
-</ul>
-<p>最后用斯坦福的设计方法论的基础模型来总结整个工作流程和需要交流的地方。</p>
-<p><img src="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20220525225705.png" srcset="/img/loading.gif" lazyload alt="设计思维与协作"></p>
-<h2 id="文档，文档，还是TM的文档"><a href="#文档，文档，还是TM的文档" class="headerlink" title="文档，文档，还是TM的文档"></a>文档，文档，还是TM的文档</h2><p>一说到交流，我们的第一反应会是面对面的交谈，或者即时通讯软件上的沟通，或者再正式一点的邮件。但是这种形式的交流（即时或半即时），主要的使用场景是讨论。凡是讨论，则必定会含有大量的不确定的信息&#x2F;垃圾信息，使得工作目标模糊；加上这些交流很快会被新的交流淹没，就算讨论出了结果，明确的工作目标也很可能因被遗忘在某个角落而丢失。</p>
-<p>所以唯一的解决方案就是白纸黑字确定下来的文档。这份文档需要随时供团队内的成员进行查阅，并伴随整个项目落地。「这份文档」也不仅仅代表一份文档，除了最重要的<strong>产品需求文档PRD</strong>，偶尔需要接触到的<strong>商业需求文档BRD</strong>和<strong>市场需求文档MRD</strong>，可以进一步包含<strong>会议记录</strong>、<strong>各类评审记录</strong>、<strong>用户研究报告</strong>、<strong>项目管理文档</strong>等等，还可能包含领导口头<strong>传话记录</strong>等（虽然不应该直接负责，但为了防止领导变卦最好还是留档下来给领导过一遍。）</p>
-<p>总之，凡是需要协作与工作交接的部分，在讨论完成之后就需要有一个确定的文档，保证整个团队对于工作目标明确清晰，从而使得项目有序推进。团队里的开发同学有自己的开发文档、接口文档需要准备，交互、UI同学有交互、UI文档准备，测试的同学有测试文档，剩下的PRD以及各种杂七杂八的交流文档则基本上由产品经理包了。整个团队中产品经理对于业务的理解一定是最深刻的，所以多承担些别的同学不那么喜欢的文档工作，也是必须的。</p>
-<h3 id="修改与存档"><a href="#修改与存档" class="headerlink" title="修改与存档"></a>修改与存档</h3><p>上面说到我们需要一堆确定的文档指导工作推进，但是实际执行中，文档是会不断更改的。比如自己在写第一版的时候，可能就会私下里修改很多次；然后给领导过的时候，又会有一些修改；再之后发布给整个执行团队的时候，执行团队可能首次提问就会导致很多修改；然后就算执行团队需求评审通过了，在实际执行起来后也会遇到一些没预估的问题，这个时候又要进行修改或补充。</p>
-<p>当然以上这些还算是正常的文档修改，通过一些备注、修改说明还能定稿。有些情况下领导一拍脑门整个方案大改，文档重构也是完全可能的。</p>
-<p>所以如何做好这些文档的版本控制也得好好研究研究。随着各种在线协作文档的兴起，各种集成在软件中的版本控制已经完全能用。不必像开发那样严格按照dev、beta、release分支那样管理版本，产品经理对于文档的版本管理更多的是保持文档的良好阅读性。</p>
-<p><img src="https://pic4.zhimg.com/v2-a8c2834cb2097297bdbb6e43113e981f_r.jpg" srcset="/img/loading.gif" lazyload alt="一份可参考的修订历史记录"></p>
-<p>比如在需要频繁修改的文档中首先就说明历次修改的内容，同时做好文档的目录，方便目标成员查阅。虽然一般情况下接触的文档很少有回滚版本的需求，但是若注意到某些破坏性的修改，可以考虑在修改前备份文档副本并标注版本信息（就和游戏存档一样）。</p>
-<h3 id="通知与交流"><a href="#通知与交流" class="headerlink" title="通知与交流"></a>通知与交流</h3><p>在实际的工作中，时刻要关注文档的受众，完成或修改文档后需要及时向受众沟通。文档天然在即时性上存在缺陷，所以需要通过这种方式弥补交流的缺陷。</p>
-<p>一般情况下，我都会把各类文档的最新版直接呈现给团队成员，这一点会在<a href="#%E6%96%87%E6%A1%A3%E7%AE%A1%E7%90%86">工作空间</a>中进一步讨论。实时协作文档工具（包括面向设计文档的Figma），因为部分解决了传统本地文档在交流上的痛点，这几年也是快速增长。</p>
-<h2 id="工作空间"><a href="#工作空间" class="headerlink" title="工作空间"></a>工作空间</h2><p>我对工作空间的定义是一个实体或虚拟的环境，用于向个人或团队呈现工作流中的各种实时信息，或者帮助人们快速查找工作需要的信息，从而帮助人们高效工作。</p>
-<p>一个工作空间需要有一个大的工作目标，团队成员因为拥有这一共同的工作目标而聚集在这一工作空间中。当然在实际工作中，一个人往往会同时接手多个大的工作目标（项目），这种多线程操作稍后再谈。</p>
-<h3 id="看板"><a href="#看板" class="headerlink" title="看板"></a>看板</h3><p>看板（KANBAN）工具是一个典型的工作空间工具，同时市场上几乎所有的协同办公&#x2F;管理工具都会添加看板的功能，另外GitHub的Issue、Pull Request也和看板的理念类似。看板是一个可视化工具，通过将工作目标拆解，并放置在「未开始」「进行中」「已完成」三个基本的核心模块中，实现整体工作进程的可视化。</p>
-<p><img src="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20220529002156.png" srcset="/img/loading.gif" lazyload alt="看板工具"></p>
-<p>看板的管理属性会更强一些，管理者通过这种可视化可快速监控项目进度；团队成员也可在看板中明确自己的代办事项，合理规划自己的工作。一个团队需要有这么一个看板来激励所有成员的工作。</p>
-<p>至于看板的实体或虚拟性，我个人倾向于在团队办公室竖一块玻璃看板，通过便利贴跟进子任务。站在实体看板前讨论问题和进度总是会让人更有感官上的冲击，让工作更加具象化从而起到更好的激励效果。</p>
-<p>而虚拟看板的优势在于突破了空间限制，为远程办公等跨距离办公场景提供帮助。同时在「多维表格」这一概念起来之后，看板的可视化效果可以根据需要在列表、便利贴式看板以及甘特图间切换，满足不同的需求场景，可参考<a target="_blank" rel="noopener" href="https://www.feishu.cn/hc/zh-CN/articles/360049067678">飞书「多维表格」的说明</a>。比如列表模式可方便快速编辑、甘特图模式对于进程的综合展示效果更佳。</p>
-<p><img src="https://p9-hera.byteimg.com/tos-cn-i-jbbdkfciu3/7d6678c7dd5b4f6784d1724fc123b158~tplv-jbbdkfciu3-image:0:0.image" srcset="/img/loading.gif" lazyload alt="飞书的多维表格"></p>
-<h3 id="文档管理"><a href="#文档管理" class="headerlink" title="文档管理"></a>文档管理</h3><p>看板工具虽然在任务可视化上很有成效，但在实际的任务推进上还是缺了一点味道，看板并不能方便地告诉成员如何完成任务。相应的，解决方案是前面提到的文档。对应到GitHub，则是核心的Code模块。</p>
-<p>工作空间中需要有这么一个文档管理系统，包含最基础的存储、分类、查阅、编辑等功能。</p>
-<p><img src="https://static.sitestack.cn/projects/yuque/f69f5c6abf012d05b3a350757e545e6c.png" srcset="/img/loading.gif" lazyload alt="语雀知识库"></p>
-<p>我的实际使用流程一般就是直接在空间的合适目录建立新文档，完成后通知相关人员。在整个项目的持续时间内，相关的文档修改、添加等都在这一空间中进行，文档时刻保持最新且唯一状态（也即一个问题&#x2F;工作流程对应一个文档）。同时整个文档空间对所有人开放，就算是暂时无关的成员也可对所有文档进行查阅，方便对整个产品业务进行认知和了解。</p>
-<p>保持在线文档的「唯一」，省去了文档版本冲突、交流不在一个版本上的各种问题，从易用性角度完爆各类版本控制软件。</p>
-<p>而在项目结束或者版本上线后，当前工作空间中的在线文档都会统一归档处理，通过「项目名称+版本号」的形式归档在本地SVN服务器中，供后续复盘或历史查阅使用。</p>
-<p>至于线上的工作空间，则暂时清空。在保留产品线和空间结构的基础上，相关文档随着新一周期的工作目标而逐渐建立和丰富起来。不过实际上，产品经理和研发的工作时间线相对会错位一些，在研发后期一般下一轮的产品工作已经逐步启动，在这一时间段我会在个人工作空间先完善各种文档，然后随着新一轮项目的交流工作迁移到团队工作空间中。</p>
-<h3 id="多线程工作"><a href="#多线程工作" class="headerlink" title="多线程工作"></a>多线程工作</h3><p>理论上多线程完全是一个管理工作，暂时还轮不到我来负责统筹安排。不过我也不是完全没有多线程的经历，看书&#x2F;剧总喜欢一本&#x2F;部没看完的时候就新开一个坑（典型INTP了），工作上现在也是在三条产品线上多开。</p>
-<p>对于多线程的工作空间，首先第一步是对每一个线程建立起一个独立的工作空间。对于个人而言，TA的工作域就是多个工作空间的集合，进入某一个工作空间即开展这一工作空间的相关工作。至于单独工作空间内的协作与交流，都与前面提到的无异。</p>
-<p>唯一比较麻烦的是，由于多线程操作，时间管理更加困难了。虽然名义上叫做多线程操作，但是实质上事情只能一件一件的做。所以多线程本质上是一个时间安排问题，什么事先做，什么事后做，突发事件怎么应对，事件完成后的协作交流与任务交接等等。</p>
-<p>比较有效的方式是项目规划阶段的甘特图与个人安排的甘特图之间的协调。从大到小拆解任务流程，在大阶段避免个人任务的冲突，小阶段适当灵活调整。不过这一切的基础还是团队leader对整个项目难度的把控以及对自身团队能力的把控，能够合理安排计划。</p>
-<p><img src="https://p9-hera.byteimg.com/tos-cn-i-jbbdkfciu3/5afc8d30c7bb4d2d8e908b2940860a34~tplv-jbbdkfciu3-image:0:0.image" srcset="/img/loading.gif" lazyload alt="飞书甘特图"></p>
-<p>可惜管理工作讲起来太抽象了，以前单打独斗的时候没怎么重视管理的重要性。如今在各个团队中偶尔涉及一些小的管理工作，深知管理不易，虽然我基本上可以实现团队的成果按时提交。</p>
-<h2 id="碎碎念的总结"><a href="#碎碎念的总结" class="headerlink" title="碎碎念的总结"></a>碎碎念的总结</h2><p>以上就是这篇文章的全部了，有一些技巧类的总结，也有一些工具、方法的介绍，还有一些抽象的说明。不论如何，工作中需要时刻保持思考、保持学习、提高效率。</p>
-<p>最后，团队合作最重要的还是要放开自己，由向内思考（Introvert）转为向外交流（Extrovert）。虽然我在生活上倾向于INTP（主要是社交太无聊了），但在工作上还是倾向于ENTP，巴不得天天和团队内的成员对线（指解答问题、Push任务推进、说服大家接受自己的想法）。</p>
+                <p>最近又兜兜转转用回了 Axure 制作原型。由于用惯了某些在线原型工具现成的高封装组件，倒是对 Axure 这种基础的组件有点不熟悉了。特别是默认组件库中，移动端的交互组件基本没有，上手难度较高。</p>
+<p>一番简单的搜索，就找到了一份开源的资源（其实也不能算开源，只是放在 GitHub 仓库里）。</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://refs.cn/">http://refs.cn/</a> 原型设计元件库，基于 Axure RP 10&#x2F;9，支持 Android、Apple、Windows、微信，移动、桌面平台的应用和网站原型设计。——<a target="_blank" rel="noopener" href="https://github.com/refscn/rplibs">rplibs组件项目</a></p>
+</blockquote>
+<p>项目包含网页端（Ant Design）、微信&#x2F;小程序、Apple Design、Material Design、Fluent Design 等主流设计规范下的组件样式，可以覆盖绝大多数工作场景。另外还包含图标库、统计图表库等实用组件。</p>
+<p><img src="https://pic1.zhimg.com/v2-4efc6e00ab04699760d84aaabd91b366.webp" srcset="/img/loading.gif" lazyload alt="Ant Design（按钮）"></p>
+<p><img src="https://pic2.zhimg.com/v2-3181adc4e0d61d5c49ecd43f1f6a2d21.webp" srcset="/img/loading.gif" lazyload alt="微信/小程序"></p>
+<p><img src="https://picx.zhimg.com/v2-64e45bae8d546417041a636fbbd07d57.webp" srcset="/img/loading.gif" lazyload alt="Apple Design"></p>
+<p><img src="https://pic4.zhimg.com/v2-72b4f6d8cf28b2a50eb200236b374067.webp" srcset="/img/loading.gif" lazyload alt="Material Design"></p>
+<p>P.S. 作为产品，绝大多数下原型的要求是快速而准确地传达需求。除非有向客户演示的需要，很多高保真交互式的原型都不是那么必要。所以有一个统一设计规范，可以快速的复用的组件库是可以极大程度提高工作效率的。</p>
+<p>虽然有了现成的组件，Axure 组件的学习成本还是要略高一些，比如高级组件中继器、蒙版、动态面板等，如果要做一些简单交互就会更复杂些（但能实现的交互方式也是真的多）。</p>
+<p>不过不同组件的作者显然有着不同的设计思路。比如 Ant Design 以 UI 角度构建组件库，基本元素都是文字、方框、线和图片，缺少组件的交互性，不像 Axure 原生的组件那样（文本框可以直接输入之类）。而且 Ant Design 把统一类型的组件放在一起，图层&#x2F;分组设置又不怎么规范，使用时还需要从里面挑一个出来复制就有点难崩，鉴定为炫技而非实用性质的组件。</p>
 
                 
               </div>
@@ -481,13 +449,11 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E5%B7%A5%E4%BD%9C/" class="print-no-link">#工作</a>
+        <a href="/tags/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86/" class="print-no-link">#产品经理</a>
       
-        <a href="/tags/%E6%95%88%E7%8E%87/" class="print-no-link">#效率</a>
+        <a href="/tags/Axure/" class="print-no-link">#Axure</a>
       
-        <a href="/tags/%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C/" class="print-no-link">#团队协作</a>
-      
-        <a href="/tags/%E7%AE%A1%E7%90%86/" class="print-no-link">#管理</a>
+        <a href="/tags/Ant-Design/" class="print-no-link">#Ant-Design</a>
       
     </div>
   
@@ -499,8 +465,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>工作踩坑录：团队、交流、协作与执行</div>
-      <div>https://skeathytomas.github.io/post/工作踩坑录：团队、交流、协作与执行/</div>
+      <div>分享一组不错的Axure组件</div>
+      <div>https://skeathytomas.github.io/post/分享一组不错的axure组件/</div>
     </div>
     <div class="license-meta">
       
@@ -512,7 +478,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年5月17日</div>
+          <div>2024年9月5日</div>
         </div>
       
       
@@ -544,18 +510,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/post/%E5%A6%82%E4%BD%95%E5%81%9A%E4%B8%80%E4%B8%AA%E5%9C%A3%E9%81%97%E7%89%A9%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%EF%BC%9A%E4%BA%A7%E5%93%81%E8%B0%83%E7%A0%94%E4%B8%8E%E5%88%86%E6%9E%90/" title="如何做一个圣遗物管理系统：产品调研与分析">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">如何做一个圣遗物管理系统：产品调研与分析</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/post/%E9%98%BF%E5%AE%85%E4%B9%9F%E4%BD%93%E9%AA%8C%E4%BA%86%E4%B8%80%E6%8A%8A%E7%96%AB%E6%83%85/" title="阿宅也体验了一把疫情">
-                        <span class="hidden-mobile">阿宅也体验了一把疫情</span>
+                      <a href="/post/%E5%A6%82%E4%BD%95%E8%AF%84%E4%BB%B72024%E5%B9%B48%E6%9C%88%E7%B1%B3%E5%93%88%E6%B8%B8%E3%80%8A%E5%8E%9F%E7%A5%9E%E3%80%8B%E8%89%BE%E6%A2%85%E8%8E%89%E5%9F%83%E4%BC%A0%E8%AF%B4%E4%BB%BB%E5%8A%A1%E3%80%8A%E9%A6%99%E6%B0%9B%E7%93%B6%E4%B9%8B%E7%AB%A0%E3%80%8B%EF%BC%9F/" title="如何评价2024年8月米哈游《原神》艾梅莉埃传说任务《香氛瓶之章》？">
+                        <span class="hidden-mobile">如何评价2024年8月米哈游《原神》艾梅莉埃传说任务《香氛瓶之章》？</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -578,7 +538,7 @@
         var options = Object.assign(
           {"clientID":"658faad5dc784f8ec14b","clientSecret":"b1c37d084a7aa0367a81f3a12c863a11ec088597","repo":"skeathytomas.github.io","owner":"skeathytomas","admin":["skeathytomas"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
           {
-            id: '676b175b1bf8d2a38551f62785f4612c'
+            id: 'f5abc175d3957ec9698acbd3a6fe9548'
           }
         )
         var gitalk = new Gitalk(options);

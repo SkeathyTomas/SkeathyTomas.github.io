@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>分享一组不错的Axure组件</title>
+    <link href="/post/%E5%88%86%E4%BA%AB%E4%B8%80%E7%BB%84%E4%B8%8D%E9%94%99%E7%9A%84axure%E7%BB%84%E4%BB%B6/"/>
+    <url>/post/%E5%88%86%E4%BA%AB%E4%B8%80%E7%BB%84%E4%B8%8D%E9%94%99%E7%9A%84axure%E7%BB%84%E4%BB%B6/</url>
+    
+    <content type="html"><![CDATA[<p>最近又兜兜转转用回了 Axure 制作原型。由于用惯了某些在线原型工具现成的高封装组件，倒是对 Axure 这种基础的组件有点不熟悉了。特别是默认组件库中，移动端的交互组件基本没有，上手难度较高。</p><p>一番简单的搜索，就找到了一份开源的资源（其实也不能算开源，只是放在 GitHub 仓库里）。</p><blockquote><p><a href="http://refs.cn/">http://refs.cn/</a> 原型设计元件库，基于 Axure RP 10&#x2F;9，支持 Android、Apple、Windows、微信，移动、桌面平台的应用和网站原型设计。——<a href="https://github.com/refscn/rplibs">rplibs组件项目</a></p></blockquote><p>项目包含网页端（Ant Design）、微信&#x2F;小程序、Apple Design、Material Design、Fluent Design 等主流设计规范下的组件样式，可以覆盖绝大多数工作场景。另外还包含图标库、统计图表库等实用组件。</p><p><img src="https://pic1.zhimg.com/v2-4efc6e00ab04699760d84aaabd91b366.webp" alt="Ant Design（按钮）"></p><p><img src="https://pic2.zhimg.com/v2-3181adc4e0d61d5c49ecd43f1f6a2d21.webp" alt="微信/小程序"></p><p><img src="https://picx.zhimg.com/v2-64e45bae8d546417041a636fbbd07d57.webp" alt="Apple Design"></p><p><img src="https://pic4.zhimg.com/v2-72b4f6d8cf28b2a50eb200236b374067.webp" alt="Material Design"></p><p>P.S. 作为产品，绝大多数下原型的要求是快速而准确地传达需求。除非有向客户演示的需要，很多高保真交互式的原型都不是那么必要。所以有一个统一设计规范，可以快速的复用的组件库是可以极大程度提高工作效率的。</p><p>虽然有了现成的组件，Axure 组件的学习成本还是要略高一些，比如高级组件中继器、蒙版、动态面板等，如果要做一些简单交互就会更复杂些（但能实现的交互方式也是真的多）。</p><p>不过不同组件的作者显然有着不同的设计思路。比如 Ant Design 以 UI 角度构建组件库，基本元素都是文字、方框、线和图片，缺少组件的交互性，不像 Axure 原生的组件那样（文本框可以直接输入之类）。而且 Ant Design 把统一类型的组件放在一起，图层&#x2F;分组设置又不怎么规范，使用时还需要从里面挑一个出来复制就有点难崩，鉴定为炫技而非实用性质的组件。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>工作</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>产品经理</tag>
+      
+      <tag>Axure</tag>
+      
+      <tag>Ant-Design</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>如何评价2024年8月米哈游《原神》艾梅莉埃传说任务《香氛瓶之章》？</title>
     <link href="/post/%E5%A6%82%E4%BD%95%E8%AF%84%E4%BB%B72024%E5%B9%B48%E6%9C%88%E7%B1%B3%E5%93%88%E6%B8%B8%E3%80%8A%E5%8E%9F%E7%A5%9E%E3%80%8B%E8%89%BE%E6%A2%85%E8%8E%89%E5%9F%83%E4%BC%A0%E8%AF%B4%E4%BB%BB%E5%8A%A1%E3%80%8A%E9%A6%99%E6%B0%9B%E7%93%B6%E4%B9%8B%E7%AB%A0%E3%80%8B%EF%BC%9F/"/>
     <url>/post/%E5%A6%82%E4%BD%95%E8%AF%84%E4%BB%B72024%E5%B9%B48%E6%9C%88%E7%B1%B3%E5%93%88%E6%B8%B8%E3%80%8A%E5%8E%9F%E7%A5%9E%E3%80%8B%E8%89%BE%E6%A2%85%E8%8E%89%E5%9F%83%E4%BC%A0%E8%AF%B4%E4%BB%BB%E5%8A%A1%E3%80%8A%E9%A6%99%E6%B0%9B%E7%93%B6%E4%B9%8B%E7%AB%A0%E3%80%8B%EF%BC%9F/</url>
