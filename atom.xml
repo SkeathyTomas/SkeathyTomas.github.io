@@ -6,7 +6,7 @@
   <link href="https://skeathytomas.github.io/atom.xml" rel="self"/>
   
   <link href="https://skeathytomas.github.io/"/>
-  <updated>2025-06-25T05:33:08.076Z</updated>
+  <updated>2025-06-30T14:21:51.163Z</updated>
   <id>https://skeathytomas.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>基于概率方法的Excel数据构造方法</title>
+    <link href="https://skeathytomas.github.io/post/%E5%9F%BA%E4%BA%8E%E6%A6%82%E7%8E%87%E6%96%B9%E6%B3%95%E7%9A%84excel%E6%95%B0%E6%8D%AE%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95/"/>
+    <id>https://skeathytomas.github.io/post/%E5%9F%BA%E4%BA%8E%E6%A6%82%E7%8E%87%E6%96%B9%E6%B3%95%E7%9A%84excel%E6%95%B0%E6%8D%AE%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95/</id>
+    <published>2025-06-15T16:00:00.000Z</published>
+    <updated>2025-06-30T14:21:51.163Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;起因是工作中突然接到了一个需求，需要模拟一些数据。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://pic4.zhimg.com/80/v2-4c8cee909bfdfdf265086ca13267c7f5_720w.jpg&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="工作" scheme="https://skeathytomas.github.io/categories/%E5%B7%A5%E4%BD%9C/"/>
+    
+    
+    <category term="概率" scheme="https://skeathytomas.github.io/tags/%E6%A6%82%E7%8E%87/"/>
+    
+    <category term="数据分析" scheme="https://skeathytomas.github.io/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
+    
+    <category term="Excel" scheme="https://skeathytomas.github.io/tags/Excel/"/>
+    
+  </entry>
   
   <entry>
     <title>如何评价《原神》5.6的魔神任务《悖理》？</title>

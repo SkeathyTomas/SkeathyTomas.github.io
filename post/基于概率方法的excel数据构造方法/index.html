@@ -16,28 +16,28 @@
   <meta name="author" content="Skeathy">
   <meta name="keywords" content="互联网,产品经理,设计,生活,游戏,动漫,Coding">
   
-    <meta name="description" content="最近又兜兜转转用回了 Axure 制作原型。由于用惯了某些在线原型工具现成的高封装组件，倒是对 Axure 这种基础的组件有点不熟悉了。特别是默认组件库中，移动端的交互组件基本没有，上手难度较高。 一番简单的搜索，就找到了一份开源的资源（其实也不能算开源，只是放在 GitHub 仓库里）。  http:&#x2F;&#x2F;refs.cn&#x2F; 原型设计元件库，基于 Axure RP 10&#x2F;9，支持 Andr">
+    <meta name="description" content="起因是工作中突然接到了一个需求，需要模拟一些数据。  原始数据大约有 10000+的数据量，从可视化结果上大致可以得出特征：  数据比较稳定，偶有一些波动； 大体上呈现一定的上升趋势，但上升速度比较缓慢，总体也就增长了 1、2 这样。  需求：保持数据的整体特征不变，但末尾呈现更加明显的增长趋势。 本来想着开 vscode 写 python 代码了，突然一想有点麻烦，不如在原来的 excel 里试">
 <meta property="og:type" content="article">
-<meta property="og:title" content="分享一组不错的Axure组件">
-<meta property="og:url" content="https://skeathytomas.github.io/post/%E5%88%86%E4%BA%AB%E4%B8%80%E7%BB%84%E4%B8%8D%E9%94%99%E7%9A%84axure%E7%BB%84%E4%BB%B6/index.html">
+<meta property="og:title" content="基于概率方法的Excel数据构造方法">
+<meta property="og:url" content="https://skeathytomas.github.io/post/%E5%9F%BA%E4%BA%8E%E6%A6%82%E7%8E%87%E6%96%B9%E6%B3%95%E7%9A%84excel%E6%95%B0%E6%8D%AE%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95/index.html">
 <meta property="og:site_name" content="智商衰退之后">
-<meta property="og:description" content="最近又兜兜转转用回了 Axure 制作原型。由于用惯了某些在线原型工具现成的高封装组件，倒是对 Axure 这种基础的组件有点不熟悉了。特别是默认组件库中，移动端的交互组件基本没有，上手难度较高。 一番简单的搜索，就找到了一份开源的资源（其实也不能算开源，只是放在 GitHub 仓库里）。  http:&#x2F;&#x2F;refs.cn&#x2F; 原型设计元件库，基于 Axure RP 10&#x2F;9，支持 Andr">
+<meta property="og:description" content="起因是工作中突然接到了一个需求，需要模拟一些数据。  原始数据大约有 10000+的数据量，从可视化结果上大致可以得出特征：  数据比较稳定，偶有一些波动； 大体上呈现一定的上升趋势，但上升速度比较缓慢，总体也就增长了 1、2 这样。  需求：保持数据的整体特征不变，但末尾呈现更加明显的增长趋势。 本来想着开 vscode 写 python 代码了，突然一想有点麻烦，不如在原来的 excel 里试">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://pic1.zhimg.com/70/v2-fdda4629b604c0555549858c32a4980b_1440w.avis?source=172ae18b&biz_tag=Post">
-<meta property="article:published_time" content="2024-09-04T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-09-05T13:51:52.656Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/rubaitul-azad-GauA0hiEwDk-unsplash.jpg">
+<meta property="article:published_time" content="2025-06-15T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-06-30T14:21:51.163Z">
 <meta property="article:author" content="Skeathy">
-<meta property="article:tag" content="产品经理">
-<meta property="article:tag" content="Axure">
-<meta property="article:tag" content="Ant-Design">
+<meta property="article:tag" content="概率">
+<meta property="article:tag" content="数据分析">
+<meta property="article:tag" content="Excel">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://pic1.zhimg.com/70/v2-fdda4629b604c0555549858c32a4980b_1440w.avis?source=172ae18b&biz_tag=Post">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/rubaitul-azad-GauA0hiEwDk-unsplash.jpg">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>分享一组不错的Axure组件 - 智商衰退之后</title>
+  <title>基于概率方法的Excel数据构造方法 - 智商衰退之后</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -225,13 +225,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('https://pic1.zhimg.com/70/v2-fdda4629b604c0555549858c32a4980b_1440w.avis?source=172ae18b&biz_tag=Post') no-repeat center center; background-size: cover;">
+     style="background: url('https://raw.githubusercontent.com/SkeathyTomas/img/main/img/rubaitul-azad-GauA0hiEwDk-unsplash.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="分享一组不错的Axure组件"></span>
+            <span id="subtitle" data-typed-text="基于概率方法的Excel数据构造方法"></span>
           
         </div>
 
@@ -242,8 +242,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-09-05 00:00" pubdate>
-          2024年9月5日 凌晨
+        <time datetime="2025-06-16 00:00" pubdate>
+          2025年6月16日 凌晨
         </time>
       </span>
     
@@ -254,7 +254,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          713 字
+          902 字
         
       </span>
     
@@ -265,7 +265,7 @@
         
         
         
-          6 分钟
+          8 分钟
         
       </span>
     
@@ -349,7 +349,7 @@
       
         <a href="/post/%E5%88%86%E4%BA%AB%E4%B8%80%E7%BB%84%E4%B8%8D%E9%94%99%E7%9A%84axure%E7%BB%84%E4%BB%B6/" title="分享一组不错的Axure组件"
            class="list-group-item list-group-item-action
-           active">
+           ">
           <span class="category-post">分享一组不错的Axure组件</span>
         </a>
       
@@ -358,7 +358,7 @@
       
         <a href="/post/%E5%9F%BA%E4%BA%8E%E6%A6%82%E7%8E%87%E6%96%B9%E6%B3%95%E7%9A%84excel%E6%95%B0%E6%8D%AE%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95/" title="基于概率方法的Excel数据构造方法"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">基于概率方法的Excel数据构造方法</span>
         </a>
       
@@ -408,12 +408,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">分享一组不错的Axure组件</h1>
+            <h1 id="seo-header">基于概率方法的Excel数据构造方法</h1>
             
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2024年9月5日 晚上
+                    本文最后更新于：2025年6月30日 晚上
                   
                 
               </p>
@@ -421,19 +421,33 @@
             
               <div class="markdown-body">
                 
-                <p>最近又兜兜转转用回了 Axure 制作原型。由于用惯了某些在线原型工具现成的高封装组件，倒是对 Axure 这种基础的组件有点不熟悉了。特别是默认组件库中，移动端的交互组件基本没有，上手难度较高。</p>
-<p>一番简单的搜索，就找到了一份开源的资源（其实也不能算开源，只是放在 GitHub 仓库里）。</p>
+                <p>起因是工作中突然接到了一个需求，需要模拟一些数据。</p>
+<p><img src="https://pic4.zhimg.com/80/v2-4c8cee909bfdfdf265086ca13267c7f5_720w.jpg" srcset="/img/loading.gif" lazyload alt="原始数据可视化"></p>
+<p>原始数据大约有 10000+的数据量，从可视化结果上大致可以得出特征：</p>
+<ul>
+<li>数据比较稳定，偶有一些波动；</li>
+<li>大体上呈现一定的上升趋势，但上升速度比较缓慢，总体也就增长了 1、2 这样。</li>
+</ul>
+<p>需求：保持数据的整体特征不变，但末尾呈现更加明显的增长趋势。</p>
+<p>本来想着开 vscode 写 python 代码了，突然一想有点麻烦，不如在原来的 excel 里试一试。</p>
+<p>当然如何在 excel 里造这样的数据，我也毫无思路，于是果断问起了大模型。</p>
 <blockquote>
-<p><a target="_blank" rel="noopener" href="http://refs.cn/">http://refs.cn/</a> 原型设计元件库，基于 Axure RP 10&#x2F;9，支持 Android、Apple、Windows、微信，移动、桌面平台的应用和网站原型设计。——<a target="_blank" rel="noopener" href="https://github.com/refscn/rplibs">rplibs组件项目</a></p>
+<p>excel 生成范围内随机自然数，多个连续自然数有较好的连续性，不会随意上下变动。</p>
 </blockquote>
-<p>项目包含网页端（Ant Design）、微信&#x2F;小程序、Apple Design、Material Design、Fluent Design 等主流设计规范下的组件样式，可以覆盖绝大多数工作场景。另外还包含图标库、统计图表库等实用组件。</p>
-<p><img src="https://pic1.zhimg.com/v2-4efc6e00ab04699760d84aaabd91b366.webp" srcset="/img/loading.gif" lazyload alt="Ant Design（按钮）"></p>
-<p><img src="https://pic2.zhimg.com/v2-3181adc4e0d61d5c49ecd43f1f6a2d21.webp" srcset="/img/loading.gif" lazyload alt="微信/小程序"></p>
-<p><img src="https://picx.zhimg.com/v2-64e45bae8d546417041a636fbbd07d57.webp" srcset="/img/loading.gif" lazyload alt="Apple Design"></p>
-<p><img src="https://pic4.zhimg.com/v2-72b4f6d8cf28b2a50eb200236b374067.webp" srcset="/img/loading.gif" lazyload alt="Material Design"></p>
-<p>P.S. 作为产品，绝大多数下原型的要求是快速而准确地传达需求。除非有向客户演示的需要，很多高保真交互式的原型都不是那么必要。所以有一个统一设计规范，可以快速的复用的组件库是可以极大程度提高工作效率的。</p>
-<p>虽然有了现成的组件，Axure 组件的学习成本还是要略高一些，比如高级组件中继器、蒙版、动态面板等，如果要做一些简单交互就会更复杂些（但能实现的交互方式也是真的多）。</p>
-<p>不过不同组件的作者显然有着不同的设计思路。比如 Ant Design 以 UI 角度构建组件库，基本元素都是文字、方框、线和图片，缺少组件的交互性，不像 Axure 原生的组件那样（文本框可以直接输入之类）。而且 Ant Design 把统一类型的组件放在一起，图层&#x2F;分组设置又不怎么规范，使用时还需要从里面挑一个出来复制就有点难崩，鉴定为炫技而非实用性质的组件。</p>
+<p>大模型首先给出了 RANDBETWEEN 函数，但是这个函数相邻数据间的波动过于频繁，显然与原始数据模式不同。</p>
+<p><img src="https://pic2.zhimg.com/80/v2-98a4b3389fca0efa5c84ed5b6338e73a_720w.jpg" srcset="/img/loading.gif" lazyload alt="RANDBETWEEN(-1,1)可视化"></p>
+<p>于是追问：</p>
+<blockquote>
+<p>这样前一个数和后一个数可能都会不同，能不能提高前后数值的一致性，一个数连续出现几次，然后再随机变成另一个数。</p>
+</blockquote>
+<p>大模型又给出了新的方案，通过构造一个计数器的中间值，当中间值满足计数条件的时候，再对上一个数值进行变动处理。</p>
+<p>仔细看了下大模型的输出，虽然细节上有点问题，但整体思路 ok，于是照着这个流程开始试验。</p>
+<p>第一步，生成一列随机数，使用 RANDBETWEEN 函数生成 1-100 的随机数。</p>
+<p>第二步，计算变化量列，当随机数那一列的值达到某种规则的时候，对应的变化量为-1，0 或 1。由于我的要求是相对快速上升，于是大致定了随机数为 1 的时候，变化量为-1；随机数为 99、100 的时候，变化量为 1；其余为 0。翻译一下，就是 2%概率+1，1%概率-1，97%不变。其中转化过程使用 IFS 函数：IFS(A1&gt;&#x3D;99,1,A1&lt;&#x3D;1,-1,AND(A1&gt;1,A1&lt;99),0)。</p>
+<p>第三步，用上一个值+变化量构造目标数据。</p>
+<p><img src="https://pic1.zhimg.com/80/v2-9975ee0f7aea5535240f5ee9b3b4e2fc_720w.jpg" srcset="/img/loading.gif" lazyload alt="最终结果可视化"></p>
+<p>最终模拟了 500 个数据，从结果上看和原始数据的特征大体一致。值得注意的是，随机结果具有不稳定性，且 500 个数据量也不是特别大，可能需要多次尝试并找到合适的结果。</p>
+<p>本文重在介绍思路，很多数据构造的需求完全可以由 excel 来实现。比如在此基础上，可以调整波动范围（IFS 函数多设置几个条件，概率也可以调整），直至生成自己满意的数据。</p>
 
                 
               </div>
@@ -467,11 +481,11 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86/" class="print-no-link">#产品经理</a>
+        <a href="/tags/%E6%A6%82%E7%8E%87/" class="print-no-link">#概率</a>
       
-        <a href="/tags/Axure/" class="print-no-link">#Axure</a>
+        <a href="/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" class="print-no-link">#数据分析</a>
       
-        <a href="/tags/Ant-Design/" class="print-no-link">#Ant-Design</a>
+        <a href="/tags/Excel/" class="print-no-link">#Excel</a>
       
     </div>
   
@@ -483,8 +497,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>分享一组不错的Axure组件</div>
-      <div>https://skeathytomas.github.io/post/分享一组不错的axure组件/</div>
+      <div>基于概率方法的Excel数据构造方法</div>
+      <div>https://skeathytomas.github.io/post/基于概率方法的excel数据构造方法/</div>
     </div>
     <div class="license-meta">
       
@@ -496,7 +510,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年9月5日</div>
+          <div>2025年6月16日</div>
         </div>
       
       
@@ -528,18 +542,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/post/%E3%80%8C%E8%8D%89%E6%96%99%E4%BA%8C%E7%BB%B4%E7%A0%81%E3%80%8D%E2%80%94%E2%80%94%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%9D%A2%E8%AF%95%E4%BA%A4%E6%B5%81/" title="「草料二维码」——记一次面试交流">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">「草料二维码」——记一次面试交流</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/post/%E5%A6%82%E4%BD%95%E8%AF%84%E4%BB%B72024%E5%B9%B48%E6%9C%88%E7%B1%B3%E5%93%88%E6%B8%B8%E3%80%8A%E5%8E%9F%E7%A5%9E%E3%80%8B%E8%89%BE%E6%A2%85%E8%8E%89%E5%9F%83%E4%BC%A0%E8%AF%B4%E4%BB%BB%E5%8A%A1%E3%80%8A%E9%A6%99%E6%B0%9B%E7%93%B6%E4%B9%8B%E7%AB%A0%E3%80%8B%EF%BC%9F/" title="如何评价2024年8月米哈游《原神》艾梅莉埃传说任务《香氛瓶之章》？">
-                        <span class="hidden-mobile">如何评价2024年8月米哈游《原神》艾梅莉埃传说任务《香氛瓶之章》？</span>
+                      <a href="/post/%E5%A6%82%E4%BD%95%E8%AF%84%E4%BB%B7%E3%80%8A%E5%8E%9F%E7%A5%9E%E3%80%8B5-6%E7%9A%84%E9%AD%94%E7%A5%9E%E4%BB%BB%E5%8A%A1%E3%80%8A%E6%82%96%E7%90%86%E3%80%8B%EF%BC%9F/" title="如何评价《原神》5.6的魔神任务《悖理》？">
+                        <span class="hidden-mobile">如何评价《原神》5.6的魔神任务《悖理》？</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -562,7 +570,7 @@
         var options = Object.assign(
           {"clientID":"658faad5dc784f8ec14b","clientSecret":"b1c37d084a7aa0367a81f3a12c863a11ec088597","repo":"skeathytomas.github.io","owner":"skeathytomas","admin":["skeathytomas"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
           {
-            id: 'f5abc175d3957ec9698acbd3a6fe9548'
+            id: '9e78ef1d2bfaf0c665e1eb7888ad22d7'
           }
         )
         var gitalk = new Gitalk(options);
