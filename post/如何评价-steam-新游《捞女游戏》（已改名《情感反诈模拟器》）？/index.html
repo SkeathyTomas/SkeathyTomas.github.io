@@ -19,28 +19,28 @@
   <meta name="author" content="Skeathy">
   <meta name="keywords" content="互联网,产品经理,设计,生活,游戏,动漫,Coding">
   
-    <meta name="description" content="起因是在写刻晴办公桌新功能本地数据保存的时候，需要加载与更新数据，然后就莫名踩了一次动态数据类型的坑。正好借着这个机会整理一下 Python 中的数据类型，以及引用和拷贝相关的知识。虽说网上总结很多，但这一次想要自己记录一遍。 Python 的数据类型与赋值Python 中变量不需要声明，而是用赋值（&#x3D;）的方式创建。某种意义上，变量就像指针（但是这个指针也没有类型），指向内存中具体的数据">
+    <meta name="description" content="由于实在没什么精力去推影游，恰好 B 站关注里有人发了实况，就快速借助视频云通关了，之后某些游戏画面也会直接截取自主播实况视频，顺便贴个主播地址，B 站关注咖米谢谢喵。 123456url: https:&#x2F;&#x2F;space.bilibili.com&#x2F;7770395title: &quot;咖米狸的个人空间-咖米狸个人主页-哔哩哔哩视频&quot;description: &quot;哔哩哔哩咖米狸的个">
 <meta property="og:type" content="article">
-<meta property="og:title" content="总会踩一次 Python 引用与拷贝的坑">
-<meta property="og:url" content="https://skeathytomas.github.io/post/%E6%80%BB%E4%BC%9A%E8%B8%A9%E4%B8%80%E6%AC%A1-python-%E5%BC%95%E7%94%A8%E4%B8%8E%E6%8B%B7%E8%B4%9D%E7%9A%84%E5%9D%91/index.html">
+<meta property="og:title" content="如何评价 Steam 新游《捞女游戏》（已改名《情感反诈模拟器》）？">
+<meta property="og:url" content="https://skeathytomas.github.io/post/%E5%A6%82%E4%BD%95%E8%AF%84%E4%BB%B7-steam-%E6%96%B0%E6%B8%B8%E3%80%8A%E6%8D%9E%E5%A5%B3%E6%B8%B8%E6%88%8F%E3%80%8B%EF%BC%88%E5%B7%B2%E6%94%B9%E5%90%8D%E3%80%8A%E6%83%85%E6%84%9F%E5%8F%8D%E8%AF%88%E6%A8%A1%E6%8B%9F%E5%99%A8%E3%80%8B%EF%BC%89%EF%BC%9F/index.html">
 <meta property="og:site_name" content="智商衰退之后">
-<meta property="og:description" content="起因是在写刻晴办公桌新功能本地数据保存的时候，需要加载与更新数据，然后就莫名踩了一次动态数据类型的坑。正好借着这个机会整理一下 Python 中的数据类型，以及引用和拷贝相关的知识。虽说网上总结很多，但这一次想要自己记录一遍。 Python 的数据类型与赋值Python 中变量不需要声明，而是用赋值（&#x3D;）的方式创建。某种意义上，变量就像指针（但是这个指针也没有类型），指向内存中具体的数据">
+<meta property="og:description" content="由于实在没什么精力去推影游，恰好 B 站关注里有人发了实况，就快速借助视频云通关了，之后某些游戏画面也会直接截取自主播实况视频，顺便贴个主播地址，B 站关注咖米谢谢喵。 123456url: https:&#x2F;&#x2F;space.bilibili.com&#x2F;7770395title: &quot;咖米狸的个人空间-咖米狸个人主页-哔哩哔哩视频&quot;description: &quot;哔哩哔哩咖米狸的个">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20221230160051.png">
-<meta property="article:published_time" content="2022-12-11T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-12-30T10:08:32.760Z">
+<meta property="og:image" content="https://pica.zhimg.com/100/v2-067def5ed07424a0e82dd94fcf25b588_r.jpg">
+<meta property="article:published_time" content="2025-06-22T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-07-12T03:35:50.244Z">
 <meta property="article:author" content="Skeathy">
-<meta property="article:tag" content="Coding">
-<meta property="article:tag" content="Python">
-<meta property="article:tag" content="数据结构">
+<meta property="article:tag" content="游戏">
+<meta property="article:tag" content="steam">
+<meta property="article:tag" content="影游">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20221230160051.png">
+<meta name="twitter:image" content="https://pica.zhimg.com/100/v2-067def5ed07424a0e82dd94fcf25b588_r.jpg">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>总会踩一次 Python 引用与拷贝的坑 - 智商衰退之后</title>
+  <title>如何评价 Steam 新游《捞女游戏》（已改名《情感反诈模拟器》）？ - 智商衰退之后</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -226,13 +226,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20221230160051.png') no-repeat center center; background-size: cover;">
+     style="background: url('https://pica.zhimg.com/100/v2-067def5ed07424a0e82dd94fcf25b588_r.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="总会踩一次 Python 引用与拷贝的坑"></span>
+            <span id="subtitle" data-typed-text="如何评价 Steam 新游《捞女游戏》（已改名《情感反诈模拟器》）？"></span>
           
         </div>
 
@@ -243,8 +243,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-12-12 00:00" pubdate>
-          2022年12月12日 凌晨
+        <time datetime="2025-06-23 00:00" pubdate>
+          2025年6月23日 凌晨
         </time>
       </span>
     
@@ -255,7 +255,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.6k 字
+          2k 字
         
       </span>
     
@@ -266,7 +266,7 @@
         
         
         
-          13 分钟
+          17 分钟
         
       </span>
     
@@ -311,17 +311,17 @@
     
     <div class="category row nomargin-x">
       <a class="category-item 
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="Coding"
-        id="heading-cddcade0405954c4325ee1fb11e3dc0e" role="tab" data-toggle="collapse" href="#collapse-cddcade0405954c4325ee1fb11e3dc0e"
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="游戏"
+        id="heading-ba08216f13dd1742157412386eee1225" role="tab" data-toggle="collapse" href="#collapse-ba08216f13dd1742157412386eee1225"
         aria-expanded="true"
       >
-        Coding
-        <span class="list-group-count">(4)</span>
+        游戏
+        <span class="list-group-count">(20)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-cddcade0405954c4325ee1fb11e3dc0e"
-           role="tabpanel" aria-labelledby="heading-cddcade0405954c4325ee1fb11e3dc0e">
+      <div class="category-collapse collapse show" id="collapse-ba08216f13dd1742157412386eee1225"
+           role="tabpanel" aria-labelledby="heading-ba08216f13dd1742157412386eee1225">
         
         
           
@@ -330,40 +330,100 @@
     
       
       
-        <a href="/post/leetcode-no-3-longest-substring-without-repeating-characters/" title="LeetCode No.3 Longest Substring Without Repeating Characters"
+        <a href="/post/%E4%BB%8E%E7%A0%B4%E5%9C%88%E5%88%B0%E5%9B%9E%E5%BD%92%E2%80%94%E2%80%94%E3%80%8A%E5%8E%9F%E7%A5%9E%E3%80%8B%E7%BA%B3%E5%A1%94%E7%89%88%E6%9C%AC%E4%B8%AD%E6%9C%9F%E5%9B%9E%E9%A1%BE/" title="从破圈到回归——《原神》纳塔版本中期回顾"
            class="list-group-item list-group-item-action
            ">
-          <span class="category-post">LeetCode No.3 Longest Substring Without Repeating Characters</span>
+          <span class="category-post">从破圈到回归——《原神》纳塔版本中期回顾</span>
         </a>
       
     
       
       
-        <a href="/post/%E5%9C%A3%E9%81%97%E7%89%A9%E8%AF%84%E5%88%86%E5%B7%A5%E5%85%B7%EF%BC%9A%E5%88%BB%E6%99%B4%E5%8A%9E%E5%85%AC%E6%A1%8C%E6%8A%80%E6%9C%AF%E6%95%B4%E7%90%86%E4%B8%8E%E6%80%BB%E7%BB%93/" title="圣遗物评分工具：刻晴办公桌技术整理与总结"
+        <a href="/post/%E5%86%8D%E8%B0%88%E3%80%8A%E5%8E%9F%E7%A5%9E%E3%80%8B%E7%8E%A9%E6%B3%95%EF%BC%9A%E5%86%99%E5%9C%A8%E9%A1%BB%E5%BC%A5%E6%9B%B4%E6%96%B0%E4%B9%8B%E5%89%8D/" title="再谈《原神》玩法：写在须弥更新之前"
            class="list-group-item list-group-item-action
            ">
-          <span class="category-post">圣遗物评分工具：刻晴办公桌技术整理与总结</span>
+          <span class="category-post">再谈《原神》玩法：写在须弥更新之前</span>
         </a>
       
     
       
       
-        <a href="/post/%E6%80%BB%E4%BC%9A%E8%B8%A9%E4%B8%80%E6%AC%A1-python-%E5%BC%95%E7%94%A8%E4%B8%8E%E6%8B%B7%E8%B4%9D%E7%9A%84%E5%9D%91/" title="总会踩一次 Python 引用与拷贝的坑"
+        <a href="/post/%E5%8E%9F%E7%A5%9E%E6%B4%BB%E5%8A%A8%E7%8E%A9%E6%B3%95%E8%AF%84%E6%9E%90/" title="原神活动玩法评析"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">原神活动玩法评析</span>
+        </a>
+      
+    
+      
+      
+        <a href="/post/%E5%8E%9F%E7%A5%9E%E7%8E%A9%E6%B3%95%E6%80%BB%E7%BB%93/" title="原神玩法总结"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">原神玩法总结</span>
+        </a>
+      
+    
+      
+      
+        <a href="/post/%E5%A6%82%E4%BD%95%E8%AF%84%E4%BB%B7-2024-%E5%B9%B4-10-%E6%9C%88%E7%B1%B3%E5%93%88%E6%B8%B8%E3%80%8A%E5%8E%9F%E7%A5%9E%E3%80%8B-5-1-%E5%89%A7%E6%83%85%E3%80%8A%E5%91%BD%E5%AE%9A%E5%B0%86%E7%84%9A%E7%9A%84%E8%99%B9%E5%85%89%E3%80%8B%EF%BC%9F/" title="如何评价 2024 年 10 月米哈游《原神》 5.1 剧情《命定将焚的虹光》？"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">如何评价 2024 年 10 月米哈游《原神》 5.1 剧情《命定将焚的虹光》？</span>
+        </a>
+      
+    
+      
+      
+        <a href="/post/%E5%A6%82%E4%BD%95%E8%AF%84%E4%BB%B7-steam-%E6%96%B0%E6%B8%B8%E3%80%8A%E6%8D%9E%E5%A5%B3%E6%B8%B8%E6%88%8F%E3%80%8B%EF%BC%88%E5%B7%B2%E6%94%B9%E5%90%8D%E3%80%8A%E6%83%85%E6%84%9F%E5%8F%8D%E8%AF%88%E6%A8%A1%E6%8B%9F%E5%99%A8%E3%80%8B%EF%BC%89%EF%BC%9F/" title="如何评价 Steam 新游《捞女游戏》（已改名《情感反诈模拟器》）？"
            class="list-group-item list-group-item-action
            active">
-          <span class="category-post">总会踩一次 Python 引用与拷贝的坑</span>
+          <span class="category-post">如何评价 Steam 新游《捞女游戏》（已改名《情感反诈模拟器》）？</span>
         </a>
       
     
       
       
-        <a href="/post/%E6%8A%BD%E5%8D%A1%E4%B8%8E%E6%8E%89%E8%90%BD%EF%BC%882-%E9%81%93%E6%A6%82%E7%8E%87%E9%A2%98%EF%BC%89/" title="抽卡与掉落（2 道概率题）"
+        <a href="/post/%E5%A6%82%E4%BD%95%E8%AF%84%E4%BB%B72024%E5%B9%B48%E6%9C%88%E7%B1%B3%E5%93%88%E6%B8%B8%E3%80%8A%E5%8E%9F%E7%A5%9E%E3%80%8B%E8%89%BE%E6%A2%85%E8%8E%89%E5%9F%83%E4%BC%A0%E8%AF%B4%E4%BB%BB%E5%8A%A1%E3%80%8A%E9%A6%99%E6%B0%9B%E7%93%B6%E4%B9%8B%E7%AB%A0%E3%80%8B%EF%BC%9F/" title="如何评价2024年8月米哈游《原神》艾梅莉埃传说任务《香氛瓶之章》？"
            class="list-group-item list-group-item-action
            ">
-          <span class="category-post">抽卡与掉落（2 道概率题）</span>
+          <span class="category-post">如何评价2024年8月米哈游《原神》艾梅莉埃传说任务《香氛瓶之章》？</span>
         </a>
       
     
+      
+      
+        <a href="/post/%E5%A6%82%E4%BD%95%E8%AF%84%E4%BB%B72025%E5%B9%B41%E6%9C%88%E7%B1%B3%E5%93%88%E6%B8%B8%E3%80%8A%E5%8E%9F%E7%A5%9E%E3%80%8B5-3%E4%BB%BB%E5%8A%A1%E5%89%A7%E6%83%85%E3%80%8A%E7%82%BD%E7%83%88%E7%9A%84%E8%BF%98%E9%AD%82%E8%AF%97%E3%80%8B%EF%BC%9F/" title="如何评价2025年1月米哈游《原神》5.3任务剧情《炽烈的还魂诗》？"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">如何评价2025年1月米哈游《原神》5.3任务剧情《炽烈的还魂诗》？</span>
+        </a>
+      
+    
+      
+      
+        <a href="/post/%E5%A6%82%E4%BD%95%E8%AF%84%E4%BB%B7%E3%80%8A%E5%8E%9F%E7%A5%9E%E3%80%8B1-6-%E7%89%88%E6%9C%AC%E6%96%B0%E5%9C%B0%E5%9B%BE%E9%87%91%E8%8B%B9%E6%9E%9C%E7%BE%A4%E5%B2%9B%E7%9A%84%E5%85%B3%E5%8D%A1%E8%AE%BE%E8%AE%A1/" title="如何评价《原神》1.6 版本新地图金苹果群岛的关卡设计"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">如何评价《原神》1.6 版本新地图金苹果群岛的关卡设计</span>
+        </a>
+      
+    
+      
+      
+        <a href="/post/%E5%A6%82%E4%BD%95%E8%AF%84%E4%BB%B7%E3%80%8A%E5%8E%9F%E7%A5%9E%E3%80%8B2-5-%E7%89%88%E6%9C%AC%E6%96%B0%E6%B4%BB%E5%8A%A8%E3%80%8C%E4%B8%89%E7%95%8C%E8%B7%AF%E9%A3%A8%E7%A5%AD%E3%80%8D%EF%BC%9F/" title="如何评价《原神》2.5 版本新活动「三界路飨祭」？"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">如何评价《原神》2.5 版本新活动「三界路飨祭」？</span>
+        </a>
+      
+    
+      
+      
+        <a href="/categories/%E6%B8%B8%E6%88%8F/" class="list-group-item list-group-item-action">
+          <span class="category-post">More...</span>
+        </a>
+        
   </div>
 
         
@@ -382,12 +442,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">总会踩一次 Python 引用与拷贝的坑</h1>
+            <h1 id="seo-header">如何评价 Steam 新游《捞女游戏》（已改名《情感反诈模拟器》）？</h1>
             
               <p id="updated-time" class="note note-info" style="">
                 
                   
-                    本文最后更新于 2022年12月30日 晚上
+                    本文最后更新于 2025年7月12日 中午
                   
                 
               </p>
@@ -395,39 +455,33 @@
             
               <div class="markdown-body">
                 
-                <p>起因是在写<a target="_blank" rel="noopener" href="https://github.com/SkeathyTomas/genshin_artifact_auxiliary">刻晴办公桌</a>新功能本地数据保存的时候，需要加载与更新数据，然后就莫名踩了一次动态数据类型的坑。正好借着这个机会整理一下 Python 中的数据类型，以及引用和拷贝相关的知识。虽说网上总结很多，但这一次想要自己记录一遍。</p>
-<h2 id="Python-的数据类型与赋值"><a href="#Python-的数据类型与赋值" class="headerlink" title="Python 的数据类型与赋值"></a>Python 的数据类型与赋值</h2><p>Python 中变量不需要声明，而是用赋值（&#x3D;）的方式创建。某种意义上，变量就像指针（但是这个指针也没有类型），指向内存中具体的数据，而赋值就是完成「指向」这一操作。如果等号右边是具体的数据，也顺便完成了数据在内存中的创建操作。</p>
-<p>虽说变量没有类型一说，但是具体的数据 Python 还是有类型的，Python 3 有 6 种标准数据类型——Number（数字）、String（字符串）、Tuple（元组）、List（列表）、Set（集合）和 Dictionary（字典）。其中前三种是静态数据类型（不可变），后三种是动态数据类型（可变），具体每一种数据类型的含义不再继续展开。可变与不可变的含义为是否可对该内存中的数据进行修改。</p>
-<h2 id="引用与拷贝"><a href="#引用与拷贝" class="headerlink" title="引用与拷贝"></a>引用与拷贝</h2><p>从本质上讲，赋值操作即是一种引用，前面提到的「指向」和「引用」含义是一致的。除了初始化这种建立变量到内存数据的引用，对旧变量重新赋值、变量之间互相赋值也是常见的引用，比如<code>b = a</code>。</p>
-<p>重新赋值是把就旧变量指向新的数据，而引用变量并不是再创建一份数据，而是把新变量指向赋值变量引用的数据。</p>
-<p><img src="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20221230145626.png" srcset="/img/loading.gif" lazyload alt="静态变量引用"></p>
-<p>以上对于静态数据和动态数据（整体）都是成立的，但是动态数据包含索引操作，比如需要改变列表中第一个数值，就会用到<code>a[0] = xx</code>这样的操作。前面提到动态数据是可变的，索引赋值就是改变同一内存地址数据的操作。所以如果<code>a, b</code> 同时引用了一个列表数据，而对<code>b</code>进行了索引赋值修改，由于<code>a</code>还是指向了同一个已修改的数据，所以会出现反直觉的<code>a</code>也修改了数据的情况。</p>
-<p><img src="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20221230151319.png" srcset="/img/loading.gif" lazyload alt="动态数据索引赋值"></p>
-<p>补充一下代码及输出：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span>a = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>b = a<br><span class="hljs-meta">&gt;&gt;&gt; </span>b[<span class="hljs-number">0</span>] = <span class="hljs-number">2</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>b<br>[<span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>a<br>[<span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]<br></code></pre></td></tr></table></figure>
+                <p>由于实在没什么精力去推影游，恰好 B 站关注里有人发了实况，就快速借助视频云通关了，之后某些游戏画面也会直接截取自主播实况视频，顺便贴个主播地址，B 站关注咖米谢谢喵。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs cardlink">url: https://space.bilibili.com/7770395<br>title: &quot;咖米狸的个人空间-咖米狸个人主页-哔哩哔哩视频&quot;<br>description: &quot;哔哩哔哩咖米狸的个人空间，提供咖米狸分享的视频、音频、文章、动态、收藏等内容，关注咖米狸账号，第一时间了解UP主动态。游戏/外设 商业合作私信或➕Q:41336588（备注品牌）网瘾咖咖平日会在B站直播各种好玩的游戏哒&quot;<br>host: space.bilibili.com<br>favicon: https://www.bilibili.com/favicon.ico<br>image: https://www.bilibili.com/favicon.ico<br></code></pre></td></tr></table></figure>
 
-<p>不过这样引用肯定会遇到需求上的问题——比如有一份原始数据，现要拿出一部分修改&#x2F;添加，经过校验后返回数据。因为引用数据的修改直接修改了原数据，自然是不妥的。所以需要引入拷贝的概念，即创建一份新内存地址的数据，数据内容和原来一样，但互相独立。</p>
-<h2 id="浅拷贝与深拷贝"><a href="#浅拷贝与深拷贝" class="headerlink" title="浅拷贝与深拷贝"></a>浅拷贝与深拷贝</h2><p>数据类型可以嵌套，比如列表中套列表。浅拷贝仅拷贝第一层数据，嵌套内的数据还是指向原地址；而深拷贝会将所有嵌套结构都拷贝一份，真正做到两个数据完全独立。</p>
-<p>浅拷贝的方法是切片操作（<code>a[:]</code>）、数据类型自带的<code>copy()</code>方法或是<code>copy</code>模块的<code>copy()</code>方法，深拷贝的方法是<code>copy</code>模块的<code>deepcopy()</code>方法。以上概念都过于抽象，建议结合实例进行理解。</p>
-<p>实例一：浅拷贝对第一层进行拷贝处理，所以<code>b[0]=[2,2]</code>并不会对<code>a</code>进行修改，但<code>b[0][0]=2</code>由于对第二层修改了数据，<code>a</code>也就随之变动。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span>a=[[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>],<span class="hljs-number">3</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>b=a.copy()<br><span class="hljs-meta">&gt;&gt;&gt; </span>b[<span class="hljs-number">0</span>]=[<span class="hljs-number">2</span>,<span class="hljs-number">2</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>b<br>[[<span class="hljs-number">2</span>, <span class="hljs-number">2</span>], <span class="hljs-number">3</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>a<br>[[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>], <span class="hljs-number">3</span>]<br></code></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span>a=[[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>],<span class="hljs-number">3</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>b=a.copy()<br><span class="hljs-meta">&gt;&gt;&gt; </span>b[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>]=<span class="hljs-number">2</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>b<br>[[<span class="hljs-number">2</span>, <span class="hljs-number">2</span>], <span class="hljs-number">3</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>a<br>[[<span class="hljs-number">2</span>, <span class="hljs-number">2</span>], <span class="hljs-number">3</span>]<br></code></pre></td></tr></table></figure>
-
-<p>实例二：深拷贝完全独立数据，所以无论<code>b</code>怎么修改，<code>a</code>不会变动。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> copy<br><span class="hljs-meta">&gt;&gt;&gt; </span>a=[[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>],<span class="hljs-number">3</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>b=copy.deepcopy(a)<br><span class="hljs-meta">&gt;&gt;&gt; </span>b[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>]=<span class="hljs-number">2</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>b<br>[[<span class="hljs-number">2</span>, <span class="hljs-number">2</span>], <span class="hljs-number">3</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>a<br>[[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>], <span class="hljs-number">3</span>]<br></code></pre></td></tr></table></figure>
-
-<p>再补一张<a target="_blank" rel="noopener" href="https://draapho.github.io/2016/11/21/1618-python-variable/">大佬</a>做的图帮助理解（切片也是浅拷贝哦）：</p>
-<p><img src="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20221230160051.png" srcset="/img/loading.gif" lazyload alt="浅拷贝与深拷贝"></p>
-<h2 id="踩坑场景回顾"><a href="#踩坑场景回顾" class="headerlink" title="踩坑场景回顾"></a>踩坑场景回顾</h2><p>回到自己的项目和踩坑时的场景：因为要做圣遗物数据导出与读取功能，避免不了一些本地数据的增删改查操作（实际上删还没做），于是顺利踩坑。当初觉得这种互相引用的方式很蠢，自己写代码的时候肯定会避免这种误导性写法，结果蠢的还是自己。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-variable language_">self</span>.artifact = <span class="hljs-variable language_">self</span>.artifacts[<span class="hljs-variable language_">self</span>.<span class="hljs-built_in">type</span>][<span class="hljs-variable language_">self</span>.archive.currentText()]<br></code></pre></td></tr></table></figure>
-
-<p>等号右侧是读取了所有圣遗物保存方案中的一个，数据类型是字典，其中<code>self.archive.currentText</code>是下拉选择框中的方案名称。选择某一个选项相当于读取了数据，并呈现相关数据结果，也即实时数据。因为本工具实时数据结果就是<code>self.artifact</code>，所以当进行了新的识别后，数据就自动更新到<code>self.artifacts</code>这个所有的方案数据中了。</p>
-<p>当初搜遍整个文档，debug 许久，也不明白究竟自己对<code>self.artifacts</code>的数据更新是在哪里完成的，直至回想起 Python 的数据类型。解决方案也非常简单，由于直接对最深层进行拷贝，也不会有浅拷贝与深拷贝相关问题。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-variable language_">self</span>.artifact = <span class="hljs-variable language_">self</span>.artifacts[<span class="hljs-variable language_">self</span>.<span class="hljs-built_in">type</span>][<span class="hljs-variable language_">self</span>.archive.currentText()].copy()<br></code></pre></td></tr></table></figure>
-
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>尽管自己可能并不是那么适合做基础技术科普，讲得可能没那么专业全面，可能还有潜在错误（如果有的话请尽快通知我），不过本文的主要目的还是给自己长个记性。</p>
-<p>如果下次遇到了莫名其妙的数据突然就被更改了的情况，可能就是在引用和拷贝上踩了坑，不论是我还是身为读者的你。</p>
+<p>恰好游戏的第一章和直播强相关，所以看主播玩游戏也是一种特别的体验了。之后还刷到了不少直播的切片，看主播们各式各样的反应，也算是非常美味。P.S.能直播玩这游戏，还放出视频的主播，一定是站在相同战线了。</p>
+<hr>
+<p>回到正题，游戏质量的评价。说实话，游戏整体的质量也就中等水平。同类型的恋爱模拟影游，都非常能卷。从选角、剧情、人设种种方面，本作并没有太多的优势，反而因为选题的特殊性而放弃了部分加分技巧。</p>
+<p>比如本作采用了第三人称视角，而同类作品中现象级的几部都采用了第一人称（《完蛋》《学习》）。第一人称在这类游戏上有天然优势，增加代入感的同时也可以更加充分地展示出女角色的魅力。不过本作中，显然男主角也是非常重要，抛弃第一人称，常规的电影视角显然是更合适的。</p>
+<p>再比如同类作品的整体结构是共通线+主推角色的角色线，不同角色在性格、人设上有较大差异，让玩家可以根据自己的喜好自由选择「单推人」，还能在多个角色间拉扯。这样在角色塑造上更加详略得当，可以让玩家在主推角色上发掘更多故事，玩法上也增加了自由度。</p>
+<p>而本作是闯关类型的结构，必须攻略一人后再攻略下一个，且一关比一关难（角色设定上）。最后攻略「变凤凰」高层的时候已经套路化，剧情转变突然，女角色逐渐降智，智斗的解决是通过降智去实现有点搞了。角色人设上也主要为了「捞女」剧情服务，很难多元展示不同类型女性的魅力，后续尽管人设上有一定差异，但还是有很大同质性，让玩家产生厌倦感。最终结局部分，又想到了自由度，可以选择一位角色达成真结局。于是强行给每个悔过&#x2F;洗白的角色安排了一个 happy ending，也是让人有点摸不着头脑，包括陈欣欣的假死。</p>
+<p>欲扬先抑，抛开一些技巧上的不足，还有部分因为众所周知的原因无法过审的内容（沈梦娜线很多东西上不了台面）而导致后续剧情平庸，本作依然是有一些值得拿得出手的高能片段。或者说某些场面的拍摄、剪辑、演出达到了电影级别，对同类游戏形成降维打击。</p>
+<p>最广为人知的就是酒吧游戏。男女主快速一问一答，面部特写正反打（怼脸男女主演技也都在线），对话稍稍舒缓的时候再切一个包含两人的中景。俩人的回答也很有意思，男主基本都是实话，且回答简练干脆（是、有）；女主则基本上是假话，还会加上「当然」之类的副词，尽显自己的心虚，然后明知男主没有撒谎却在不断喝酒掩饰。最后男主亮出手腕的伤疤时，女主震惊的表情加上眼角的一滴泪，让此段场景封神。</p>
+<p><img src="https://pic3.zhimg.com/80/v2-0c625976271dc26ccbfc07a1787e0def_720w.jpg" srcset="/img/loading.gif" lazyload alt="到斩杀线了"></p>
+<p>之后就是 BGM 响起，各种回忆交织，原来之前也一直在玩这个游戏，而且之前说的尽是实话，如今都替换成了谎言。切回现实，剪辑也稍作变化，很明显用了抽帧，王家卫导演的《重庆森林》同款手法，表现了角色的矛盾、挣扎与恍惚。只能说专业导演还真有两把刷子，特别是在他擅长的领域上（男女情感冲突）。</p>
+<p>后面还有几段对话场景也值得夸奖，但在镜头语言上并没有超出上面的场景，所以就简单带过。</p>
+<p>比如和诗琪咖啡店讨论喜欢的作家和作品，虽然都是我没看过的作品，但双方对答如流，引用原话互相切磋，颇有伯牙子期之风。</p>
+<p><img src="https://pic1.zhimg.com/80/v2-b4b472ca83f9e267b3432d0bd430aa41_720w.jpg" srcset="/img/loading.gif" lazyload alt="文艺对对子"></p>
+<p>再比如和最终 boss 梦娜几番价值观辩论，也是相当精彩，此作的价值观那是相当的正。既引出了社会问题，也剖析了背后的原因，可惜再深度的内容只能点到为止了。</p>
+<p><img src="https://pic1.zhimg.com/80/v2-e7beb269c0ad306512d837ef4bce8714_720w.jpg" srcset="/img/loading.gif" lazyload alt="不是，这么正的价值观也能被封？"></p>
+<p>总结一下：作为游戏而言，本作缺乏游戏技巧的应用，在多支线剧情结构处理上显得有些不成熟，有些剧情处理得有些简陋；但在影视拍摄和剪辑制作上，展现出很高的水平，尤其是某些封神场面。</p>
+<hr>
+<p>然后就是游戏外的一些话题与流量。原名《捞女游戏》可谓争议度拉满，敏感词「捞女」直接放在游戏名里可谓非常勇了。然后自然是引来了各类讨伐：</p>
+<blockquote>
+<p>游戏上线当天，制作人胡耀辉的 B 站账号被封禁，游戏的 B 站官方账号内容也突然消失，投稿的视频和图文动态全部被清除。<br>次日，极目新闻对《捞女游戏》发文评价，认为其存在煽动性别对立、污名化女性等问题，并呼吁加强审核。<br>游戏在 Steam 平台上的名字被改为《情感反诈模拟器》，游戏官方在游戏社区的账号也更名为《情感反诈模拟器》，游戏内置的留言板功能被清空并下线。<br> 在微博平台，相关的话题被屏蔽，搜索部分关键词会显示“该话题内容未予显示”。<br>   小黑盒官方号被封禁。<br>   小红书上搜索“捞女游戏”相关内容时，无法显示，但搜索“情感反诈模拟器”则可以显示。<br>   《捞女游戏》女主刘梦茹被曝抖音衣服上有 girls supporting girls(已删除)。</p>
+</blockquote>
+<p>线下 DLC 频出，每出一个相关事件，必然引发热议，男女对立果然很有话题度。然而现实是为女性发声可以，为男性发声封禁，一国两制，讽刺之至。但凡看过一点游戏内容，也不至于让制作组受此待遇。</p>
+<p>至于游戏制作发行方是否的确有通过敏感话题吸引流量一说，确实不是特别好评判，但至少游戏本身不只是为了吸引流量，作品的三观非常正。前两章直播诈骗、渣男套路可谓非常贴合之后的「情感反诈」主题了。可惜这些都是老生常谈的内容，并没有太多深度，只能给到一些小朋友（刚上大学或者刚毕业）一种另类的视听体验去强化这些基础反诈知识了。</p>
+<p>最后，游戏本体 33 元，首发 88 折，只要 29 元，放在同类游戏中也是相当便宜且有竞争力的。</p>
 
                 
               </div>
@@ -446,7 +500,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/Coding/" class="category-chain-item">Coding</a>
+  <a href="/categories/%E6%B8%B8%E6%88%8F/" class="category-chain-item">游戏</a>
   
   
 
@@ -461,11 +515,11 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Coding/" class="print-no-link">#Coding</a>
+        <a href="/tags/%E6%B8%B8%E6%88%8F/" class="print-no-link">#游戏</a>
       
-        <a href="/tags/Python/" class="print-no-link">#Python</a>
+        <a href="/tags/steam/" class="print-no-link">#steam</a>
       
-        <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="print-no-link">#数据结构</a>
+        <a href="/tags/%E5%BD%B1%E6%B8%B8/" class="print-no-link">#影游</a>
       
     </div>
   
@@ -477,8 +531,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>总会踩一次 Python 引用与拷贝的坑</div>
-      <div>https://skeathytomas.github.io/post/总会踩一次-python-引用与拷贝的坑/</div>
+      <div>如何评价 Steam 新游《捞女游戏》（已改名《情感反诈模拟器》）？</div>
+      <div>https://skeathytomas.github.io/post/如何评价-steam-新游《捞女游戏》（已改名《情感反诈模拟器》）？/</div>
     </div>
     <div class="license-meta">
       
@@ -490,7 +544,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年12月12日</div>
+          <div>2025年6月23日</div>
         </div>
       
       
@@ -522,18 +576,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/post/%E5%AF%BB%E6%89%BE%E8%BF%B7%E8%8C%AB%E4%B8%AD%E7%9A%84%E6%9B%99%E5%85%89-2022%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/" title="寻找迷茫中的曙光 | 2022年终总结">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">寻找迷茫中的曙光 | 2022年终总结</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/post/%E6%90%9C%E7%B4%A2%E4%B8%8E%E5%8C%B9%E9%85%8D%E8%A7%84%E5%88%99/" title="搜索与匹配规则">
-                        <span class="hidden-mobile">搜索与匹配规则</span>
+                      <a href="/post/%E5%A6%82%E4%BD%95%E8%AF%84%E4%BB%B7%E3%80%8A%E5%8E%9F%E7%A5%9E%E3%80%8B%E4%B8%9D%E6%9F%AF%E5%85%8B%E4%BC%A0%E8%AF%B4%E4%BB%BB%E5%8A%A1%E3%80%8C%E7%A3%B7%E6%98%9F%E4%B9%8B%E7%AB%A0%E3%80%8D%EF%BC%9F/" title="如何评价《原神》丝柯克传说任务「磷星之章」？">
+                        <span class="hidden-mobile">如何评价《原神》丝柯克传说任务「磷星之章」？</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -556,7 +604,7 @@
         var options = Object.assign(
           {"clientID":"658faad5dc784f8ec14b","clientSecret":"b1c37d084a7aa0367a81f3a12c863a11ec088597","repo":"skeathytomas.github.io","owner":"skeathytomas","admin":["skeathytomas"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
           {
-            id: '272fab26394d8becd8f6080aa29ad1b5'
+            id: '15daf6d8c26e830b19050ea30ef339a3'
           }
         )
         var gitalk = new Gitalk(options);

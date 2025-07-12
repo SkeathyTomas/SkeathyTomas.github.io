@@ -6,7 +6,7 @@
   <link href="https://skeathytomas.github.io/atom.xml" rel="self"/>
   
   <link href="https://skeathytomas.github.io/"/>
-  <updated>2025-07-08T04:00:56.823Z</updated>
+  <updated>2025-07-12T03:35:50.244Z</updated>
   <id>https://skeathytomas.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何评价 Steam 新游《捞女游戏》（已改名《情感反诈模拟器》）？</title>
+    <link href="https://skeathytomas.github.io/post/%E5%A6%82%E4%BD%95%E8%AF%84%E4%BB%B7-steam-%E6%96%B0%E6%B8%B8%E3%80%8A%E6%8D%9E%E5%A5%B3%E6%B8%B8%E6%88%8F%E3%80%8B%EF%BC%88%E5%B7%B2%E6%94%B9%E5%90%8D%E3%80%8A%E6%83%85%E6%84%9F%E5%8F%8D%E8%AF%88%E6%A8%A1%E6%8B%9F%E5%99%A8%E3%80%8B%EF%BC%89%EF%BC%9F/"/>
+    <id>https://skeathytomas.github.io/post/%E5%A6%82%E4%BD%95%E8%AF%84%E4%BB%B7-steam-%E6%96%B0%E6%B8%B8%E3%80%8A%E6%8D%9E%E5%A5%B3%E6%B8%B8%E6%88%8F%E3%80%8B%EF%BC%88%E5%B7%B2%E6%94%B9%E5%90%8D%E3%80%8A%E6%83%85%E6%84%9F%E5%8F%8D%E8%AF%88%E6%A8%A1%E6%8B%9F%E5%99%A8%E3%80%8B%EF%BC%89%EF%BC%9F/</id>
+    <published>2025-06-22T16:00:00.000Z</published>
+    <updated>2025-07-12T03:35:50.244Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;由于实在没什么精力去推影游，恰好 B 站关注里有人发了实况，就快速借助视频云通关了，之后某些游戏画面也会直接截取自主播实况视频，顺便贴个主播地址，B 站关注咖米谢谢喵。&lt;/p&gt;
+&lt;figure class=&quot;highlight</summary>
+        
+      
+    
+    
+    
+    <category term="游戏" scheme="https://skeathytomas.github.io/categories/%E6%B8%B8%E6%88%8F/"/>
+    
+    
+    <category term="游戏" scheme="https://skeathytomas.github.io/tags/%E6%B8%B8%E6%88%8F/"/>
+    
+    <category term="steam" scheme="https://skeathytomas.github.io/tags/steam/"/>
+    
+    <category term="影游" scheme="https://skeathytomas.github.io/tags/%E5%BD%B1%E6%B8%B8/"/>
+    
+  </entry>
   
   <entry>
     <title>如何评价《原神》丝柯克传说任务「磷星之章」？</title>
@@ -162,9 +192,9 @@
     
     <category term="游戏" scheme="https://skeathytomas.github.io/tags/%E6%B8%B8%E6%88%8F/"/>
     
-    <category term="设计" scheme="https://skeathytomas.github.io/tags/%E8%AE%BE%E8%AE%A1/"/>
-    
     <category term="原神" scheme="https://skeathytomas.github.io/tags/%E5%8E%9F%E7%A5%9E/"/>
+    
+    <category term="设计" scheme="https://skeathytomas.github.io/tags/%E8%AE%BE%E8%AE%A1/"/>
     
   </entry>
   
@@ -252,9 +282,9 @@
     
     <category term="游戏" scheme="https://skeathytomas.github.io/tags/%E6%B8%B8%E6%88%8F/"/>
     
-    <category term="设计" scheme="https://skeathytomas.github.io/tags/%E8%AE%BE%E8%AE%A1/"/>
-    
     <category term="原神" scheme="https://skeathytomas.github.io/tags/%E5%8E%9F%E7%A5%9E/"/>
+    
+    <category term="设计" scheme="https://skeathytomas.github.io/tags/%E8%AE%BE%E8%AE%A1/"/>
     
   </entry>
   
@@ -344,9 +374,9 @@
     
     <category term="产品" scheme="https://skeathytomas.github.io/tags/%E4%BA%A7%E5%93%81/"/>
     
-    <category term="社交" scheme="https://skeathytomas.github.io/tags/%E7%A4%BE%E4%BA%A4/"/>
-    
     <category term="商业模式" scheme="https://skeathytomas.github.io/tags/%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F/"/>
+    
+    <category term="社交" scheme="https://skeathytomas.github.io/tags/%E7%A4%BE%E4%BA%A4/"/>
     
     <category term="可话" scheme="https://skeathytomas.github.io/tags/%E5%8F%AF%E8%AF%9D/"/>
     
@@ -376,9 +406,9 @@
     
     <category term="产品" scheme="https://skeathytomas.github.io/tags/%E4%BA%A7%E5%93%81/"/>
     
-    <category term="Algorithm" scheme="https://skeathytomas.github.io/tags/Algorithm/"/>
-    
     <category term="用户体验" scheme="https://skeathytomas.github.io/tags/%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C/"/>
+    
+    <category term="Algorithm" scheme="https://skeathytomas.github.io/tags/Algorithm/"/>
     
     <category term="商业模式" scheme="https://skeathytomas.github.io/tags/%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F/"/>
     
@@ -434,13 +464,13 @@
     <category term="工作" scheme="https://skeathytomas.github.io/categories/%E5%B7%A5%E4%BD%9C/"/>
     
     
-    <category term="商业" scheme="https://skeathytomas.github.io/tags/%E5%95%86%E4%B8%9A/"/>
-    
     <category term="产品" scheme="https://skeathytomas.github.io/tags/%E4%BA%A7%E5%93%81/"/>
     
-    <category term="工作" scheme="https://skeathytomas.github.io/tags/%E5%B7%A5%E4%BD%9C/"/>
-    
     <category term="面试" scheme="https://skeathytomas.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="商业" scheme="https://skeathytomas.github.io/tags/%E5%95%86%E4%B8%9A/"/>
+    
+    <category term="工作" scheme="https://skeathytomas.github.io/tags/%E5%B7%A5%E4%BD%9C/"/>
     
   </entry>
   
@@ -558,13 +588,13 @@
     <category term="设计" scheme="https://skeathytomas.github.io/categories/%E8%AE%BE%E8%AE%A1/"/>
     
     
-    <category term="产品" scheme="https://skeathytomas.github.io/tags/%E4%BA%A7%E5%93%81/"/>
-    
-    <category term="用户体验" scheme="https://skeathytomas.github.io/tags/%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C/"/>
-    
     <category term="人机交互" scheme="https://skeathytomas.github.io/tags/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92/"/>
     
+    <category term="产品" scheme="https://skeathytomas.github.io/tags/%E4%BA%A7%E5%93%81/"/>
+    
     <category term="汽车" scheme="https://skeathytomas.github.io/tags/%E6%B1%BD%E8%BD%A6/"/>
+    
+    <category term="用户体验" scheme="https://skeathytomas.github.io/tags/%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C/"/>
     
   </entry>
   
@@ -649,9 +679,9 @@
     
     <category term="产品" scheme="https://skeathytomas.github.io/tags/%E4%BA%A7%E5%93%81/"/>
     
-    <category term="新零售" scheme="https://skeathytomas.github.io/tags/%E6%96%B0%E9%9B%B6%E5%94%AE/"/>
-    
     <category term="商业模式" scheme="https://skeathytomas.github.io/tags/%E5%95%86%E4%B8%9A%E6%A8%A1%E5%BC%8F/"/>
+    
+    <category term="新零售" scheme="https://skeathytomas.github.io/tags/%E6%96%B0%E9%9B%B6%E5%94%AE/"/>
     
     <category term="信息化" scheme="https://skeathytomas.github.io/tags/%E4%BF%A1%E6%81%AF%E5%8C%96/"/>
     
@@ -773,9 +803,9 @@
     <category term="Coding" scheme="https://skeathytomas.github.io/categories/Coding/"/>
     
     
-    <category term="原神" scheme="https://skeathytomas.github.io/tags/%E5%8E%9F%E7%A5%9E/"/>
-    
     <category term="产品" scheme="https://skeathytomas.github.io/tags/%E4%BA%A7%E5%93%81/"/>
+    
+    <category term="原神" scheme="https://skeathytomas.github.io/tags/%E5%8E%9F%E7%A5%9E/"/>
     
     <category term="Coding" scheme="https://skeathytomas.github.io/tags/Coding/"/>
     
@@ -809,9 +839,9 @@
     <category term="产品" scheme="https://skeathytomas.github.io/categories/%E4%BA%A7%E5%93%81/"/>
     
     
-    <category term="设计" scheme="https://skeathytomas.github.io/tags/%E8%AE%BE%E8%AE%A1/"/>
-    
     <category term="产品" scheme="https://skeathytomas.github.io/tags/%E4%BA%A7%E5%93%81/"/>
+    
+    <category term="设计" scheme="https://skeathytomas.github.io/tags/%E8%AE%BE%E8%AE%A1/"/>
     
     <category term="交互" scheme="https://skeathytomas.github.io/tags/%E4%BA%A4%E4%BA%92/"/>
     
@@ -841,9 +871,9 @@
     
     <category term="游戏" scheme="https://skeathytomas.github.io/tags/%E6%B8%B8%E6%88%8F/"/>
     
-    <category term="设计" scheme="https://skeathytomas.github.io/tags/%E8%AE%BE%E8%AE%A1/"/>
-    
     <category term="原神" scheme="https://skeathytomas.github.io/tags/%E5%8E%9F%E7%A5%9E/"/>
+    
+    <category term="设计" scheme="https://skeathytomas.github.io/tags/%E8%AE%BE%E8%AE%A1/"/>
     
   </entry>
   
@@ -870,11 +900,11 @@
     <category term="产品" scheme="https://skeathytomas.github.io/categories/%E4%BA%A7%E5%93%81/"/>
     
     
+    <category term="产品" scheme="https://skeathytomas.github.io/tags/%E4%BA%A7%E5%93%81/"/>
+    
     <category term="游戏" scheme="https://skeathytomas.github.io/tags/%E6%B8%B8%E6%88%8F/"/>
     
     <category term="原神" scheme="https://skeathytomas.github.io/tags/%E5%8E%9F%E7%A5%9E/"/>
-    
-    <category term="产品" scheme="https://skeathytomas.github.io/tags/%E4%BA%A7%E5%93%81/"/>
     
     <category term="Coding" scheme="https://skeathytomas.github.io/tags/Coding/"/>
     
@@ -909,11 +939,11 @@
     <category term="产品" scheme="https://skeathytomas.github.io/categories/%E4%BA%A7%E5%93%81/"/>
     
     
+    <category term="产品" scheme="https://skeathytomas.github.io/tags/%E4%BA%A7%E5%93%81/"/>
+    
     <category term="游戏" scheme="https://skeathytomas.github.io/tags/%E6%B8%B8%E6%88%8F/"/>
     
     <category term="原神" scheme="https://skeathytomas.github.io/tags/%E5%8E%9F%E7%A5%9E/"/>
-    
-    <category term="产品" scheme="https://skeathytomas.github.io/tags/%E4%BA%A7%E5%93%81/"/>
     
     <category term="产品需求文档" scheme="https://skeathytomas.github.io/tags/%E4%BA%A7%E5%93%81%E9%9C%80%E6%B1%82%E6%96%87%E6%A1%A3/"/>
     
@@ -941,11 +971,11 @@
     <category term="工作" scheme="https://skeathytomas.github.io/categories/%E5%B7%A5%E4%BD%9C/"/>
     
     
-    <category term="设计" scheme="https://skeathytomas.github.io/tags/%E8%AE%BE%E8%AE%A1/"/>
-    
     <category term="产品" scheme="https://skeathytomas.github.io/tags/%E4%BA%A7%E5%93%81/"/>
     
     <category term="工作" scheme="https://skeathytomas.github.io/tags/%E5%B7%A5%E4%BD%9C/"/>
+    
+    <category term="设计" scheme="https://skeathytomas.github.io/tags/%E8%AE%BE%E8%AE%A1/"/>
     
     <category term="需求评审" scheme="https://skeathytomas.github.io/tags/%E9%9C%80%E6%B1%82%E8%AF%84%E5%AE%A1/"/>
     
@@ -974,11 +1004,11 @@
     <category term="产品" scheme="https://skeathytomas.github.io/categories/%E4%BA%A7%E5%93%81/"/>
     
     
+    <category term="产品" scheme="https://skeathytomas.github.io/tags/%E4%BA%A7%E5%93%81/"/>
+    
     <category term="游戏" scheme="https://skeathytomas.github.io/tags/%E6%B8%B8%E6%88%8F/"/>
     
     <category term="原神" scheme="https://skeathytomas.github.io/tags/%E5%8E%9F%E7%A5%9E/"/>
-    
-    <category term="产品" scheme="https://skeathytomas.github.io/tags/%E4%BA%A7%E5%93%81/"/>
     
     <category term="需求分析" scheme="https://skeathytomas.github.io/tags/%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90/"/>
     
@@ -1103,11 +1133,11 @@
     <category term="工作" scheme="https://skeathytomas.github.io/categories/%E5%B7%A5%E4%BD%9C/"/>
     
     
+    <category term="工作" scheme="https://skeathytomas.github.io/tags/%E5%B7%A5%E4%BD%9C/"/>
+    
     <category term="软件" scheme="https://skeathytomas.github.io/tags/%E8%BD%AF%E4%BB%B6/"/>
     
     <category term="教程" scheme="https://skeathytomas.github.io/tags/%E6%95%99%E7%A8%8B/"/>
-    
-    <category term="工作" scheme="https://skeathytomas.github.io/tags/%E5%B7%A5%E4%BD%9C/"/>
     
     <category term="效率" scheme="https://skeathytomas.github.io/tags/%E6%95%88%E7%8E%87/"/>
     
@@ -1136,11 +1166,11 @@
     <category term="设计" scheme="https://skeathytomas.github.io/categories/%E8%AE%BE%E8%AE%A1/"/>
     
     
+    <category term="产品" scheme="https://skeathytomas.github.io/tags/%E4%BA%A7%E5%93%81/"/>
+    
     <category term="游戏" scheme="https://skeathytomas.github.io/tags/%E6%B8%B8%E6%88%8F/"/>
     
     <category term="设计" scheme="https://skeathytomas.github.io/tags/%E8%AE%BE%E8%AE%A1/"/>
-    
-    <category term="产品" scheme="https://skeathytomas.github.io/tags/%E4%BA%A7%E5%93%81/"/>
     
     <category term="交互" scheme="https://skeathytomas.github.io/tags/%E4%BA%A4%E4%BA%92/"/>
     
@@ -1169,9 +1199,9 @@
     <category term="Coding" scheme="https://skeathytomas.github.io/categories/Coding/"/>
     
     
-    <category term="Coding" scheme="https://skeathytomas.github.io/tags/Coding/"/>
-    
     <category term="Algorithm" scheme="https://skeathytomas.github.io/tags/Algorithm/"/>
+    
+    <category term="Coding" scheme="https://skeathytomas.github.io/tags/Coding/"/>
     
     <category term="Python" scheme="https://skeathytomas.github.io/tags/Python/"/>
     
@@ -1232,9 +1262,9 @@
     
     <category term="游戏" scheme="https://skeathytomas.github.io/tags/%E6%B8%B8%E6%88%8F/"/>
     
-    <category term="设计" scheme="https://skeathytomas.github.io/tags/%E8%AE%BE%E8%AE%A1/"/>
-    
     <category term="原神" scheme="https://skeathytomas.github.io/tags/%E5%8E%9F%E7%A5%9E/"/>
+    
+    <category term="设计" scheme="https://skeathytomas.github.io/tags/%E8%AE%BE%E8%AE%A1/"/>
     
   </entry>
   
@@ -1290,15 +1320,15 @@
     <category term="产品" scheme="https://skeathytomas.github.io/categories/%E4%BA%A7%E5%93%81/"/>
     
     
+    <category term="产品" scheme="https://skeathytomas.github.io/tags/%E4%BA%A7%E5%93%81/"/>
+    
     <category term="动漫" scheme="https://skeathytomas.github.io/tags/%E5%8A%A8%E6%BC%AB/"/>
     
     <category term="游戏" scheme="https://skeathytomas.github.io/tags/%E6%B8%B8%E6%88%8F/"/>
     
-    <category term="设计" scheme="https://skeathytomas.github.io/tags/%E8%AE%BE%E8%AE%A1/"/>
-    
     <category term="商业" scheme="https://skeathytomas.github.io/tags/%E5%95%86%E4%B8%9A/"/>
     
-    <category term="产品" scheme="https://skeathytomas.github.io/tags/%E4%BA%A7%E5%93%81/"/>
+    <category term="设计" scheme="https://skeathytomas.github.io/tags/%E8%AE%BE%E8%AE%A1/"/>
     
     <category term="影视" scheme="https://skeathytomas.github.io/tags/%E5%BD%B1%E8%A7%86/"/>
     
@@ -1326,11 +1356,11 @@
     <category term="工作" scheme="https://skeathytomas.github.io/categories/%E5%B7%A5%E4%BD%9C/"/>
     
     
-    <category term="工作" scheme="https://skeathytomas.github.io/tags/%E5%B7%A5%E4%BD%9C/"/>
+    <category term="产品经理" scheme="https://skeathytomas.github.io/tags/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86/"/>
     
     <category term="面试" scheme="https://skeathytomas.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
     
-    <category term="产品经理" scheme="https://skeathytomas.github.io/tags/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86/"/>
+    <category term="工作" scheme="https://skeathytomas.github.io/tags/%E5%B7%A5%E4%BD%9C/"/>
     
   </entry>
   
