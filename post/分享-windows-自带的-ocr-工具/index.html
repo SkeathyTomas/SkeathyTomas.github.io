@@ -19,28 +19,28 @@
   <meta name="author" content="Skeathy">
   <meta name="keywords" content="互联网,产品经理,设计,生活,游戏,动漫,Coding">
   
-    <meta name="description" content="本篇主要想研究一下标题栏和搜索栏的使用场景，可能会有非常多的案例探讨。目的的话，也许是看看哪些场景用标题，哪些场景可以添加搜索，两者共现的时候谁的优先级比较高（用户更加关注的点或者产品想让用户更加关注的点）。因为文章是边收集素材边探讨的，所以结构上可能会比较乱？ 标题与「广义」标题栏标题是一块内容空间简短的文字概括，这个内容空间可能是一个窗口&#x2F;一个页面&#x2F;页面的一个区域。标题存在">
+    <meta name="description" content="之前在写圣遗物评分工具时候，调研过不少 OCR 工具，有 API、模型、软件等等。最终选择了飞桨，在代码灵活性和准确性上都有很好的保障。 后来在日常办公中，还是偶尔会遇到一些需要 OCR 工具解决的问题，比如复制图片中的一些文字云云，这样使用代码调用就有些呆了。 好在基本上办公、聊天类软件的图片查看器中已经集成了 OCR 功能，比如国民级聊天工具微信。  从识别速度到识别准确率，基本没有什么可挑剔">
 <meta property="og:type" content="article">
-<meta property="og:title" content="标题栏和搜索栏的斗争">
-<meta property="og:url" content="https://skeathytomas.github.io/post/%E6%A0%87%E9%A2%98%E6%A0%8F%E5%92%8C%E6%90%9C%E7%B4%A2%E6%A0%8F%E7%9A%84%E6%96%97%E4%BA%89/index.html">
+<meta property="og:title" content="分享 Windows 自带的 OCR 工具">
+<meta property="og:url" content="https://skeathytomas.github.io/post/%E5%88%86%E4%BA%AB-windows-%E8%87%AA%E5%B8%A6%E7%9A%84-ocr-%E5%B7%A5%E5%85%B7/index.html">
 <meta property="og:site_name" content="智商衰退之后">
-<meta property="og:description" content="本篇主要想研究一下标题栏和搜索栏的使用场景，可能会有非常多的案例探讨。目的的话，也许是看看哪些场景用标题，哪些场景可以添加搜索，两者共现的时候谁的优先级比较高（用户更加关注的点或者产品想让用户更加关注的点）。因为文章是边收集素材边探讨的，所以结构上可能会比较乱？ 标题与「广义」标题栏标题是一块内容空间简短的文字概括，这个内容空间可能是一个窗口&#x2F;一个页面&#x2F;页面的一个区域。标题存在">
+<meta property="og:description" content="之前在写圣遗物评分工具时候，调研过不少 OCR 工具，有 API、模型、软件等等。最终选择了飞桨，在代码灵活性和准确性上都有很好的保障。 后来在日常办公中，还是偶尔会遇到一些需要 OCR 工具解决的问题，比如复制图片中的一些文字云云，这样使用代码调用就有些呆了。 好在基本上办公、聊天类软件的图片查看器中已经集成了 OCR 功能，比如国民级聊天工具微信。  从识别速度到识别准确率，基本没有什么可挑剔">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20220920115634.png">
-<meta property="article:published_time" content="2022-09-05T05:21:54.000Z">
-<meta property="article:modified_time" content="2022-09-27T12:03:04.000Z">
+<meta property="og:image" content="https://pic1.zhimg.com/70/v2-ca216dba721b682d232715f47e9aae6c_1440w">
+<meta property="article:published_time" content="2025-06-23T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-07-15T14:53:48.802Z">
 <meta property="article:author" content="Skeathy">
 <meta property="article:tag" content="产品">
-<meta property="article:tag" content="设计">
-<meta property="article:tag" content="交互">
+<meta property="article:tag" content="工具">
+<meta property="article:tag" content="OCR">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20220920115634.png">
+<meta name="twitter:image" content="https://pic1.zhimg.com/70/v2-ca216dba721b682d232715f47e9aae6c_1440w">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>标题栏和搜索栏的斗争 - 智商衰退之后</title>
+  <title>分享 Windows 自带的 OCR 工具 - 智商衰退之后</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -226,13 +226,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20220920115634.png') no-repeat center center; background-size: cover;">
+     style="background: url('https://pic1.zhimg.com/70/v2-ca216dba721b682d232715f47e9aae6c_1440w') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="标题栏和搜索栏的斗争"></span>
+            <span id="subtitle" data-typed-text="分享 Windows 自带的 OCR 工具"></span>
           
         </div>
 
@@ -243,8 +243,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-09-05 13:21" pubdate>
-          2022年9月5日 下午
+        <time datetime="2025-06-24 00:00" pubdate>
+          2025年6月24日 凌晨
         </time>
       </span>
     
@@ -255,7 +255,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          3.8k 字
+          1k 字
         
       </span>
     
@@ -266,7 +266,7 @@
         
         
         
-          32 分钟
+          9 分钟
         
       </span>
     
@@ -350,7 +350,7 @@
       
         <a href="/post/%E5%88%86%E4%BA%AB-windows-%E8%87%AA%E5%B8%A6%E7%9A%84-ocr-%E5%B7%A5%E5%85%B7/" title="分享 Windows 自带的 OCR 工具"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">分享 Windows 自带的 OCR 工具</span>
         </a>
       
@@ -442,12 +442,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">标题栏和搜索栏的斗争</h1>
+            <h1 id="seo-header">分享 Windows 自带的 OCR 工具</h1>
             
               <p id="updated-time" class="note note-info" style="">
                 
                   
-                    本文最后更新于 2022年9月27日 晚上
+                    本文最后更新于 2025年7月15日 晚上
                   
                 
               </p>
@@ -455,61 +455,28 @@
             
               <div class="markdown-body">
                 
-                <p>本篇主要想研究一下标题栏和搜索栏的使用场景，可能会有非常多的案例探讨。目的的话，也许是看看哪些场景用标题，哪些场景可以添加搜索，两者共现的时候谁的优先级比较高（用户更加关注的点或者产品想让用户更加关注的点）。因为文章是边收集素材边探讨的，所以结构上可能会比较乱？</p>
-<h2 id="标题与「广义」标题栏"><a href="#标题与「广义」标题栏" class="headerlink" title="标题与「广义」标题栏"></a>标题与「广义」标题栏</h2><p>标题是一块内容空间简短的文字概括，这个内容空间可能是一个窗口&#x2F;一个页面&#x2F;页面的一个区域。标题存在的意义是帮助用户快速理解内容的主要目标或含义，以及在需要切换内容空间时提供导航的作用。</p>
-<p>「广义」标题栏是用于存放标题内容的空间，因为往往成长条状，所以称为栏（Bar）。根据广义标题栏对应的实际内容，标题栏还可以是某种标签页&#x2F;导航栏&#x2F;标题行&#x2F;表头等等。标题栏遍及各处，比如操作系统原生应用标题栏、文章内容的标题行、网页的标签页（垂直标签页）、网站顶端的导航栏等。</p>
-<p>「狭义」标题栏对应的内容空间则仅包括窗口或页面，是真正意义上独立于内容区之外的「栏」。除了做「唯一」的标题内容展示外，还主要附带窗口的移动&#x2F;关闭&#x2F;最小最大化（桌面端）或是返回上一页面&#x2F;关于&#x2F;页面分享等额外操作（移动端）的功能。</p>
-<p>「狭义」标题栏由于不在主要的内容操控区，交互频率一般比较低，关闭、最小化、返回按钮这些基本功能也可能被一些快捷键&#x2F;手势取代（尤其是移动端屏幕尺寸变大后，返回按钮很难直接按到，基本被左滑&#x2F;右滑取代）。而作为标题栏中的标题，更是因为本就没什么交互手段（仅存在一个信息展示功能）而被更加忽略，甚至一些专业人士（设计师、产品经理）也开始讨论起了这些标题存在的意义。</p>
-<h2 id="搜索与搜索栏"><a href="#搜索与搜索栏" class="headerlink" title="搜索与搜索栏"></a>搜索与搜索栏</h2><p>搜索的目标是帮助用户快速找到想要的信息。人类的搜索能力取决于阅读&#x2F;浏览速度，而计算机在这一方面是非常有优势的，所以搜索本质上是一个效率工具&#x2F;方法。</p>
-<p>常见的搜索类型包含针对内容区的页面&#x2F;文档内搜索，以及针对发现目标内容的搜索引擎。前一种搜索由于多与文档工作相关，一般由相关编辑软件内置，移动端因为少有文档编辑的需求，实际上比较少见；后一种则广泛应用于操作系统内寻找相关文件&#x2F;资源，或是搜索互联网相关内容（真·搜索引擎）。</p>
-<p>搜索栏是承载搜索功能的控件，主体是一个输入框，允许用户自由输入。业务上可能还包含前置的唤起搜索栏操作（图标、下拉、焦点等）以及后置的确认&#x2F;搜索按钮（可能最终集成到键盘交互中）。</p>
-<p>搜索栏也在各种场景中广泛使用，如 Windows 系统开始菜单搜索栏、浏览器搜索栏、文档编辑应用搜索与查找栏、iOS Spotlight 搜索栏、网站应用内部的搜索栏等。</p>
-<p>值得注意的是搜索这一行为本身需要更大的脑力&#x2F;体力：用户需要知道自己的目标，然后把目标简化为一些关键词；新技术按图搜索也需要用户拍摄&#x2F;截图之类的操作等等。搜索行为大放异彩的时代逐渐被智能推荐的时代取代，但搜索功能依旧存在。</p>
-<h2 id="组合与斗争"><a href="#组合与斗争" class="headerlink" title="组合与斗争"></a>组合与斗争</h2><p>在实际的应用中，标题栏&#x2F;导航栏和搜索栏经常一起出现。视觉上往往集中在顶端，符合从上至下的阅读习惯，使得这一功能第一时间落在视觉感受区，又不足以成为视觉中心。以下会搜集一些典型案例，对标题和搜索两个业务做场景分析。</p>
-<h3 id="搜索引擎"><a href="#搜索引擎" class="headerlink" title="搜索引擎"></a>搜索引擎</h3><p>搜索引擎的核心业务是搜索，于是搜索框的重要性是第一位的。不仅在视觉上比较突出，也会把搜索框直接展现出来，无需通过其他操作唤起。</p>
-<p>在无搜索结果（也就是初始搜索页面时），更是把搜索栏整体居中，处于视觉中心，而「标题栏」则以一种商业 logo 的形式展现（如果把 logo 视为标题的话），告诉用户这个搜索引擎是 xx 公司的。比如 Google 的搜索首页就是如此，这个 logo 还会根据节日进行变化，成为了一套有趣的 Google Doodles。</p>
-<p><img src="https://repository-images.githubusercontent.com/478725150/549171cc-37a4-44a4-8549-dcd1a6429106" srcset="/img/loading.gif" lazyload alt="Google Search and Google Doodles"></p>
-<p>至于搜索结果页，虽然结果列表是主体内容区，但搜索栏依旧处于置顶位置，且不随页面滚动而隐藏。标题栏（分页标签）则明显弱于搜索栏，是搜索结果的一种筛选功能，并且随页面滚动而隐藏。</p>
-<p><img src="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20220915145743.png" srcset="/img/loading.gif" lazyload alt="结果页面的搜索栏"></p>
-<p>Windows 11 的系统级搜索也在多次改版后，增加了一些「广告与推荐」的功能。不过搜索框+自动聚焦，以及实时的搜索结果列表，仍然是整个功能的核心。至于标题栏，已经在这一功能模块中完全省略。一些其他类似的搜索，比如 macOS 的 Spotlight，第三方系统搜索与快速启动工具，也都沿用此思路。</p>
-<p><img src="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20220915160945.png" srcset="/img/loading.gif" lazyload alt="Windows 11 搜索"></p>
-<p>还有常规的浏览器，长长长长长的地址栏&#x2F;搜索栏，并且常驻；新建标签页又自动聚焦到搜索栏，可以直接进行输入，整体是非常方便进行搜索操作的。作为标题栏，则被标签页的形式填满；若是多开几个标签页，标题栏里基本没有标题只剩下一个图标，想要切换到目标标签页还是有点费力。不过我最近已改用垂直标签页的模式进行分组管理和切换标签页，原来的标题栏则用来「完整」显示标题（虽然好像也没什么用）。</p>
-<p><img src="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20220915172526.png" srcset="/img/loading.gif" lazyload alt="常规浏览器的标题栏和搜索栏"></p>
-<p>移动端方面，无论是浏览器还是系统级的搜索，搜索框同样占据顶端标题栏的位置（初始状态下也可能会把搜索框居中，如 Google 首页、高德地图的首页）。并且由于搜索的核心业务，标题栏直接在业务上隐藏或者在搜索栏下补充一个标签页的切换。至于上下滑动后搜索栏和标题栏&#x2F;标签栏的保留情况，一般搜索栏是完全保留的，而标签页似乎保留不保留的情况都较为常见。</p>
-<p><img src="https://i.redd.it/8e3qctu0usd71.jpg" srcset="/img/loading.gif" lazyload alt="iOS Spotlight"></p>
-<h3 id="内容向网站-x2F-应用"><a href="#内容向网站-x2F-应用" class="headerlink" title="内容向网站&#x2F;应用"></a>内容向网站&#x2F;应用</h3><p>以内容推荐为主的网站或应用，比如视频、图文、音乐、购物、通讯等等（其中购物存疑，带有强目的性的购物搜索业务也是很重要的），标题栏和搜索栏的情况又是如何？</p>
-<p>知乎的标题栏&#x2F;导航栏有两层，第一层有一些商业性质，第二层属于内容向分类。而搜索栏置于第一层标题栏，同时在搜索框中默认进行内容推荐。另外，在页面滚动操作后，标题栏置顶并改为一层。在下滚操作后使用原第二层标题栏，并对用户信息相关按钮进行省略；搜索栏也不再推荐内容，仅作操作提示；上滚操作则回到第一层导航栏。很难对标题栏的两种形态进行分析（最多也只是强行揣测），值得注意的仅仅是搜索栏始终保留（尽管知乎的搜索做得很拉）。</p>
-<p><img src="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20220916142040.png" srcset="/img/loading.gif" lazyload alt="知乎标题栏的两种形态"></p>
-<p>GitHub Explore 页面也有两层标题栏，第一层附带搜索框，第二层以标签页形式进行切换；且在页面滚动后隐藏第一层标题栏，同时搜索栏也无了。可以看出搜索业务在浏览内容推送时弱化，不过这个两层标题栏还带重复的架构着实有点蒙圈。</p>
-<p><img src="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20220916153004.png" srcset="/img/loading.gif" lazyload alt="GitHub 标题栏"></p>
-<p>Pinterest 图片与灵感网站，标题栏中的标题弱化甚至没有，取代的是长长的搜索栏，并且随页面滚动始终置顶。整个网站有点 Google 图片搜索页面的感觉，一大用途也确实是搜索目标关键词的图片。与 Google 图片不同的是会有基于个人喜好的瀑布流图片推送。不过整个图片确实没有什么合适的标题（或者分类），如果必须要有，可能就是一些语义关键词标签或是颜色块分类。</p>
-<p><img src="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20220916155359.png" srcset="/img/loading.gif" lazyload alt="Pinterest 标题栏"></p>
-<p>视频类网站 YouTube，同样把搜索栏置顶。同时标题栏使用的是个性化的标签，因为特别多一行甚至放不下。同时 Youtube 还配备侧边导航栏，提供更丰富的导航与浏览功能。Bilibili 也与此类似，只不过搜索栏更窄，标题栏加入了一些商业化推广入口，然后有一个不错的 banner；二级标题栏堆了很多非个性化的分类标签。</p>
-<p><img src="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20220916172458.png" srcset="/img/loading.gif" lazyload alt="YouTube 标题栏"></p>
-<p>移动端方面，由于横向空间有限，标题栏与搜索栏往往只能分行呈现或分页面呈现（使用搜索图标切换到搜索分页）。而且通过实例调研，这两种方法都普遍使用，甚至在同一种 App 中同一个页面也同时使用了两种方法。至于搜索页，大致与上面提到的 iOS Spotlight 类似，以搜索框取代标题，然后包含搜索提示、热点、搜索历史等等，可以之后有空专门讲讲搜索的业务逻辑。</p>
-<p>国民级通讯软件微信、QQ，恰好使用了两种不同的形式。微信在标题栏上使用搜索图标，点击可打开新的搜索页面；而 QQ 使用了一整条的搜索栏，同样点击打开新的搜索页面。另外，QQ 的搜索栏在下滑操作后隐藏。</p>
-<p><img src="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20220919115848.png" srcset="/img/loading.gif" lazyload alt="微信（上）QQ（下）"></p>
-<p>以图文为主要内容的知乎，通过业务拆分将标题换成三个子业务（与桌面端的业务划分并不相同），又在二级标题栏根据内容拆分为更多分类，搜索栏提示热点话题。页面下滑后二级标题隐藏，搜索栏隐藏但在标题栏增加一个搜索图标。</p>
-<p><img src="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20220919174958.png" srcset="/img/loading.gif" lazyload alt="知乎首屏（上）下拉后（下）"></p>
-<p>视频类 App 哔哩哔哩，将搜索栏放在标题栏之上，而所谓的标题栏则由许许多多的分区（标签页）组成，和知乎的二级标题栏类似。这种复杂的标签&#x2F;分区系统有点类似于互联网早期的门户网站，服务于浏览，在移动互联网和智能推荐的背景下也有了更广的就业面。同样的，在下拉操作后，搜索栏隐藏，仅保留多标签的标题栏；不同的是搜索功能需要完全返回顶端了。</p>
-<p><img src="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20220919203146.png" srcset="/img/loading.gif" lazyload alt="哔哩哔哩"></p>
-<p>讲到回到顶端这个操作，记得交互指南里藏着一个快捷操作——双击标题栏。这一交互方式不那么容易发现，但也不能说完全没用。至少微信、QQ 都保留着这一功能，至于其他将传统标题栏改改成标签页&#x2F;搜索栏的应用，自然也就没有这个功能了。</p>
-<p>其他各类应用，包括音乐、购物等等，标题栏和搜索栏的结构及变化也大都和以上几种重复，就不纷纷举例了。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>试图从以上种种案例中做出一些可应用性的总结：</p>
-<ol>
-<li>桌面端和移动端还是有很大差异的。<ol>
-<li>最大的区别是桌面端应用基本结构是窗口，窗口存在移动位置的需求，所以会有传统标题栏实现相关功能，顺带窗口最小化&#x2F;最大化的功能。移动端基本都是全屏页面显示，比起移动窗口，返回上一个页面的需求更大（标题栏❌，返回栏✅），所以此类用于移动窗口的标题栏一般是没有的，除非有额外的悬浮窗口需求。</li>
-<li>桌面端的空间更大，除非标题栏中内容非常多（比如贴上很多标签，必要时还需要二级标题栏、侧边导航栏等），一般都可以把搜索栏完整放在标题栏内。如果空间有限，使用搜索图标作为搜索业务的启动按钮，也一般仅唤起一个悬浮窗口，不会新开一个搜索页面。移动端则由于空间显示，搜索栏和标题栏互相独立，要么分行显示，要么只取其一，搜索栏&#x2F;页面可以从标题栏中的搜索图标按钮触发。</li>
-</ol>
-</li>
-<li>搞清楚业务的主要目标。<ol>
-<li>若是以搜索为主（比如各类搜索引擎），自然搜索栏会更重要一些，那么搜索栏的大小、摆放位置等视觉效果都要使得搜索栏更为突出。相对的，标题栏无论从结构还是内容都应被弱化，比如移动端搜索页面基本都是搜索栏完全取代原标题栏的位置。另外，可以对搜索结果进行适当标签页分类（二级标题栏），辅助用户筛选搜索结果。</li>
-<li>若是以浏览为主，则含分类标签页的标题栏则更重要一些。可以根据自身的业务需求，设置一级标签栏、二级标签栏，当然最重要的还是默认的那个「智能推荐」的标签页以及背后的推荐算法。此业务下搜索可以弱化，比如使用不怎么起眼且小占位的图标，或者页面下拉后隐藏搜索栏。</li>
-</ol>
-</li>
-<li>注意搜索域。由于分类业务的复杂度，搜索业务可能是全局搜索，也可能仅针对在某个标题分页下的子域。若是全局搜索，搜索栏需要摆在各标题之上；若是子域搜索，则搜索栏需要摆在对应的标题之下。</li>
-</ol>
-<p>回过头来，本以为一个非常简单的话题却也还是罗嗦了那么多，而且最后的结论似乎也没那么明了，还是要具体业务具体分析。</p>
+                <p>之前在写圣遗物评分工具时候，调研过不少 OCR 工具，有 API、模型、软件等等。最终选择了飞桨，在代码灵活性和准确性上都有很好的保障。</p>
+<p>后来在日常办公中，还是偶尔会遇到一些需要 OCR 工具解决的问题，比如复制图片中的一些文字云云，这样使用代码调用就有些呆了。</p>
+<p>好在基本上办公、聊天类软件的图片查看器中已经集成了 OCR 功能，比如国民级聊天工具微信。</p>
+<p><img src="https://picx.zhimg.com/80/v2-487c671acbec33de199cbde03c7e17cb_720w.png?source=d16d100b" srcset="/img/loading.gif" lazyload alt="圣遗物词条微信 OCR 结果"></p>
+<p>从识别速度到识别准确率，基本没有什么可挑剔的地方。需要使用结果文字的时候，右侧选择并复制即可。</p>
+<p>不过要是遇上复杂的图片，识别效果和最终结果的文字排版可能都会不堪入目，比如我截了一个复杂的图文混杂的网页。这时候想要在结果里找到想要的文字复制出来还是会有一些麻烦的。</p>
+<p><img src="https://pica.zhimg.com/80/v2-df3626df210e5a1428bf9a6a2a1a9e79_720w.png?source=d16d100b" srcset="/img/loading.gif" lazyload alt="Paimon 卡池网页微信 OCR 结果"></p>
+<p>后来在本地查看图片的时候，意外发现「照片」应用已经集成了 OCR 功能，只要点击图片下方的「扫描」按钮就可以实现。</p>
+<p><img src="https://picx.zhimg.com/80/v2-4780d33d855e580daf0d8fcab41a6003_720w.png?source=d16d100b" srcset="/img/loading.gif" lazyload alt="Windows 自带照片应用扫描文本功能"></p>
+<p>识别完成后，会在原图片上框出包含文字的部分，并激活光标可进行选择与复制操作（如果需要复制全部文字，可以按 Ctrl+A 全选再 Ctrl+C 复制，或者右键点击「扫描文本」按钮打开右键菜单进行操作）。这是我觉得最惊艳的部分，可以在原图上直接选取想要的文字。如此丝滑的交互方式一下就让我联想到了几年前 Google lens 上的相机实时翻译功能——直接提取镜头里的文字并翻译好后贴图覆盖在画面中。</p>
+<p><img src="https://picx.zhimg.com/80/v2-f0eb3b567661903442dd1466544bde56_720w.png?source=d16d100b" srcset="/img/loading.gif" lazyload alt="已经把「出口」翻译成了「Exit」"></p>
+<p>当然识别准确性的问题还是有的，比如上面复杂页面的识别结果如下：</p>
+<blockquote>
+<p>Character Event V Void Star’s Advent 1 &amp; The Transcendent One Returns 3 v .moe Paimon Void Star’s The Transcendent 主页 Advent One Returns New Wish Available New Wish Available 角色 aracter Event Wish +Character Event Wish-2 祈愿统计 Skirk UP! Shenhe <strong>*</strong> Void Star Lonesome Transcendence 计算器 养成规划 28,729 Skirk 被抽到 1.71% 5★ 中位数 75 58.2% 小保底没歪 Total 42,121 总玩家数 30,832 数据库 894 祈愿总计 2,456,399 Shenhe 被抽到 13.02% 活动时间一览 58.2% 小保底没歪 Total 319,913 价值 ↑ 393,023,840 O3 设置 Pull By Day % TO1. 100.8 100.6 100 4 100.0 中文(简体) 99.8 99 6 994 99.2 06&#x2F;19 A</p>
+</blockquote>
+<p>整体而言，似乎比微信的结果要好一些，但也基本排版混乱，结果实用性很低。而且还有一个致命问题，没法在复制完成之前确定结果的准确性。因为这种交互方式只是把文字区域标注出来，并没有用结果文字替换掉原图中的文字。所以一旦识别有问题，你看着选择的是「123」，实际粘贴出来的是「456」。</p>
+<p>此外，如果需要本地用照片打开，还需要图片文件的保存、整理，又无形增加了不少操作复杂度。</p>
+<p>如果觉得以上操作过于复杂，Windows 还有一个内置的截图工具可以稍稍优化一些步骤。快捷键 Win+Shift+S 或 Print Screen 功能键开始截图，截图完成后会打开「截图工具」的应用（需要点击截图完成后的消息弹窗）。里面内置的 OCR 功能和照片里的应该是同一套功能，而且增加了「复制为表格」的功能。如果截图内容呈现明显的表格结构，可以使用此功能并直接粘贴到 Excel 中。</p>
+<p><img src="https://pica.zhimg.com/80/v2-3c70370641e83a6a31398b4754aefea5_720w.png?source=d16d100b" srcset="/img/loading.gif" lazyload alt="钉钉版本功能对比 OCR 结果"></p>
+<p>比如我截了钉钉多个付费版本的功能对比，识别后形成 4*5 的表格结构，复制为表格后的效果如下：</p>
+<p><img src="https://pic1.zhimg.com/80/v2-772e090a7084ec37fcd5d0f62a489c57_720w.png?source=d16d100b" srcset="/img/loading.gif" lazyload alt="表格准确度 OK，就是把特殊字符识别错误了"></p>
+<p>最后做一下总结，Windows 自带的照片也好，截图工具也好，因为丝滑的交互方式打动我使用这个工具。但是 OCR 的应用场景有很多局限性，这两个工具适用的范围很窄。如果我去构思一个 OCR 工具，可能会更看重具体的场景和需求，OCR 只是作为其中一个重要环节。</p>
 
                 
               </div>
@@ -545,9 +512,9 @@
       
         <a href="/tags/%E4%BA%A7%E5%93%81/" class="print-no-link">#产品</a>
       
-        <a href="/tags/%E8%AE%BE%E8%AE%A1/" class="print-no-link">#设计</a>
+        <a href="/tags/%E5%B7%A5%E5%85%B7/" class="print-no-link">#工具</a>
       
-        <a href="/tags/%E4%BA%A4%E4%BA%92/" class="print-no-link">#交互</a>
+        <a href="/tags/OCR/" class="print-no-link">#OCR</a>
       
     </div>
   
@@ -559,8 +526,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>标题栏和搜索栏的斗争</div>
-      <div>https://skeathytomas.github.io/post/标题栏和搜索栏的斗争/</div>
+      <div>分享 Windows 自带的 OCR 工具</div>
+      <div>https://skeathytomas.github.io/post/分享-windows-自带的-ocr-工具/</div>
     </div>
     <div class="license-meta">
       
@@ -572,7 +539,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年9月5日</div>
+          <div>2025年6月24日</div>
         </div>
       
       
@@ -604,9 +571,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/post/%E5%9C%A3%E9%81%97%E7%89%A9%E8%AF%84%E5%88%86%E5%B7%A5%E5%85%B7%EF%BC%9A%E5%88%BB%E6%99%B4%E5%8A%9E%E5%85%AC%E6%A1%8C%E6%8A%80%E6%9C%AF%E6%95%B4%E7%90%86%E4%B8%8E%E6%80%BB%E7%BB%93/" title="圣遗物评分工具：刻晴办公桌技术整理与总结">
+                      <a href="/post/%E5%88%86%E4%BA%AB-windows-%E8%87%AA%E5%B8%A6%E7%9A%84ocr%E5%B7%A5%E5%85%B7/" title="分享 Windows 自带的OCR工具">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">圣遗物评分工具：刻晴办公桌技术整理与总结</span>
+                        <span class="hidden-mobile">分享 Windows 自带的OCR工具</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -614,8 +581,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/post/%E5%86%8D%E8%B0%88%E3%80%8A%E5%8E%9F%E7%A5%9E%E3%80%8B%E7%8E%A9%E6%B3%95%EF%BC%9A%E5%86%99%E5%9C%A8%E9%A1%BB%E5%BC%A5%E6%9B%B4%E6%96%B0%E4%B9%8B%E5%89%8D/" title="再谈《原神》玩法：写在须弥更新之前">
-                        <span class="hidden-mobile">再谈《原神》玩法：写在须弥更新之前</span>
+                      <a href="/post/%E5%A6%82%E4%BD%95%E8%AF%84%E4%BB%B7-steam-%E6%96%B0%E6%B8%B8%E3%80%8A%E6%8D%9E%E5%A5%B3%E6%B8%B8%E6%88%8F%E3%80%8B%EF%BC%88%E5%B7%B2%E6%94%B9%E5%90%8D%E3%80%8A%E6%83%85%E6%84%9F%E5%8F%8D%E8%AF%88%E6%A8%A1%E6%8B%9F%E5%99%A8%E3%80%8B%EF%BC%89%EF%BC%9F/" title="如何评价 Steam 新游《捞女游戏》（已改名《情感反诈模拟器》）？">
+                        <span class="hidden-mobile">如何评价 Steam 新游《捞女游戏》（已改名《情感反诈模拟器》）？</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -638,7 +605,7 @@
         var options = Object.assign(
           {"clientID":"658faad5dc784f8ec14b","clientSecret":"b1c37d084a7aa0367a81f3a12c863a11ec088597","repo":"skeathytomas.github.io","owner":"skeathytomas","admin":["skeathytomas"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
           {
-            id: '5fd30b8f56d094d217410360d0c31a27'
+            id: 'b38d6e86fd859bd64d36956555a633f8'
           }
         )
         var gitalk = new Gitalk(options);

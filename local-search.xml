@@ -4,6 +4,64 @@
   
   
   <entry>
+    <title>分享 Windows 自带的OCR工具</title>
+    <link href="/post/%E5%88%86%E4%BA%AB-windows-%E8%87%AA%E5%B8%A6%E7%9A%84ocr%E5%B7%A5%E5%85%B7/"/>
+    <url>/post/%E5%88%86%E4%BA%AB-windows-%E8%87%AA%E5%B8%A6%E7%9A%84ocr%E5%B7%A5%E5%85%B7/</url>
+    
+    <content type="html"><![CDATA[<p>之前在写圣遗物评分工具时候，调研过不少 OCR 工具，有 API、模型、软件等等。最终选择了飞桨，在代码灵活性和准确性上都有很好的保障。</p><p>后来在日常办公中，还是偶尔会遇到一些需要 OCR 工具解决的问题，比如复制图片中的一些文字云云，这样使用代码调用就有些呆了。</p><p>好在基本上办公、聊天类软件的图片查看器中已经集成了 OCR 功能，比如国民级聊天工具微信。</p><p><img src="https://picx.zhimg.com/80/v2-487c671acbec33de199cbde03c7e17cb_720w.png?source=d16d100b" alt="圣遗物词条微信 OCR 结果"></p><p>从识别速度到识别准确率，基本没有什么可挑剔的地方。需要使用结果文字的时候，右侧选择并复制即可。</p><p>不过要是遇上复杂的图片，识别效果和最终结果的文字排版可能都会不堪入目，比如我截了一个复杂的图文混杂的网页。这时候想要在结果里找到想要的文字复制出来还是会有一些麻烦的。</p><p><img src="https://pica.zhimg.com/80/v2-df3626df210e5a1428bf9a6a2a1a9e79_720w.png?source=d16d100b" alt="Paimon 卡池网页微信 OCR 结果"></p><p>后来在本地查看图片的时候，意外发现「照片」应用已经集成了 OCR 功能，只要点击图片下方的「扫描」按钮就可以实现。</p><p><img src="https://picx.zhimg.com/80/v2-4780d33d855e580daf0d8fcab41a6003_720w.png?source=d16d100b" alt="Windows 自带照片应用扫描文本功能"></p><p>识别完成后，会在原图片上框出包含文字的部分，并激活光标可进行选择与复制操作（如果需要复制全部文字，可以按 Ctrl+A 全选再 Ctrl+C 复制，或者右键点击「扫描文本」按钮打开右键菜单进行操作）。这是我觉得最惊艳的部分，可以在原图上直接选取想要的文字。如此丝滑的交互方式一下就让我联想到了几年前 Google lens 上的相机实时翻译功能——直接提取镜头里的文字并翻译好后贴图覆盖在画面中。</p><p><img src="https://picx.zhimg.com/80/v2-f0eb3b567661903442dd1466544bde56_720w.png?source=d16d100b" alt="已经把「出口」翻译成了「Exit」"></p><p>当然识别准确性的问题还是有的，比如上面复杂页面的识别结果如下：</p><blockquote><p>Character Event V Void Star’s Advent 1 &amp; The Transcendent One Returns 3 v .moe Paimon Void Star’s The Transcendent 主页 Advent One Returns New Wish Available New Wish Available 角色 aracter Event Wish +Character Event Wish-2 祈愿统计 Skirk UP! Shenhe <strong>*</strong> Void Star Lonesome Transcendence 计算器 养成规划 28,729 Skirk 被抽到 1.71% 5★ 中位数 75 58.2% 小保底没歪 Total 42,121 总玩家数 30,832 数据库 894 祈愿总计 2,456,399 Shenhe 被抽到 13.02% 活动时间一览 58.2% 小保底没歪 Total 319,913 价值 ↑ 393,023,840 O3 设置 Pull By Day % TO1. 100.8 100.6 100 4 100.0 中文(简体) 99.8 99 6 994 99.2 06&#x2F;19 A</p></blockquote><p>整体而言，似乎比微信的结果要好一些，但也基本排版混乱，结果实用性很低。而且还有一个致命问题，没法在复制完成之前确定结果的准确性。因为这种交互方式只是把文字区域标注出来，并没有用结果文字替换掉原图中的文字。所以一旦识别有问题，你看着选择的是「123」，实际粘贴出来的是「456」。</p><p>此外，如果需要本地用照片打开，还需要图片文件的保存、整理，又无形增加了不少操作复杂度。</p><p>如果觉得以上操作过于复杂，Windows 还有一个内置的截图工具可以稍稍优化一些步骤。快捷键 Win+Shift+S 或 Print Screen 功能键开始截图，截图完成后会打开「截图工具」的应用（需要点击截图完成后的消息弹窗）。里面内置的 OCR 功能和照片里的应该是同一套功能，而且增加了「复制为表格」的功能。如果截图内容呈现明显的表格结构，可以使用此功能并直接粘贴到 Excel 中。</p><p><img src="https://pica.zhimg.com/80/v2-3c70370641e83a6a31398b4754aefea5_720w.png?source=d16d100b" alt="钉钉版本功能对比 OCR 结果"></p><p>比如我截了钉钉多个付费版本的功能对比，识别后形成 4*5 的表格结构，复制为表格后的效果如下：</p><p><img src="https://pic1.zhimg.com/80/v2-772e090a7084ec37fcd5d0f62a489c57_720w.png?source=d16d100b" alt="表格准确度 OK，就是把特殊字符识别错误了"></p><p>最后做一下总结，Windows 自带的照片也好，截图工具也好，因为丝滑的交互方式打动我使用这个工具。但是 OCR 的应用场景有很多局限性，这两个工具适用的范围很窄。如果我去构思一个 OCR 工具，可能会更看重具体的场景和需求，OCR 只是作为其中一个重要环节。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>产品</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>产品</tag>
+      
+      <tag>工具</tag>
+      
+      <tag>OCR</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>分享 Windows 自带的 OCR 工具</title>
+    <link href="/post/%E5%88%86%E4%BA%AB-windows-%E8%87%AA%E5%B8%A6%E7%9A%84-ocr-%E5%B7%A5%E5%85%B7/"/>
+    <url>/post/%E5%88%86%E4%BA%AB-windows-%E8%87%AA%E5%B8%A6%E7%9A%84-ocr-%E5%B7%A5%E5%85%B7/</url>
+    
+    <content type="html"><![CDATA[<p>之前在写圣遗物评分工具时候，调研过不少 OCR 工具，有 API、模型、软件等等。最终选择了飞桨，在代码灵活性和准确性上都有很好的保障。</p><p>后来在日常办公中，还是偶尔会遇到一些需要 OCR 工具解决的问题，比如复制图片中的一些文字云云，这样使用代码调用就有些呆了。</p><p>好在基本上办公、聊天类软件的图片查看器中已经集成了 OCR 功能，比如国民级聊天工具微信。</p><p><img src="https://picx.zhimg.com/80/v2-487c671acbec33de199cbde03c7e17cb_720w.png?source=d16d100b" alt="圣遗物词条微信 OCR 结果"></p><p>从识别速度到识别准确率，基本没有什么可挑剔的地方。需要使用结果文字的时候，右侧选择并复制即可。</p><p>不过要是遇上复杂的图片，识别效果和最终结果的文字排版可能都会不堪入目，比如我截了一个复杂的图文混杂的网页。这时候想要在结果里找到想要的文字复制出来还是会有一些麻烦的。</p><p><img src="https://pica.zhimg.com/80/v2-df3626df210e5a1428bf9a6a2a1a9e79_720w.png?source=d16d100b" alt="Paimon 卡池网页微信 OCR 结果"></p><p>后来在本地查看图片的时候，意外发现「照片」应用已经集成了 OCR 功能，只要点击图片下方的「扫描」按钮就可以实现。</p><p><img src="https://picx.zhimg.com/80/v2-4780d33d855e580daf0d8fcab41a6003_720w.png?source=d16d100b" alt="Windows 自带照片应用扫描文本功能"></p><p>识别完成后，会在原图片上框出包含文字的部分，并激活光标可进行选择与复制操作（如果需要复制全部文字，可以按 Ctrl+A 全选再 Ctrl+C 复制，或者右键点击「扫描文本」按钮打开右键菜单进行操作）。这是我觉得最惊艳的部分，可以在原图上直接选取想要的文字。如此丝滑的交互方式一下就让我联想到了几年前 Google lens 上的相机实时翻译功能——直接提取镜头里的文字并翻译好后贴图覆盖在画面中。</p><p><img src="https://picx.zhimg.com/80/v2-f0eb3b567661903442dd1466544bde56_720w.png?source=d16d100b" alt="已经把「出口」翻译成了「Exit」"></p><p>当然识别准确性的问题还是有的，比如上面复杂页面的识别结果如下：</p><blockquote><p>Character Event V Void Star’s Advent 1 &amp; The Transcendent One Returns 3 v .moe Paimon Void Star’s The Transcendent 主页 Advent One Returns New Wish Available New Wish Available 角色 aracter Event Wish +Character Event Wish-2 祈愿统计 Skirk UP! Shenhe <strong>*</strong> Void Star Lonesome Transcendence 计算器 养成规划 28,729 Skirk 被抽到 1.71% 5★ 中位数 75 58.2% 小保底没歪 Total 42,121 总玩家数 30,832 数据库 894 祈愿总计 2,456,399 Shenhe 被抽到 13.02% 活动时间一览 58.2% 小保底没歪 Total 319,913 价值 ↑ 393,023,840 O3 设置 Pull By Day % TO1. 100.8 100.6 100 4 100.0 中文(简体) 99.8 99 6 994 99.2 06&#x2F;19 A</p></blockquote><p>整体而言，似乎比微信的结果要好一些，但也基本排版混乱，结果实用性很低。而且还有一个致命问题，没法在复制完成之前确定结果的准确性。因为这种交互方式只是把文字区域标注出来，并没有用结果文字替换掉原图中的文字。所以一旦识别有问题，你看着选择的是「123」，实际粘贴出来的是「456」。</p><p>此外，如果需要本地用照片打开，还需要图片文件的保存、整理，又无形增加了不少操作复杂度。</p><p>如果觉得以上操作过于复杂，Windows 还有一个内置的截图工具可以稍稍优化一些步骤。快捷键 Win+Shift+S 或 Print Screen 功能键开始截图，截图完成后会打开「截图工具」的应用（需要点击截图完成后的消息弹窗）。里面内置的 OCR 功能和照片里的应该是同一套功能，而且增加了「复制为表格」的功能。如果截图内容呈现明显的表格结构，可以使用此功能并直接粘贴到 Excel 中。</p><p><img src="https://pica.zhimg.com/80/v2-3c70370641e83a6a31398b4754aefea5_720w.png?source=d16d100b" alt="钉钉版本功能对比 OCR 结果"></p><p>比如我截了钉钉多个付费版本的功能对比，识别后形成 4*5 的表格结构，复制为表格后的效果如下：</p><p><img src="https://pic1.zhimg.com/80/v2-772e090a7084ec37fcd5d0f62a489c57_720w.png?source=d16d100b" alt="表格准确度 OK，就是把特殊字符识别错误了"></p><p>最后做一下总结，Windows 自带的照片也好，截图工具也好，因为丝滑的交互方式打动我使用这个工具。但是 OCR 的应用场景有很多局限性，这两个工具适用的范围很窄。如果我去构思一个 OCR 工具，可能会更看重具体的场景和需求，OCR 只是作为其中一个重要环节。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>产品</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>产品</tag>
+      
+      <tag>工具</tag>
+      
+      <tag>OCR</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>如何评价 Steam 新游《捞女游戏》（已改名《情感反诈模拟器》）？</title>
     <link href="/post/%E5%A6%82%E4%BD%95%E8%AF%84%E4%BB%B7-steam-%E6%96%B0%E6%B8%B8%E3%80%8A%E6%8D%9E%E5%A5%B3%E6%B8%B8%E6%88%8F%E3%80%8B%EF%BC%88%E5%B7%B2%E6%94%B9%E5%90%8D%E3%80%8A%E6%83%85%E6%84%9F%E5%8F%8D%E8%AF%88%E6%A8%A1%E6%8B%9F%E5%99%A8%E3%80%8B%EF%BC%89%EF%BC%9F/"/>
     <url>/post/%E5%A6%82%E4%BD%95%E8%AF%84%E4%BB%B7-steam-%E6%96%B0%E6%B8%B8%E3%80%8A%E6%8D%9E%E5%A5%B3%E6%B8%B8%E6%88%8F%E3%80%8B%EF%BC%88%E5%B7%B2%E6%94%B9%E5%90%8D%E3%80%8A%E6%83%85%E6%84%9F%E5%8F%8D%E8%AF%88%E6%A8%A1%E6%8B%9F%E5%99%A8%E3%80%8B%EF%BC%89%EF%BC%9F/</url>

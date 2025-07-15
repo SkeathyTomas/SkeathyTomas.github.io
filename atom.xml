@@ -6,7 +6,7 @@
   <link href="https://skeathytomas.github.io/atom.xml" rel="self"/>
   
   <link href="https://skeathytomas.github.io/"/>
-  <updated>2025-07-12T03:35:50.244Z</updated>
+  <updated>2025-07-15T14:52:11.029Z</updated>
   <id>https://skeathytomas.github.io/</id>
   
   <author>
@@ -15,6 +15,66 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>分享 Windows 自带的OCR工具</title>
+    <link href="https://skeathytomas.github.io/post/%E5%88%86%E4%BA%AB-windows-%E8%87%AA%E5%B8%A6%E7%9A%84ocr%E5%B7%A5%E5%85%B7/"/>
+    <id>https://skeathytomas.github.io/post/%E5%88%86%E4%BA%AB-windows-%E8%87%AA%E5%B8%A6%E7%9A%84ocr%E5%B7%A5%E5%85%B7/</id>
+    <published>2025-06-23T16:00:00.000Z</published>
+    <updated>2025-07-15T14:52:11.029Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;之前在写圣遗物评分工具时候，调研过不少 OCR 工具，有 API、模型、软件等等。最终选择了飞桨，在代码灵活性和准确性上都有很好的保障。&lt;/p&gt;
+&lt;p&gt;后来在日常办公中，还是偶尔会遇到一些需要 OCR</summary>
+        
+      
+    
+    
+    
+    <category term="产品" scheme="https://skeathytomas.github.io/categories/%E4%BA%A7%E5%93%81/"/>
+    
+    
+    <category term="产品" scheme="https://skeathytomas.github.io/tags/%E4%BA%A7%E5%93%81/"/>
+    
+    <category term="工具" scheme="https://skeathytomas.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="OCR" scheme="https://skeathytomas.github.io/tags/OCR/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>分享 Windows 自带的 OCR 工具</title>
+    <link href="https://skeathytomas.github.io/post/%E5%88%86%E4%BA%AB-windows-%E8%87%AA%E5%B8%A6%E7%9A%84-ocr-%E5%B7%A5%E5%85%B7/"/>
+    <id>https://skeathytomas.github.io/post/%E5%88%86%E4%BA%AB-windows-%E8%87%AA%E5%B8%A6%E7%9A%84-ocr-%E5%B7%A5%E5%85%B7/</id>
+    <published>2025-06-23T16:00:00.000Z</published>
+    <updated>2025-07-15T14:53:48.802Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;之前在写圣遗物评分工具时候，调研过不少 OCR 工具，有 API、模型、软件等等。最终选择了飞桨，在代码灵活性和准确性上都有很好的保障。&lt;/p&gt;
+&lt;p&gt;后来在日常办公中，还是偶尔会遇到一些需要 OCR</summary>
+        
+      
+    
+    
+    
+    <category term="产品" scheme="https://skeathytomas.github.io/categories/%E4%BA%A7%E5%93%81/"/>
+    
+    
+    <category term="产品" scheme="https://skeathytomas.github.io/tags/%E4%BA%A7%E5%93%81/"/>
+    
+    <category term="工具" scheme="https://skeathytomas.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="OCR" scheme="https://skeathytomas.github.io/tags/OCR/"/>
+    
+  </entry>
   
   <entry>
     <title>如何评价 Steam 新游《捞女游戏》（已改名《情感反诈模拟器》）？</title>
