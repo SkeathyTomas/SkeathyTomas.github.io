@@ -6,7 +6,7 @@
   <link href="https://skeathytomas.github.io/atom.xml" rel="self"/>
   
   <link href="https://skeathytomas.github.io/"/>
-  <updated>2025-08-05T13:33:33.084Z</updated>
+  <updated>2025-08-08T13:40:46.258Z</updated>
   <id>https://skeathytomas.github.io/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>《原神》流水和玩家抽卡数据间有什么关联性？</title>
+    <link href="https://skeathytomas.github.io/post/%E3%80%8A%E5%8E%9F%E7%A5%9E%E3%80%8B%E6%B5%81%E6%B0%B4%E5%92%8C%E7%8E%A9%E5%AE%B6%E6%8A%BD%E5%8D%A1%E6%95%B0%E6%8D%AE%E9%97%B4%E6%9C%89%E4%BB%80%E4%B9%88%E5%85%B3%E8%81%94%E6%80%A7%EF%BC%9F/"/>
+    <id>https://skeathytomas.github.io/post/%E3%80%8A%E5%8E%9F%E7%A5%9E%E3%80%8B%E6%B5%81%E6%B0%B4%E5%92%8C%E7%8E%A9%E5%AE%B6%E6%8A%BD%E5%8D%A1%E6%95%B0%E6%8D%AE%E9%97%B4%E6%9C%89%E4%BB%80%E4%B9%88%E5%85%B3%E8%81%94%E6%80%A7%EF%BC%9F/</id>
+    <published>2025-07-11T16:00:00.000Z</published>
+    <updated>2025-08-08T13:40:46.258Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;之前在一篇文章里简单研究了抽卡数据和流水排名间的关系，大致得出了流水和平均祈愿数有比较大的相关性。&lt;/p&gt;
+&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="游戏" scheme="https://skeathytomas.github.io/categories/%E6%B8%B8%E6%88%8F/"/>
+    
+    
+    <category term="游戏" scheme="https://skeathytomas.github.io/tags/%E6%B8%B8%E6%88%8F/"/>
+    
+    <category term="原神" scheme="https://skeathytomas.github.io/tags/%E5%8E%9F%E7%A5%9E/"/>
+    
+    <category term="商业" scheme="https://skeathytomas.github.io/tags/%E5%95%86%E4%B8%9A/"/>
+    
+    <category term="数据分析" scheme="https://skeathytomas.github.io/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
+    
+  </entry>
   
   <entry>
     <title>如何评价原神6月25日活动《幽境危战》？如何看待玩家这波舆论风波？</title>
