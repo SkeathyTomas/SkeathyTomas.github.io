@@ -4,6 +4,50 @@
   
   
   <entry>
+    <title></title>
+    <link href="/post//"/>
+    <url>/post//</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>大家是怎么学习Pyqt5的？</title>
+    <link href="/post/%E5%A4%A7%E5%AE%B6%E6%98%AF%E6%80%8E%E4%B9%88%E5%AD%A6%E4%B9%A0pyqt5%E7%9A%84%EF%BC%9F/"/>
+    <url>/post/%E5%A4%A7%E5%AE%B6%E6%98%AF%E6%80%8E%E4%B9%88%E5%AD%A6%E4%B9%A0pyqt5%E7%9A%84%EF%BC%9F/</url>
+    
+    <content type="html"><![CDATA[<p>忽略 pyqt&#x2F;pyside 以及大的版本号，以前的我会好好看官方文档和示例，现在的我只想拥抱大模型快速实现功能。</p><p>在了解一些基础 GUI 专业名词和大致的框架后，剩下的就是功能实现的细节。而大多数常规功能都可以通过大模型快速问出来。</p><p>比如我写的圣遗物评分工具，前些日子有群友反映有些词条的系数配置不是非常合理。</p><p>比如常规评分暴击系数配 2，暴伤系数配 1，大攻击配 1，小攻击配 0.15。现在角色+专武的攻击力差不多有 1000 左右，1% 大攻击约等于+10 攻击力，评分为 1；而小攻击配 0.15，同样的 10 点攻击加了 1.5 评分，造成小攻击评分偏高。</p><p>一番沟通后，我觉得可以做成配置项，有高级需求的专业玩家可以手动修改。由于之前的配置项都做成了 json 文件，改动起来专业性更高，所以一直都有做成 GUI 的想法。</p><p>所以现在的需求是在原来主页面的基础上，增加一个设置页面，在设置页面中可以对一些词条系数进行修改。</p><p>由于之前都是在一个页面完成所有 GUI 布局的，这次新加页面的需求暂无思路。这两年  AI 辅助编程发展迅速，所以第一时间也是想到了能不能问问大模型得到想要的结果。</p><blockquote><p>pyside6 如何一个窗口内实现多个页面？</p></blockquote><p>大模型很快就给出了几个可能的方法：</p><p><img src="https://picx.zhimg.com/v2-4f77076958e8c5f421f39390cb6d8d7d.webp" alt="大模型给出的方法总结"></p><p>我觉得 QStackedWidget 比较合适，于是进一步问实现细节：</p><blockquote><p>使用 QStackedWidget 方法，我想要拆分第二个页面的代码到另一个 py 文件中</p></blockquote><p>大模型很快给出了基本框架，包括创建第二个页面的.py 文件，两个页面间的跳转。以下是首页控制切换的核心代码逻辑：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># main.py</span><br><span class="hljs-keyword">from</span> PySide6.QtWidgets <span class="hljs-keyword">import</span> (<br>    QApplication, QWidget, QVBoxLayout, QPushButton,<br>    QStackedWidget, QLabel<br>)<br><span class="hljs-keyword">from</span> page2 <span class="hljs-keyword">import</span> Page2  <span class="hljs-comment"># 导入第二个页面</span><br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">MainWindow</span>(<span class="hljs-title class_ inherited__">QWidget</span>):<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-built_in">super</span>().__init__()<br>        <span class="hljs-variable language_">self</span>.setWindowTitle(<span class="hljs-string">&quot;多页面切换示例&quot;</span>)<br><br>        <span class="hljs-variable language_">self</span>.stack = QStackedWidget()<br><br>        <span class="hljs-comment"># 页面 1</span><br>        <span class="hljs-variable language_">self</span>.page1 = QWidget()<br>        layout1 = QVBoxLayout()<br>        layout1.addWidget(QLabel(<span class="hljs-string">&quot;这是页面 1&quot;</span>))<br>        <span class="hljs-variable language_">self</span>.btn_go = QPushButton(<span class="hljs-string">&quot;跳转到页面 2&quot;</span>)<br>        layout1.addWidget(<span class="hljs-variable language_">self</span>.btn_go)<br>        <span class="hljs-variable language_">self</span>.page1.setLayout(layout1)<br><br>        <span class="hljs-comment"># 页面 2（从外部文件导入）</span><br>        <span class="hljs-variable language_">self</span>.page2 = Page2()<br><br>        <span class="hljs-comment"># 添加到堆栈</span><br>        <span class="hljs-variable language_">self</span>.stack.addWidget(<span class="hljs-variable language_">self</span>.page1)<br>        <span class="hljs-variable language_">self</span>.stack.addWidget(<span class="hljs-variable language_">self</span>.page2)<br><br>        <span class="hljs-comment"># 连接按钮信号</span><br>        <span class="hljs-variable language_">self</span>.btn_go.clicked.connect(<span class="hljs-keyword">lambda</span>: <span class="hljs-variable language_">self</span>.stack.setCurrentWidget(<span class="hljs-variable language_">self</span>.page2))<br>        <span class="hljs-variable language_">self</span>.page2.btn_back.clicked.connect(<span class="hljs-keyword">lambda</span>: <span class="hljs-variable language_">self</span>.stack.setCurrentWidget(<span class="hljs-variable language_">self</span>.page1))<br><br>        <span class="hljs-comment"># 主布局</span><br>        main_layout = QVBoxLayout()<br>        main_layout.addWidget(<span class="hljs-variable language_">self</span>.stack)<br>        <span class="hljs-variable language_">self</span>.setLayout(main_layout)<br><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&quot;__main__&quot;</span>:<br>    app = QApplication([])<br>    window = MainWindow()<br>    window.show()<br>    app.<span class="hljs-built_in">exec</span>()<br></code></pre></td></tr></table></figure><p>简单看过代码后，我发现其中一个问题。大模型给出的示例代码其实在第一个页面中已经包含了 2 个页面逻辑，使用 Layout 包了一层 StackedWidget，StackedWidget 里包了两个页面。我现在没有外面那层 Layout，感觉整体都需要重构，于是再次和大模型友好交流：</p><blockquote><p>关于 pyside6 多页面，我原先只考虑了一个页面，布局都用了 self.layout 快速实现，现在增加一个页面，如何快速修改？</p></blockquote><p>大模型也很快指出，只需要将原来第一个页面封装成 QWidget 类，然后在新的主窗口中导入原先主页面的类和新的设置页的类即可。具体页面项目结构如下：</p><p><img src="https://pic1.zhimg.com/v2-af9c45057b816d53743236fc54f29063.webp" alt="大模型给出的页面结构"></p><p>随后我将原来整段页面代码（大概 500 多行）提供给了大模型，帮我生成三份.py 文件。试着运行了下居然可以跑通，且原页面功能都基本完全实现。只是一些特殊的操作逻辑会报错，我看着报错说明快速定位问题，补充了几个缺失的全局变量就完全没问题了。</p><p>最值得称赞的是，大模型提供的代码帮我原先页面的初始化部分也重新整理了。原先混在一起的 UI、数据、交互事件它居然比较合理地拆成了三份 inti_ui(self), inti_data(self), init_events(self)。</p><p>最后补充了一些业务细节，页面上已经非常完善，包括两个页面的 SizePolicy 不会互相影响，避免页面很空等等。之后有时间再补充数据修改的逻辑即可，感觉 AI 辅助编程大大提升了我的效率。</p><p><img src="https://picx.zhimg.com/v2-2892cd6dc760ad96b2998ce47c731d7f.webp" alt="首页，点击设置跳转设置页"></p><p><img src="https://picx.zhimg.com/v2-ae934013206e13bbd9dc04549a714bf1.webp" alt="设置页，可修改词条系数，保存后回到首页"></p><p>具体项目可参考：<a href="https://github.com/SkeathyTomas">刻晴办公桌</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Coding</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Coding</tag>
+      
+      <tag>前端</tag>
+      
+      <tag>AI大模型</tag>
+      
+      <tag>GUI</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>《原神》流水和玩家抽卡数据间有什么关联性？</title>
     <link href="/post/%E3%80%8A%E5%8E%9F%E7%A5%9E%E3%80%8B%E6%B5%81%E6%B0%B4%E5%92%8C%E7%8E%A9%E5%AE%B6%E6%8A%BD%E5%8D%A1%E6%95%B0%E6%8D%AE%E9%97%B4%E6%9C%89%E4%BB%80%E4%B9%88%E5%85%B3%E8%81%94%E6%80%A7%EF%BC%9F/"/>
     <url>/post/%E3%80%8A%E5%8E%9F%E7%A5%9E%E3%80%8B%E6%B5%81%E6%B0%B4%E5%92%8C%E7%8E%A9%E5%AE%B6%E6%8A%BD%E5%8D%A1%E6%95%B0%E6%8D%AE%E9%97%B4%E6%9C%89%E4%BB%80%E4%B9%88%E5%85%B3%E8%81%94%E6%80%A7%EF%BC%9F/</url>

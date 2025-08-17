@@ -19,28 +19,29 @@
   <meta name="author" content="Skeathy">
   <meta name="keywords" content="互联网,产品经理,设计,生活,游戏,动漫,Coding">
   
-    <meta name="description" content="起因是在写刻晴办公桌新功能本地数据保存的时候，需要加载与更新数据，然后就莫名踩了一次动态数据类型的坑。正好借着这个机会整理一下 Python 中的数据类型，以及引用和拷贝相关的知识。虽说网上总结很多，但这一次想要自己记录一遍。 Python 的数据类型与赋值Python 中变量不需要声明，而是用赋值（&#x3D;）的方式创建。某种意义上，变量就像指针（但是这个指针也没有类型），指向内存中具体的数据">
+    <meta name="description" content="忽略 pyqt&#x2F;pyside 以及大的版本号，以前的我会好好看官方文档和示例，现在的我只想拥抱大模型快速实现功能。 在了解一些基础 GUI 专业名词和大致的框架后，剩下的就是功能实现的细节。而大多数常规功能都可以通过大模型快速问出来。 比如我写的圣遗物评分工具，前些日子有群友反映有些词条的系数配置不是非常合理。 比如常规评分暴击系数配 2，暴伤系数配 1，大攻击配 1，小攻击配 0.15">
 <meta property="og:type" content="article">
-<meta property="og:title" content="总会踩一次 Python 引用与拷贝的坑">
-<meta property="og:url" content="https://skeathytomas.github.io/post/%E6%80%BB%E4%BC%9A%E8%B8%A9%E4%B8%80%E6%AC%A1-python-%E5%BC%95%E7%94%A8%E4%B8%8E%E6%8B%B7%E8%B4%9D%E7%9A%84%E5%9D%91/index.html">
+<meta property="og:title" content="大家是怎么学习Pyqt5的？">
+<meta property="og:url" content="https://skeathytomas.github.io/post/%E5%A4%A7%E5%AE%B6%E6%98%AF%E6%80%8E%E4%B9%88%E5%AD%A6%E4%B9%A0pyqt5%E7%9A%84%EF%BC%9F/index.html">
 <meta property="og:site_name" content="智商衰退之后">
-<meta property="og:description" content="起因是在写刻晴办公桌新功能本地数据保存的时候，需要加载与更新数据，然后就莫名踩了一次动态数据类型的坑。正好借着这个机会整理一下 Python 中的数据类型，以及引用和拷贝相关的知识。虽说网上总结很多，但这一次想要自己记录一遍。 Python 的数据类型与赋值Python 中变量不需要声明，而是用赋值（&#x3D;）的方式创建。某种意义上，变量就像指针（但是这个指针也没有类型），指向内存中具体的数据">
+<meta property="og:description" content="忽略 pyqt&#x2F;pyside 以及大的版本号，以前的我会好好看官方文档和示例，现在的我只想拥抱大模型快速实现功能。 在了解一些基础 GUI 专业名词和大致的框架后，剩下的就是功能实现的细节。而大多数常规功能都可以通过大模型快速问出来。 比如我写的圣遗物评分工具，前些日子有群友反映有些词条的系数配置不是非常合理。 比如常规评分暴击系数配 2，暴伤系数配 1，大攻击配 1，小攻击配 0.15">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20221230160051.png">
-<meta property="article:published_time" content="2022-12-11T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-12-30T10:08:32.760Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/Desktop%20Apps%20with%20Python%20and%20Qt%20and%20PyQt.png">
+<meta property="article:published_time" content="2025-07-14T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-08-17T09:16:39.880Z">
 <meta property="article:author" content="Skeathy">
 <meta property="article:tag" content="Coding">
-<meta property="article:tag" content="Python">
-<meta property="article:tag" content="数据结构">
+<meta property="article:tag" content="前端">
+<meta property="article:tag" content="AI大模型">
+<meta property="article:tag" content="GUI">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20221230160051.png">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/Desktop%20Apps%20with%20Python%20and%20Qt%20and%20PyQt.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>总会踩一次 Python 引用与拷贝的坑 - 智商衰退之后</title>
+  <title>大家是怎么学习Pyqt5的？ - 智商衰退之后</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -226,13 +227,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20221230160051.png') no-repeat center center; background-size: cover;">
+     style="background: url('https://raw.githubusercontent.com/SkeathyTomas/img/main/img/Desktop%20Apps%20with%20Python%20and%20Qt%20and%20PyQt.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="总会踩一次 Python 引用与拷贝的坑"></span>
+            <span id="subtitle" data-typed-text="大家是怎么学习Pyqt5的？"></span>
           
         </div>
 
@@ -243,8 +244,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-12-12 00:00" pubdate>
-          2022年12月12日 凌晨
+        <time datetime="2025-07-15 00:00" pubdate>
+          2025年7月15日 凌晨
         </time>
       </span>
     
@@ -255,7 +256,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.6k 字
+          1.1k 字
         
       </span>
     
@@ -266,7 +267,7 @@
         
         
         
-          13 分钟
+          10 分钟
         
       </span>
     
@@ -350,7 +351,7 @@
       
         <a href="/post/%E5%A4%A7%E5%AE%B6%E6%98%AF%E6%80%8E%E4%B9%88%E5%AD%A6%E4%B9%A0pyqt5%E7%9A%84%EF%BC%9F/" title="大家是怎么学习Pyqt5的？"
            class="list-group-item list-group-item-action
-           ">
+           active">
           <span class="category-post">大家是怎么学习Pyqt5的？</span>
         </a>
       
@@ -359,7 +360,7 @@
       
         <a href="/post/%E6%80%BB%E4%BC%9A%E8%B8%A9%E4%B8%80%E6%AC%A1-python-%E5%BC%95%E7%94%A8%E4%B8%8E%E6%8B%B7%E8%B4%9D%E7%9A%84%E5%9D%91/" title="总会踩一次 Python 引用与拷贝的坑"
            class="list-group-item list-group-item-action
-           active">
+           ">
           <span class="category-post">总会踩一次 Python 引用与拷贝的坑</span>
         </a>
       
@@ -391,12 +392,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">总会踩一次 Python 引用与拷贝的坑</h1>
+            <h1 id="seo-header">大家是怎么学习Pyqt5的？</h1>
             
               <p id="updated-time" class="note note-info" style="">
                 
                   
-                    本文最后更新于 2022年12月30日 晚上
+                    本文最后更新于 2025年8月17日 下午
                   
                 
               </p>
@@ -404,39 +405,37 @@
             
               <div class="markdown-body">
                 
-                <p>起因是在写<a target="_blank" rel="noopener" href="https://github.com/SkeathyTomas/genshin_artifact_auxiliary">刻晴办公桌</a>新功能本地数据保存的时候，需要加载与更新数据，然后就莫名踩了一次动态数据类型的坑。正好借着这个机会整理一下 Python 中的数据类型，以及引用和拷贝相关的知识。虽说网上总结很多，但这一次想要自己记录一遍。</p>
-<h2 id="Python-的数据类型与赋值"><a href="#Python-的数据类型与赋值" class="headerlink" title="Python 的数据类型与赋值"></a>Python 的数据类型与赋值</h2><p>Python 中变量不需要声明，而是用赋值（&#x3D;）的方式创建。某种意义上，变量就像指针（但是这个指针也没有类型），指向内存中具体的数据，而赋值就是完成「指向」这一操作。如果等号右边是具体的数据，也顺便完成了数据在内存中的创建操作。</p>
-<p>虽说变量没有类型一说，但是具体的数据 Python 还是有类型的，Python 3 有 6 种标准数据类型——Number（数字）、String（字符串）、Tuple（元组）、List（列表）、Set（集合）和 Dictionary（字典）。其中前三种是静态数据类型（不可变），后三种是动态数据类型（可变），具体每一种数据类型的含义不再继续展开。可变与不可变的含义为是否可对该内存中的数据进行修改。</p>
-<h2 id="引用与拷贝"><a href="#引用与拷贝" class="headerlink" title="引用与拷贝"></a>引用与拷贝</h2><p>从本质上讲，赋值操作即是一种引用，前面提到的「指向」和「引用」含义是一致的。除了初始化这种建立变量到内存数据的引用，对旧变量重新赋值、变量之间互相赋值也是常见的引用，比如<code>b = a</code>。</p>
-<p>重新赋值是把就旧变量指向新的数据，而引用变量并不是再创建一份数据，而是把新变量指向赋值变量引用的数据。</p>
-<p><img src="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20221230145626.png" srcset="/img/loading.gif" lazyload alt="静态变量引用"></p>
-<p>以上对于静态数据和动态数据（整体）都是成立的，但是动态数据包含索引操作，比如需要改变列表中第一个数值，就会用到<code>a[0] = xx</code>这样的操作。前面提到动态数据是可变的，索引赋值就是改变同一内存地址数据的操作。所以如果<code>a, b</code> 同时引用了一个列表数据，而对<code>b</code>进行了索引赋值修改，由于<code>a</code>还是指向了同一个已修改的数据，所以会出现反直觉的<code>a</code>也修改了数据的情况。</p>
-<p><img src="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20221230151319.png" srcset="/img/loading.gif" lazyload alt="动态数据索引赋值"></p>
-<p>补充一下代码及输出：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span>a = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>b = a<br><span class="hljs-meta">&gt;&gt;&gt; </span>b[<span class="hljs-number">0</span>] = <span class="hljs-number">2</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>b<br>[<span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>a<br>[<span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]<br></code></pre></td></tr></table></figure>
+                <p>忽略 pyqt&#x2F;pyside 以及大的版本号，以前的我会好好看官方文档和示例，现在的我只想拥抱大模型快速实现功能。</p>
+<p>在了解一些基础 GUI 专业名词和大致的框架后，剩下的就是功能实现的细节。而大多数常规功能都可以通过大模型快速问出来。</p>
+<p>比如我写的圣遗物评分工具，前些日子有群友反映有些词条的系数配置不是非常合理。</p>
+<p>比如常规评分暴击系数配 2，暴伤系数配 1，大攻击配 1，小攻击配 0.15。现在角色+专武的攻击力差不多有 1000 左右，1% 大攻击约等于+10 攻击力，评分为 1；而小攻击配 0.15，同样的 10 点攻击加了 1.5 评分，造成小攻击评分偏高。</p>
+<p>一番沟通后，我觉得可以做成配置项，有高级需求的专业玩家可以手动修改。由于之前的配置项都做成了 json 文件，改动起来专业性更高，所以一直都有做成 GUI 的想法。</p>
+<p>所以现在的需求是在原来主页面的基础上，增加一个设置页面，在设置页面中可以对一些词条系数进行修改。</p>
+<p>由于之前都是在一个页面完成所有 GUI 布局的，这次新加页面的需求暂无思路。这两年  AI 辅助编程发展迅速，所以第一时间也是想到了能不能问问大模型得到想要的结果。</p>
+<blockquote>
+<p>pyside6 如何一个窗口内实现多个页面？</p>
+</blockquote>
+<p>大模型很快就给出了几个可能的方法：</p>
+<p><img src="https://picx.zhimg.com/v2-4f77076958e8c5f421f39390cb6d8d7d.webp" srcset="/img/loading.gif" lazyload alt="大模型给出的方法总结"></p>
+<p>我觉得 QStackedWidget 比较合适，于是进一步问实现细节：</p>
+<blockquote>
+<p>使用 QStackedWidget 方法，我想要拆分第二个页面的代码到另一个 py 文件中</p>
+</blockquote>
+<p>大模型很快给出了基本框架，包括创建第二个页面的.py 文件，两个页面间的跳转。以下是首页控制切换的核心代码逻辑：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># main.py</span><br><span class="hljs-keyword">from</span> PySide6.QtWidgets <span class="hljs-keyword">import</span> (<br>    QApplication, QWidget, QVBoxLayout, QPushButton,<br>    QStackedWidget, QLabel<br>)<br><span class="hljs-keyword">from</span> page2 <span class="hljs-keyword">import</span> Page2  <span class="hljs-comment"># 导入第二个页面</span><br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">MainWindow</span>(<span class="hljs-title class_ inherited__">QWidget</span>):<br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-built_in">super</span>().__init__()<br>        <span class="hljs-variable language_">self</span>.setWindowTitle(<span class="hljs-string">&quot;多页面切换示例&quot;</span>)<br><br>        <span class="hljs-variable language_">self</span>.stack = QStackedWidget()<br><br>        <span class="hljs-comment"># 页面 1</span><br>        <span class="hljs-variable language_">self</span>.page1 = QWidget()<br>        layout1 = QVBoxLayout()<br>        layout1.addWidget(QLabel(<span class="hljs-string">&quot;这是页面 1&quot;</span>))<br>        <span class="hljs-variable language_">self</span>.btn_go = QPushButton(<span class="hljs-string">&quot;跳转到页面 2&quot;</span>)<br>        layout1.addWidget(<span class="hljs-variable language_">self</span>.btn_go)<br>        <span class="hljs-variable language_">self</span>.page1.setLayout(layout1)<br><br>        <span class="hljs-comment"># 页面 2（从外部文件导入）</span><br>        <span class="hljs-variable language_">self</span>.page2 = Page2()<br><br>        <span class="hljs-comment"># 添加到堆栈</span><br>        <span class="hljs-variable language_">self</span>.stack.addWidget(<span class="hljs-variable language_">self</span>.page1)<br>        <span class="hljs-variable language_">self</span>.stack.addWidget(<span class="hljs-variable language_">self</span>.page2)<br><br>        <span class="hljs-comment"># 连接按钮信号</span><br>        <span class="hljs-variable language_">self</span>.btn_go.clicked.connect(<span class="hljs-keyword">lambda</span>: <span class="hljs-variable language_">self</span>.stack.setCurrentWidget(<span class="hljs-variable language_">self</span>.page2))<br>        <span class="hljs-variable language_">self</span>.page2.btn_back.clicked.connect(<span class="hljs-keyword">lambda</span>: <span class="hljs-variable language_">self</span>.stack.setCurrentWidget(<span class="hljs-variable language_">self</span>.page1))<br><br>        <span class="hljs-comment"># 主布局</span><br>        main_layout = QVBoxLayout()<br>        main_layout.addWidget(<span class="hljs-variable language_">self</span>.stack)<br>        <span class="hljs-variable language_">self</span>.setLayout(main_layout)<br><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&quot;__main__&quot;</span>:<br>    app = QApplication([])<br>    window = MainWindow()<br>    window.show()<br>    app.<span class="hljs-built_in">exec</span>()<br></code></pre></td></tr></table></figure>
 
-<p>不过这样引用肯定会遇到需求上的问题——比如有一份原始数据，现要拿出一部分修改&#x2F;添加，经过校验后返回数据。因为引用数据的修改直接修改了原数据，自然是不妥的。所以需要引入拷贝的概念，即创建一份新内存地址的数据，数据内容和原来一样，但互相独立。</p>
-<h2 id="浅拷贝与深拷贝"><a href="#浅拷贝与深拷贝" class="headerlink" title="浅拷贝与深拷贝"></a>浅拷贝与深拷贝</h2><p>数据类型可以嵌套，比如列表中套列表。浅拷贝仅拷贝第一层数据，嵌套内的数据还是指向原地址；而深拷贝会将所有嵌套结构都拷贝一份，真正做到两个数据完全独立。</p>
-<p>浅拷贝的方法是切片操作（<code>a[:]</code>）、数据类型自带的<code>copy()</code>方法或是<code>copy</code>模块的<code>copy()</code>方法，深拷贝的方法是<code>copy</code>模块的<code>deepcopy()</code>方法。以上概念都过于抽象，建议结合实例进行理解。</p>
-<p>实例一：浅拷贝对第一层进行拷贝处理，所以<code>b[0]=[2,2]</code>并不会对<code>a</code>进行修改，但<code>b[0][0]=2</code>由于对第二层修改了数据，<code>a</code>也就随之变动。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span>a=[[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>],<span class="hljs-number">3</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>b=a.copy()<br><span class="hljs-meta">&gt;&gt;&gt; </span>b[<span class="hljs-number">0</span>]=[<span class="hljs-number">2</span>,<span class="hljs-number">2</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>b<br>[[<span class="hljs-number">2</span>, <span class="hljs-number">2</span>], <span class="hljs-number">3</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>a<br>[[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>], <span class="hljs-number">3</span>]<br></code></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span>a=[[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>],<span class="hljs-number">3</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>b=a.copy()<br><span class="hljs-meta">&gt;&gt;&gt; </span>b[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>]=<span class="hljs-number">2</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>b<br>[[<span class="hljs-number">2</span>, <span class="hljs-number">2</span>], <span class="hljs-number">3</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>a<br>[[<span class="hljs-number">2</span>, <span class="hljs-number">2</span>], <span class="hljs-number">3</span>]<br></code></pre></td></tr></table></figure>
-
-<p>实例二：深拷贝完全独立数据，所以无论<code>b</code>怎么修改，<code>a</code>不会变动。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> copy<br><span class="hljs-meta">&gt;&gt;&gt; </span>a=[[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>],<span class="hljs-number">3</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>b=copy.deepcopy(a)<br><span class="hljs-meta">&gt;&gt;&gt; </span>b[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>]=<span class="hljs-number">2</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>b<br>[[<span class="hljs-number">2</span>, <span class="hljs-number">2</span>], <span class="hljs-number">3</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>a<br>[[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>], <span class="hljs-number">3</span>]<br></code></pre></td></tr></table></figure>
-
-<p>再补一张<a target="_blank" rel="noopener" href="https://draapho.github.io/2016/11/21/1618-python-variable/">大佬</a>做的图帮助理解（切片也是浅拷贝哦）：</p>
-<p><img src="https://raw.githubusercontent.com/SkeathyTomas/img/main/img/20221230160051.png" srcset="/img/loading.gif" lazyload alt="浅拷贝与深拷贝"></p>
-<h2 id="踩坑场景回顾"><a href="#踩坑场景回顾" class="headerlink" title="踩坑场景回顾"></a>踩坑场景回顾</h2><p>回到自己的项目和踩坑时的场景：因为要做圣遗物数据导出与读取功能，避免不了一些本地数据的增删改查操作（实际上删还没做），于是顺利踩坑。当初觉得这种互相引用的方式很蠢，自己写代码的时候肯定会避免这种误导性写法，结果蠢的还是自己。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-variable language_">self</span>.artifact = <span class="hljs-variable language_">self</span>.artifacts[<span class="hljs-variable language_">self</span>.<span class="hljs-built_in">type</span>][<span class="hljs-variable language_">self</span>.archive.currentText()]<br></code></pre></td></tr></table></figure>
-
-<p>等号右侧是读取了所有圣遗物保存方案中的一个，数据类型是字典，其中<code>self.archive.currentText</code>是下拉选择框中的方案名称。选择某一个选项相当于读取了数据，并呈现相关数据结果，也即实时数据。因为本工具实时数据结果就是<code>self.artifact</code>，所以当进行了新的识别后，数据就自动更新到<code>self.artifacts</code>这个所有的方案数据中了。</p>
-<p>当初搜遍整个文档，debug 许久，也不明白究竟自己对<code>self.artifacts</code>的数据更新是在哪里完成的，直至回想起 Python 的数据类型。解决方案也非常简单，由于直接对最深层进行拷贝，也不会有浅拷贝与深拷贝相关问题。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-variable language_">self</span>.artifact = <span class="hljs-variable language_">self</span>.artifacts[<span class="hljs-variable language_">self</span>.<span class="hljs-built_in">type</span>][<span class="hljs-variable language_">self</span>.archive.currentText()].copy()<br></code></pre></td></tr></table></figure>
-
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>尽管自己可能并不是那么适合做基础技术科普，讲得可能没那么专业全面，可能还有潜在错误（如果有的话请尽快通知我），不过本文的主要目的还是给自己长个记性。</p>
-<p>如果下次遇到了莫名其妙的数据突然就被更改了的情况，可能就是在引用和拷贝上踩了坑，不论是我还是身为读者的你。</p>
+<p>简单看过代码后，我发现其中一个问题。大模型给出的示例代码其实在第一个页面中已经包含了 2 个页面逻辑，使用 Layout 包了一层 StackedWidget，StackedWidget 里包了两个页面。我现在没有外面那层 Layout，感觉整体都需要重构，于是再次和大模型友好交流：</p>
+<blockquote>
+<p>关于 pyside6 多页面，我原先只考虑了一个页面，布局都用了 self.layout 快速实现，现在增加一个页面，如何快速修改？</p>
+</blockquote>
+<p>大模型也很快指出，只需要将原来第一个页面封装成 QWidget 类，然后在新的主窗口中导入原先主页面的类和新的设置页的类即可。具体页面项目结构如下：</p>
+<p><img src="https://pic1.zhimg.com/v2-af9c45057b816d53743236fc54f29063.webp" srcset="/img/loading.gif" lazyload alt="大模型给出的页面结构"></p>
+<p>随后我将原来整段页面代码（大概 500 多行）提供给了大模型，帮我生成三份.py 文件。试着运行了下居然可以跑通，且原页面功能都基本完全实现。只是一些特殊的操作逻辑会报错，我看着报错说明快速定位问题，补充了几个缺失的全局变量就完全没问题了。</p>
+<p>最值得称赞的是，大模型提供的代码帮我原先页面的初始化部分也重新整理了。原先混在一起的 UI、数据、交互事件它居然比较合理地拆成了三份 inti_ui(self), inti_data(self), init_events(self)。</p>
+<p>最后补充了一些业务细节，页面上已经非常完善，包括两个页面的 SizePolicy 不会互相影响，避免页面很空等等。之后有时间再补充数据修改的逻辑即可，感觉 AI 辅助编程大大提升了我的效率。</p>
+<p><img src="https://picx.zhimg.com/v2-2892cd6dc760ad96b2998ce47c731d7f.webp" srcset="/img/loading.gif" lazyload alt="首页，点击设置跳转设置页"></p>
+<p><img src="https://picx.zhimg.com/v2-ae934013206e13bbd9dc04549a714bf1.webp" srcset="/img/loading.gif" lazyload alt="设置页，可修改词条系数，保存后回到首页"></p>
+<p>具体项目可参考：<a target="_blank" rel="noopener" href="https://github.com/SkeathyTomas">刻晴办公桌</a></p>
 
                 
               </div>
@@ -472,9 +471,11 @@
       
         <a href="/tags/Coding/" class="print-no-link">#Coding</a>
       
-        <a href="/tags/Python/" class="print-no-link">#Python</a>
+        <a href="/tags/%E5%89%8D%E7%AB%AF/" class="print-no-link">#前端</a>
       
-        <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="print-no-link">#数据结构</a>
+        <a href="/tags/AI%E5%A4%A7%E6%A8%A1%E5%9E%8B/" class="print-no-link">#AI大模型</a>
+      
+        <a href="/tags/GUI/" class="print-no-link">#GUI</a>
       
     </div>
   
@@ -486,8 +487,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>总会踩一次 Python 引用与拷贝的坑</div>
-      <div>https://skeathytomas.github.io/post/总会踩一次-python-引用与拷贝的坑/</div>
+      <div>大家是怎么学习Pyqt5的？</div>
+      <div>https://skeathytomas.github.io/post/大家是怎么学习pyqt5的？/</div>
     </div>
     <div class="license-meta">
       
@@ -499,7 +500,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年12月12日</div>
+          <div>2025年7月15日</div>
         </div>
       
       
@@ -531,9 +532,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/post/%E5%AF%BB%E6%89%BE%E8%BF%B7%E8%8C%AB%E4%B8%AD%E7%9A%84%E6%9B%99%E5%85%89-2022%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/" title="寻找迷茫中的曙光 | 2022年终总结">
+                      <a href="/post/" title="">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">寻找迷茫中的曙光 | 2022年终总结</span>
+                        <span class="hidden-mobile"></span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -541,8 +542,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/post/%E6%90%9C%E7%B4%A2%E4%B8%8E%E5%8C%B9%E9%85%8D%E8%A7%84%E5%88%99/" title="搜索与匹配规则">
-                        <span class="hidden-mobile">搜索与匹配规则</span>
+                      <a href="/post/%E3%80%8A%E5%8E%9F%E7%A5%9E%E3%80%8B%E6%B5%81%E6%B0%B4%E5%92%8C%E7%8E%A9%E5%AE%B6%E6%8A%BD%E5%8D%A1%E6%95%B0%E6%8D%AE%E9%97%B4%E6%9C%89%E4%BB%80%E4%B9%88%E5%85%B3%E8%81%94%E6%80%A7%EF%BC%9F/" title="《原神》流水和玩家抽卡数据间有什么关联性？">
+                        <span class="hidden-mobile">《原神》流水和玩家抽卡数据间有什么关联性？</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -565,7 +566,7 @@
         var options = Object.assign(
           {"clientID":"658faad5dc784f8ec14b","clientSecret":"b1c37d084a7aa0367a81f3a12c863a11ec088597","repo":"skeathytomas.github.io","owner":"skeathytomas","admin":["skeathytomas"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
           {
-            id: '272fab26394d8becd8f6080aa29ad1b5'
+            id: 'ebeed1dfb479283708c521b15605cc91'
           }
         )
         var gitalk = new Gitalk(options);

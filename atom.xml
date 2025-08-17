@@ -6,7 +6,7 @@
   <link href="https://skeathytomas.github.io/atom.xml" rel="self"/>
   
   <link href="https://skeathytomas.github.io/"/>
-  <updated>2025-08-08T13:40:46.258Z</updated>
+  <updated>2025-08-17T09:05:54.862Z</updated>
   <id>https://skeathytomas.github.io/</id>
   
   <author>
@@ -15,6 +15,51 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="https://skeathytomas.github.io/post/"/>
+    <id>https://skeathytomas.github.io/post/</id>
+    <published>2025-08-17T09:04:39.357Z</published>
+    <updated>2025-08-17T09:05:54.862Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>大家是怎么学习Pyqt5的？</title>
+    <link href="https://skeathytomas.github.io/post/%E5%A4%A7%E5%AE%B6%E6%98%AF%E6%80%8E%E4%B9%88%E5%AD%A6%E4%B9%A0pyqt5%E7%9A%84%EF%BC%9F/"/>
+    <id>https://skeathytomas.github.io/post/%E5%A4%A7%E5%AE%B6%E6%98%AF%E6%80%8E%E4%B9%88%E5%AD%A6%E4%B9%A0pyqt5%E7%9A%84%EF%BC%9F/</id>
+    <published>2025-07-14T16:00:00.000Z</published>
+    <updated>2025-08-17T09:16:39.880Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;忽略 pyqt&amp;#x2F;pyside 以及大的版本号，以前的我会好好看官方文档和示例，现在的我只想拥抱大模型快速实现功能。&lt;/p&gt;
+&lt;p&gt;在了解一些基础 GUI</summary>
+        
+      
+    
+    
+    
+    <category term="Coding" scheme="https://skeathytomas.github.io/categories/Coding/"/>
+    
+    
+    <category term="Coding" scheme="https://skeathytomas.github.io/tags/Coding/"/>
+    
+    <category term="前端" scheme="https://skeathytomas.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="AI大模型" scheme="https://skeathytomas.github.io/tags/AI%E5%A4%A7%E6%A8%A1%E5%9E%8B/"/>
+    
+    <category term="GUI" scheme="https://skeathytomas.github.io/tags/GUI/"/>
+    
+  </entry>
   
   <entry>
     <title>《原神》流水和玩家抽卡数据间有什么关联性？</title>
